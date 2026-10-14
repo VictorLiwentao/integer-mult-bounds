@@ -38,6 +38,12 @@ PASS_REGISTERED_RESEARCH_PACKAGE research/shared-point-frame-contains outcome=co
 PASS_IDENTICAL_SHARED_POINT_FRAME_CONTAINS_RECEIPTS
 ```
 
+On Linux / CPython 3.12.3 (Linux-6.12.94+-x86_64-with-glibc2.39), five
+alternating fresh-process pairs timing only
+`SharedPointCircuit(46).verify_frames(code)` (construction and compile
+excluded) gave median wall time **2.888 → 1.729 seconds (1.67×)**. Timing is
+host-descriptive and is not a correctness gate; see `RESULT.json`.
+
 Default verify is read-only. Full `make verify`, selected cold replay, Lean, and
 multiplication-theorem obligations were not rerun for this isolated
 historical-checker change.
