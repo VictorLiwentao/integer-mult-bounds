@@ -31,7 +31,7 @@ python3.12 -I -B research/disjoint-tensor-support-masks/benchmark.py --rounds 5
 Expected:
 
 ```text
-PASS_DISJOINT_TENSOR_SUPPORT_MASKS verify_cases=6 mask_cases=... certs=4 no_new_kappa
+PASS_DISJOINT_TENSOR_SUPPORT_MASKS verify_cases=6 mask_cases=7416 certs=4 no_new_kappa
 PASS_REGISTERED_RESEARCH_PACKAGE research/disjoint-tensor-support-masks outcome=completed
 PASS_IDENTICAL_DISJOINT_TENSOR_SUPPORT_MASK_RECEIPTS
 ```
