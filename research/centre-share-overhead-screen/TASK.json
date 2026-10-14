@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task_id": "centre-path-sharing",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_nonce": "1707ecf836f0e426690c9e33d5d902df",
+  "catalog_scope_key": "a55534776f5479f1686c",
+  "original_card": {
+    "id": "centre-path-sharing",
+    "question": "Can the 64-per-call centre path (eight rank-8 COPY/ERASE totals through the private temporary) be shared across calls or shrunk?",
+    "starting_points": [
+      "research/complex-local-word-ceiling/README.md",
+      "research/split-centres-global/proofs/PR386-BIT-GEOMETRY.txt",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Derive a fully charged favorable relaxation for sharing one centre path across k calls, including restoration, hosting and precision.",
+      "Prove a lower bound on copied information per call for the selected decoder contract."
+    ],
+    "acceptance_gate": "Show the changed centre charge and copy profile per call with every added restoration or hosting cost charged, and its ceiling via ceiling.ceiling(centre=...).",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Write the per-call centre charge and copy children for sharing across k = 2 calls, charge the sharing overhead, and screen it; stop this route if even the ideal sharing gains under 10%. Ideal budgets: free 2.80x, shared by two 1.90x (levers.py).",
+    "bottleneck_link": "The centre path consumes 64 of about 99.6 unpaid coordinates per call, i.e. about 64% of the raw deficit.",
+    "allowed_variations": [
+      "One sharing pattern across a fixed number of calls.",
+      "One reduced copied-total contract for the existing decoder.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Removing copies without a replacement contract for the decoder's copied totals."
+    ],
+    "overlap_terms": [
+      "centre path",
+      "copied totals",
+      "private temporary",
+      "shared centre",
+      "batching"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "For k=2 sharing on the selected paid local word, charge restoration/hosting overhead into ceiling.ceiling and test the card's ≥10% screened-ceiling gate; separate copy-child amortization (centre charge fixed at 64) from a reduced coverage-law centre charge.",
+  "scope_change_reason": "The catalogue first experiment asks to charge sharing overhead after writing the per-call centre charge and copy children. Ideal zero-overhead share-by-2 already clears 10%, so the useful refinement is which charged obligation is binding: amortizing the eight rank-8 COPY/ERASE children versus reducing the coverage-law centre charge parameter.",
+  "bottleneck_link": "The centre path consumes 64 of about 99.6 unpaid coordinates per call (~64% of the raw deficit). Packing-only gains on this word are capped under +0.87%; a centre-charge change is one of the levers with ideal headroom beyond packing.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop the construction route for the ≥10% gate if copy-only amortization with fixed centre charge 64 is the only available contract; continue only for contracts that reduce the coverage centre charge to ≤60 (or replace the coverage model).",
+  "outcome": "completed",
+  "evidence": "PASS_CENTRE_SHARE_OVERHEAD_SCREEN ideal_gate=PASS copy_only_gate=FAIL max_centre_for_10pct=60 rank1_overhead_clears_all_idle=True controls=8 no_new_kappa",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for task selection, overlap checks, certified-interval screen design, verifier implementation, and writing. Human donor supplied the standard donation prompt and quality-bar corrections.",
+  "predecessors": [
+    "research/complex-local-word-ceiling/",
+    "certificates/selected-result.json",
+    "PR #1656 centre-cut-pair-sharing (distinct within-call screen)",
+    "PR #1684 selected-centre-cutrank (distinct transport floor)"
+  ],
+  "open_questions": [
+    {
+      "question": "Which explicit two-call contract can reduce the coverage-law centre charge below 60 while remaining legal on dirty private temporaries?",
+      "why_it_matters": "The screen shows copy amortization alone cannot meet the card's ≥10% gate; only a reduced centre charge (or replacement coverage model) can.",
+      "first_step": "Write entry/exit obligations for one shared temporary across two consecutive selected-centre phases and price every restore.",
+      "blocked_by": "A concrete restoration/hosting lemma, not another packing sweep."
+    },
+    {
+      "question": "Does #1684's cut-rank transport floor of 64 per emitted centre phase survive a shared-temporary accounting that credits work across two calls?",
+      "why_it_matters": "A shared-temp model might change the measured interval or Q-entry rank used by the scalar transport bound.",
+      "first_step": "Restate #1664/#1684 with an explicit two-call history span.",
+      "blocked_by": "Agreement on the shared-temp observation model."
+    }
+  ]
+}
