@@ -74,6 +74,27 @@ Also: `python3 -B scripts/research_package.py --package research/selected-comple
 - commdata2338: bit projector ledger (#1421).
 - Rohan Arun / Jeremy Kothe and the frontier1094 packing lineage.
 
+
+
+## Disposition (2026-10-14)
+
+**Defer upstream publication.** Bounded probes against live main `0b1cccf8`:
+
+| Prior | What it already proves |
+|---|---|
+| [CrocSwap/integer-mult-bounds#1240](https://github.com/CrocSwap/integer-mult-bounds/pull/1240) | Packing ceiling model and diagnosis figures |
+| [CrocSwap/integer-mult-bounds#1262](https://github.com/CrocSwap/integer-mult-bounds/pull/1262) | Emitted complex ledger rebuild |
+| [CrocSwap/integer-mult-bounds#1293](https://github.com/CrocSwap/integer-mult-bounds/pull/1293) | `a* < D/E` diagnostic |
+| [CrocSwap/integer-mult-bounds#1334](https://github.com/CrocSwap/integer-mult-bounds/pull/1334) | Bit-side lever budgets |
+| [CrocSwap/integer-mult-bounds#1421](https://github.com/CrocSwap/integer-mult-bounds/pull/1421) | Bit projector ledger |
+
+**Independence (precise):** `enclosure.py` is code-disjoint from `research/complex-local-word-ceiling/ceiling.py` (binary `ln 2` + odd reduction + Mercator `ln(1+x)` + Taylor `exp`, not atanh-successor chains). It still shares classical Mercator/Taylor range logic with earlier vendored moment engines (e.g. PR559 `engines/moment.py`). Diagnosis quantities reprint the known portfolio.
+
+**no-q-adic:** A useful check must inspect the transitive `emit_local`/controller path and inject a meaningful selector counterexample. Keyword absence / vocabulary counting is not a compiler theorem; PR559 already argues the premise in review prose. Not completed in this bounded budget.
+
+Fork PR kept for record; not submitted to CrocSwap.
+
+
 Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu;
 [@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance.
 New work Apache-2.0; retain source notices.
