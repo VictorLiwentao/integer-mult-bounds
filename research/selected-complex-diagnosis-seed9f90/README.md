@@ -74,6 +74,6 @@ Also: `python3 -B scripts/research_package.py --package research/selected-comple
 - commdata2338: bit projector ledger (#1421).
 - Rohan Arun / Jeremy Kothe and the frontier1094 packing lineage.
 
-Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu; optional X
-[@Is__Victor](https://x.com/Is__Victor)) with substantial Cursor/Composer AI
-assistance. New work Apache-2.0; retain source notices.
+Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu;
+[@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance.
+New work Apache-2.0; retain source notices.

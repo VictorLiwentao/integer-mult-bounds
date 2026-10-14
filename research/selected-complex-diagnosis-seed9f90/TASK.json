@@ -55,7 +55,7 @@
   "author": "Wentao Li",
   "github": "VictorLiwentao",
   "email": "wentaol4@illinois.edu",
-  "ai_assistance": "Substantial Cursor/Composer AI assistance for task selection, overlap checks, independent enclosure design, verifier implementation, and writing. No independent human review is claimed.",
+  "ai_assistance": "Substantial AI assistance for task selection, overlap checks, independent enclosure design, verifier implementation, and writing. No independent human review is claimed.",
   "local_claim": {
     "posted_to_discussions": false,
     "expiry_utc": "2026-10-14T09:53Z",
