@@ -1,5 +1,12 @@
 # Faster historical inplace-side compile_side with identical gate lists
 
+**Deferred from upstream publication.** Identity holds (fieldwise-identical gate
+lists / pivots / small-scalar controls), but fresh-process median speedup on
+`h∈{22,26,30}` is only **~1.08×**, below the #756 / #1793 tooling bar. Keep as
+packaged evidence answering #1793’s `compile_side` OQ; do not open a CrocSwap PR
+until a larger residual (XOR-loop) win exists. Production tip on this branch is
+not intended for merge as-is.
+
 **Tooling improvement; no new kappa.** At base
 `0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2`, merged
 [CrocSwap/integer-mult-bounds#1793](https://github.com/CrocSwap/integer-mult-bounds/pull/1793)
