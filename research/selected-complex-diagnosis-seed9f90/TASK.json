@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser": {
+    "nonce": "9f90e3a535639d71c064e320e06118ad",
+    "track": "independent-verification",
+    "scope_key": "c6f2494b197df3bc3591",
+    "also_suggested": ["formal-interface-lemma"]
+  },
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Can one selected pricing or assembly claim be checked by a genuinely independent exact implementation?",
+    "starting_points": [
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Reconstruct the rank ledger from original operations rather than trusting its aggregate.",
+      "Implement certified moment inequalities through a different exact enclosure method."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Record the selected certificate and complex_profile rather than taking a PR headline as input.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Recompute one small part of the ledger or one certified enclosure using an independent implementation.",
+    "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+    "allowed_variations": [
+      "Reconstruct either a source ledger or a numeric enclosure with a different method."
+    ],
+    "scope_change_triggers": [
+      "Importing the primary function and calling its output independent verification."
+    ],
+    "overlap_terms": [
+      "independent moment",
+      "rank histogram",
+      "exact enclosure"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Code-disjoint exact certification of the selected complex revision-3 diagnosis ledger (mass, D, coverage identity, unpaid-after-centre, live families/call, effective child rank, D/E) and the six ideal lever packing ceilings cited in autoresearch.md, from ASSEMBLY.json's complex_profile, without importing research/complex-local-word-ceiling/; Mercator/binary-ln2 enclosure distinct from #1240's atanh chains; kappa checked as the 18-decimal truncation of a/(1+a).",
+  "scope_change_reason": "Preserves the card's independent-enclosure method. Operation-to-ledger reconstruction is already covered for this record (#1262 complex emitted ledger, #1421 bit projectors). Endpoint moment engines and the a<D/E lemma are covered by #1293. This session binds the portfolio diagnosis text and lever table to the selected certificate with a different enclosure.",
+  "bottleneck_link": "The donated portfolio and lever table rest on these exact arithmetic claims. Independent corroboration of unpaid-after-centre ≈35.6, families/call ≈99.6, r_eff ≈3.9 and the ×2.80/×1.90/×2.31/×3.77/×6.51 ceilings reduces the risk that coordination targets float free of the selected assembly.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after diagnosis identities, D/E intersection with PR1293, packing-ceiling containment of #1240, all six lever multipliers within ±0.005 of the published two-decimal figures, and semantic controls pass; or stop on the first failing check.",
+  "outcome": "completed",
+  "evidence": "RESULT.json: PASS_SELECTED_COMPLEX_DIAGNOSIS; D=5120; unpaid 320/9; families 896/9; r_eff≈3.9159; D/E intersects PR1293; ceiling contains 1690054109089/10^15; levers match published ×2.80/×1.90/×2.31/×1.62/×3.77/×6.51; kappa is the 18-decimal truncation of complex a/(1+a).",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for task selection, overlap checks, independent enclosure design, verifier implementation, and writing. No independent human review is claimed.",
+  "local_claim": {
+    "posted_to_discussions": false,
+    "expiry_utc": "2026-10-14T09:53Z",
+    "text": "CLAIM independent-moment refined to selected complex revision-3 diagnosis + lever ceilings; seed 9f90e3a535639d71c064e320e06118ad; base 0b1cccf86e2f5132ed286a26ef0a681a495740ea."
+  },
+  "open_questions": [
+    {
+      "question": "Can the no-q-adic-selector premise (b) of the surcharge-free complex recurrence be checked from the pinned emit/controller rules rather than the PR552/PR559 review prose?",
+      "why_it_matters": "The selected kappa uses the native complex moment (surcharge false); premise (b) is still inherited.",
+      "first_step": "Code-disjoint static event-vocabulary check on the bound emit_local and hosted schedule in the frontier1094 capsule.",
+      "blocked_by": "None beyond careful reading of the pinned capsule."
+    },
+    {
+      "question": "Do the same diagnosis identities hold for each open complex claim whose local word leaves the #1240 packing model?",
+      "why_it_matters": "Portfolio triage of claims above the selected kappa needs per-word unpaid/lever numbers.",
+      "first_step": "Extract one claim's per-call local profile and idle histogram, then rerun this checker.",
+      "blocked_by": "Per-claim idle histogram extraction from each package."
+    }
+  ],
+  "predecessor_credit": [
+    "Douglas Colkitt (#1240 diagnosis and packing ceiling)",
+    "Sagar Thakrar (#1262 emitted ledger, #1334 bit levers)",
+    "Navinor (#1293 D/E diagnostic)",
+    "commdata2338 (#1421 bit projector ledger)",
+    "Rohan Arun / Jeremy Kothe (frontier1094 lineage)"
+  ]
+}
