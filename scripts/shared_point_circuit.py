@@ -6,7 +6,6 @@ by half a million dense global bit vectors. A sum that occurs in two distinct
 common-point groups must be a pair-star; its fixed pair and union of vertices
 identify its support exactly.
 """
-from functools import lru_cache
 from hashlib import sha256
 from itertools import combinations
 
@@ -59,31 +58,66 @@ class SharedPointCircuit:
             if self.args[n]:stack.extend(self.args[n])
         self.additions=sum(self.args[n] is not None for n in self.active)
 
-    @lru_cache(maxsize=16384)
     def support_in(self,node,common):
-        """Exact pair-input support in coordinates with this common point."""
-        assert self.core[node]&(1<<common)
-        if self.args[node] is None:
-            pair=tuple(x for x in self.inputs[node-1] if x!=common)
-            return 1<<(self.pair_ids[common][pair]-1)
-        old,local=self.provenance[node]
-        if old==common:return self.local.support[local]
-        # This node occurs in two groups, so every triple contains both points.
-        assert self.core[node].bit_count()==2
-        fixed=self.core[node]&~(1<<common)
-        other=fixed.bit_length()-1
-        remaining=self.union[node]&~self.core[node]
-        answer=0
-        while remaining:
-            bit=remaining&-remaining;remaining-=bit
-            pair=tuple(sorted((other,bit.bit_length()-1)))
-            answer|=1<<(self.pair_ids[common][pair]-1)
+        """Exact pair-input support in coordinates with this common point.
+
+        Tooling note (shared-point / bit-compression frame replay): results are
+        memoized in a per-instance dense table indexed by ``node * h + common``
+        instead of a process-wide ``lru_cache(maxsize=16384)``. The historical
+        full-size checker (``h=46``) asks for far more than 16384 distinct
+        ``(node, common)`` pairs during ``verify_frames``, so the small LRU
+        thrashed. Leaf triples and two-point stars unpack pairs without a
+        generator or ``sorted`` call. Returned bitmasks are unchanged. See
+        ``research/shared-point-frame-contains/``.
+        """
+        try:
+            cache=self._support_in_cache
+        except AttributeError:
+            cache=[None]*(len(self.args)*self.h)
+            self._support_in_cache=cache
+        h=self.h
+        idx=node*h+common
+        hit=cache[idx]
+        if hit is not None:
+            return hit
+        core_row=self.core
+        core=core_row[node]
+        assert core&(1<<common)
+        edge=self.args[node]
+        if edge is None:
+            a,b,d=self.inputs[node-1]
+            if a==common:pair=(b,d) if b<d else (d,b)
+            elif b==common:pair=(a,d) if a<d else (d,a)
+            else:pair=(a,b) if a<b else (b,a)
+            answer=1<<(self.pair_ids[common][pair]-1)
+        else:
+            old,local=self.provenance[node]
+            if old==common:
+                answer=self.local.support[local]
+            else:
+                # This node occurs in two groups, so every triple contains both points.
+                assert core.bit_count()==2
+                fixed=core&~(1<<common)
+                other=fixed.bit_length()-1
+                remaining=self.union[node]&~core
+                answer=0
+                pid=self.pair_ids[common]
+                while remaining:
+                    bit=remaining&-remaining;remaining-=bit
+                    x=bit.bit_length()-1
+                    pair=(other,x) if other<x else (x,other)
+                    answer|=1<<(pid[pair]-1)
+        cache[idx]=answer
         return answer
 
     def contained(self,a,b):
-        common=(self.core[b]&-self.core[b]).bit_length()-1
-        return bool(self.core[a]&(1<<common)) and not (
-            self.support_in(a,common)&~self.support_in(b,common))
+        """Exact support nesting of node ``a`` inside node ``b``'s span."""
+        core=self.core
+        core_b=core[b]
+        common=(core_b&-core_b).bit_length()-1
+        if not core[a]&(1<<common):
+            return False
+        return not (self.support_in(a,common)&~self.support_in(b,common))
 
     def verify(self):
         """Exact support nesting and a byte-stable circuit digest.
@@ -141,23 +175,83 @@ class SharedPointCircuit:
     compile=ExclusionCircuit.compile
 
     def verify_frames(self,code=None):
-        """Check all role inclusions; reverse frames are orthogonal complements."""
-        code=code or self.compile();frames=[0]*code['roles']
-        for triple,slot in code['sources'].items():frames[slot]=self.variables[triple]
+        """Check all role inclusions; reverse frames are orthogonal complements.
+
+        Tooling note (shared-point / bit-compression frame replay): the nesting
+        walk uses the same per-instance dense ``support_in`` table as above, but
+        through local closures that bind hot rows once per call. Compile input,
+        nesting predicates, and the returned receipt fields are unchanged. See
+        ``research/shared-point-frame-contains/``.
+        """
+        code=code or self.compile()
+        h=self.h
+        try:
+            cache=self._support_in_cache
+        except AttributeError:
+            cache=[None]*(len(self.args)*h)
+            self._support_in_cache=cache
+        core=self.core;args=self.args;provenance=self.provenance
+        inputs=self.inputs;pair_ids=self.pair_ids
+        local_support=self.local.support;union=self.union
+        variables=self.variables;outputs=self.outputs
+
+        def support_in(node,common):
+            idx=node*h+common
+            hit=cache[idx]
+            if hit is not None:
+                return hit
+            c=core[node]
+            assert c&(1<<common)
+            edge=args[node]
+            if edge is None:
+                a,b,d=inputs[node-1]
+                if a==common:pair=(b,d) if b<d else (d,b)
+                elif b==common:pair=(a,d) if a<d else (d,a)
+                else:pair=(a,b) if a<b else (b,a)
+                answer=1<<(pair_ids[common][pair]-1)
+            else:
+                old,local=provenance[node]
+                if old==common:
+                    answer=local_support[local]
+                else:
+                    assert c.bit_count()==2
+                    fixed=c&~(1<<common)
+                    other=fixed.bit_length()-1
+                    remaining=union[node]&~c
+                    answer=0
+                    pid=pair_ids[common]
+                    while remaining:
+                        bit=remaining&-remaining;remaining-=bit
+                        x=bit.bit_length()-1
+                        pair=(other,x) if other<x else (x,other)
+                        answer|=1<<(pid[pair]-1)
+            cache[idx]=answer
+            return answer
+
+        def contained(a,b):
+            cb=core[b]
+            common=(cb&-cb).bit_length()-1
+            return bool(core[a]&(1<<common)) and not (
+                support_in(a,common)&~support_in(b,common))
+
+        frames=[0]*code['roles']
+        for triple,slot in code['sources'].items():frames[slot]=variables[triple]
         for node,ins,outs in code['gates']:
             for slot in set(ins+outs):
-                assert not frames[slot] or self.contained(frames[slot],node)
+                prev=frames[slot]
+                assert not prev or contained(prev,node)
                 frames[slot]=node
-        for target,slot in code['outputs'].items():assert frames[slot]==self.outputs[target]
+        for target,slot in code['outputs'].items():assert frames[slot]==outputs[target]
         # Output target lines enter the complement of these output spans.
         # The exact output relation proved above supplies that orthogonality.
         reverse=[0]*code['roles']
-        for target,slot in code['outputs'].items():reverse[slot]=self.outputs[target]
+        for target,slot in code['outputs'].items():reverse[slot]=outputs[target]
         for node,ins,outs in reversed(code['gates']):
             for slot in set(ins+outs):
-                assert not reverse[slot] or self.contained(node,reverse[slot])
+                prev=reverse[slot]
+                assert not prev or contained(node,prev)
                 reverse[slot]=node
-        for triple,slot in code['sources'].items():assert reverse[slot]==self.variables[triple]
+        for triple,slot in code['sources'].items():assert reverse[slot]==variables[triple]
         return dict(roles=code['roles'],forward_frames_nested=True,
                     reverse_complement_frames_nested=True,
                     nondegeneracy='Every source span has a common point; its orthogonal complement is nondegenerate.')
