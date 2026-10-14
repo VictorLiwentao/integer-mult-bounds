@@ -42,11 +42,12 @@ historical-checker change.
 
 ## Result
 
-On Linux / CPython 3.12.3 (host platform recorded in [RESULT.json](RESULT.json)),
-five alternating fresh-process pairs timing only `DisjointTensor(26).verify`
-(construction excluded) gave the median wall time recorded there. Timing is
-host-descriptive and is not a correctness gate. Every verify receipt matches the
-baseline checker fieldwise (`roles`, `additions`, `dag_sha256`, flags).
+On Linux / CPython 3.12.3 (Linux-6.12.94+-x86_64-with-glibc2.39), five
+alternating fresh-process pairs timing only `DisjointTensor(26).verify`
+(construction excluded) gave median wall time **1.101 → 0.606 seconds (1.82×)**.
+Timing is host-descriptive and is not a correctness gate; all samples and
+environment pins are in [RESULT.json](RESULT.json). Every verify receipt matches
+the baseline checker fieldwise (`roles`, `additions`, `dag_sha256`, flags).
 
 ## Equivalence
 
