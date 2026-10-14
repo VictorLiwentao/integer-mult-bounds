@@ -77,6 +77,25 @@ posing the unpaid-coordinate question and releasing the line-port diagnosis
 this package independently formalizes and checks. Plane-port decoder work on
 that thread is not consumed.
 
+
+
+## Disposition (2026-10-14)
+
+**Defer upstream publication** after internal skeptical review.
+
+The packing screens and `terminal_Y == q` attestation are real and distinct from
+[CrocSwap/integer-mult-bounds#1348](https://github.com/CrocSwap/integer-mult-bounds/pull/1348).
+The headline `U ≤ v(N−d)` ⇒ `u=2` blocked jump was judged circular: the machine
+checks re-verify the bound arithmetic and a monotone rank counter, but do not
+derive the unpaid-count inequality without assuming the equality accounting.
+The dirty toy is a fiat endpoint, not a coverage-law geometric replacement.
+`N−d ≥ 16` clashes with the package’s own plane-port escape at fixed `N=9`.
+
+Not submitted to CrocSwap. A future useful delta would either (a) derive the
+counting lemma without assuming equality accounting, or (b) narrow the claim to
+the attested pins + packing screens without a route-closing obstruction.
+
+
 Prepared by Wentao Li ([VictorLiwentao](https://github.com/VictorLiwentao),
 [@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance, under
 Apache-2.0. No independent human review, Lean formalization, or selected cold
