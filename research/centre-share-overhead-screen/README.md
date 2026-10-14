@@ -77,6 +77,22 @@ Chooser nonce `1707ecf836f0e426690c9e33d5d902df`. Not run: `make frontier1094-ve
 2. Does #1684’s transport floor of 64 survive shared-temporary accounting across
    two calls?
 
+
+
+## Disposition (2026-10-14)
+
+**Defer upstream publication.** Bounded probes against live main `0b1cccf8`:
+
+| Prior | What it already proves (code/proof read) |
+|---|---|
+| [CrocSwap/integer-mult-bounds#1348](https://github.com/CrocSwap/integer-mult-bounds/pull/1348) (`74768ab4`) | Code-disjoint exact unpaid/centre/families/word-scaling thresholds for T1/T2, pair points, D/E margins, monotonicity/failure controls |
+| [CrocSwap/integer-mult-bounds#1708](https://github.com/CrocSwap/integer-mult-bounds/pull/1708) (`4d163c04`) | Shared-source forward fanout construction; complete local invoice 416→384; profile rank-8 8→4 |
+| [CrocSwap/integer-mult-bounds#1714](https://github.com/CrocSwap/integer-mult-bounds/pull/1714) (`333acd5b`) | Scoped all-batch floor 64·rank(C) in the P112 root-code model |
+| [CrocSwap/integer-mult-bounds#1748](https://github.com/CrocSwap/integer-mult-bounds/pull/1748) (`ea14f191`) | Shared reverse phase + precision/overhead inequality |
+
+This package’s certified 10% card-gate cut (copies=4 ⇒ centre ≤60 PASS / ≥61 FAIL) and copy-only FAIL at centre 64 are packing-parameter screens. The #1708 fused rank-8 profile matches the copy-only row; adding centre-monotonicity alone does not establish a new construction or restoration lemma. Fork PR kept for record; not submitted to CrocSwap.
+
+
 ## Credit
 
 Packing ceiling / levers: `research/complex-local-word-ceiling/` (Douglas
