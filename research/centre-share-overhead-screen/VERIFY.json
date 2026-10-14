@@ -7,7 +7,8 @@
     "certificates/selected-result.json",
     "research/complex-local-word-ceiling/RESULT.json",
     "research/complex-local-word-ceiling/ceiling.py",
-    "research/complex-local-word-ceiling/levers.py"
+    "research/complex-local-word-ceiling/levers.py",
+    "research/centre-share-overhead-screen/RESULT.json"
   ],
   "commands": [
     {
@@ -17,7 +18,7 @@
         "{package}/verify.py"
       ],
       "timeout_seconds": 300,
-      "checks": "Pins, selected kappa, predecessor ceiling match, ideal share-by-2 ≥1.90x and ≥10% gate, copy-only centre=64 fails ≥10% gate, no-copies centre=64 fails gate, centre-charge threshold 60/61, full idle rank-1 overhead at centre=32 still clears gate, coverage rejection control"
+      "checks": "Read-only: pins, selected kappa, predecessor a_hi match, certified PASS/FAIL gates (interval logic), centre threshold 60/61 window scan, full idle rank-1 overhead PASS, coverage rejection, receipt equality, corruption rejection, checkout unchanged"
     },
     {
       "argv": [
@@ -28,7 +29,16 @@
         "{package}/verify.py"
       ],
       "timeout_seconds": 300,
-      "checks": "Same admission predicates with asserts disabled"
+      "checks": "Same read-only admission with asserts disabled"
     }
-  ]
+  ],
+  "regenerate": {
+    "argv": [
+      "{python}",
+      "-B",
+      "{package}/verify.py",
+      "--write"
+    ],
+    "notes": "Explicit receipt regeneration only; not the default verify path."
+  }
 }
