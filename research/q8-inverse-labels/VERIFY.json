@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/bit-dihedral-commutator/README.md",
+    "research/bit-dihedral-commutator/TASK.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Q8 group laws and inverse identities, six rank-one idempotents, 24-generator inverse-label alphabet strictly containing the positive-only 12-generator subset, D_N(g)^2 = D_N(g^2), GL_2(F2) conjugation closure, complete BFS layers to depth 4 with depth-3 miss of both pair targets, exact distance-4 minima for diag([z],[z]) and diag([xy],[yx]), positive and inverse-square direct words, independent engine-B replay, omission and mutated-target controls, certificate equality."
+    }
+  ]
+}
