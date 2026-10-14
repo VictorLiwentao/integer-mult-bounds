@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/community-frontier1094-audit/ASSEMBLY.json",
+    "certificates/selected-result.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Diagnosis identities, D/E intersection with PR1293, packing-ceiling containment of #1240, six lever multipliers, kappa truncation, semantic failure controls; compares stable fields to committed RESULT.json."
+    }
+  ]
+}
