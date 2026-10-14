@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
-"""Standalone re-check of the selected PR1042 finite invoice and outer admission.
+"""Standalone re-check of the historical PR1042 finite invoice and outer admission.
 
 Independent verification, assignment seed 81. Standard library only. Nothing
-from the repository is imported or executed: the committed selected assembly,
-the committed selected replay archive and the cited PR589 record are read as
+from the repository is imported or executed: the committed #1042 assembly,
+the committed #1042 replay archive and the cited PR589 record are read as
 data. Prepared by Wronskode (@Wronskode) with substantial AI assistance from Claude
-(Anthropic) via Claude Code. Apache-2.0.
+(Anthropic) via Claude Code. Checkpoint-pin repair by Wentao Li with substantial
+Cursor/Composer assistance. Apache-2.0.
 
 Scope: arithmetic from the frozen owner audit and invoice receipts to kappa.
 The receipts' semantic content (words, owners, hosting, local replays) and the
 moment endpoints themselves are taken as data; see README.md.
+
+Binding: the record pin is the frozen checkpoint
+``certificates/checkpoints/frontier1042.json``, not the moving
+``certificates/selected-result.json`` pointer. After #1094 became selected,
+the moving pointer made ``make frontier1042-invoice-audit-verify`` fail with
+``selected certificate path moved`` even though the historical audit is intact.
 """
 import argparse
 import copy
@@ -24,7 +31,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 AUDIT = 'research/community-frontier1042-audit'
-# Selected certificate at base ba82555c; archive members are pinned by the assembly itself.
+# Frozen historical record; archive members are pinned by the assembly itself.
+CHECKPOINT = 'certificates/checkpoints/frontier1042.json'
+CHECKPOINT_SHA256 = '207d1f49f113c585024b9d3c17eadbb8b1be17c1321e3d190aabe2f18ce1c5b7'
 ASSEMBLY_SHA256 = '093f35445812ea96fe1bfe6a3af7d769cb7f274e08f4fb30f71a17ed1161e54e'
 BIT_PATH = 'research/e8-bit-p111-tuned/tune/EXPECTED.json'
 BIT_BLOB = 'e293ddc557742637f9f679f083a1a282d87b1b13'   # PR589 blob, cited in the assembly
@@ -128,13 +137,23 @@ def orthogonal_odd_brute(n):
 
 # ---------------------------------------------------------------- inputs
 def load_inputs(root):
-    sel = json.loads((root / 'certificates/selected-result.json').read_bytes())
-    need(sel['certificate'] == AUDIT + '/ASSEMBLY.json', 'selected certificate path moved')
+    """Bind the historical #1042 certificate through its frozen checkpoint.
+
+    The moving selected-result pointer is intentionally not consulted: this
+    audit must keep working after a later record becomes selected.
+    """
+    ck_path = root / CHECKPOINT
+    ck_bytes = ck_path.read_bytes()
+    need(sha256(ck_bytes) == CHECKPOINT_SHA256, 'checkpoint receipt hash mismatch')
+    rec = json.loads(ck_bytes)
+    need(rec['certificate'] == AUDIT + '/ASSEMBLY.json', 'checkpoint certificate path moved')
+    need(rec.get('certificate_sha256') == ASSEMBLY_SHA256,
+         'checkpoint certificate_sha256 pin mismatch')
     asm_bytes = (root / AUDIT / 'ASSEMBLY.json').read_bytes()
-    need(sha256(asm_bytes) == sel['certificate_sha256'] == ASSEMBLY_SHA256,
-         'ASSEMBLY.json does not match the selected-record pin')
+    need(sha256(asm_bytes) == rec['certificate_sha256'] == ASSEMBLY_SHA256,
+         'ASSEMBLY.json does not match the checkpoint pin')
     asm = json.loads(asm_bytes)
-    need(sel['kappa'] == asm['kappa'], 'selected kappa differs from assembly')
+    need(rec['kappa'] == asm['kappa'], 'checkpoint kappa differs from assembly')
     members = {}
     with tarfile.open(root / AUDIT / 'selected-replay.tar.gz') as tar:
         for name in (OWNER_MEMBER, INVOICE_MEMBER, ASSEMBLY_MEMBER):
@@ -145,7 +164,8 @@ def load_inputs(root):
     bit_bytes = (root / BIT_PATH).read_bytes()
     need(git_blob(bit_bytes) == BIT_BLOB == asm['bit_supplier']['git_blob_sha1'], 'PR589 blob pin')
     return dict(asm=asm, owner=json.loads(members[OWNER_MEMBER]),
-                invoice=json.loads(members[INVOICE_MEMBER]), bit=json.loads(bit_bytes))
+                invoice=json.loads(members[INVOICE_MEMBER]), bit=json.loads(bit_bytes),
+                checkpoint=rec, checkpoint_path=CHECKPOINT)
 
 
 # ---------------------------------------------------------------- A: profile

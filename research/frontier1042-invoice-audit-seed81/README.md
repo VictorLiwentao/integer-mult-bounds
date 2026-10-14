@@ -1,11 +1,21 @@
-# Independent re-check of the selected PR1042 finite invoice and outer admission
+# Independent re-check of the historical PR1042 finite invoice and outer admission
 
 **Status: independent verification. No new κ, and the selected result is unchanged. No discrepancy was found.**
 
 - **Track and seed:** track 75–84 (independent verification), assignment seed **81** from the OS CSPRNG (Python `secrets`).
 - **Base commit:** `ba82555c64e1879e4b7decce28186f208fcb8262`.
-- **Audited record:** `research/community-frontier1042-audit/ASSEMBLY.json`, sha256 `093f3544…1e54e`. This is the `certificate_sha256` in `certificates/selected-result.json`, with κ = 1672188119205421/10¹⁸.
+- **Audited record:** `research/community-frontier1042-audit/ASSEMBLY.json`, sha256 `093f3544…1e54e`. Bound through the frozen checkpoint `certificates/checkpoints/frontier1042.json` (not the moving `selected-result.json` pointer), with κ = 1672188119205421/10¹⁸.
 - **Adds:** this directory and one Makefile target.
+
+**Checkpoint-pin repair (no arithmetic change).** After #1094 became selected, the
+moving selected-record pointer made `make frontier1042-invoice-audit-verify` fail
+with `selected certificate path moved` while the historical #1042 audit remained
+intact. The loader now pins the frozen checkpoint (path, `certificate_sha256`,
+kappa, and the checkpoint file SHA-256). Default verify stays read-only and still
+compares the regenerated receipt to the committed `RESULT.json` byte for byte;
+`--write` is required to rewrite it. The committed `RESULT.json` SHA-256 is
+unchanged (`b9ca758d…`). Identified as a handoff in the #1735 certificate-binding
+audit; applied here.
 
 ## Why
 
@@ -126,4 +136,4 @@ Six unit tests should then pass. The run takes about 1.5 s on Python 3.10+, need
 - **Predecessor guard audit:** theon199's #771 established the group order and the nine-guard recomputation for the #626 invoice, including the row-guard sensitivity to replacing the group with GL(73,2). This package extends that check to the selected #1042 invoice, the per-vertex envelope, the bootstrap chain and the outer slacks. It does not claim priority for the group-order identity.
 - **Neighbouring audits whose boundaries this complements:** #1069 and #1051 (Sagar Thakrar), #1052 (steph4n-gh), #1091 (JosieElliston), #1049 and #1009.
 
-Prepared by Wronskode (@Wronskode) with substantial AI assistance from Claude (Anthropic) via Claude Code. New material is Apache-2.0.
+Prepared by Wronskode (@Wronskode) with substantial AI assistance from Claude (Anthropic) via Claude Code. Checkpoint-pin repair by Wentao Li with substantial Cursor/Composer assistance, following the #1735 handoff. New material is Apache-2.0.
