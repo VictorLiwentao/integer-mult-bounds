@@ -1,0 +1,287 @@
+{
+  "baseline_a_ceiling": "1690054109089/1000000000000000",
+  "centre_charge_threshold": {
+    "copies": 4,
+    "max_centre_charge": 60,
+    "multiplier": "1884965006755/1690054109089",
+    "multiplier_float": 1.1153281996225932,
+    "next_centre_fails": 61,
+    "next_multiplier_float": 1.0872077830019575
+  },
+  "centre_curve_copies4": [
+    {
+      "a_ceiling": "169482500239/100000000000000",
+      "a_ceiling_float": 0.00169482500239,
+      "centre": "64",
+      "clears_10pct_gate": false,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1678",
+      "local_mass": "5554",
+      "multiplier": "1694825002390/1690054109089",
+      "multiplier_float": 1.0028229234054356,
+      "name": "copies4_centre64"
+    },
+    {
+      "a_ceiling": "376993001351/200000000000000",
+      "a_ceiling_float": 0.001884965006755,
+      "centre": "60",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1674",
+      "local_mass": "5554",
+      "multiplier": "1884965006755/1690054109089",
+      "multiplier_float": 1.1153281996225932,
+      "name": "copies4_centre60"
+    },
+    {
+      "a_ceiling": "1037499325421/500000000000000",
+      "a_ceiling_float": 0.002074998650842,
+      "centre": "56",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1670",
+      "local_mass": "5554",
+      "multiplier": "2074998650842/1690054109089",
+      "multiplier_float": 1.2277705427789523,
+      "name": "copies4_centre56"
+    },
+    {
+      "a_ceiling": "2454747283343/1000000000000000",
+      "a_ceiling_float": 0.002454747283343,
+      "centre": "48",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1662",
+      "local_mass": "5554",
+      "multiplier": "2454747283343/1690054109089",
+      "multiplier_float": 1.4524666814757767,
+      "name": "copies4_centre48"
+    },
+    {
+      "a_ceiling": "1417035874379/500000000000000",
+      "a_ceiling_float": 0.002834071748758,
+      "centre": "40",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1654",
+      "local_mass": "5554",
+      "multiplier": "2834071748758/1690054109089",
+      "multiplier_float": 1.6769118417668099,
+      "name": "copies4_centre40"
+    },
+    {
+      "a_ceiling": "3212972893643/1000000000000000",
+      "a_ceiling_float": 0.003212972893643,
+      "centre": "32",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1646",
+      "local_mass": "5554",
+      "multiplier": "3212972893643/1690054109089",
+      "multiplier_float": 1.9011065245567245,
+      "name": "copies4_centre32"
+    },
+    {
+      "a_ceiling": "1984754298271/500000000000000",
+      "a_ceiling_float": 0.003969508596542,
+      "centre": "16",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1630",
+      "local_mass": "5554",
+      "multiplier": "3969508596542/1690054109089",
+      "multiplier_float": 2.348746454444413,
+      "name": "copies4_centre16"
+    },
+    {
+      "a_ceiling": "295272569911/62500000000000",
+      "a_ceiling_float": 0.004724361118576,
+      "centre": "0",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1614",
+      "local_mass": "5554",
+      "multiplier": "4724361118576/1690054109089",
+      "multiplier_float": 2.795390451210228,
+      "name": "copies4_centre0"
+    }
+  ],
+  "controls": 7,
+  "copy_only_fails_gate": {
+    "a_ceiling": "169482500239/100000000000000",
+    "a_ceiling_float": 0.00169482500239,
+    "centre": "64",
+    "clears_10pct_gate": false,
+    "grid": "1/1000000000000000",
+    "idle_mass": "1678",
+    "local_mass": "5554",
+    "multiplier": "1694825002390/1690054109089",
+    "multiplier_float": 1.0028229234054356,
+    "name": "copy_only_centre64_copies4"
+  },
+  "findings": [
+    "Ideal k=2 sharing (centre charge 32, four rank-8 copies) clears the +10% gate at about 1.90x, matching levers.py.",
+    "Halving only the rank-8 COPY children while leaving the coverage-law centre charge at 64 yields only about +0.28% and fails the +10% gate.",
+    "With copies fixed at 4, the coverage-law centre charge must be at most 60 to clear +10%; centre 61 fails.",
+    "When the centre charge is reduced to 32, even consuming the entire idle mass as adversarial rank-1 overhead still clears +10%.",
+    "Therefore the binding obligation for this route is reducing the coverage-law centre charge (or an equivalent fully charged replacement model), not merely amortizing the eight private COPY/ERASE children."
+  ],
+  "ideal_share_k2": {
+    "a_ceiling": "3212972893643/1000000000000000",
+    "a_ceiling_float": 0.003212972893643,
+    "centre": "32",
+    "clears_10pct_gate": true,
+    "grid": "1/1000000000000000",
+    "idle_mass": "1646",
+    "local_mass": "5554",
+    "multiplier": "3212972893643/1690054109089",
+    "multiplier_float": 1.9011065245567245,
+    "name": "ideal_share_k2_centre32_copies4"
+  },
+  "model": {
+    "R": 51,
+    "families": 896,
+    "fine_grid": "1/1000000000000000",
+    "gate": "+10% screened ceiling vs selected-word packing ceiling",
+    "m": 73,
+    "search_grid": "1/1000000000000",
+    "selected_word": {
+      "1": 2412,
+      "2": 418,
+      "3": 432,
+      "4": 142,
+      "5": 82,
+      "8": 8
+    },
+    "stages": 9
+  },
+  "not_checked": [
+    "No physical two-call sharing circuit, restoration lemma, or dirty-temp contract.",
+    "No change to the selected supplier, cold replay, or kappa record.",
+    "Ceiling model hypotheses (coverage law, halving guard, fractional idle packing) are inherited from research/complex-local-word-ceiling."
+  ],
+  "rank1_overhead_at_centre32": {
+    "centre": "32",
+    "clears_10pct_gate": true,
+    "consumes_entire_idle_budget": true,
+    "copies": 4,
+    "idle_budget": "1646",
+    "max_rank1_overhead_mass": "1646",
+    "multiplier_at_max": "2456068774812/1690054109089",
+    "multiplier_at_max_float": 1.453248604055588
+  },
+  "rows": [
+    {
+      "a_ceiling": "1690054109089/1000000000000000",
+      "a_ceiling_float": 0.001690054109089,
+      "centre": "64",
+      "clears_10pct_gate": false,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1646",
+      "local_mass": "5586",
+      "multiplier": "1",
+      "multiplier_float": 1.0,
+      "name": "selected_baseline"
+    },
+    {
+      "a_ceiling": "3212972893643/1000000000000000",
+      "a_ceiling_float": 0.003212972893643,
+      "centre": "32",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1646",
+      "local_mass": "5554",
+      "multiplier": "3212972893643/1690054109089",
+      "multiplier_float": 1.9011065245567245,
+      "name": "ideal_share_k2_centre32_copies4"
+    },
+    {
+      "a_ceiling": "169482500239/100000000000000",
+      "a_ceiling_float": 0.00169482500239,
+      "centre": "64",
+      "clears_10pct_gate": false,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1678",
+      "local_mass": "5554",
+      "multiplier": "1694825002390/1690054109089",
+      "multiplier_float": 1.0028229234054356,
+      "name": "copy_only_centre64_copies4"
+    },
+    {
+      "a_ceiling": "424905720647/250000000000000",
+      "a_ceiling_float": 0.001699622882588,
+      "centre": "64",
+      "clears_10pct_gate": false,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1710",
+      "local_mass": "5522",
+      "multiplier": "1699622882588/1690054109089",
+      "multiplier_float": 1.0056618148777248,
+      "name": "no_rank8_copies_centre64"
+    },
+    {
+      "a_ceiling": "642113512147/200000000000000",
+      "a_ceiling_float": 0.003210567560735,
+      "centre": "32",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1642",
+      "local_mass": "5558",
+      "multiplier": "3210567560735/1690054109089",
+      "multiplier_float": 1.8996832962144694,
+      "name": "share_k2_plus_rank1_overhead4"
+    },
+    {
+      "a_ceiling": "200740188369/62500000000000",
+      "a_ceiling_float": 0.003211843013904,
+      "centre": "32",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1642",
+      "local_mass": "5558",
+      "multiplier": "3211843013904/1690054109089",
+      "multiplier_float": 1.9004379780688199,
+      "name": "share_k2_plus_rank8_overhead4"
+    },
+    {
+      "a_ceiling": "614017193703/250000000000000",
+      "a_ceiling_float": 0.002456068774812,
+      "centre": "32",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "0",
+      "local_mass": "7200",
+      "multiplier": "2456068774812/1690054109089",
+      "multiplier_float": 1.453248604055588,
+      "name": "share_k2_plus_rank1_overhead_all_idle"
+    },
+    {
+      "a_ceiling": "376993001351/200000000000000",
+      "a_ceiling_float": 0.001884965006755,
+      "centre": "60",
+      "clears_10pct_gate": true,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1674",
+      "local_mass": "5554",
+      "multiplier": "1884965006755/1690054109089",
+      "multiplier_float": 1.1153281996225932,
+      "name": "share_k2_centre60_copies4"
+    },
+    {
+      "a_ceiling": "229679997637/125000000000000",
+      "a_ceiling_float": 0.001837439981096,
+      "centre": "61",
+      "clears_10pct_gate": false,
+      "grid": "1/1000000000000000",
+      "idle_mass": "1675",
+      "local_mass": "5554",
+      "multiplier": "1837439981096/1690054109089",
+      "multiplier_float": 1.0872077830019575,
+      "name": "share_k2_centre61_copies4"
+    }
+  ],
+  "scope_status": "refined",
+  "selected_kappa": "836330098538459/500000000000000000",
+  "status": "PASS_CENTRE_SHARE_OVERHEAD_SCREEN",
+  "task_id": "centre-path-sharing"
+}
