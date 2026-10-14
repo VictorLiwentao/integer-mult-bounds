@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_id": "coverage-law-change",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "a946c496b01c23f36f2c8de5246cce74",
+  "scope_key": "f383d8fc405ee6982cdd",
+  "original_card": {
+    "id": "coverage-law-change",
+    "question": "Can a template or call contract leave two or more unpaid coordinates per live family?",
+    "starting_points": [
+      "research/complex-local-word-ceiling/README.md",
+      "research/idle-axis-hosting/PROOF.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "State a replacement for the coverage identity (mass = 72W + 64N) and the contract change that realizes it, with its implementation cost.",
+      "Find an obstruction: show which data-endpoint obligation forces exactly one unpaid coordinate in the current template."
+    ],
+    "acceptance_gate": "An explicit replacement identity, verified on a small complete instance with dirty inputs, priced with ceiling.ceiling(unpaid=...).",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Explain where the single unpaid coordinate per family comes from in the hosted template; propose one change and price it. Ideal budget: two unpaid coordinates per family is 3.77x (levers.py).",
+    "bottleneck_link": "The deficit is one coordinate per family minus the centre charge; doubling unpaid coordinates per family scales it directly.",
+    "allowed_variations": [
+      "One template change or one endpoint-contract change.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Counting a coordinate as unpaid while leaving it unadvanced in the data endpoint."
+    ],
+    "overlap_terms": [
+      "coverage identity",
+      "unpaid coordinate",
+      "deficit law",
+      "W - 64N"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Independent machine-checked line-port counting obstruction: U <= v(N-d) blocks u=2 at selected ambient N=9; attest terminal_Y==q; exact dirty two-unpaid toy outside N=9; price ideal unpaid=2 via ceiling.ceiling.",
+  "scope_change_reason": "Card asks for an obstruction or replacement identity. This session takes the obstruction half for line ports at the selected ambient dimension, with an exact dirty toy for the replacement identity outside that ambient, rather than a plane-port decoder (claimed on Discussion #1587).",
+  "bottleneck_link": "The complex deficit is one unpaid coordinate per family minus the centre charge; showing u=2 is unreachable by template rearrangement at N=9 forces any coverage-law gain onto ambient/port-contract changes (plane ports or larger N).",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the N=9 line-port obstruction is machine-checked, the dirty toy and packing screens pass, and failure controls reject; do not enter the plane-port decoder search claimed on #1587.",
+  "outcome": "negative-result",
+  "evidence": "PASS_LINE_PORT_UNPAID_OBSTRUCTION; U_bound=896; u2_blocked; 65536 dirty toy columns; 5 controls; ideal unpaid=2 multiplier ~3.77 reproduced",
+  "author": "Wentao Li",
+  "ai_assistance": "Cursor/Composer (substantial assistance in scoping, implementation, verification and writing)",
+  "open_questions": [
+    {
+      "question": "With 112 planes in F2^9 and target caps E_t^perp, is there an exact decoder whose copy charge per call is below 1472/9 ≈ 163.6?",
+      "why_it_matters": "Plane ports leave two unpaid directions at fixed N=9, escaping this line-port obstruction.",
+      "first_step": "Compute a pairing-rank lower bound against the break-even on Discussion #1587.",
+      "blocked_by": "Active plane-port decoder claim on that thread; do not duplicate it."
+    },
+    {
+      "question": "Does the same U <= v(N-d) counting close u=2 for the PR589 bit ambient (m=64, copy charge 63)?",
+      "why_it_matters": "The bit side still caps kappa; a matching obstruction would focus bit coverage-law work.",
+      "first_step": "Pin hosted bit template receipts and rerun the bound with N=8, d=1.",
+      "blocked_by": "Hosted bit template is not a first-class tree artifact in this checkout."
+    }
+  ]
+}
