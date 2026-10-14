@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/complex-monomial-runs-seed25/CERTIFICATE.json",
+    "research/complex-monomial-runs-seed25/README.md",
+    "research/complex-monomial-runs-seed25/backward.py",
+    "research/complex-monomial-runs-seed25/finite.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Joint floor 7 vs separate closed 8; predecessor floors 4 and 8; independent forward agreement; open-midpoint witness; short/omitted-clear/wrong-completion controls"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same receipt under PYTHONOPTIMIZE"
+    }
+  ]
+}

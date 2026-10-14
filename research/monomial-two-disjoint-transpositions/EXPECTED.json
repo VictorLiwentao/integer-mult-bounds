@@ -1,0 +1,355 @@
+{
+  "assignment_seed": "606c01aeeef18054c0e46f4ce68fe3e9",
+  "cases": {
+    "clean": {
+      "backward_admissible_states": 480,
+      "backward_states_reaching_goal": 480,
+      "closed_separate_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ],
+        [
+          "copy",
+          4,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "distance_histogram": {
+        "0": 1,
+        "1": 4,
+        "2": 16,
+        "3": 48,
+        "4": 114,
+        "5": 136,
+        "6": 38,
+        "7": 3
+      },
+      "forward_primitive_edges": 2400,
+      "forward_reachable_states": 360,
+      "independent_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "open_midpoint_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "copy",
+          4,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "predecessor_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ]
+    },
+    "dirty_erase": {
+      "backward_admissible_states": 480,
+      "backward_states_reaching_goal": 480,
+      "closed_separate_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ],
+        [
+          "copy",
+          4,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "distance_histogram": {
+        "0": 1,
+        "1": 5,
+        "2": 16,
+        "3": 48,
+        "4": 114,
+        "5": 136,
+        "6": 38,
+        "7": 3
+      },
+      "forward_primitive_edges": 2405,
+      "forward_reachable_states": 361,
+      "independent_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "open_midpoint_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "copy",
+          4,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ],
+      "predecessor_witness": [
+        [
+          "copy",
+          4,
+          0
+        ],
+        [
+          "copy",
+          0,
+          1
+        ],
+        [
+          "copy",
+          1,
+          2
+        ],
+        [
+          "copy",
+          2,
+          3
+        ],
+        [
+          "copy",
+          3,
+          1
+        ],
+        [
+          "copy",
+          1,
+          4
+        ],
+        [
+          "clear",
+          4
+        ]
+      ]
+    }
+  },
+  "controls": {
+    "omitted_clear_rejected": true,
+    "predecessor_floors_replayed": true,
+    "short_word_rejected": true,
+    "wrong_second_cycle_rejected": true
+  },
+  "eliminated_mid_clear": 1,
+  "joint_minimum": 7,
+  "permutation": [
+    2,
+    1,
+    4,
+    3
+  ],
+  "predecessor_controls": {
+    "two_cycle_minimum": 4,
+    "two_plus_three_minimum": 8
+  },
+  "scope_key": "026be4b6e61971d51838",
+  "separate_closed_composition": 8,
+  "status": "PASS_MONOMIAL_TWO_DISJOINT_TRANSPOSITIONS joint=7 separate_closed=8 eliminated_mid_clear=1 no_new_kappa",
+  "task_id": "persistent-boundary"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    },
+    {
+      "path": "research/complex-monomial-runs-seed25/CERTIFICATE.json",
+      "usage": "input",
+      "git_blob": "38ba724c1168b888ca1f6f4c79a54c123f8428d7",
+      "sha256": "a9ecef31bc11654672c987bbea7b1d0e5da7d2213faaed440ae45535845639cd"
+    },
+    {
+      "path": "research/complex-monomial-runs-seed25/README.md",
+      "usage": "input",
+      "git_blob": "5f970132b996c7b4bac38243377608dfef11d391",
+      "sha256": "73dad7b44fcf282c35b4ba5ab43aedb434eb52799f7728cd6861389c28e5f270"
+    },
+    {
+      "path": "research/complex-monomial-runs-seed25/backward.py",
+      "usage": "input",
+      "git_blob": "09be9056b70851ea253113d92e0ff6bfbb86a032",
+      "sha256": "3de7fb5f50c01cc55c769f0ee55c63f01a6fba909e170b2db4842ba60d7f50d0"
+    },
+    {
+      "path": "research/complex-monomial-runs-seed25/finite.py",
+      "usage": "input",
+      "git_blob": "dec0d59f027e7d8965d9a2b5c123c14abf22933c",
+      "sha256": "a6c91d06522615c17ca93feb6149f24547dffbb773a6a292928dfdbc92b37fce"
+    }
+  ]
+}

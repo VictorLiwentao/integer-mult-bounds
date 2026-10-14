@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task_id": "persistent-boundary",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "assignment_seed": "606c01aeeef18054c0e46f4ce68fe3e9",
+  "scope_key": "026be4b6e61971d51838",
+  "original_card": {
+    "id": "persistent-boundary",
+    "question": "Can a specified pair of consecutive calls eliminate a restoration that the next call reconstructs?",
+    "starting_points": [
+      "research/heterogeneous-owner-assembly/README.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Write typed entry/exit contracts and a contracting multitype recurrence.",
+      "Derive a lower bound for the compulsory transitions of one proposed typed interface."
+    ],
+    "acceptance_gate": "Show actual eliminated work and legal composition; changing a scalar recurrence into a matrix is insufficient.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Find a concrete consecutive-call boundary in the selected review and list its entry/exit obligations.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Specify two call types and one operation actually removed by composition; derive the normalized recurrence.",
+    "bottleneck_link": "Eliminating compulsory boundary work can lower recursive cost beyond packing gains.",
+    "allowed_variations": [
+      "A two-type pilot or one explicit deferred restoration."
+    ],
+    "scope_change_triggers": [
+      "Rewriting the old scalar recurrence as a matrix without eliminating work."
+    ],
+    "overlap_terms": [
+      "persistent boundary",
+      "deferred restoration",
+      "multitype"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Exact joint COPY/CLEAR floor for two consecutive disjoint monomial transpositions with a typed open midpoint that eliminates one workspace CLEAR versus separate closed composition.",
+  "scope_change_reason": "Instantiate the card's allowed two-type pilot on the predecessor absolute-label quotient, where separate closed cost 8 and joint open/closed cost 7 are independently searchable.",
+  "bottleneck_link": "Deferring a midpoint restoration that the next transposition reconstructs is exactly the persistent-boundary lever; here the eliminated work is one CLEAR with a matching exact joint floor.",
+  "budget_minutes": 60,
+  "stop_rule": "Certify joint minimum 7 against separate closed 8 with predecessor and independent engines, positive predecessor floors, and failure controls; no supplier inference.",
+  "outcome": "completed",
+  "evidence": "EXPECTED.json: joint=7, separate_closed=8, eliminated_mid_clear=1; clean/dirty-erase state counts 360/361; predecessor floors 4 and 8 replayed; short/omitted-clear/wrong-completion controls.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance in experiment design, proof checking, packaging and prose.",
+  "open_questions": [
+    {
+      "question": "Does a selected physical caller expose two consecutive disjoint transposition boundaries that can keep this open midpoint type?",
+      "why_it_matters": "Only then does the local 8→7 saving appear in a paid recursive invoice.",
+      "first_step": "Locate consecutive CK/JP8-style 2-cycle boundaries and check whether the open work label is admitted by the next hosting cut.",
+      "blocked_by": "No selected physical caller is pinned to this monomial midpoint type."
+    },
+    {
+      "question": "Is the shared-CLEAR cost 3k+1 exact for k disjoint 2-cycles when k≥3?",
+      "why_it_matters": "Would extend the persistence saving linearly, or reveal a new obstruction.",
+      "first_step": "Run the same forward/backward engines on permutation (2,1,4,3,6,5) and compare to 10.",
+      "blocked_by": "None for the finite class; physical admission remains separate."
+    }
+  ]
+}
