@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "scripts/experiments/inplace_side.py",
+    "scripts/experiments/inplace_side_witnesses.json",
+    "scripts/audit_inplace_side.py",
+    "certificates/inplace-side.json",
+    "docs/research/inplace-side.md",
+    "tests/test_inplace_side.py",
+    "tests/test_inplace_side_compile_scan.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Exact baseline copy of the base-commit source; identical compile_side receipts on h in {6,10,14,18,22,26,30}; singular h=8 rejection; greatest-unused mutant differs on every identity size; temp-copy corruption rejected; certificates/inplace-side.json matches certificate() and differs from the base certificate only in the inplace_side.py source pin; package JSON has no duplicate keys."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Same equivalence and certificate discipline under -O (require() gates, not assert)."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_inplace_side*.py",
+        "-v"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Existing inplace-side unit tests plus focused compile-scan package controls."
+    }
+  ]
+}

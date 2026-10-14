@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "chooser_seed": "expertise-override-inplace-compile-scan",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Can scripts/experiments/inplace_side.py:compile_side replace per-column sorted(unused) pivot search with a least-unused flag scan and column masks so gate lists, pivots, initial matching and certificate small-scalar controls stay fieldwise identical on h in {6,10,14,18,22,26,30}?",
+  "scope_change_reason": "The catalogue card asks for one measured replay bottleneck with before/after wall time and retained checks. Expertise override selected verifier-engineering after profiling discarded dag_sha256 hand-roll (~1.2× on DisjointTensor.verify; blocked by open #2117 disjoint_tensor.py cert pins), MixedPoint Circuit.add/total micro-opts (~1.0×), and confirmed #1793's open next question on compile_side remains unanswered with identical gate lists.",
+  "bottleneck_link": "Side result on review throughput: compile_side shares the lexicographic pivot rule with the certificate hot-path verify_prefix (#1793) and feeds the h=6/10 small_scalar_controls. Unifying the scan removes a second O(n log n) sort per column. Not a kappa or selected-supplier change.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship an equivalence-preserving compile_side change with frozen baseline, identical gate lists through h=30, singular/mutant/temp-corruption controls, certificate pin discipline, registered replay and a measured before/after median on h in {22,26,30}. Do not reopen the mathematical rejection or run the selected cold frontier replay.",
+  "outcome": "completed",
+  "evidence": "PASS_INPLACE_SIDE_COMPILE_SCAN via research/inplace-side-compile-scan/verify.py (also under -O); PASS_IDENTICAL_INPLACE_COMPILE_RECEIPTS via benchmark.py; certificates/inplace-side.json differs from base only in the inplace_side.py source pin.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, profiling, implementation, packaging, benchmarking and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "Can the dominant O(n^2) XOR update loop inside compile_side be accelerated further without changing gate order?",
+      "why_it_matters": "After removing sorted(unused), fresh-process medians on h in {22,26,30} are only about 1.2×; the remaining wall time is the dense row-XOR scan.",
+      "first_step": "Profile compile_side(h=34) and test a column-resident active-row structure that preserves increasing-i gate order.",
+      "blocked_by": "Out of this session's stop rule; not required for the identical-gate-list claim."
+    },
+    {
+      "question": "Should verify-certificates adopt a soft regression timer for compile_side on h=30?",
+      "why_it_matters": "A future edit could restore sorted(unused) without failing equivalence tests.",
+      "first_step": "Decide whether RESULT.json medians belong in CI or remain descriptive.",
+      "blocked_by": "Maintainer CI-budget preference."
+    }
+  ]
+}

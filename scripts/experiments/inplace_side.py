@@ -28,14 +28,24 @@ def central_type(h):
 
 
 def compile_side(h):
-    triples,points,rows=triple_side(h);n=len(rows);work=list(rows);unused=set(range(n));ops=[]
+    """Compile the lexicographic n-role Gauss--Jordan side map.
+
+    Tooling note (inplace-side replay): the pivot is still the least unused row
+    with the column bit set, but the search uses an unused-flag scan and a
+    column mask instead of rebuilding ``sorted(unused)`` each column. Gate
+    lists, pivots, initial matching and every receipt field stay identical.
+    See ``research/inplace-side-compile-scan/``.
+    """
+    triples,points,rows=triple_side(h);n=len(rows);work=list(rows);unused=[True]*n;ops=[]
     require(h%4==2,'The n-role side matrix is singular for h divisible by four')
-    pivots=[]
+    pivots=[];append=ops.append
     for col in range(n):
-        p=next(i for i in sorted(unused) if work[i]>>col&1)
-        unused.remove(p);pivots.append(p)
+        mask=1<<col
+        p=next(i for i in range(n) if unused[i] and work[i]&mask)
+        unused[p]=False;pivots.append(p)
+        row=work[p]
         for i in range(n):
-            if i!=p and work[i]>>col&1:work[i]^=work[p];ops.append((i,p))
+            if i!=p and work[i]&mask:work[i]^=row;append((i,p))
     require(set(work)=={1<<i for i in range(n)},'Incomplete elimination')
     initial=[row.bit_length()-1 for row in work]
     values=[1<<j for j in initial]
