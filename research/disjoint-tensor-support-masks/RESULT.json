@@ -1,0 +1,19 @@
+{
+  "environment": {
+    "executable": "/usr/bin/python3.12",
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "fixture": "DisjointTensor(26).verify only (construction excluded)",
+  "median_baseline_seconds": null,
+  "median_optimized_seconds": null,
+  "median_ratio": null,
+  "no_new_kappa": true,
+  "rounds": 0,
+  "samples": [],
+  "source_sha256": {
+    "baseline": "102dd59bf96033f96ba0dab4c2aba77b3a7a73b67b0f96929ff8b20a98b91cd8",
+    "production": "085600fc922ae167b5981505e1a5caba4d1c1df15482f61d83d2c086fa89eac1"
+  },
+  "status": "PENDING_BENCHMARK"
+}
