@@ -104,6 +104,18 @@ Structured copies live in [TASK.json](TASK.json).
 
 ## Credit
 
+
+
+## Disposition (2026-10-14)
+
+**Defer upstream publication as a freestanding claim.** Exact inverse-label BFS
+is real (`PASS_Q8_INVERSE_LABELS`), and #1822 left this alphabet variant open,
+but the minima remain 4 on the same endpoints with the same method. That is an
+incremental alphabet census on an open predecessor, not a new useful obstruction
+under the donation negative-result bar. Prefer folding into reviewed #1822 or a
+harder distinct endpoint (e.g. inverse-label `r=3`).
+
+
 Prepared by **Wentao Li** with substantial AI assistance; no independent human
 review. Apache-2.0. Model and presentation follow
 [CrocSwap/integer-mult-bounds#1822](https://github.com/CrocSwap/integer-mult-bounds/pull/1822)
