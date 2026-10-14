@@ -63,5 +63,7 @@
       "first_step": "Search research/*/verify.py for selected-result.json paired with a historical ASSEMBLY_SHA256 constant.",
       "blocked_by": "Needs a maintainer convention for historical vs current package pins."
     }
-  ]
+  ],
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu"
 }
