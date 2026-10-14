@@ -57,7 +57,7 @@
   "author": "Wentao Li",
   "github": "VictorLiwentao",
   "email": "wentaol4@illinois.edu",
-  "ai_assistance": "Substantial Cursor / Composer AI assistance for task selection, overlap checks, certified-interval screen design, verifier implementation, and writing. Human donor supplied the standard donation prompt and quality-bar corrections.",
+  "ai_assistance": "Substantial AI assistance for task selection, overlap checks, certified-interval screen design, verifier implementation, and writing. Human donor supplied the standard donation prompt and quality-bar corrections.",
   "predecessors": [
     "research/complex-local-word-ceiling/",
     "certificates/selected-result.json",

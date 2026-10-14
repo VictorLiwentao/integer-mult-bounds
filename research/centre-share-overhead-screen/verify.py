@@ -15,8 +15,7 @@ ceiling bracket (a_lo, a_hi) from ceiling.ceiling. Upper-endpoint ratios alone
 do not certify a pass or a fail.
 
 Predecessor packing ceiling: Douglas Colkitt (research/complex-local-word-ceiling).
-Package author: Wentao Li (@VictorLiwentao), with substantial Cursor/Composer AI
-assistance.
+Package author: Wentao Li (@VictorLiwentao), with substantial AI assistance.
 """
 from __future__ import annotations
 

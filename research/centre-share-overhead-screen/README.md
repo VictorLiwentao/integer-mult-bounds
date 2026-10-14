@@ -82,6 +82,6 @@ Chooser nonce `1707ecf836f0e426690c9e33d5d902df`. Not run: `make frontier1094-ve
 Packing ceiling / levers: `research/complex-local-word-ceiling/` (Douglas
 Colkitt; Claude assistance). Coverage identity: PR1012 lineage. Selected
 construction: community batch #1099 / frontier #1094. Nearby: #1656, #1684,
-#1664. Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu; optional
-X [@Is__Victor](https://x.com/Is__Victor)) with substantial Cursor/Composer AI
-assistance. Apache-2.0.
+#1664. Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu;
+[@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance.
+Apache-2.0.
