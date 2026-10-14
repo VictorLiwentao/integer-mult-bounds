@@ -169,10 +169,17 @@ class ExclusionCircuit:
             for slot in set(ins+outs):
                 assert reverse_frames[slot]&~frame==0
                 reverse_frames[slot]=frame
+        # Reverse-frame expected support equals the full sorted-output mask with
+        # every output target incident to either source endpoint cleared.
+        # Equivalent to the historical genexpr
+        # sum(1<<i for target,i in target_index.items() if not set(source)&set(target)).
+        full=(1<<len(target_index))-1
+        vertex=[0]*self.n
+        for target,i in target_index.items():
+            bit=1<<i;vertex[target[0]]|=bit;vertex[target[1]]|=bit
         for source,slot in code['sources'].items():
-            expected=sum(1<<i for target,i in target_index.items()
-                         if not set(source)&set(target))
-            assert reverse_frames[slot]==expected
+            a,b=source
+            assert reverse_frames[slot]==full^(vertex[a]|vertex[b])
         return dict(reversible_roles=size,forward_coefficient_map_exact=True,
                     forward_support_frames_nested=True,reverse_support_frames_nested=True,
                     no_forbidden_source_target_path=True)
