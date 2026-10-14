@@ -84,7 +84,8 @@ def main():
     run('rare-pattern-exchanges', PACKAGE/'verify.py', '--main', ROOT,
         '--local', baseline/'slots/local', '--work', work/'candidate')
     final = read(work/'candidate/strict/REPLAY.json')
-    assembly = read(work/'candidate/strict/ASSEMBLY.json')
+    assembly_path = work/'candidate/strict/ASSEMBLY.json'
+    assembly = read(assembly_path)
     require(Fraction(final['kappa']) == Fraction('0.001672660197076918') and
             final['kappa'] == assembly['kappa'], 'Exact selected kappa')
     require(assembly['bit_supplier'] == read(baseline/'t16/ASSEMBLY.json')['bit_supplier'], 'Retained bit supplier')
@@ -93,11 +94,19 @@ def main():
     require(final['roles'] == 69120 and final['complete_invocations'] == 144 and
             final['prefix_bits'] == 397 and final['charged_prefix_bits'] == 512 and
             final['physical_row_coefficient'] == 16469, 'Physical inventory')
+    # Bind the replay output to the selected certificate bytes, not only kappa.
+    # Without this check a well-formed mutant with unchanged kappa is accepted
+    # by the selected-record hash pin once that pin is rewritten (PR1735 audit).
+    selected = read(ROOT/'certificates/selected-result.json')
+    require(selected['certificate'] == 'research/community-frontier1094-audit/ASSEMBLY.json',
+            'Selected certificate path')
+    require(sha(assembly_path) == selected['certificate_sha256'],
+            'Replay output is the selected certificate')
     result = dict(status='PASS_COMPLETE_PR1094_COMPOSITION', kappa=assembly['kappa'],
                   decimal=assembly['kappa_decimal'], stages=stages,
                   reused_completed_baseline=bool(args.baseline1042), baseline=str(baseline),
                   baseline_receipt_sha256=sha(baseline/'RESULT.json'),
-                  assembly_sha256=sha(work/'candidate/strict/ASSEMBLY.json'),
+                  assembly_sha256=sha(assembly_path),
                   scope=receipt['scope'])
     (work/'RESULT.json').write_text(json.dumps(result, indent=2)+'\n')
     print(result['status'], result['decimal'])

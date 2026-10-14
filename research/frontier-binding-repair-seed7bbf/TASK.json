@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task_id": "supplier-boundary-audit",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "assignment_seed": "7bbf4b956bfd253bfec1676ee4a4d8dd",
+  "original_card": {
+    "id": "supplier-boundary-audit",
+    "question": "Does one selected supplier obligation follow from its actual source-bound checks?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/owner-boundary-audit/README.md"
+    ],
+    "methods": [
+      "Trace one hypothesis through the source, checker and complete caller.",
+      "Construct one semantically invalid but superficially well-formed fixture and test rejection."
+    ],
+    "acceptance_gate": "Pin the current sources and one obligation; the historical owner audit is an example, not evidence of a current bug.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/owner-boundary-audit/verify.py"
+      ],
+      "expected": "PASS_PR626_NEXT_TOUCH_BOUNDARY_AUDIT",
+      "inspect": "Identify why the timing-only omission passes but the full production controller still rejects it.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Choose one current supplier obligation and trace whether its acceptance depends on an independent check.",
+    "bottleneck_link": "Closing a current acceptance gap or proof obligation strengthens reliability even without changing kappa.",
+    "allowed_variations": [
+      "Audit one named current condition using a new semantic counterexample."
+    ],
+    "scope_change_triggers": [
+      "Reporting the historical timing-only diagnostic as a new current acceptance bug."
+    ],
+    "overlap_terms": [
+      "owner boundary",
+      "bridge omission",
+      "hosting"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Apply the #1735 handoffs: (1) restore the historical #1042 invoice audit by binding its frozen checkpoint instead of the moving selected pointer; (2) add a selected-certificate SHA-256 require to scripts/verify_frontier1094.py so the reproduce path binds replay output beyond kappa. Controlled before/after with receipt-corruption failure controls; no new kappa.",
+  "scope_change_reason": "The OS-random card is supplier-boundary-audit. Prior donated work already covered dependency-head audits; open #1735 identified these two concrete acceptance gaps and left them as handoffs. Applying the repairs is the useful independently reviewable delta within the card's allowed variation (named current/historical condition with semantic counterexample / rejection controls).",
+  "bottleneck_link": "Trusted reproduce paths and historical invoice audits must keep working as the selected pointer advances; otherwise acceptance gaps silently accumulate without changing kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after both bindings are implemented, read-only verified with failure controls, and documented with exact before/after. Do not run the full selected cold replay in this session.",
+  "outcome": "completed",
+  "evidence": "PASS_FRONTIER_BINDING_REPAIR; seed81 RESULT.json SHA unchanged (b9ca758d); #1094 SHA binding present with kappa-preserving mutant rejected; make frontier1042-invoice-audit-verify; tests.test_frontier1094_certificate_bind",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial Cursor/Composer assistance for task selection, implementation, verification, and writing. No subagents claimed for mathematical review.",
+  "open_questions": [
+    {
+      "question": "Does a fresh cold make frontier1094-verify still pass with the new certificate SHA require?",
+      "why_it_matters": "Offline binding against committed bytes does not replace an end-to-end replay after editing the selected reproduce script.",
+      "first_step": "Run make frontier1094-verify with a reused published #1042 baseline if available.",
+      "blocked_by": "Long #1042 baseline wall time outside this session budget."
+    },
+    {
+      "question": "Which other historical audit loaders still pin certificates through the moving selected-result pointer?",
+      "why_it_matters": "The same stale-pointer failure mode can recur for every later frontier advance.",
+      "first_step": "Search research/*/verify.py for selected-result.json paired with a historical ASSEMBLY_SHA256 constant.",
+      "blocked_by": "Needs a maintainer convention for historical vs current package pins."
+    }
+  ]
+}

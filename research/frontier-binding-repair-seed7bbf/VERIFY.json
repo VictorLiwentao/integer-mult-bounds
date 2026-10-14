@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "certificates/checkpoints/frontier1042.json",
+    "certificates/selected-result.json",
+    "research/community-frontier1094-audit/ASSEMBLY.json",
+    "research/community-frontier1094-audit/RESULT.json",
+    "research/frontier1042-invoice-audit-seed81/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Read-only receipt compare; seed81 PASS with unchanged RESULT sha; #1094 SHA binding present; forged-checkpoint control rejects"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_frontier1094_certificate_bind",
+        "-v"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Published certificate matches pin; kappa-preserving mutant rejected by SHA binding"
+    }
+  ]
+}

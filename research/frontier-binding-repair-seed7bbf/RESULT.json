@@ -1,0 +1,29 @@
+{
+  "after": {
+    "frontier1094_certificate_binding": {
+      "certificate_sha256": "1122cb3a575f8c788345fc1bf4c108ac7c3250fb81a5988671f5eb04b3ab3045",
+      "cold_replay_run": false,
+      "mutant_kappa_unchanged": true,
+      "mutant_rejected_by_sha_binding": true,
+      "published_receipt_assembly_sha256": "1122cb3a575f8c788345fc1bf4c108ac7c3250fb81a5988671f5eb04b3ab3045",
+      "status": "PASS"
+    },
+    "seed81": {
+      "checkpoint": "certificates/checkpoints/frontier1042.json",
+      "result_sha256": "b9ca758da0fcc664e36c07f3850082ba4de8c444ebaf8a674f3a8e33d6298875",
+      "selected_certificate": "research/community-frontier1094-audit/ASSEMBLY.json",
+      "status": "PASS",
+      "stdout": "PASS_FRONTIER1042_INVOICE_OUTER_INDEPENDENT | guards 9 | slacks 94 | bootstrap 14 | controls 15"
+    }
+  },
+  "before": {
+    "frontier1094_binding": "kappa only; certificate SHA not compared",
+    "seed81_make_target": "FAIL selected certificate path moved"
+  },
+  "controls": {
+    "forged_checkpoint_hash": "checkpoint receipt hash mismatch"
+  },
+  "no_new_kappa": true,
+  "scope": "Tooling/binding repair only. Restores the historical #1042 invoice make target and adds a selected-certificate SHA require to the #1094 reproduce script. Does not change kappa, certificates, or selected frontier content. Cold make frontier1094-verify was not re-run.",
+  "status": "PASS_FRONTIER_BINDING_REPAIR"
+}
