@@ -77,7 +77,7 @@ posing the unpaid-coordinate question and releasing the line-port diagnosis
 this package independently formalizes and checks. Plane-port decoder work on
 that thread is not consumed.
 
-Prepared by **Wentao Li** ([VictorLiwentao](https://github.com/VictorLiwentao),
-[@Is__Victor](https://x.com/Is__Victor)) with substantial **Cursor/Composer**
-assistance, under Apache-2.0. No independent human review, Lean formalization,
-or selected cold replay is claimed.
+Prepared by Wentao Li ([VictorLiwentao](https://github.com/VictorLiwentao),
+[@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance, under
+Apache-2.0. No independent human review, Lean formalization, or selected cold
+replay is claimed.

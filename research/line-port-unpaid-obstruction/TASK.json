@@ -53,7 +53,7 @@
   "outcome": "negative-result",
   "evidence": "PASS_LINE_PORT_UNPAID_OBSTRUCTION; U_bound=896; u2_blocked; 65536 dirty toy columns; 5 controls; ideal unpaid=2 multiplier ~3.77 reproduced",
   "author": "Wentao Li",
-  "ai_assistance": "Cursor/Composer (substantial assistance in scoping, implementation, verification and writing)",
+  "ai_assistance": "Substantial AI assistance for scoping, implementation, verification and writing.",
   "open_questions": [
     {
       "question": "With 112 planes in F2^9 and target caps E_t^perp, is there an exact decoder whose copy charge per call is below 1472/9 ≈ 163.6?",
