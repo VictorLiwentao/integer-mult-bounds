@@ -1,5 +1,7 @@
 # Faster exact shared-point frame nesting
 
+**Folded into open [CrocSwap/integer-mult-bounds#2054](https://github.com/CrocSwap/integer-mult-bounds/pull/2054)** @ `ff889ccd` (same `scripts/shared_point_circuit.py`). Do not open a second upstream PR.
+
 **Tooling improvement; no new kappa.** At base
 `0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2` (after merged
 [CrocSwap/integer-mult-bounds#1994](https://github.com/CrocSwap/integer-mult-bounds/pull/1994)
