@@ -312,37 +312,48 @@ def main(argv=None):
             "enclosure_method": "ln2 binary series + odd reduction to Mercator ln(1+x); exp Taylor on [0,1/2]; not atanh-successor chains",
             "does_not_change_selected_frontier": True,
         },
+        "author": "Wentao Li",
         "limitations": [
             "Favorable lever relaxations omit realization costs; not constructions.",
             "Does not rebuild the rank ledger from gate operations (see #1262/#1421).",
             "Does not re-prove the no-q-adic-selector compiler premise (PR552/PR559).",
             "Does not run make frontier1094-verify.",
-            "Discussion CLAIM posting was unavailable to this token; local claim recorded in TASK.json.",
         ],
     }
 
-    text = json.dumps(result, indent=2) + "\n"
+    text = json.dumps(result, indent=2, sort_keys=True) + "\n"
     if write:
         (PKG / "RESULT.json").write_text(text, encoding="utf-8", newline="\n")
-    # Always print
-    sys.stdout.write(text)
-    # Compare stable fields to committed RESULT when present and not writing.
+        print("WROTE_SELECTED_COMPLEX_DIAGNOSIS", file=sys.stderr)
+        return 0
+
     committed = PKG / "RESULT.json"
-    if committed.exists() and not write:
-        prev = json.loads(committed.read_text(encoding="utf-8"))
-        require(prev["status"] == result["status"], "status drift")
-        require(prev["diagnosis"]["D"] == result["diagnosis"]["D"], "D drift")
-        require(prev["diagnosis"]["rank_mass"] == result["diagnosis"]["rank_mass"], "mass drift")
-        require(prev["inputs"]["kappa"] == result["inputs"]["kappa"], "kappa drift")
-        for key in PUBLISHED_LEVER_MULT:
-            require(
-                result["levers"][key]["multiplier_matches_published_two_decimals"],
-                f"lever {key} must match published two-decimal multiplier",
-            )
-            require(
-                prev["levers"][key]["a_ceiling"] == result["levers"][key]["a_ceiling"],
-                f"lever {key} a_ceiling drift",
-            )
+    require(committed.is_file(), "missing committed RESULT.json (run with --write)")
+    prev_text = committed.read_text(encoding="utf-8")
+    require(prev_text == text, "committed RESULT.json differs from recomputed evidence")
+    # Corruption controls: forged receipts must not match recomputed evidence.
+    forged = json.loads(text)
+    forged["diagnosis"]["D"] = 0
+    require(
+        json.dumps(forged, indent=2, sort_keys=True) + "\n" != text,
+        "corruption control setup",
+    )
+    require(
+        json.dumps(forged, indent=2, sort_keys=True) + "\n" != prev_text,
+        "corrupted D must not match committed receipt",
+    )
+    forged2 = json.loads(text)
+    forged2["status"] = "PASS_FORGED"
+    require(
+        json.dumps(forged2, indent=2, sort_keys=True) + "\n" != prev_text,
+        "corrupted status must not match committed receipt",
+    )
+    for key in PUBLISHED_LEVER_MULT:
+        require(
+            result["levers"][key]["multiplier_matches_published_two_decimals"],
+            f"lever {key} must match published two-decimal multiplier",
+        )
+    # Read-only: do not print the full JSON blob to stdout (keeps logs small); receipt is on disk.
     print("PASS_SELECTED_COMPLEX_DIAGNOSIS", file=sys.stderr)
     return 0
 

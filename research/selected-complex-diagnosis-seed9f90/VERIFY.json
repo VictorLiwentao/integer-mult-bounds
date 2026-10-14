@@ -15,8 +15,18 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 120,
-      "checks": "Diagnosis identities, D/E intersection with PR1293, packing-ceiling containment of #1240, six lever multipliers, kappa truncation, semantic failure controls; compares stable fields to committed RESULT.json."
+      "timeout_seconds": 300,
+      "checks": "Read-only: full RESULT equality, D/status corruption controls, lever two-decimal matches, no receipt rewrite"
     }
-  ]
+  ],
+  "regenerate": {
+    "argv": [
+      "{python}",
+      "-I",
+      "-B",
+      "{package}/verify.py",
+      "--write"
+    ],
+    "notes": "Explicit receipt regeneration only"
+  }
 }

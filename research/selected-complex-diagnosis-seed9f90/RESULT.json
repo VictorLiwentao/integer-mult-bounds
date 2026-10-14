@@ -1,31 +1,18 @@
 {
-  "status": "PASS_SELECTED_COMPLEX_DIAGNOSIS",
-  "task_id": "independent-moment",
-  "chooser_seed": "9f90e3a535639d71c064e320e06118ad",
+  "author": "Wentao Li",
   "base_commit_expected": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
-  "inputs": {
-    "ASSEMBLY.json_sha256": "1122cb3a575f8c788345fc1bf4c108ac7c3250fb81a5988671f5eb04b3ab3045",
-    "selected-result.json_sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32",
-    "kappa": "836330098538459/500000000000000000",
-    "complex_lower": "67018507072324140917/40000000000000000000000"
+  "chooser_seed": "9f90e3a535639d71c064e320e06118ad",
+  "controls": {
+    "assembly_declares_complex_surcharge_false": true,
+    "bogus_centre_free_multiplier_x3": "rejected",
+    "extra_rank1_lowers_ceiling": true,
+    "forged_profile_breaks_coverage_identity": true,
+    "idle_rank_52": "rejected: idle rank cap violates the halving guard",
+    "kappa_ulp_distinct": true,
+    "over_coverage": "rejected: local word pays more mass than the coverage law allows"
   },
   "diagnosis": {
-    "m": 73,
-    "W": 14336,
-    "N_calls": 144,
-    "rank_mass": 1041408,
     "D": 5120,
-    "live_families_per_call": "896/9",
-    "unpaid_after_centre_per_call": "320/9",
-    "unpaid_after_centre_float": 35.55555555555556,
-    "live_families_float": 99.55555555555556,
-    "local_mass_per_call": 5586,
-    "idle_mass_per_call": 1646,
-    "coverage_identity": "mass = 72 W + 64 N",
-    "E_enclosure": [
-      "176383069790301859470166447829668591484768381030513937824831526253600281051881392195/57896044618658097711785492504343953926634992332820282019728792003956564819968",
-      "352766139580603718940332895659337182969536762061027875649663052507200562103772340047/115792089237316195423570985008687907853269984665640564039457584007913129639936"
-    ],
     "D_over_E_enclosure": [
       "194599109435276979657110370148318118755048126914948843629479870767881322601/115792089237316195423570985008687907853269984665640564039457584007913129639936",
       "97299554717638489828555185074159059377524063457474421814739935383940661301/57896044618658097711785492504343953926634992332820282019728792003956564819968"
@@ -34,24 +21,42 @@
       0.0016805907097543218,
       0.0016805907097543218
     ],
+    "E_enclosure": [
+      "176383069790301859470166447829668591484768381030513937824831526253600281051881392195/57896044618658097711785492504343953926634992332820282019728792003956564819968",
+      "352766139580603718940332895659337182969536762061027875649663052507200562103772340047/115792089237316195423570985008687907853269984665640564039457584007913129639936"
+    ],
+    "N_calls": 144,
+    "W": 14336,
+    "coverage_identity": "mass = 72 W + 64 N",
     "effective_child_rank_enclosure_float": [
       3.9159073869553946,
       3.9159073869553946
     ],
+    "idle_mass_per_call": 1646,
+    "live_families_float": 99.55555555555556,
+    "live_families_per_call": "896/9",
+    "local_mass_per_call": 5586,
+    "m": 73,
     "published_portfolio_claims_reproduced": {
-      "unpaid_about_35_6": true,
-      "families_about_99_6": true,
+      "a_star_lt_D_over_E": true,
       "effective_child_rank_about_3_9": true,
-      "a_star_lt_D_over_E": true
-    }
+      "families_about_99_6": true,
+      "unpaid_about_35_6": true
+    },
+    "rank_mass": 1041408,
+    "unpaid_after_centre_float": 35.55555555555556,
+    "unpaid_after_centre_per_call": "320/9"
   },
-  "packing_ceiling": {
-    "a_lo": "1690054109/1000000000000",
-    "a_hi": "169005411/100000000000",
-    "a_hi_float": 0.00169005411,
-    "published_1240_a_ceiling": "1690054109089/1000000000000000",
-    "kappa_cap_float": 0.0016872026462333306,
-    "idle_rank_cap": 51
+  "independence": {
+    "does_not_change_selected_frontier": true,
+    "enclosure_method": "ln2 binary series + odd reduction to Mercator ln(1+x); exp Taylor on [0,1/2]; not atanh-successor chains",
+    "imports_complex_local_word_ceiling": false
+  },
+  "inputs": {
+    "ASSEMBLY.json_sha256": "1122cb3a575f8c788345fc1bf4c108ac7c3250fb81a5988671f5eb04b3ab3045",
+    "complex_lower": "67018507072324140917/40000000000000000000000",
+    "kappa": "836330098538459/500000000000000000",
+    "selected-result.json_sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
   },
   "levers": {
     "baseline": {
@@ -65,69 +70,64 @@
       "a_ceiling_float": 0.00473765347,
       "kappa_cap_float": 0.004715313946519134,
       "multiplier_float": 2.8032554945829515,
-      "published_multiplier": "14/5",
-      "multiplier_matches_published_two_decimals": true
-    },
-    "centre_shared": {
-      "a_ceiling": "1606486447/500000000000",
-      "a_ceiling_float": 0.003212972894,
-      "kappa_cap_float": 0.003202682761100503,
-      "multiplier_float": 1.9011065237431954,
-      "published_multiplier": "19/10",
-      "multiplier_matches_published_two_decimals": true
-    },
-    "rank16": {
-      "a_ceiling": "1954728001/500000000000",
-      "a_ceiling_float": 0.003909456002,
-      "kappa_cap_float": 0.003894231674606531,
-      "multiplier_float": 2.313213511252607,
-      "published_multiplier": "231/100",
-      "multiplier_matches_published_two_decimals": true
-    },
-    "rank8": {
-      "a_ceiling": "547900877/200000000000",
-      "a_ceiling_float": 0.002739504385,
-      "kappa_cap_float": 0.0027320200042185356,
-      "multiplier_float": 1.6209566124483434,
-      "published_multiplier": "81/50",
-      "multiplier_matches_published_two_decimals": true
-    },
-    "two_unpaid": {
-      "a_ceiling": "6377984109/1000000000000",
-      "a_ceiling_float": 0.006377984109,
-      "kappa_cap_float": 0.006337563231420219,
-      "multiplier_float": 3.773834264395239,
-      "published_multiplier": "377/100",
-      "multiplier_matches_published_two_decimals": true
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "14/5"
     },
     "centre_free_rank16": {
       "a_ceiling": "5504212719/500000000000",
       "a_ceiling_float": 0.011008425438,
       "kappa_cap_float": 0.010888559542152985,
       "multiplier_float": 6.5136526534052805,
-      "published_multiplier": "651/100",
-      "multiplier_matches_published_two_decimals": true
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "651/100"
+    },
+    "centre_shared": {
+      "a_ceiling": "1606486447/500000000000",
+      "a_ceiling_float": 0.003212972894,
+      "kappa_cap_float": 0.003202682761100503,
+      "multiplier_float": 1.9011065237431954,
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "19/10"
+    },
+    "rank16": {
+      "a_ceiling": "1954728001/500000000000",
+      "a_ceiling_float": 0.003909456002,
+      "kappa_cap_float": 0.003894231674606531,
+      "multiplier_float": 2.313213511252607,
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "231/100"
+    },
+    "rank8": {
+      "a_ceiling": "547900877/200000000000",
+      "a_ceiling_float": 0.002739504385,
+      "kappa_cap_float": 0.0027320200042185356,
+      "multiplier_float": 1.6209566124483434,
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "81/50"
+    },
+    "two_unpaid": {
+      "a_ceiling": "6377984109/1000000000000",
+      "a_ceiling_float": 0.006377984109,
+      "kappa_cap_float": 0.006337563231420219,
+      "multiplier_float": 3.773834264395239,
+      "multiplier_matches_published_two_decimals": true,
+      "published_multiplier": "377/100"
     }
-  },
-  "controls": {
-    "idle_rank_52": "rejected: idle rank cap violates the halving guard",
-    "over_coverage": "rejected: local word pays more mass than the coverage law allows",
-    "extra_rank1_lowers_ceiling": true,
-    "bogus_centre_free_multiplier_x3": "rejected",
-    "kappa_ulp_distinct": true,
-    "forged_profile_breaks_coverage_identity": true,
-    "assembly_declares_complex_surcharge_false": true
-  },
-  "independence": {
-    "imports_complex_local_word_ceiling": false,
-    "enclosure_method": "ln2 binary series + odd reduction to Mercator ln(1+x); exp Taylor on [0,1/2]; not atanh-successor chains",
-    "does_not_change_selected_frontier": true
   },
   "limitations": [
     "Favorable lever relaxations omit realization costs; not constructions.",
     "Does not rebuild the rank ledger from gate operations (see #1262/#1421).",
     "Does not re-prove the no-q-adic-selector compiler premise (PR552/PR559).",
-    "Does not run make frontier1094-verify.",
-    "Discussion CLAIM posting was unavailable to this token; local claim recorded in TASK.json."
-  ]
+    "Does not run make frontier1094-verify."
+  ],
+  "packing_ceiling": {
+    "a_hi": "169005411/100000000000",
+    "a_hi_float": 0.00169005411,
+    "a_lo": "1690054109/1000000000000",
+    "idle_rank_cap": 51,
+    "kappa_cap_float": 0.0016872026462333306,
+    "published_1240_a_ceiling": "1690054109089/1000000000000000"
+  },
+  "status": "PASS_SELECTED_COMPLEX_DIAGNOSIS",
+  "task_id": "independent-moment"
 }

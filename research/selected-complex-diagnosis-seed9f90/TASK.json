@@ -52,11 +52,12 @@
   "stop_rule": "Stop after diagnosis identities, D/E intersection with PR1293, packing-ceiling containment of #1240, all six lever multipliers within ±0.005 of the published two-decimal figures, and semantic controls pass; or stop on the first failing check.",
   "outcome": "completed",
   "evidence": "RESULT.json: PASS_SELECTED_COMPLEX_DIAGNOSIS; D=5120; unpaid 320/9; families 896/9; r_eff≈3.9159; D/E intersects PR1293; ceiling contains 1690054109089/10^15; levers match published ×2.80/×1.90/×2.31/×1.62/×3.77/×6.51; kappa is the 18-decimal truncation of complex a/(1+a).",
-  "author": "Victor Liwentao (VictorLiwentao) with Cursor Agent assistance",
-  "ai_assistance": "Substantial: Cursor Agent (Composer) performed orientation, task selection, overlap checks, implementation, verification and writing. No independent human review is claimed.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial Cursor/Composer AI assistance for task selection, overlap checks, independent enclosure design, verifier implementation, and writing. No independent human review is claimed.",
   "local_claim": {
     "posted_to_discussions": false,
-    "posting_blocker": "GitHub token lacks discussion comment permission (Resource not accessible by integration).",
     "expiry_utc": "2026-10-14T09:53Z",
     "text": "CLAIM independent-moment refined to selected complex revision-3 diagnosis + lever ceilings; seed 9f90e3a535639d71c064e320e06118ad; base 0b1cccf86e2f5132ed286a26ef0a681a495740ea."
   },

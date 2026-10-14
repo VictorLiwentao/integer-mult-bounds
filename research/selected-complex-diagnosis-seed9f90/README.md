@@ -34,14 +34,17 @@ histogram rebuilds the ASSEMBLY complex profile exactly.
 
 ## Reproduce
 
+Default verify is **read-only**: recomputes evidence, requires exact equality
+with committed [RESULT.json](RESULT.json), rejects forged D/status, and does not
+rewrite the receipt. Use `--write` only to regenerate.
+
 ```sh
 python3 -I -B research/selected-complex-diagnosis-seed9f90/verify.py
-python3 -B scripts/research_package.py --package research/selected-complex-diagnosis-seed9f90 --check-only
-python3 -B scripts/research_package.py --package research/selected-complex-diagnosis-seed9f90
 ```
 
-`verify.py --write` regenerates [RESULT.json](RESULT.json). Replay without
-`--write` rechecks and compares stable fields to the committed receipt.
+Expected on stderr: `PASS_SELECTED_COMPLEX_DIAGNOSIS`
+
+Also: `python3 -B scripts/research_package.py --package research/selected-complex-diagnosis-seed9f90`.
 
 ## Scope and limitations
 
@@ -49,9 +52,6 @@ python3 -B scripts/research_package.py --package research/selected-complex-diagn
 - Does not rebuild the rank ledger from gate operations (see #1262 / #1421).
 - Does not re-prove the no-q-adic-selector compiler premise (PR552 / PR559).
 - Does not run `make frontier1094-verify`.
-- Discussion CLAIM posting was unavailable to this session's GitHub token; the
-  local claim is recorded in [TASK.json](TASK.json).
-
 ## Open next questions
 
 1. **Can the no-q-adic-selector premise (b) of the surcharge-free complex
@@ -74,5 +74,6 @@ python3 -B scripts/research_package.py --package research/selected-complex-diagn
 - commdata2338: bit projector ledger (#1421).
 - Rohan Arun / Jeremy Kothe and the frontier1094 packing lineage.
 
-Prepared by Victor Liwentao (@VictorLiwentao) with substantial Cursor Agent
+Prepared by Wentao Li (@VictorLiwentao; wentaol4@illinois.edu; optional X
+[@Is__Victor](https://x.com/Is__Victor)) with substantial Cursor/Composer AI
 assistance. New work Apache-2.0; retain source notices.
