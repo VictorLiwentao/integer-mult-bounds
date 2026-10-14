@@ -56,7 +56,11 @@ python3.12 -I -B research/inplace-side-compile-scan/benchmark.py --rounds 5
 ```
 
 Expected: `PASS_IDENTICAL_INPLACE_COMPILE_RECEIPTS`. Samples are retained in
-[RESULT.json](RESULT.json).
+[RESULT.json](RESULT.json). On this Linux host / CPython 3.12.3, five alternating
+fresh-process pairs for `compile_side` on `h in {22,26,30}` gave median
+**5.696 → 5.297 seconds (1.075×)**. Timing is descriptive, not a correctness
+gate; the primary claim is fieldwise-identical gate lists, not a large wall-time
+win.
 
 ## Why the receipts stay identical
 

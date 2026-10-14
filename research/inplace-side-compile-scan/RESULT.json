@@ -1,0 +1,61 @@
+{
+  "ai_assistance": "Substantial AI assistance for profiling, implementation, packaging, benchmarking and writing. Not independent human peer review.",
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "baseline_seconds": [
+    5.618888536000213,
+    5.69582551700023,
+    5.726662846999716,
+    5.621070788999987,
+    5.8018124440000065
+  ],
+  "compile_h": [
+    22,
+    26,
+    30
+  ],
+  "engines": {
+    "baseline": "research/inplace-side-compile-scan/baseline.py",
+    "optimized": "scripts/experiments/inplace_side.py"
+  },
+  "environment": {
+    "executable": "/usr/bin/python3.12",
+    "implementation": "CPython",
+    "isolated_host": false,
+    "os_caches_flushed": false,
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "fixture": "compile_side h=[22, 26, 30]",
+  "gate_counts": [
+    1018272,
+    2821888,
+    6734984
+  ],
+  "medians": {
+    "baseline": 5.69582551700023,
+    "optimized": 5.297284641999795,
+    "speedup": 1.0752349367524228
+  },
+  "no_new_kappa": true,
+  "optimized_seconds": [
+    5.398171971000011,
+    5.398893004999991,
+    4.768703143000039,
+    5.297284641999795,
+    5.226585186000193
+  ],
+  "receipt_fields_compared": [
+    "gates",
+    "h",
+    "initial",
+    "pivots",
+    "roles"
+  ],
+  "rounds": 5,
+  "scope": "Historical inplace-side compile_side on h in {22,26,30}. Not a selected-supplier cold replay or multiplication runtime.",
+  "source_sha256": {
+    "baseline.py": "4397b84f3ac52554bf14303171410a2799af0bf8dae11ec64594bb5c011e93a2",
+    "scripts/experiments/inplace_side.py": "b8f0ecd53bd9647ac4bf32ec69b663742002944baa5846bdfd4047d0924a788d"
+  },
+  "status": "PASS_IDENTICAL_INPLACE_COMPILE_RECEIPTS"
+}
