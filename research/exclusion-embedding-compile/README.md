@@ -1,5 +1,14 @@
 # Faster ExclusionCircuit.verify_embedding compile with identical receipts
 
+**Deferred from upstream publication.** Closed
+[CrocSwap/integer-mult-bounds#2155](https://github.com/CrocSwap/integer-mult-bounds/pull/2155)
+after skeptical review: compile maps / embedding receipts are fieldwise
+identical, but the win is a noisy post-#2001 micro-opt (~56→33 ms; independent
+rebenches near ~1.5× with rounds as low as ~1.12×), not a #756-class tooling
+gain. Keep as packaged evidence; do not reopen until a hotter bottleneck or
+clearer absolute-time story exists. Production tip on this branch is not
+intended for merge as-is.
+
 **Tooling improvement; no new kappa.** At base
 `0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2`, merged
 [CrocSwap/integer-mult-bounds#2001](https://github.com/CrocSwap/integer-mult-bounds/pull/2001)
