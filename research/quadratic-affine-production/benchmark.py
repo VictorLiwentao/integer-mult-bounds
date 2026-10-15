@@ -48,15 +48,16 @@ fixtures = json.loads(
 def kwargs(case):
     return {k: case[k] for k in ("t", "complex_phases", "parity", "sample", "independent_rows")}
 
+from prepare_layers import serializable
+
 if scope == "witness":
     t0 = time.perf_counter()
-    receipts = [qa.rank_witness(**kwargs(case)) for case in fixtures]
+    receipts = [serializable(qa.rank_witness(**kwargs(case))) for case in fixtures]
     elapsed = time.perf_counter() - t0
     print(json.dumps({"elapsed": elapsed, "receipts": receipts}, sort_keys=True))
 else:
     import audit_quadratic_affine as audit
     import experiments.quadratic_affine as live
-    from prepare_layers import serializable
     # audit_quadratic_affine binds rank_witness at import time; patch both.
     live.rank_witness = qa.rank_witness
     audit.rank_witness = qa.rank_witness
