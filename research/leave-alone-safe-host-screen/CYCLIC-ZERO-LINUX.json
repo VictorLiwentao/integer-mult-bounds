@@ -1,0 +1,99 @@
+{
+  "disposition": "DEFER_MAGNITUDE",
+  "expected_sha256": "2c4ab855129670053f4f39ee14269cc9b5bda015eab71d5a226dd0d395740ebd",
+  "host": {
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "identical_receipts": true,
+  "median_guarded_seconds": 3.0521839250000085,
+  "median_reference_seconds": 3.9038435400000253,
+  "no_new_kappa": true,
+  "pairs": [
+    {
+      "guarded_seconds": 3.0362643050000315,
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 1,
+      "ratio": 1.3070740177212552,
+      "reference_seconds": 3.9686221840000258
+    },
+    {
+      "guarded_seconds": 3.1261889809999843,
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 2,
+      "ratio": 1.2278889185298498,
+      "reference_seconds": 3.838612807000004
+    },
+    {
+      "guarded_seconds": 3.0521839250000085,
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 3,
+      "ratio": 1.3000855634871102,
+      "reference_seconds": 3.968100257999936
+    },
+    {
+      "guarded_seconds": 3.1913324239999383,
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 4,
+      "ratio": 1.2232644617783324,
+      "reference_seconds": 3.9038435400000253
+    },
+    {
+      "guarded_seconds": 3.051237054000012,
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 5,
+      "ratio": 1.2988251869204033,
+      "reference_seconds": 3.9630235370000264
+    },
+    {
+      "guarded_seconds": 3.037644038000053,
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 6,
+      "ratio": 1.253640979114562,
+      "reference_seconds": 3.808115045999898
+    },
+    {
+      "guarded_seconds": 3.290915568999935,
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 7,
+      "ratio": 1.167969146400223,
+      "reference_seconds": 3.8436878480000587
+    }
+  ],
+  "per_round_max": 1.3070740177212552,
+  "per_round_min": 1.167969146400223,
+  "per_round_ratios": [
+    1.3070740177212552,
+    1.2278889185298498,
+    1.3000855634871102,
+    1.2232644617783324,
+    1.2988251869204033,
+    1.253640979114562,
+    1.167969146400223
+  ],
+  "production_target": "research/prime-power-cyclic-inverse/verify.py eliminate()",
+  "ratio_of_medians": 1.2790328616909987,
+  "reason": "leave-alone-safe; stable ~1.28x below clearly-above-~1.5x bar",
+  "status": "PASS_CYCLIC_ZERO_HOST_REMEASURE"
+}

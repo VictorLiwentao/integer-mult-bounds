@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/leave-alone-safe-host-screen/RESULT.json",
+    "research/leave-alone-safe-host-screen/GRAM-PREFIX-LINUX.json",
+    "research/leave-alone-safe-host-screen/CYCLIC-ZERO-LINUX.json",
+    "research/gram-prefix-performance/kernel.py",
+    "research/gram-prefix-performance/frames.json.gz",
+    "research/e8-bit-carrier-skeleton/code/pricing/prime_witnesses.py"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "RESULT schema, deferred inventory-exhausted disposition, no production-edit claim, gram/cyclic receipts, duplicate JSON-key check, temp-copy corruption rejection, checkout unchanged."
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same gates under -O (require() remains)."
+    }
+  ]
+}

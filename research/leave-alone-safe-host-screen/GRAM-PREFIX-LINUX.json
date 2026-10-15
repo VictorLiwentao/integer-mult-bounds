@@ -1,0 +1,147 @@
+{
+  "determinant_batch": {
+    "median_prefix_seconds": 0.006612790000076529,
+    "median_reference_seconds": 0.009979788000009648,
+    "pairs": [
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 1,
+        "prefix_seconds": 0.006347398999992038,
+        "ratio": 1.577685442497575,
+        "reference_seconds": 0.010014199000011104
+      },
+      {
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "pair": 2,
+        "prefix_seconds": 0.006786857999941276,
+        "ratio": 1.4540868543336143,
+        "reference_seconds": 0.009868680999943535
+      },
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 3,
+        "prefix_seconds": 0.006612790000076529,
+        "ratio": 1.4953293541514803,
+        "reference_seconds": 0.009888298999953804
+      },
+      {
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "pair": 4,
+        "prefix_seconds": 0.006418575999987297,
+        "ratio": 1.5877968882837443,
+        "reference_seconds": 0.010191394999992553
+      },
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 5,
+        "prefix_seconds": 0.006775865000008707,
+        "ratio": 1.4728433934260532,
+        "reference_seconds": 0.009979788000009648
+      }
+    ],
+    "per_round_max": 1.5877968882837443,
+    "per_round_min": 1.4540868543336143,
+    "per_round_ratios": [
+      1.577685442497575,
+      1.4540868543336143,
+      1.4953293541514803,
+      1.5877968882837443,
+      1.4728433934260532
+    ],
+    "ratio_of_medians": 1.5091645129958993
+  },
+  "disposition": "DEFER_MAGNITUDE",
+  "frames": 672,
+  "full_checker": {
+    "median_prefix_seconds": 0.029721526000002996,
+    "median_reference_seconds": 0.03202437699997063,
+    "pairs": [
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 1,
+        "prefix_seconds": 0.029947694000043157,
+        "ratio": 1.071420857978787,
+        "reference_seconds": 0.03208658400001241
+      },
+      {
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "pair": 2,
+        "prefix_seconds": 0.028629820999981348,
+        "ratio": 1.1007059736806382,
+        "reference_seconds": 0.03151301500008685
+      },
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 3,
+        "prefix_seconds": 0.02979194399995322,
+        "ratio": 1.0649484303566177,
+        "reference_seconds": 0.03172688400002244
+      },
+      {
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "pair": 4,
+        "prefix_seconds": 0.02967760800004271,
+        "ratio": 1.0790754093094208,
+        "reference_seconds": 0.03202437699997063
+      },
+      {
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "pair": 5,
+        "prefix_seconds": 0.029721526000002996,
+        "ratio": 1.1197521621189357,
+        "reference_seconds": 0.03328074299997752
+      }
+    ],
+    "per_round_max": 1.1197521621189357,
+    "per_round_min": 1.0649484303566177,
+    "per_round_ratios": [
+      1.071420857978787,
+      1.1007059736806382,
+      1.0649484303566177,
+      1.0790754093094208,
+      1.1197521621189357
+    ],
+    "ratio_of_medians": 1.0774809140004251
+  },
+  "host": {
+    "cpu_count": 4,
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "identical_receipts": true,
+  "mode": "production_style_in_process_pw.det_replacement",
+  "no_new_kappa": true,
+  "production_target": "research/e8-bit-carrier-skeleton/code/pricing/prime_witnesses.py:det (via gram_frames --positive)",
+  "reason": "leave-alone-safe production-style wiring of proved gram-prefix Bareiss reuse; complete positive Gram checker ~1.08x (1.06-1.12) below clearly-above-~1.5x bar; determinant-batch ~1.51x is micro-only and not a complete-host claim",
+  "status": "PASS_GRAM_PREFIX_HOST_SCREEN"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "leave-alone-safe-host-screen-60b9",
+  "scope_status": "refined",
+  "actual_scope": "Answer lec-parallel-host-screen open question 2 by refreshing the leave-alone-safe proved-opt-in inventory after tooling through #2433. Production-style Linux remeasure of gram-prefix Bareiss det reuse on the carrier-skeleton Gram checker (byte-disjoint from leave-alone #2263/#2276); independent cyclic-zero remeasure; no production file edits.",
+  "scope_change_reason": "Catalogue replay-runtime asks for one measured bottleneck with before/after wall time. Expertise override preferred production wiring of proved opt-in adapters with identical receipts and stable host samples clearly above ~1.5x. Soft-overlap with open leave-independent PRs is a DEFER. Prior lec-parallel inventory left open whether any leave-alone-safe adapter clears the bar; this session supplies that refresh with production-style gram-prefix numbers and an honest magnitude DEFER.",
+  "bottleneck_link": "Side result on review throughput: production wiring only when host magnitude clears the accepted tooling bar and soft-overlap with open leave-independent PRs is absent.",
+  "budget_minutes": 60,
+  "stop_rule": "Publish production wiring only with identical receipts, stable host samples clearly above ~1.5x, and no soft-overlap with open leave-independent PRs; otherwise record an honest DEFER with per-round ratios.",
+  "outcome": "negative-result",
+  "evidence": "PASS_LEAVE_ALONE_SAFE_HOST_SCREEN; gram-prefix production-style full Gram checker ratio_of_medians 1.077x (per-round 1.065-1.120) with identical receipts; determinant-batch 1.509x micro-only; cyclic-zero remeasure 1.279x (1.168-1.307); soft-overlap LEC/phase/Clifford hosts left deferred; no production files changed.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "After leave-alone #2409/#2412 (and preferably #2329) merge, can production wiring of layer-end-controls-parallel into a default LEC call site keep identical receipts with retargeted HPE digests?",
+      "why_it_matters": "Prior Linux remeasure shows a stable ~2.45x host that already clears the #756 magnitude bar; leave-alone-safe adapters remain thin.",
+      "first_step": "Retarget PINS.json audit digest to the merged integer-row production tip; remeasure one call site.",
+      "blocked_by": "#2409 / #2412 leave-alone resolution."
+    },
+    {
+      "question": "Is there a scoped #840-style construction (exact before/after costs, independent replay) outside exhausted tooling spaces and open leave-independent soft-overlaps?",
+      "why_it_matters": "This inventory refresh finds no leave-alone-safe proved opt-in clearing the complete-host #756 bar.",
+      "first_step": "Pick one open next question from a recently incorporated recursive-interface or bit-mechanism package whose object is byte-disjoint from leave-alone PRs.",
+      "blocked_by": "Construction search / claim coordination on Discussions #1166."
+    }
+  ],
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  }
+}

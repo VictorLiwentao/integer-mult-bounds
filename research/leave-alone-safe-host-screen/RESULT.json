@@ -1,0 +1,64 @@
+{
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "author": "Wentao Li",
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "candidates": [
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "identical_receipts": true,
+      "name": "gram-prefix-performance (#707 lineage) production-style det reuse",
+      "full_checker_ratio_of_medians": 1.0774809140004251,
+      "full_checker_per_round_range": [
+        1.0649484303566177,
+        1.1197521621189357
+      ],
+      "determinant_batch_ratio_of_medians": 1.5091645129958993,
+      "determinant_batch_per_round_range": [
+        1.4540868543336143,
+        1.5877968882837443
+      ],
+      "production_target": "research/e8-bit-carrier-skeleton/code/pricing/prime_witnesses.py:det (gram_frames --positive)",
+      "reason": "leave-alone-safe (carrier-skeleton tree, byte-disjoint from leave-alone #2263/#2276 e8-bit-r420 MANIFEST edits and from tooling through #2433). Complete positive Gram checker ~1.08x (1.06-1.12) below clearly-above-~1.5x bar; determinant-batch ~1.51x is micro-only and not a complete-host claim"
+    },
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "identical_receipts": true,
+      "name": "cyclic-zero-elimination (#736) independent Linux remeasure",
+      "ratio_of_medians": 1.2790328616909987,
+      "per_round_range": [
+        1.167969146400223,
+        1.3070740177212552
+      ],
+      "production_target": "research/prime-power-cyclic-inverse/verify.py eliminate()",
+      "reason": "leave-alone-safe object; ~1.28x (1.17-1.31) below bar; corroborates prior lec-parallel inventory 1.285x (1.25-1.30)"
+    },
+    {
+      "disposition": "DEFER_SOFT_OVERLAP",
+      "name": "layer-end-controls-parallel / frontier1042-lec-parallel / phase-recipes-parallel / selected-replay-fastpath",
+      "reason": "strong claimed hosts (LEC Linux ~2.45x already recorded in research/lec-parallel-host-screen/); production wiring soft-overlaps leave-alone #2409/#2412 and/or #2329"
+    },
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "name": "owner-footprint-bitsets / exact-frame-containment / joint-frame-modular-screen / t37-slice-bitmaps / p111-rup-epochs / stage-pair-performance / exact-exp-performance / rational-containment-performance",
+      "reason": "reported complete-process hosts ~1.0-1.23x or microbenchmark-only; below bar; not re-opened"
+    },
+    {
+      "disposition": "LEAVE_ALONE_LEDGER_DEFERRED",
+      "name": "ck-dyadic-replay-production / scalar-fused-dyadic-production / clifford-reuse-host-screen / u8-dyadic-host-screen / lec-parallel-host-screen / quadratic-affine-production"
+    },
+    {
+      "disposition": "LEAVE_ALONE_ALREADY_PUBLISHED",
+      "name": "tooling through CrocSwap #2433 (incl. Clifford #2329, HPE #2409/#2412, omission-lanes #2431, p112 modular #2433) and open leave-independents"
+    }
+  ],
+  "claim": "Inventory refresh answering lec-parallel-host-screen open question 2: no proved opt-in whose production target is byte-disjoint from leave-alone/#ledger-Deferred packages clears the #756 complete-host bar (clearly above ~1.5x, stable per-round range) on this Linux host. Strongest leave-alone-safe production-style sample is gram-prefix complete Gram checker ~1.08x; cyclic-zero remains ~1.28x. Strong hosts remain soft-overlap-blocked.",
+  "host": {
+    "cpu_count": 4,
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "no_new_kappa": true,
+  "production_files_changed": false,
+  "status": "DEFER_TOOLING_INVENTORY_EXHAUSTED",
+  "prior_inventory": "research/lec-parallel-host-screen/ (ledger Deferred; soft-overlap LEC ~2.45x; leave-alone-safe adapters thin)"
+}

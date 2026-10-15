@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    },
+    {
+      "path": "research/gram-prefix-performance/kernel.py",
+      "usage": "input",
+      "git_blob": "54f94d454357e0806a248c622f98f15ebc5552b6",
+      "sha256": "2e1701099bffeb84d28add001a7a46fd6457ef113aea13be8d030aa85e0e0008"
+    },
+    {
+      "path": "research/gram-prefix-performance/README.md",
+      "usage": "provenance",
+      "git_blob": "8f92b29a5209c948745d361cc35433405ff94b88",
+      "sha256": "a6834b35e35365b1e681e854b4c9ca7597835ebb0beeefbf28251dcec3bf4e07"
+    },
+    {
+      "path": "research/gram-prefix-performance/SOURCE.json",
+      "usage": "provenance",
+      "git_blob": "e9e152e11a7d849ed6ff7627a22b427938b22487",
+      "sha256": "c5cf89b2b9de6116dcff8ea594aa6b6881315af7c526fa422071e16329c30692"
+    },
+    {
+      "path": "research/gram-prefix-performance/frames.json.gz",
+      "usage": "input",
+      "git_blob": "b36593e6f3ee1733cba97867a735af1ae4bc8049",
+      "sha256": "ec22f6bc3fa8d4621065b040a98c0109141506c23120b0bf6af164c425653ed0"
+    },
+    {
+      "path": "research/e8-bit-carrier-skeleton/code/pricing/prime_witnesses.py",
+      "usage": "input",
+      "git_blob": "7f16d930302ae879c562dd58e085d9747fcac077",
+      "sha256": "98cd03bc9582e7bd0ab194c191ea8eea940539e510051443ab9fd3e572a364ab"
+    },
+    {
+      "path": "research/e8-bit-carrier-skeleton/code/bit/checkers/gram_frames.py",
+      "usage": "provenance",
+      "git_blob": "b740d47295c02692260d7cc01874a49fe48f78ab",
+      "sha256": "223a5a07731fc315a90a3e48177796babc155c1d9985c7ae5017eff6af2a0608"
+    },
+    {
+      "path": "research/cyclic-zero-elimination/README.md",
+      "usage": "provenance",
+      "git_blob": "8930b3f06398557300466be87cc6523585174e14",
+      "sha256": "73b2c058517ef416aef6425c4898efa45a636257e7d98d4fa29aa3e505236b59"
+    }
+  ]
+}
