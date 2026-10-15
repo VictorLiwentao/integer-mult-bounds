@@ -16,7 +16,6 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
-import textwrap
 
 ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = Path(__file__).resolve().parent
