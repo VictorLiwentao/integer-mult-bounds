@@ -1,5 +1,13 @@
 # Production packed quadratic-affine rank witness
 
+**Deferred from upstream publication.** Open
+[CrocSwap/integer-mult-bounds#1076](https://github.com/CrocSwap/integer-mult-bounds/pull/1076)
+(navinor) already rewrites production `rank_witness` with a different bit-sliced
+engine and the same certificate pin. Content here (Curtis Dransfield #752 packed
+lanes wired into production; ~9× identical receipts) is kept as packaged
+evidence on the fork; do **not** open a competing CrocSwap PR while #1076 is
+open. Revisit only if #1076 closes without landing a production wire.
+
 **Tooling improvement; no new kappa.** At base
 `0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2`,
 `scripts/experiments/quadratic_affine.py:rank_witness` still built each binary
