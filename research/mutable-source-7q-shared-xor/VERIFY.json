@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/mutable-source-shear-cost/README.md",
+    "research/mutable-source-connector/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Full R=82 path_X=6 interleaved X<=2/<=3 census, champion min X=6, certificate match, source pins"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py",
+        "--quick"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Champion/length-2 quick replay under PYTHONOPTIMIZE; admission via need() not assert"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Separate restored length-2 enumeration and champion X bounds"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Corruption rejection and quick/admission controls"
+    }
+  ]
+}

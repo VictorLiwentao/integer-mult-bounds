@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "research/mutable-source-shear-cost/README.md",
+      "usage": "input",
+      "git_blob": "6d728e6717bf0cb685b957a26436f3fa59ab5615",
+      "sha256": "7d3d12980fc3b9a2e581a1b8f9885d286c75e798944c816a7767610fba8dbda2"
+    },
+    {
+      "path": "research/mutable-source-connector/README.md",
+      "usage": "input",
+      "git_blob": "80a33186da00781d4e11031f1f980a0c1fe0df73",
+      "sha256": "dc1a08240ebfdd3778e55a5c26df239a8e9c49b123412218bd3b8c9174c9c935"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    }
+  ]
+}

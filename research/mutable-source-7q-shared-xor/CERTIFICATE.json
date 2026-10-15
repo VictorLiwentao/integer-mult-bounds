@@ -1,0 +1,320 @@
+{
+  "claimed_scope": "interleaved elementary source-XOR schedules realizing connector increments of full-rank path-local-X=6 walks on R=82 seven-query slot sets; PR1898 abstract tariff (38,2,2); no new kappa",
+  "fixture": {
+    "a": 2,
+    "b": 38,
+    "champion_increments": [
+      1,
+      3,
+      4,
+      10,
+      20,
+      8,
+      16
+    ],
+    "champion_path": [
+      0,
+      1,
+      2,
+      6,
+      12,
+      24,
+      16,
+      0
+    ],
+    "endpoint_q6_tariff": 436,
+    "x": 2
+  },
+  "format": "mutable-source-7q-shared-xor-certificate-v1",
+  "interleaved_census": {
+    "champion_X_le_2": false,
+    "champion_X_le_3": false,
+    "champion_X_le_6": true,
+    "champion_exact_min_X": 6,
+    "paths_with_X_le_2": 0,
+    "paths_with_X_le_3": 0
+  },
+  "multi_bit_patterns": {
+    "repeated_multi_bit_increments": 0,
+    "weight_222": 30240,
+    "weight_23": 10080
+  },
+  "no_new_kappa": true,
+  "path_local_x6_fullrank_paths": 40320,
+  "r82_cover_sets": 97216,
+  "restored_length_two": {
+    "count": 20,
+    "distinct_mid_multi_bit_column_sets": 10,
+    "max_multi_bit_columns_per_mid_state": 1,
+    "words": [
+      {
+        "first": [
+          0,
+          1
+        ],
+        "mid_multi_bit_columns": [
+          3
+        ],
+        "second": [
+          0,
+          1
+        ]
+      },
+      {
+        "first": [
+          0,
+          2
+        ],
+        "mid_multi_bit_columns": [
+          5
+        ],
+        "second": [
+          0,
+          2
+        ]
+      },
+      {
+        "first": [
+          0,
+          3
+        ],
+        "mid_multi_bit_columns": [
+          9
+        ],
+        "second": [
+          0,
+          3
+        ]
+      },
+      {
+        "first": [
+          0,
+          4
+        ],
+        "mid_multi_bit_columns": [
+          17
+        ],
+        "second": [
+          0,
+          4
+        ]
+      },
+      {
+        "first": [
+          1,
+          0
+        ],
+        "mid_multi_bit_columns": [
+          3
+        ],
+        "second": [
+          1,
+          0
+        ]
+      },
+      {
+        "first": [
+          1,
+          2
+        ],
+        "mid_multi_bit_columns": [
+          6
+        ],
+        "second": [
+          1,
+          2
+        ]
+      },
+      {
+        "first": [
+          1,
+          3
+        ],
+        "mid_multi_bit_columns": [
+          10
+        ],
+        "second": [
+          1,
+          3
+        ]
+      },
+      {
+        "first": [
+          1,
+          4
+        ],
+        "mid_multi_bit_columns": [
+          18
+        ],
+        "second": [
+          1,
+          4
+        ]
+      },
+      {
+        "first": [
+          2,
+          0
+        ],
+        "mid_multi_bit_columns": [
+          5
+        ],
+        "second": [
+          2,
+          0
+        ]
+      },
+      {
+        "first": [
+          2,
+          1
+        ],
+        "mid_multi_bit_columns": [
+          6
+        ],
+        "second": [
+          2,
+          1
+        ]
+      },
+      {
+        "first": [
+          2,
+          3
+        ],
+        "mid_multi_bit_columns": [
+          12
+        ],
+        "second": [
+          2,
+          3
+        ]
+      },
+      {
+        "first": [
+          2,
+          4
+        ],
+        "mid_multi_bit_columns": [
+          20
+        ],
+        "second": [
+          2,
+          4
+        ]
+      },
+      {
+        "first": [
+          3,
+          0
+        ],
+        "mid_multi_bit_columns": [
+          9
+        ],
+        "second": [
+          3,
+          0
+        ]
+      },
+      {
+        "first": [
+          3,
+          1
+        ],
+        "mid_multi_bit_columns": [
+          10
+        ],
+        "second": [
+          3,
+          1
+        ]
+      },
+      {
+        "first": [
+          3,
+          2
+        ],
+        "mid_multi_bit_columns": [
+          12
+        ],
+        "second": [
+          3,
+          2
+        ]
+      },
+      {
+        "first": [
+          3,
+          4
+        ],
+        "mid_multi_bit_columns": [
+          24
+        ],
+        "second": [
+          3,
+          4
+        ]
+      },
+      {
+        "first": [
+          4,
+          0
+        ],
+        "mid_multi_bit_columns": [
+          17
+        ],
+        "second": [
+          4,
+          0
+        ]
+      },
+      {
+        "first": [
+          4,
+          1
+        ],
+        "mid_multi_bit_columns": [
+          18
+        ],
+        "second": [
+          4,
+          1
+        ]
+      },
+      {
+        "first": [
+          4,
+          2
+        ],
+        "mid_multi_bit_columns": [
+          20
+        ],
+        "second": [
+          4,
+          2
+        ]
+      },
+      {
+        "first": [
+          4,
+          3
+        ],
+        "mid_multi_bit_columns": [
+          24
+        ],
+        "second": [
+          4,
+          3
+        ]
+      }
+    ]
+  },
+  "tariffs": {
+    "beats_or_ties_endpoint_requires_X_le": 3,
+    "blocked_by_census": true,
+    "q7_r82_x2": 434,
+    "q7_r82_x3": 436,
+    "q7_r82_x4": 438,
+    "q7_r82_x6": 442
+  }
+}
