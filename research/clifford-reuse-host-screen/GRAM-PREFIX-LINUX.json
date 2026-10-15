@@ -1,0 +1,182 @@
+{
+  "status": "PASS_GRAM_PREFIX_BENCHMARK",
+  "scope": "Complete 672-frame Gram checker including adapter startup and source/fixture validation, fresh processes, existing exported inputs; no exporter or full frontier replay timing.",
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/usr/bin/python3",
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "filesystem_caches_flushed": false
+  },
+  "source": {
+    "base_commit": "66849e1475c930fd7732b1a0067ffee7e1e95f60",
+    "assignment_seed": 88,
+    "source_sha256": {
+      "research/e8-bit-carrier-skeleton/code/bit/checkers/gram_frames.py": "223a5a07731fc315a90a3e48177796babc155c1d9985c7ae5017eff6af2a0608",
+      "research/e8-bit-carrier-skeleton/code/pricing/prime_witnesses.py": "98cd03bc9582e7bd0ab194c191ea8eea940539e510051443ab9fd3e572a364ab",
+      "research/e8-bit-carrier-skeleton/code/bit/export_records.py": "8a5999601f917dbb492bb9ae9a344611f18cc7cedc53dc3c76496a369e530eb3",
+      "research/e8-bit-r420/data/bitE8mut-r420.json.gz": "9721a3819efd68307f66f00d84a952eb28eb7c3ad2ce79653ce295c98a764784"
+    },
+    "frames_payload_sha256": "46f49b700fa3ecd59ba6815b58234c0b67b94360f7af52a718b275b8198c1c74",
+    "frames": 672
+  },
+  "package_python_sha256": {
+    "adapter.py": "d666868eaa53e1f66a002ed211cbd9caadee63da229fed315534d1172e525fd6",
+    "benchmark.py": "58349125e19e5598c6844c69f87c34fafe44149e083f1ec5624a62dfe51fcdfd",
+    "kernel.py": "2e1701099bffeb84d28add001a7a46fd6457ef113aea13be8d030aa85e0e0008",
+    "test_kernel.py": "562ce0bed7c455d618cfdaaa501125eea59f68fe61a840cbcd006bd23e906b73",
+    "test_package.py": "4e5e8bdbcca458450cfe45ae8ed90b19d2bccb8967f0b53d8f0c1971da69caaa",
+    "verify.py": "d4564c8323129cc94ba25ab856dc7aab9bf99b8468e1d47bb17bf2b4b5ba77eb"
+  },
+  "reference_receipt": {
+    "stdout": "PASS e8ham Gram: 672 frames checked, all nondegenerate and positive definite; prime witnesses valid; max determinant bits 17; primes [2]; by dim {0: 1, 1: 120, 2: 180, 4: 70, 6: 180, 7: 120, 8: 1}\n",
+    "determinant_calls": 3360,
+    "determinant_trace_sha256": "441d68e330a1b8b159fd914ceb2eab302d38eb50c87147ce62a513a02796dbef",
+    "kernel_stats": null
+  },
+  "compared_receipt": {
+    "stdout": "PASS e8ham Gram: 672 frames checked, all nondegenerate and positive definite; prime witnesses valid; max determinant bits 17; primes [2]; by dim {0: 1, 1: 120, 2: 180, 4: 70, 6: 180, 7: 120, 8: 1}\n",
+    "determinant_calls": 3360,
+    "determinant_trace_sha256": "441d68e330a1b8b159fd914ceb2eab302d38eb50c87147ce62a513a02796dbef",
+    "kernel_stats": {
+      "calls": 3360,
+      "hits": 3186,
+      "fallbacks": 0
+    }
+  },
+  "samples": [
+    {
+      "pair": 0,
+      "order": [
+        "reference",
+        "prefix"
+      ],
+      "reference_cpu_seconds": 0.073883,
+      "reference_seconds": 0.07429232399999819,
+      "reference_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6",
+      "prefix_cpu_seconds": 0.07901,
+      "prefix_seconds": 0.07924720699998034,
+      "prefix_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6"
+    },
+    {
+      "pair": 1,
+      "order": [
+        "prefix",
+        "reference"
+      ],
+      "prefix_cpu_seconds": 0.072513,
+      "prefix_seconds": 0.07283207900002253,
+      "prefix_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6",
+      "reference_cpu_seconds": 0.07439699999999996,
+      "reference_seconds": 0.07476825099990947,
+      "reference_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6"
+    },
+    {
+      "pair": 2,
+      "order": [
+        "reference",
+        "prefix"
+      ],
+      "reference_cpu_seconds": 0.08914500000000004,
+      "reference_seconds": 0.08934804100010751,
+      "reference_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6",
+      "prefix_cpu_seconds": 0.08144599999999994,
+      "prefix_seconds": 0.08169234800004688,
+      "prefix_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6"
+    },
+    {
+      "pair": 3,
+      "order": [
+        "prefix",
+        "reference"
+      ],
+      "prefix_cpu_seconds": 0.07075300000000001,
+      "prefix_seconds": 0.07106448600006843,
+      "prefix_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6",
+      "reference_cpu_seconds": 0.07090600000000005,
+      "reference_seconds": 0.07131447999995544,
+      "reference_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6"
+    },
+    {
+      "pair": 4,
+      "order": [
+        "reference",
+        "prefix"
+      ],
+      "reference_cpu_seconds": 0.08083499999999993,
+      "reference_seconds": 0.08126302899995608,
+      "reference_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6",
+      "prefix_cpu_seconds": 0.06941300000000006,
+      "prefix_seconds": 0.06980890299996645,
+      "prefix_stdout_sha256": "6abafaf29f2829ad650bd36d3cac8c7c884db60c72c3a34d81e1877ea5baaba6"
+    }
+  ],
+  "median_seconds": {
+    "reference": 0.07476825099990947,
+    "prefix": 0.07283207900002253
+  },
+  "median_child_cpu_seconds": {
+    "reference": 0.07439699999999996,
+    "prefix": 0.072513
+  },
+  "cpu_speedup": 1.0259815481361958,
+  "median_pair_wall_speedup": 1.026584055082189,
+  "determinant_stream": {
+    "requests": 3360,
+    "samples": [
+      {
+        "pair": 0,
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "reference_seconds": 0.010641320000104315,
+        "prefix_seconds": 0.00714569699994172
+      },
+      {
+        "pair": 1,
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "prefix_seconds": 0.007104953000066416,
+        "reference_seconds": 0.010056818999942152
+      },
+      {
+        "pair": 2,
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "reference_seconds": 0.010589868000010938,
+        "prefix_seconds": 0.007091929000011987
+      },
+      {
+        "pair": 3,
+        "order": [
+          "prefix",
+          "reference"
+        ],
+        "prefix_seconds": 0.006887338000069576,
+        "reference_seconds": 0.010583714000063082
+      },
+      {
+        "pair": 4,
+        "order": [
+          "reference",
+          "prefix"
+        ],
+        "reference_seconds": 0.010384606999991775,
+        "prefix_seconds": 0.007175415999995494
+      }
+    ],
+    "median_seconds": {
+      "reference": 0.010583714000063082,
+      "prefix": 0.007104953000066416
+    },
+    "speedup": 1.489624773023009,
+    "result_sha256": "12344fac32167535a72a2b5d79b5755f925af513d16aae5e71aefdf4a43b7e1a"
+  },
+  "speedup": 1.026584055082189,
+  "wall_time_reduction": 0.025895643859440876
+}

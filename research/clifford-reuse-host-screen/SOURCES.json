@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "notes": "This screen package does not vendor production sources. It pins the opt-in proof note and the local measurement receipts committed beside verify.py.",
+  "sources": [
+    {
+      "path": "research/clifford-state-reuse/PROOF.md",
+      "role": "opt-in equivalence argument for the monomial (vec,den) reuse",
+      "provenance": "historical"
+    },
+    {
+      "path": "research/clifford-reuse-host-screen/PHASE-REUSE-LINUX.json",
+      "role": "Linux three-round complete phase reuse receipt",
+      "provenance": "generated"
+    },
+    {
+      "path": "research/clifford-reuse-host-screen/RESULT.json",
+      "role": "deferred host-screen inventory",
+      "provenance": "generated"
+    }
+  ]
+}

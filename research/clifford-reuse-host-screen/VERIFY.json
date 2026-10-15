@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/clifford-reuse-host-screen/RESULT.json",
+    "research/clifford-reuse-host-screen/PHASE-REUSE-LINUX.json",
+    "research/clifford-state-reuse/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "RESULT schema, deferred disposition, no production-edit claim, phase receipt pin, duplicate JSON-key check, temp-copy corruption rejection, checkout unchanged."
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same gates under -O (require() remains)."
+    }
+  ]
+}

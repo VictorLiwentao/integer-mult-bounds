@@ -1,0 +1,91 @@
+{
+  "status": "PASS_OWNER_FOOTPRINT_BENCHMARK",
+  "utc": "2026-10-15T09:45:53.192056+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "executable": "/usr/bin/python3",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+  "pairs": 5,
+  "order": "alternating; sets first when (91 + pair) % 2 != 0",
+  "reference": "unchanged pinned checker, direct CLI",
+  "candidate": "adapter CLI including source pin validation and counted substitution",
+  "process": "fresh interpreter each sample; same archived inputs; OS caches not flushed",
+  "code_sha256": {
+    "adapter.py": "1fc4dfc42a613e5a9ab1b856983dcf52c27f1c3736ea1b72358e206f7fd4f463",
+    "benchmark.py": "f6d568558610d5bb274ac4bfa67d167ca97ff11bac172ab7458ac78d506726ab",
+    "test_masks.py": "a6550561820e0437b67fc3c51548e83f9dbef79d4a207f8a1799019e55df8aaf",
+    "verify.py": "3dcda41b3a373f6e1bd842d4cde0de1b2d2cf2e9c9b84ca0789ed4280498a410"
+  },
+  "origins_sha256": "0491f2d3cce5bdae06295108e82370bfcaa4180e72c1cf41bdc114787d78a33d",
+  "expected_receipt_sha256": "ec82a647bc3567efef91a1588c86f012cdbb5decac0c25a9f38ba5d11762a092",
+  "median_wall_seconds": {
+    "sets": 0.439227971,
+    "masks": 0.366555572
+  },
+  "ratio_of_medians": 1.198257520963288,
+  "wall_time_reduction_percent": 16.545485214556155,
+  "median_paired_speedup": 1.16135134479161,
+  "pairs_masks_faster": 5,
+  "samples": [
+    {
+      "pair": 0,
+      "engine": "sets",
+      "wall_seconds": 0.48121996,
+      "child_cpu_seconds": 0.48088899999999996
+    },
+    {
+      "pair": 0,
+      "engine": "masks",
+      "wall_seconds": 0.414362081,
+      "child_cpu_seconds": 0.41407600000000006
+    },
+    {
+      "pair": 1,
+      "engine": "masks",
+      "wall_seconds": 0.366555572,
+      "child_cpu_seconds": 0.366309
+    },
+    {
+      "pair": 1,
+      "engine": "sets",
+      "wall_seconds": 0.439227971,
+      "child_cpu_seconds": 0.43879199999999985
+    },
+    {
+      "pair": 2,
+      "engine": "sets",
+      "wall_seconds": 0.419655972,
+      "child_cpu_seconds": 0.41924300000000003
+    },
+    {
+      "pair": 2,
+      "engine": "masks",
+      "wall_seconds": 0.367719252,
+      "child_cpu_seconds": 0.36727599999999994
+    },
+    {
+      "pair": 3,
+      "engine": "masks",
+      "wall_seconds": 0.365233456,
+      "child_cpu_seconds": 0.36485699999999976
+    },
+    {
+      "pair": 3,
+      "engine": "sets",
+      "wall_seconds": 0.423253885,
+      "child_cpu_seconds": 0.4229000000000003
+    },
+    {
+      "pair": 4,
+      "engine": "sets",
+      "wall_seconds": 0.468268872,
+      "child_cpu_seconds": 0.46778299999999984
+    },
+    {
+      "pair": 4,
+      "engine": "masks",
+      "wall_seconds": 0.359253817,
+      "child_cpu_seconds": 0.3589690000000001
+    }
+  ],
+  "scope": "Independent owner checker only, not full supplier replay or multiplication runtime."
+}

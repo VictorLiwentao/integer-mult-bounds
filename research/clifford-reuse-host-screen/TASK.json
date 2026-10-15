@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "host-screen-defer-60b9",
+  "scope_status": "refined",
+  "actual_scope": "Screen remaining proved opt-in adapters for production wiring under the #756 host bar after leave-alone tooling through #2433; remeasure clifford-state-reuse complete U8 phase pairs on Linux and compare sibling thin adapters; do not edit production files when magnitude fails.",
+  "scope_change_reason": "Catalogue replay-runtime asks for one measured bottleneck with before/after wall time. Expertise override preferred production wiring of proved opt-in adapters. Leave-alone objects through #2433 and ledger Deferred packages were skipped. The strongest remaining opt-in (clifford-state-reuse) remasured below the clearly-above-~1.5x stable-host bar, so the session outcome is an evidence-backed DEFER rather than a production edit.",
+  "bottleneck_link": "Side result on review throughput: production wiring only when host magnitude clears the accepted tooling bar.",
+  "budget_minutes": 60,
+  "stop_rule": "Publish production wiring only with identical receipts and stable host samples clearly above ~1.5x; otherwise record an honest DEFER with per-round ratios.",
+  "outcome": "deferred",
+  "evidence": "PASS_CLIFFORD_REUSE_HOST_SCREEN; Linux phase reuse ratio-of-medians 1.486x (per-round 1.454-1.549); cyclic-zero 1.244x; owner-footprint 1.198x; t37-bitmaps 1.205x; gram-prefix process 1.027x; no production files changed.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "After #2329 merges gate-table zero_state, does monomial reuse still clear ~1.5x on the composed evaluator?",
+      "why_it_matters": "Reuse and gate tables compose on different loci, but the host bar is absolute.",
+      "first_step": "Remeasure three alternating phase pairs on the merged tip.",
+      "blocked_by": "#2329 merge and a free Linux host slot."
+    },
+    {
+      "question": "Is there another proved opt-in with stable host samples clearly above ~1.5x that avoids leave-alone production objects?",
+      "why_it_matters": "Remaining unwired adapters measured here are thin.",
+      "first_step": "Refresh the open/#756-bar tooling inventory after the next leave-alone batch merges.",
+      "blocked_by": "Inventory refresh."
+    }
+  ]
+}

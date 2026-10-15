@@ -1,0 +1,77 @@
+{
+  "status": "DEFER_PRODUCTION_WIRING_HOST_MAGNITUDE",
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "host": {
+    "python": "3.12.3",
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39"
+  },
+  "claim": "No remaining leave-alone-safe proved opt-in adapter clears the #756 host bar (clearly above ~1.5x with stable per-round ratios) on this Linux host for production wiring.",
+  "candidates": [
+    {
+      "name": "clifford-state-reuse (#1092)",
+      "production_target": "clifford_exact.py monomial assertion (soft overlap with open #2329 gate-table zero_state on multicold copy)",
+      "workload": "complete U8 phase recipes (2949 edges, 224 adapters)",
+      "command": "python3 -I -B research/clifford-state-reuse/verify.py --work /tmp/... --rounds 3 --hard-seconds 3600",
+      "baseline_seconds": [
+        133.7615901260001,
+        122.68529228500006,
+        125.37767756700009
+      ],
+      "candidate_seconds": [
+        88.12886297399996,
+        84.40085630300018,
+        80.92676400300002
+      ],
+      "per_round_ratios": [
+        1.5177954827973084,
+        1.4536024592518144,
+        1.5492733351150956
+      ],
+      "ratio_of_medians": 1.4855024351517547,
+      "median_of_ratios": 1.5177954827973084,
+      "ranges_disjoint": true,
+      "identical_recipe_bytes": true,
+      "disposition": "DEFER_MAGNITUDE",
+      "reason": "ratio-of-medians 1.486x; per-round span includes 1.454x; not clearly above ~1.5x. Soft file overlap with leave-alone open #2329."
+    },
+    {
+      "name": "cyclic-zero-elimination (#736)",
+      "production_target": "research/prime-power-cyclic-inverse/verify.py eliminate()",
+      "ratio_of_medians": 1.244,
+      "per_round_range": [
+        1.157,
+        1.383
+      ],
+      "disposition": "DEFER_MAGNITUDE",
+      "reason": "stable ~1.24x below bar"
+    },
+    {
+      "name": "owner-footprint-bitsets",
+      "ratio_of_medians": 1.198,
+      "disposition": "DEFER_MAGNITUDE"
+    },
+    {
+      "name": "gram-prefix-performance",
+      "ratio_of_medians": 1.027,
+      "disposition": "DEFER_MAGNITUDE",
+      "note": "kernel batch historically ~1.8-2.0x; complete process on this host ~1.03x"
+    },
+    {
+      "name": "t37-slice-bitmaps",
+      "ratio_of_medians": 1.205,
+      "disposition": "DEFER_MAGNITUDE"
+    },
+    {
+      "name": "ck-dyadic-replay-production / scalar-fused-dyadic-production / quadratic-affine-production",
+      "disposition": "LEAVE_ALONE_LEDGER_DEFERRED"
+    },
+    {
+      "name": "p112-signed-modular-production / omission-lanes-production / tooling through #2433",
+      "disposition": "LEAVE_ALONE_ALREADY_PUBLISHED"
+    }
+  ],
+  "no_new_kappa": true,
+  "production_files_changed": false,
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review."
+}
