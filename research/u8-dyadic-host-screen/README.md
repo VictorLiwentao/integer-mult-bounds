@@ -91,7 +91,8 @@ python3.12 -I -B research/cyclic-zero-elimination/verify.py --output /tmp/cyclic
 CK dyadic fast kernels: Sricharan Vagvala / `ck-dyadic-replay-fast`. U8
 two-sided biforest: Stephan Arrington / `u8-two-sided-biforest-seed35`.
 Cyclic-zero: Sagar Thakrar #736. Prior host inventory:
-`research/clifford-reuse-host-screen/`. Prepared by Wentao Li
+`research/clifford-reuse-host-screen/` on `cursor/clifford-reuse-host-defer-60b9`.
+Prepared by Wentao Li
 ([VictorLiwentao](https://github.com/VictorLiwentao),
 [@Is__Victor](https://x.com/Is__Victor)) with substantial AI assistance.
 Apache-2.0. No new kappa.
