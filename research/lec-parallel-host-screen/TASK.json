@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "lec-parallel-host-defer-60b9",
+  "scope_status": "refined",
+  "actual_scope": "After leave-alone through #2433 and ledger Deferred dyadic/Clifford/U8 host screens, remeasure the strongest remaining claimed host (layer-end-controls-parallel) on Linux with identical receipts and per-round ratios; remeasure leave-alone-safe cyclic-zero; do not edit production files while soft-overlap with #2409/#2412 remains.",
+  "scope_change_reason": "Catalogue replay-runtime asks for one measured bottleneck with before/after wall time. Expertise override preferred production wiring of proved opt-in adapters with identical receipts and stable host samples clearly above ~1.5x. Prior U8 dyadic inventory flagged parallel LEC as soft-overlap without a Linux remeasure; this session supplies that remeasure (stable ~2.45x) and records an honest soft-overlap DEFER rather than competing with leave-alone HPE production PRs.",
+  "bottleneck_link": "Side result on review throughput: production wiring only when host magnitude clears the accepted tooling bar and soft-overlap with open leave-independent PRs is absent.",
+  "budget_minutes": 60,
+  "stop_rule": "Publish production wiring only with identical receipts, stable host samples clearly above ~1.5x, and no soft-overlap with open leave-independent PRs; otherwise record an honest DEFER with per-round ratios.",
+  "outcome": "negative-result",
+  "evidence": "PASS_LEC_PARALLEL_HOST_SCREEN; LEC parallel ratio_of_medians 2.448x (per-round 2.426-2.617) with identical COLD-END-CONTROLS; cyclic-zero remeasure 1.285x (1.247-1.297); soft-overlap defer vs #2409/#2412; no production files changed.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "After leave-alone #2409/#2412 merge, can production wiring of controls_parallel.py into a single default LEC call site keep identical receipts with retargeted HPE digests?",
+      "why_it_matters": "This Linux remeasure shows a stable ~2.45x host that already clears the #756 magnitude bar.",
+      "first_step": "Retarget PINS.json audit digest to the merged integer-row production tip; remeasure one call site.",
+      "blocked_by": "#2409 / #2412 leave-alone resolution."
+    },
+    {
+      "question": "Is there another proved opt-in whose production target is byte-disjoint from leave-alone and ledger-Deferred packages and whose complete-host samples stably exceed ~1.5x on Linux?",
+      "why_it_matters": "Leave-alone-safe adapters screened here remain thin.",
+      "first_step": "Refresh the open/#756-bar tooling inventory after the next merge batch.",
+      "blocked_by": "Inventory refresh."
+    }
+  ],
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  }
+}

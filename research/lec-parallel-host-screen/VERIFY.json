@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/lec-parallel-host-screen/RESULT.json",
+    "research/lec-parallel-host-screen/LEC-LINUX.json",
+    "research/lec-parallel-host-screen/CYCLIC-ZERO-LINUX.json",
+    "research/layer-end-controls-parallel/verify.py",
+    "research/layer-end-controls-parallel/controls_parallel.py",
+    "research/layer-end-controls-parallel/PINS.json"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "RESULT schema, deferred soft-overlap disposition, no production-edit claim, LEC/cyclic receipts, duplicate JSON-key check, temp-copy corruption rejection, checkout unchanged."
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same gates under -O (require() remains)."
+    }
+  ]
+}

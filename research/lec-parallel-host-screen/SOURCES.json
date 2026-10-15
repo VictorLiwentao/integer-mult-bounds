@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    },
+    {
+      "path": "research/layer-end-controls-parallel/verify.py",
+      "usage": "input",
+      "git_blob": "7a61f7f9772c6259231a709ea647b026d05fdb79",
+      "sha256": "ddf62f36914c3028e8a6c7520d99a6917afe77706e695cc64df5f3a4506444ee"
+    },
+    {
+      "path": "research/layer-end-controls-parallel/controls_parallel.py",
+      "usage": "input",
+      "git_blob": "c089c05ad4d62cac65ba65c7e758371cd4aaca40",
+      "sha256": "cf67fe73dea88876a8f38d29f00f926982400413d98c7118b705717a6d8525b9"
+    },
+    {
+      "path": "research/layer-end-controls-parallel/PINS.json",
+      "usage": "input",
+      "git_blob": "512f8d4797e074c463b4c41a739456d2f6d5da7b",
+      "sha256": "23e976bf4dcbf59301d545f4f6f77ec8f572b5461bd7062e25e6330c8ec0333b"
+    },
+    {
+      "path": "research/layer-end-controls-parallel/README.md",
+      "usage": "provenance",
+      "git_blob": "ddd2fccd14b23bfe22e2500047548e32a4bec6a0",
+      "sha256": "e1dc9427980a4168cc8e5f66c36098fedea5dd5da37dfe300fc4ab75c9d73422"
+    },
+    {
+      "path": "research/cyclic-zero-elimination/README.md",
+      "usage": "provenance",
+      "git_blob": "8930b3f06398557300466be87cc6523585174e14",
+      "sha256": "73b2c058517ef416aef6425c4898efa45a636257e7d98d4fa29aa3e505236b59"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "author": "Wentao Li",
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "candidates": [
+    {
+      "disposition": "DEFER_SOFT_OVERLAP",
+      "identical_receipts": true,
+      "jobs": 4,
+      "median_parallel_seconds": 36.4,
+      "median_serial_seconds": 89.1,
+      "name": "layer-end-controls-parallel (#1059/#1151 lineage)",
+      "per_round_range": [
+        2.4256410256410255,
+        2.6174863387978142
+      ],
+      "per_round_ratios": [
+        2.6174863387978142,
+        2.4256410256410255,
+        2.484593837535014,
+        2.507122507122507,
+        2.4478021978021975
+      ],
+      "production_target": "PR870/T37 reproduce_barch layer-end-controls step (and sibling gauge44 LEC call sites)",
+      "ratio_of_medians": 2.4478021978021975,
+      "reason": "stable ~2.45x clears clearly-above-~1.5x magnitude bar, but production wiring soft-overlaps leave-alone #2409/#2412 (same PR635 hpe_audit_and_transport.py digest space the parallel runner authenticates)",
+      "workload": "complete U8 barch layer-end controls: 1 honest + 95 mutant audits with byte-identical COLD-END-CONTROLS.json"
+    },
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "name": "cyclic-zero-elimination (#736) remeasure",
+      "per_round_range": [
+        1.246539662331579,
+        1.296680674525712
+      ],
+      "per_round_ratios": [
+        1.2746079931734815,
+        1.246539662331579,
+        1.2490133629932878,
+        1.2846126827208781,
+        1.2864104292442078,
+        1.2612320992029462,
+        1.296680674525712
+      ],
+      "production_target": "research/prime-power-cyclic-inverse/verify.py eliminate()",
+      "ratio_of_medians": 1.2846126827208781,
+      "reason": "leave-alone-safe object; stable ~1.28x (1.25-1.30) below bar"
+    },
+    {
+      "disposition": "DEFER_SOFT_OVERLAP",
+      "name": "phase-recipes-parallel / frontier1042-lec-parallel / selected-replay-fastpath",
+      "reason": "strong claimed hosts; soft-overlap leave-alone #2329 Clifford object space and/or #2409/#2412 HPE LEC path"
+    },
+    {
+      "disposition": "DEFER_MAGNITUDE_OR_NOISY",
+      "name": "gram-prefix / owner-footprint / exact-frame-containment / joint-frame-modular / p111-rup / signed-sparse complete",
+      "reason": "reported complete-process hosts ~1.0-1.23x or microbenchmark-only; below bar"
+    },
+    {
+      "disposition": "LEAVE_ALONE_LEDGER_DEFERRED",
+      "name": "ck-dyadic-replay-production / scalar-fused-dyadic-production / clifford-reuse-host-screen / u8-dyadic-host-screen / quadratic-affine-production"
+    },
+    {
+      "disposition": "LEAVE_ALONE_ALREADY_PUBLISHED",
+      "name": "tooling through #2433 (incl. #2409/#2412/#2431/#2433) and open leave-independents"
+    }
+  ],
+  "claim": "Linux host remeasure of proved opt-in layer-end-controls-parallel clears the #756 magnitude bar (median 2.448x; per-round 2.426-2.617) with identical cold-end receipts, but production wiring is deferred for soft-overlap with leave-alone #2409/#2412. Leave-alone-safe cyclic-zero remeasure remains thin (~1.285x).",
+  "host": {
+    "cpu_count": 4,
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "no_new_kappa": true,
+  "production_files_changed": false,
+  "status": "DEFER_PRODUCTION_WIRING_SOFT_OVERLAP"
+}

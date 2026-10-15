@@ -1,0 +1,92 @@
+{
+  "adapter": "research/layer-end-controls-parallel/",
+  "corruption_control": "C1_corrupted_unmutated_word_fails_in_replay",
+  "cpu_count": 4,
+  "disposition": "DEFER_SOFT_OVERLAP",
+  "host": "Linux nproc=4 jobs=4",
+  "identical_receipts": true,
+  "jobs": 4,
+  "median_parallel_seconds": 36.4,
+  "median_serial_seconds": 89.1,
+  "per_round_max": 2.6174863387978142,
+  "per_round_min": 2.4256410256410255,
+  "per_round_ratios": [
+    2.6174863387978142,
+    2.4256410256410255,
+    2.484593837535014,
+    2.507122507122507,
+    2.4478021978021975
+  ],
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+  "predecessor_pr": "#1059 / #1151 lineage (thakrarsagar layer-end-controls-parallel)",
+  "python": "3.12.3",
+  "ratio_of_medians": 2.4478021978021975,
+  "reason": "stable ~2.45x clears magnitude bar, but production wiring soft-overlaps leave-alone #2409/#2412 (PR635 hpe_audit_and_transport.py digest pins used by the parallel runner)",
+  "samples": [
+    {
+      "controls": [
+        "C1_corrupted_unmutated_word_fails_in_replay"
+      ],
+      "cpu_count": 4,
+      "jobs": 4,
+      "parallel_seconds": 36.6,
+      "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "serial_seconds": 95.8,
+      "speedup": 2.62
+    },
+    {
+      "controls": [
+        "C1_corrupted_unmutated_word_fails_in_replay"
+      ],
+      "cpu_count": 4,
+      "jobs": 4,
+      "parallel_seconds": 39.0,
+      "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "serial_seconds": 94.6,
+      "speedup": 2.43
+    },
+    {
+      "controls": [
+        "C1_corrupted_unmutated_word_fails_in_replay"
+      ],
+      "cpu_count": 4,
+      "jobs": 4,
+      "parallel_seconds": 35.7,
+      "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "serial_seconds": 88.7,
+      "speedup": 2.48
+    },
+    {
+      "controls": [
+        "C1_corrupted_unmutated_word_fails_in_replay"
+      ],
+      "cpu_count": 4,
+      "jobs": 4,
+      "parallel_seconds": 35.1,
+      "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "serial_seconds": 88.0,
+      "speedup": 2.51
+    },
+    {
+      "controls": [
+        "C1_corrupted_unmutated_word_fails_in_replay"
+      ],
+      "cpu_count": 4,
+      "jobs": 4,
+      "parallel_seconds": 36.4,
+      "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "serial_seconds": 89.1,
+      "speedup": 2.45
+    }
+  ],
+  "soft_overlap": [
+    "https://github.com/CrocSwap/integer-mult-bounds/pull/2409",
+    "https://github.com/CrocSwap/integer-mult-bounds/pull/2412"
+  ],
+  "status": "PASS_LEC_PARALLEL_HOST_SCREEN"
+}

@@ -1,0 +1,29 @@
+{
+  "adapter": "research/cyclic-zero-elimination/",
+  "disposition": "DEFER_MAGNITUDE",
+  "medians": {
+    "guarded": {
+      "cpu_seconds": 3.3122590000000005,
+      "wall_seconds": 3.313153929000009
+    },
+    "reference": {
+      "cpu_seconds": 4.2553940000000035,
+      "wall_seconds": 4.25611955699992
+    }
+  },
+  "per_round_max": 1.296680674525712,
+  "per_round_min": 1.246539662331579,
+  "per_round_ratios": [
+    1.2746079931734815,
+    1.246539662331579,
+    1.2490133629932878,
+    1.2846126827208781,
+    1.2864104292442078,
+    1.2612320992029462,
+    1.296680674525712
+  ],
+  "predecessor_pr": "#736",
+  "ratio_of_medians": 1.2846126827208781,
+  "reason": "stable ~1.28x (1.25-1.30) below clearly-above-~1.5x bar; leave-alone-safe object but thin",
+  "status": "PASS_CYCLIC_ZERO_HOST_REMEASURE"
+}
