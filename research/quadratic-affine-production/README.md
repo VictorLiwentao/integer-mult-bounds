@@ -37,9 +37,13 @@ PASS_IDENTICAL_QUADRATIC_AFFINE_PRODUCTION_RECEIPTS
 Default verify is read-only. Use `--write-certificate` only after editing the
 production source. Timing is host-descriptive and is not a correctness gate.
 
-On Linux / CPython 3.12.3, five alternating fresh-process pairs gave median
-**witness-only** and **complete audit** ratios recorded in
-[`RESULT.json`](RESULT.json) after `benchmark.py`.
+On Linux / CPython 3.12.3 (Linux-6.12.94+-x86_64-with-glibc2.39), five
+alternating fresh-process pairs gave median wall time:
+
+- **witness-only (twelve rank_witness cases):** **86.378 → 9.576 s (9.02×)**
+- **complete audit:** **83.345 → 9.067 s (9.19×)**
+
+Samples are in [`RESULT.json`](RESULT.json).
 
 ## Why the packed check is equivalent
 

@@ -1,0 +1,142 @@
+{
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, profiling, implementation, packaging, benchmarking and writing. Not independent human peer review.",
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "complete_audit": {
+    "median_baseline_seconds": 83.34491947900005,
+    "median_optimized_seconds": 9.066735964999907,
+    "median_ratio": 9.192384095084973,
+    "rounds": 5,
+    "samples": [
+      {
+        "baseline_seconds": 88.56864214800021,
+        "optimized_seconds": 9.414301017999833,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.407882962172113,
+        "round": 0
+      },
+      {
+        "baseline_seconds": 86.70277222100003,
+        "optimized_seconds": 10.112504442000045,
+        "order": [
+          "optimized",
+          "baseline"
+        ],
+        "ratio": 8.573817961542671,
+        "round": 1
+      },
+      {
+        "baseline_seconds": 82.53595201999997,
+        "optimized_seconds": 9.066735964999907,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.1031604249436,
+        "round": 2
+      },
+      {
+        "baseline_seconds": 83.34491947900005,
+        "optimized_seconds": 8.735529217000021,
+        "order": [
+          "optimized",
+          "baseline"
+        ],
+        "ratio": 9.540912451738395,
+        "round": 3
+      },
+      {
+        "baseline_seconds": 82.61228561799999,
+        "optimized_seconds": 9.01259223299985,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.166317911900293,
+        "round": 4
+      }
+    ],
+    "scope": "audit"
+  },
+  "engines": {
+    "baseline": "research/quadratic-affine-production/baseline.py",
+    "optimized": "scripts/experiments/quadratic_affine.py"
+  },
+  "environment": {
+    "cpu_affinity_set": false,
+    "executable": "/usr/bin/python3.12",
+    "implementation": "CPython",
+    "os_caches_flushed": false,
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "no_new_kappa": true,
+  "predecessor": "research/quadratic-affine-packed/",
+  "source_sha256": {
+    "baseline.py": "8f9252bd092eb14779997c6767e090377e91f4d57e6526e9840ae0dd7dcc8f9c",
+    "research/quadratic-affine-packed/packed.py": "366a8046fc420eaa36ae397eec35928b91284b60f2d14f56565006ad6cd6f538",
+    "scripts/experiments/quadratic_affine.py": "e76d9125a7c4f8b8a061f09f724f6542f3ca2542f9f17a4083c76f88ccb43503"
+  },
+  "status": "PASS_IDENTICAL_QUADRATIC_AFFINE_PRODUCTION_RECEIPTS",
+  "witness_only": {
+    "median_baseline_seconds": 86.37799513999994,
+    "median_optimized_seconds": 9.575883646999955,
+    "median_ratio": 9.02036807507174,
+    "rounds": 5,
+    "samples": [
+      {
+        "baseline_seconds": 88.36649756799989,
+        "optimized_seconds": 9.442974821000007,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.357908841553165,
+        "round": 0
+      },
+      {
+        "baseline_seconds": 86.37499878299991,
+        "optimized_seconds": 9.596160230000123,
+        "order": [
+          "optimized",
+          "baseline"
+        ],
+        "ratio": 9.000995889269223,
+        "round": 1
+      },
+      {
+        "baseline_seconds": 84.377392956,
+        "optimized_seconds": 9.300659514000017,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.0721945931887,
+        "round": 2
+      },
+      {
+        "baseline_seconds": 86.37799513999994,
+        "optimized_seconds": 9.649420299999974,
+        "order": [
+          "optimized",
+          "baseline"
+        ],
+        "ratio": 8.951625326134895,
+        "round": 3
+      },
+      {
+        "baseline_seconds": 87.81172608299994,
+        "optimized_seconds": 9.575883646999955,
+        "order": [
+          "baseline",
+          "optimized"
+        ],
+        "ratio": 9.170091170699491,
+        "round": 4
+      }
+    ],
+    "scope": "witness"
+  }
+}
