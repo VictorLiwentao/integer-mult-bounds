@@ -75,7 +75,7 @@ def controls():
 
     before, after = work(original), work(fast)
     require(after < before, 'Zero-row guard removed no arithmetic')
-    source = (adapter.SOURCE / 'verify.py').read_bytes()
+    source = adapter.BASELINE.read_bytes()
     rejected(lambda: adapter.prepare(source + b'\n', True), 'Changed source was admitted')
     # These faults skip necessary nonzero work, so an inherited identity must fail.
     guarded = adapter.prepare(source, True)
@@ -118,7 +118,7 @@ def main():
                 'optimized': bool(sys.flags.optimize), 'expected_sha256': digest,
                 'cases_per_replay': len(json.loads(expected)['cases']),
                 'samples': []}
-    paths = {'reference': adapter.SOURCE / 'verify.py', 'guarded': PACKAGE / 'replay.py'}
+    paths = {'reference': adapter.BASELINE, 'guarded': PACKAGE / 'replay.py'}
     for pair in range(7):
         order = ('reference', 'guarded') if pair % 2 == 0 else ('guarded', 'reference')
         sample = {'pair': pair + 1, 'order': list(order)}

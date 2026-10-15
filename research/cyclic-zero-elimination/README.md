@@ -1,5 +1,9 @@
 # Skip zero row updates in the exact cyclic-inverse replay
 
+After `research/cyclic-zero-production/`, the pairwise checker bytes live in
+[`baseline.py`](baseline.py); production `prime-power-cyclic-inverse/verify.py`
+ships the same zero-row skip.
+
 This optional adapter speeds up Ali Romman's incorporated PR621 verifier by
 skipping elimination updates whose coefficient is exactly zero. The full
 eight-case output remains byte-identical to the predecessor's `EXPECTED.json`.

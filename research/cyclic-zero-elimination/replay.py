@@ -10,6 +10,9 @@ from pathlib import Path
 
 PACKAGE = Path(__file__).resolve().parent
 SOURCE = PACKAGE.parent / 'prime-power-cyclic-inverse'
+# Pairwise-era bytes after research/cyclic-zero-production/; production verify.py
+# now ships the zero-row skip. Keep the historical adapter pinned to baseline.py.
+BASELINE = PACKAGE / 'baseline.py'
 PINS = json.loads((PACKAGE / 'SOURCE.json').read_text())['files']
 ANCHOR = '            value = a[row][col]\n            for j'
 GUARD = '            value = a[row][col]\n            if value == k.zero:\n                continue\n            for j'
@@ -29,13 +32,13 @@ def prepare(data, fast):
 
 
 def load(fast):
-    namespace = {'__name__': 'cyclic_verifier', '__file__': str(SOURCE / 'verify.py')}
-    exec(compile(prepare((SOURCE / 'verify.py').read_bytes(), fast),
-                 str(SOURCE / 'verify.py'), 'exec'), namespace)
+    namespace = {'__name__': 'cyclic_verifier', '__file__': str(BASELINE)}
+    exec(compile(prepare(BASELINE.read_bytes(), fast),
+                 str(BASELINE), 'exec'), namespace)
     return namespace
 
 
 if __name__ == '__main__':
-    code = prepare((SOURCE / 'verify.py').read_bytes(), True)
-    exec(compile(code, str(SOURCE / 'verify.py'), 'exec'),
-         {'__name__': '__main__', '__file__': str(SOURCE / 'verify.py')})
+    code = prepare(BASELINE.read_bytes(), True)
+    exec(compile(code, str(BASELINE), 'exec'),
+         {'__name__': '__main__', '__file__': str(BASELINE)})

@@ -12,5 +12,6 @@
     "author": "Scott Woolsey Biggart",
     "scope": "Independent CRT resultants extend the finite domain. This adapter has no dependency on that pending work and retains the original rational-field solve."
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "baseline_note": "After research/cyclic-zero-production/, pairwise verify.py bytes are vendored in baseline.py; production ships the zero-row skip. The verify.py pin below remains the pairwise digest."
 }

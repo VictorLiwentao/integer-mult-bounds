@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "files": [
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "e8870e5917057d59b730eb14721a778639eca050",
+      "sha256": "d46eb6d5b3e279428753d770653663fbdf1063e55c255ea073d768f344927ef7"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "research/prime-power-cyclic-inverse/verify.py",
+      "usage": "provenance",
+      "git_blob": "20a069f42ac2e7102d8b1ddac4f568b83e077074",
+      "sha256": "40e5e18cbd98d39ba6d0bb036778ccacc077dff009099a54b9c8f441af5d6a56",
+      "note": "Pairwise-era digest retained as provenance after research/cyclic-zero-production/; working verifier ships the zero-row skip."
+    },
+    {
+      "path": "research/prime-power-cyclic-inverse/EXPECTED.json",
+      "usage": "input",
+      "git_blob": "267a0f9f9454222f7355055962640d5ad6ac55e1",
+      "sha256": "2c4ab855129670053f4f39ee14269cc9b5bda015eab71d5a226dd0d395740ebd"
+    },
+    {
+      "path": "research/cyclic-zero-elimination/SOURCE.json",
+      "usage": "provenance",
+      "git_blob": "e89f96309b6e8d041154d79d8ed84e872b7707a1",
+      "sha256": "8efa78e0847c63867bb4a01ba8e901d35e1c820a9965249354d4ebc954c0bd2f"
+    },
+    {
+      "path": "research/cyclic-zero-elimination/README.md",
+      "usage": "provenance",
+      "git_blob": "8930b3f06398557300466be87cc6523585174e14",
+      "sha256": "73b2c058517ef416aef6425c4898efa45a636257e7d98d4fa29aa3e505236b59",
+      "note": "Pre-production-wiring README bytes at base_commit; working tree adds a one-line production status note."
+    }
+  ]
+}

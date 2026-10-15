@@ -152,6 +152,10 @@ def eliminate(k, matrix, boundary=None):
             if row == col:
                 continue
             value = a[row][col]
+            # Zero-coefficient row skip (thakrarsagar #736 / cyclic-zero-elimination):
+            # omitting k.zero updates is identity for exact Field arithmetic.
+            if value == k.zero:
+                continue
             for j in range(col, len(a)):
                 a[row][j] = k.sub(a[row][j], k.mul(value, a[col][j]))
             if b is not None:
