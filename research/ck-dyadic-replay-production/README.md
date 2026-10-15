@@ -38,9 +38,13 @@ historical-checker change.
 
 ## Result
 
-See [`RESULT.json`](RESULT.json) after the pinned-CPU benchmark. Timing is
-host-descriptive and is not a correctness gate. Every four-stream receipt
-matches the pairwise baseline fieldwise.
+On Linux / CPython 3.12.3 with `taskset -c 0`, five alternating fresh-process
+pairs timing the four complete integer-dyadic streams gave median wall time
+**1.722 → 1.445 s (1.19×)**.
+Details are in [`RESULT.json`](RESULT.json). Timing is host-descriptive and is
+not a correctness gate. Every four-stream receipt matches the pairwise baseline
+fieldwise. The prior opt-in package reported about 1.45–1.50× on other hosts;
+this Linux sample is lower and is the figure claimed here.
 
 ## Why the kernels are equivalent
 

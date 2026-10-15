@@ -47,7 +47,7 @@
   "scope_change_reason": "The catalogue card asks for one measured replay bottleneck with before/after wall time and retained checks. Expertise override selected verifier-engineering after profiling leave-alone production rewrites (#2357/#2375/#2409 and the pending HPE-transport sibling) and remaining proved opt-in adapters. The PR917 independent dyadic replay still used the pairwise slow kernels despite a proved ~1.5\u00d7 opt-in adapter.",
   "bottleneck_link": "Faster trustworthy PR917 integer-dyadic replays increase review throughput without changing kappa or check coverage.",
   "stop_rule": "Stop after wiring one production object with identical-receipt evidence, pin-drift demotions, and a descriptive before/after wall-time sample; do not invent kappa or reopen leave-alone objects.",
-  "evidence": "PASS_CK_DYADIC_REPLAY_PRODUCTION via research/ck-dyadic-replay-production/verify.py (also under -O); PASS_REGISTERED_RESEARCH_PACKAGE; PASS_IDENTICAL_CK_DYADIC_REPLAY_PRODUCTION_RECEIPTS via pinned-CPU benchmark.py; demote live prod-path pins in ck-dyadic-replay-fast; vendor baseline.py inside ck-dyadic-replay-fast, ck-dyadic-helper-shears-seed22, and this package.",
+  "evidence": "PASS_CK_DYADIC_REPLAY_PRODUCTION via research/ck-dyadic-replay-production/verify.py (also under -O); PASS_REGISTERED_RESEARCH_PACKAGE; PASS_IDENTICAL_CK_DYADIC_REPLAY_PRODUCTION_RECEIPTS via pinned-CPU benchmark.py --rounds 5 (median 1.722\u21921.445 s, 1.192\u00d7); demote live prod-path pin in ck-dyadic-replay-fast; vendor baseline.py inside ck-dyadic-replay-fast, ck-dyadic-helper-shears-seed22, and this package.",
   "author": "Wentao Li",
   "email": "wentaol4@illinois.edu",
   "github": "VictorLiwentao",

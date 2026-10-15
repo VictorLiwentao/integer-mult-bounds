@@ -173,15 +173,8 @@ def check_temp_corruption_rejection() -> dict:
     text = PRODUCTION.read_text(encoding="utf-8")
     needle = "for column, value in right_terms.items():"
     require(needle in text, "sum_rows right-term loop missing for corruption control")
-    foil_text = text.replace(
-        needle,
-        "for column, value in ():  # corruption foil: drop right-hand ADD terms
-"
-        "    pass
-"
-        "    for column, value in right_terms.items():",
-        1,
-    )
+    # Replace the right-hand iterator with an empty one so ADD ignores the right row.
+    foil_text = text.replace(needle, "for column, value in dict().items():", 1)
     require(foil_text != text, "mutant must differ on disk")
 
     with tempfile.TemporaryDirectory(prefix="ck-dyadic-prod-foil-") as tmp:

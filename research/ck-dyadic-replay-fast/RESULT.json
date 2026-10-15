@@ -12,7 +12,7 @@
   ],
   "independent_fraction_primitive_steps": 3000,
   "inherited_arithmetic_test_groups": 6,
-  "live_source_count": 14,
+  "live_source_count": 13,
   "retained_construction_controls": 10,
   "retained_native_controls": 25,
   "scope": "Finite scalar replay and unchanged historical PR917 verification only; no selected cold replay, supplier change, kappa change or full multiplication proof",

@@ -1,0 +1,36 @@
+{
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "baseline_seconds": [
+    1.719405065999922,
+    1.7182706319999852,
+    1.7222104129999707,
+    1.7696474430000535,
+    1.9117709800000284
+  ],
+  "baseline_sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2",
+  "median_baseline_seconds": 1.7222104129999707,
+  "median_production_seconds": 1.445330356999989,
+  "median_speedup": 1.191568698919941,
+  "note": "Host-descriptive; not a correctness gate. Receipts identical each round.",
+  "package": "research/ck-dyadic-replay-production",
+  "platform": "Linux 6.12.94+",
+  "production_seconds": [
+    1.4190249910000148,
+    1.4407230620000746,
+    1.445330356999989,
+    1.466287229000045,
+    1.4467160570000033
+  ],
+  "production_sha256": "53f4a92ee8de3fd5ff3dc1cccddfa8b72a80b2ae8d81a786663ebb30f60a0cae",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "rounds": 5,
+  "schema_version": 1,
+  "stream_receipt_sha256": {
+    "baseline_backward": "072a20f62318ee3a6f6c4441f05da2171fbf558b4cf0a0c739c0fd74fdfb002f",
+    "baseline_forward": "34fe1a6c6b2ca9e1ae04cb54907793e2bd9ad717272fb6722c06a8dd567008b9",
+    "candidate_backward": "5c15ce77dc240d7910a688f3cdb7e1c4af7fb8055d8e371237673b2833654e6a",
+    "candidate_forward": "fc34b4eb087f9b568d437304542089d22cbb3e85a10c24f2bcde6bd70d3a551f"
+  },
+  "total_primitives_per_run": 374606,
+  "workload": "four complete integer-dyadic scalar streams (baseline/candidate \u00d7 forward/backward)"
+}

@@ -15,21 +15,24 @@ from time import perf_counter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fast_rows import accelerated
-from support import digest, fixture, predecessor, require
+from support import digest, fixture, pairwise_baseline, predecessor, require
 
 
 def benchmark(repeats=5):
     experiment, independent, _ = predecessor()
+    # Pairwise-era kernels after production wiring; production already ships fast_rows.
+    baseline_mod = pairwise_baseline()
     programs = fixture(experiment)
     timings = {"baseline": [], "accelerated": []}
     reference = None
     for trial in range(-1, repeats):
         order = ("baseline", "accelerated") if (89 + trial) % 2 else ("accelerated", "baseline")
         for mode in order:
-            context = accelerated(independent) if mode == "accelerated" else nullcontext()
+            module = baseline_mod if mode == "baseline" else independent
+            context = accelerated(module) if mode == "accelerated" else nullcontext()
             with context:
                 started = perf_counter()
-                results = {name: independent.replay(program) for name, program in programs.items()}
+                results = {name: module.replay(program) for name, program in programs.items()}
                 elapsed = perf_counter() - started
             # Equality includes every endpoint, denominator maximum, envelope,
             # first peak instruction and price; hashing is outside the timing.
