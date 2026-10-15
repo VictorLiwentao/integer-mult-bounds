@@ -14,12 +14,24 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fast_rows import accelerated, normal_row, sum_rows
-from support import HERE, PREDECESSOR, canonical, check_pins, digest, fixture, load_module, predecessor, require
+from support import (
+    HERE,
+    PREDECESSOR,
+    canonical,
+    check_pins,
+    digest,
+    fixture,
+    load_module,
+    pairwise_baseline,
+    predecessor,
+    require,
+)
 
 
 def verify():
     experiment, fast, verifier = predecessor()
-    reference = load_module("ck917_reference", PREDECESSOR / "independent.py")
+    # Pairwise baseline retained after production kernel wiring.
+    reference = pairwise_baseline()
     programs = fixture(experiment)
     counts = {"normal_row": 0, "sum_rows": 0}
     streams = {}

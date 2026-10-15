@@ -28,14 +28,22 @@ def _require(condition, message):
 
 
 def _normal_row(terms, exponent):
-    """Canonical integer numerator row divided by 2**exponent."""
+    """Canonical integer numerator row divided by 2**exponent.
+
+    Production wiring of research/ck-dyadic-replay-fast/fast_rows.py: early-exit
+    when any numerator is odd, and zero-free ADD that never mutates COPY-shared
+    maps. Receipts remain identical to the pairwise baseline.
+    """
     terms = {column: value for column, value in terms.items() if value}
     if not terms:
         return {}, 0
-    if exponent:
-        trailing = min((abs(value) & -abs(value)).bit_length() - 1
-                       for value in terms.values())
-        reduction = min(exponent, trailing)
+    reduction = exponent
+    if reduction:
+        for value in terms.values():
+            # An odd numerator already proves the common valuation is zero.
+            if value & 1:
+                return terms, exponent
+            reduction = min(reduction, (value & -value).bit_length() - 1)
         if reduction:
             terms = {column: value >> reduction for column, value in terms.items()}
             exponent -= reduction
@@ -43,13 +51,19 @@ def _normal_row(terms, exponent):
 
 
 def _sum_rows(left, right, sign):
+    """Add canonical rows without modifying either input, including on COPY."""
     left_terms, left_exponent = left
     right_terms, right_exponent = right
     exponent = max(left_exponent, right_exponent)
-    result = {column: value << (exponent - left_exponent)
-              for column, value in left_terms.items()}
+    left_shift, right_shift = exponent - left_exponent, exponent - right_exponent
+    result = ({column: value << left_shift for column, value in left_terms.items()}
+              if left_shift else left_terms.copy())
     for column, value in right_terms.items():
-        result[column] = result.get(column, 0) + sign * (value << (exponent - right_exponent))
+        value = result.get(column, 0) + sign * (value << right_shift)
+        if value:
+            result[column] = value
+        else:
+            result.pop(column, None)
     return _normal_row(result, exponent)
 
 

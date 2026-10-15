@@ -45,8 +45,9 @@
       "sha256": "f4197103380d8634dedd2e09cebf14af124661810bf3d35f6c41bc3123c747e1"
     },
     {
-      "path": "research/complex-ck-two-sided/independent.py",
-      "sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2"
+      "path": "research/ck-dyadic-helper-shears-seed22/baseline.py",
+      "sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2",
+      "note": "Vendored pairwise PR917 independent.py after production kernel wiring."
     },
     {
       "path": "research/complex-ck-two-sided/RECIPE.json",

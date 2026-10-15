@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/ck-dyadic-replay-production/baseline.py",
+    "research/complex-ck-two-sided/independent.py",
+    "research/ck-dyadic-replay-fast/fast_rows.py",
+    "research/complex-ck-two-sided/EXPECTED.json",
+    "research/complex-ck-two-sided/RECIPE.json",
+    "research/complex-ck-two-sided/experiment.py",
+    "research/complex-ck-two-sided/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Exact baseline copy of the base-commit independent.py; production kernels match ck-dyadic-replay-fast; identical four-stream and full PR917 receipts; temp-copy kernel foil rejects; read-only default verify."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same equivalence and pin discipline under -O. Loaders use compile(..., optimize=0) so checker asserts stay enforced."
+    }
+  ]
+}

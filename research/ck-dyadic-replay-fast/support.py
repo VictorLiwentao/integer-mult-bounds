@@ -13,6 +13,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 PREDECESSOR = ROOT / "research/complex-ck-two-sided"
+BASELINE = HERE / "baseline.py"
 
 
 def require(condition, message):
@@ -66,7 +67,16 @@ def module_aliases(**modules):
 
 
 def predecessor():
+    """Load construction/verifier against production independent.py.
+
+    Pairwise-era bytes live in baseline.py for differential kernel checks after
+    the production wiring in research/ck-dyadic-replay-production/.
+    """
     check_pins()
+    require(BASELINE.is_file() and not BASELINE.is_symlink(), "missing vendored baseline.py")
+    require(hashlib.sha256(BASELINE.read_bytes()).hexdigest()
+            == "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2",
+            "vendored baseline.py drift")
     experiment = load_module("ck917_experiment", PREDECESSOR / "experiment.py")
     independent = load_module("ck917_independent", PREDECESSOR / "independent.py")
     with module_aliases(experiment=experiment, independent=independent):
@@ -74,6 +84,12 @@ def predecessor():
     require(verifier.e is experiment and verifier.independent is independent,
             "unexpected predecessor imports")
     return experiment, independent, verifier
+
+
+def pairwise_baseline():
+    """Pairwise-era independent.py retained for opt-in differential evidence."""
+    require(BASELINE.is_file() and not BASELINE.is_symlink(), "missing vendored baseline.py")
+    return load_module("ck917_pairwise_baseline", BASELINE)
 
 
 def fixture(experiment):

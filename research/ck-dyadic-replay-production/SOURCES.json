@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    },
+    {
+      "path": "research/complex-ck-two-sided/independent.py",
+      "usage": "provenance",
+      "git_blob": "26d47eb64dc8ba31444f285daa4ec53823da3fb4",
+      "sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2",
+      "note": "Pairwise-era digest retained as provenance; working production file ships the ck-dyadic-replay-fast kernels (see OPTIMIZED digest in verify.py)."
+    },
+    {
+      "path": "research/ck-dyadic-replay-fast/fast_rows.py",
+      "usage": "input",
+      "git_blob": "362568f3ef2f0bc1253ff265c3b67d9c00da2ea1",
+      "sha256": "1b85e0f776021147371b8113262ef6698cabaa0c802de0ee51029749d912f0d6"
+    },
+    {
+      "path": "research/complex-ck-two-sided/EXPECTED.json",
+      "usage": "input",
+      "git_blob": "1268b94e77593883a17ec864ad17bb6f349dcbe5",
+      "sha256": "e2bcf8f49ec9b0c20c7d653ad9d20fe21ecbc587a72dcb996d11550bf2d57287"
+    },
+    {
+      "path": "research/complex-ck-two-sided/RECIPE.json",
+      "usage": "input",
+      "git_blob": "17063955a60a635c971c01feaf7cfa90e53dcb81",
+      "sha256": "8eae0f1036c2c455dd59017c4b37903e45aeff6d0c66d7a3ce74e9b78e4f4aac"
+    },
+    {
+      "path": "research/complex-ck-two-sided/experiment.py",
+      "usage": "input",
+      "git_blob": "66a1606d4841cd924c67e137b9e6f3d26c7bf32a",
+      "sha256": "f4197103380d8634dedd2e09cebf14af124661810bf3d35f6c41bc3123c747e1"
+    },
+    {
+      "path": "research/complex-ck-two-sided/verify.py",
+      "usage": "input",
+      "git_blob": "139b9eca146bfe1151a5732f3bbe2eda165d5cdc",
+      "sha256": "e72528e76852da7c6128a0a7d60f933ed505d9af893e269b8ae6b803877b963b"
+    }
+  ]
+}

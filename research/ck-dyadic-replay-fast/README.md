@@ -5,6 +5,8 @@ the integer-dyadic replay of Ross Richardson's incorporated [PR917](https://gith
 The adapter changes only `_normal_row` and `_sum_rows` in memory. It runs the
 complete unchanged historical verifier; no predecessor file is edited.
 
+
+**Production note:** `research/ck-dyadic-replay-production/` wires these kernels into `research/complex-ck-two-sided/independent.py`. This package keeps pairwise bytes as `baseline.py` for differential evidence.
 Five paired runs on Python 3.14.5/macOS arm64 reduce the median four-stream
 integer replay from **1.03788 s to 0.68973 s (1.50x)**. Both modes execute the
 same **374,606 primitives**, with every one of the **725 arbitrary input

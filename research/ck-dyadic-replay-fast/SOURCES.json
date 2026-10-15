@@ -83,9 +83,10 @@
     },
     {
       "path": "research/complex-ck-two-sided/independent.py",
-      "usage": "input",
+      "usage": "provenance",
       "git_blob": "26d47eb64dc8ba31444f285daa4ec53823da3fb4",
-      "sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2"
+      "sha256": "87d690c534409047322c1dc625586adf4c192a9746941eae06c3da6e0add3aa2",
+      "note": "Pairwise-era production bytes at package base_commit; working tree ships the fast kernels. Live equivalence uses package baseline.py."
     },
     {
       "path": "research/complex-ck-two-sided/test_independent.py",

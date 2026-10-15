@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "ck-dyadic-replay-production-60b9",
+  "budget_minutes": 60,
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Can production research/complex-ck-two-sided/independent.py adopt the proved exact dyadic row kernels from research/ck-dyadic-replay-fast/ so the shipped PR917 integer replay is faster while every stream and full-verifier receipt stays identical, without editing other leave-alone production auditors?",
+  "scope_change_reason": "The catalogue card asks for one measured replay bottleneck with before/after wall time and retained checks. Expertise override selected verifier-engineering after profiling leave-alone production rewrites (#2357/#2375/#2409 and the pending HPE-transport sibling) and remaining proved opt-in adapters. The PR917 independent dyadic replay still used the pairwise slow kernels despite a proved ~1.5\u00d7 opt-in adapter.",
+  "bottleneck_link": "Faster trustworthy PR917 integer-dyadic replays increase review throughput without changing kappa or check coverage.",
+  "stop_rule": "Stop after wiring one production object with identical-receipt evidence, pin-drift demotions, and a descriptive before/after wall-time sample; do not invent kappa or reopen leave-alone objects.",
+  "evidence": "PASS_CK_DYADIC_REPLAY_PRODUCTION via research/ck-dyadic-replay-production/verify.py (also under -O); PASS_REGISTERED_RESEARCH_PACKAGE; PASS_IDENTICAL_CK_DYADIC_REPLAY_PRODUCTION_RECEIPTS via pinned-CPU benchmark.py; demote live prod-path pins in ck-dyadic-replay-fast; vendor baseline.py inside ck-dyadic-replay-fast, ck-dyadic-helper-shears-seed22, and this package.",
+  "author": "Wentao Li",
+  "email": "wentaol4@illinois.edu",
+  "github": "VictorLiwentao",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, profiling, production wiring, packaging, benchmarking and writing. Not independent human peer review.",
+  "outcome": "completed",
+  "open_questions": [
+    {
+      "question": "Should u8-two-sided-biforest-seed35/independent.py adopt the same early-exit dyadic kernels?",
+      "why_it_matters": "It carries a near-copy of the pairwise PR917 row kernels on a different object.",
+      "first_step": "Diff its _normal_row/_sum_rows against the production transform and list pin dependents.",
+      "blocked_by": "One-object stop rule."
+    },
+    {
+      "question": "Should the registered ck-dyadic-replay-fast adapter document that production already ships its kernels?",
+      "why_it_matters": "Operators may still expect an in-memory monkey-patch to be required.",
+      "first_step": "Update the opt-in README once this production wiring is reviewed.",
+      "blocked_by": "Maintainer doc preference."
+    }
+  ]
+}

@@ -14,10 +14,11 @@
     "research/complex-ck-two-sided/RECIPE.json",
     "research/complex-ck-two-sided/SOURCES.json",
     "research/complex-ck-two-sided/experiment.py",
-    "research/complex-ck-two-sided/independent.py",
+    "research/ck-dyadic-replay-fast/baseline.py",
     "research/complex-ck-two-sided/test_independent.py",
     "research/complex-ck-two-sided/verify.py",
-    "research/complex-k492-owner-repair/data/SPEC.json"
+    "research/complex-k492-owner-repair/data/SPEC.json",
+    "research/complex-ck-two-sided/independent.py"
   ],
   "commands": [
     {
