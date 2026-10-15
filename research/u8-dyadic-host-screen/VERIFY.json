@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/u8-dyadic-host-screen/RESULT.json",
+    "research/u8-dyadic-host-screen/U8-DYADIC-LINUX.json",
+    "research/u8-dyadic-host-screen/CYCLIC-ZERO-LINUX.json",
+    "research/ck-dyadic-replay-fast/fast_rows.py"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "RESULT schema, deferred disposition, no production-edit claim, U8/cyclic receipts, duplicate JSON-key check, temp-copy corruption rejection, checkout unchanged."
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same gates under -O (require() remains)."
+    }
+  ]
+}

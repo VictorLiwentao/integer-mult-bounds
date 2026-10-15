@@ -1,0 +1,89 @@
+{
+  "disposition": "DEFER_MAGNITUDE",
+  "identical_integer_receipts": true,
+  "median_seconds": {
+    "accelerated": 0.9438034440001957,
+    "baseline": 1.2740434980000828
+  },
+  "per_round_max": 1.3875237660179247,
+  "per_round_min": 1.3018413989420436,
+  "per_round_ratios": [
+    1.3875237660179247,
+    1.349754834618645,
+    1.3609679946031341,
+    1.3396315224303865,
+    1.3018413989420436
+  ],
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "ratio_of_medians": 1.3499034212041068,
+  "reason": "integer-stage ratio_of_medians below clear ~1.5x with noisy per-round span that is not stably above ~1.5x; Fraction+integer host measured ~1.09x in the same session",
+  "reference_receipt_sha256": {
+    "backward:baseline": "47c9841c81dca316feec86be9b81ce4228b6adead61ecae07e789c4c88498690",
+    "backward:candidate": "1be6e4a784b458d630e6446311f82d862398a37a86f6c621e6003096ed9dcc14",
+    "forward:baseline": "818e1d95f76ca5ebf0e8de0c77ee4a1c8ffccd8973a177c904b8e0c94240dc86",
+    "forward:candidate": "49b6d9fe3ffff28d229d06c8ab77dbd99d287644769608d33ff037c3c6b0fa6f"
+  },
+  "samples": [
+    {
+      "accelerated_wall_seconds": 0.9438034440001957,
+      "baseline_wall_seconds": 1.309549708999839,
+      "order": [
+        "baseline",
+        "accelerated"
+      ],
+      "pair": 1,
+      "ratio": 1.3875237660179247
+    },
+    {
+      "accelerated_wall_seconds": 0.9432971280000402,
+      "baseline_wall_seconds": 1.273219858999937,
+      "order": [
+        "accelerated",
+        "baseline"
+      ],
+      "pair": 2,
+      "ratio": 1.349754834618645
+    },
+    {
+      "accelerated_wall_seconds": 0.9376139050000347,
+      "baseline_wall_seconds": 1.2760625159999108,
+      "order": [
+        "baseline",
+        "accelerated"
+      ],
+      "pair": 3,
+      "ratio": 1.3609679946031341
+    },
+    {
+      "accelerated_wall_seconds": 0.9510402500000055,
+      "baseline_wall_seconds": 1.2740434980000828,
+      "order": [
+        "accelerated",
+        "baseline"
+      ],
+      "pair": 4,
+      "ratio": 1.3396315224303865
+    },
+    {
+      "accelerated_wall_seconds": 0.9747673679999025,
+      "baseline_wall_seconds": 1.2689925140000469,
+      "order": [
+        "baseline",
+        "accelerated"
+      ],
+      "pair": 5,
+      "ratio": 1.3018413989420436
+    }
+  ],
+  "scope": "four complete integer-dyadic U8 biforest streams; excludes Fraction oracle and native audit",
+  "status": "PASS_U8_DYADIC_KERNEL_HOST_SCREEN",
+  "stream_primitives": {
+    "backward:baseline": 96677,
+    "backward:candidate": 69879,
+    "forward:baseline": 96653,
+    "forward:candidate": 69855
+  },
+  "technique": "ck-dyadic-replay-fast normal_row/sum_rows applied in-memory to u8-two-sided-biforest-seed35/independent.py",
+  "total_primitives_per_run": 333064
+}

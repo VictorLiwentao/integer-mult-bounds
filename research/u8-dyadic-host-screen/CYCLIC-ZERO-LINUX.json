@@ -1,0 +1,137 @@
+{
+  "disposition": "DEFER_MAGNITUDE",
+  "identical_expected_receipt": true,
+  "median_seconds": {
+    "guarded": {
+      "cpu_seconds": 3.1636970000000004,
+      "wall_seconds": 3.1642692179999585
+    },
+    "reference": {
+      "cpu_seconds": 4.247607999999998,
+      "wall_seconds": 4.248386901999993
+    }
+  },
+  "per_round_max": 1.4301962870511142,
+  "per_round_min": 1.2025271688504884,
+  "per_round_ratios": [
+    1.2921707112469982,
+    1.2773079759775046,
+    1.2707994213211133,
+    1.4301962870511142,
+    1.2356249560308095,
+    1.2025271688504884,
+    1.2675124768312815
+  ],
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "ratio_of_medians": 1.3426123408947084,
+  "samples": [
+    {
+      "guarded": {
+        "cpu_seconds": 3.1636970000000004,
+        "wall_seconds": 3.1642692179999585
+      },
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 1,
+      "reference": {
+        "cpu_seconds": 4.0878939999999995,
+        "wall_seconds": 4.088776005999989
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.158943999999999,
+        "wall_seconds": 3.159431627999993
+      },
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 2,
+      "reference": {
+        "cpu_seconds": 4.0333179999999995,
+        "wall_seconds": 4.035567217999983
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.0979110000000016,
+        "wall_seconds": 3.098464519999993
+      },
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 3,
+      "reference": {
+        "cpu_seconds": 3.936893000000002,
+        "wall_seconds": 3.9375269189999926
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.162347999999998,
+        "wall_seconds": 3.16286120999996
+      },
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 4,
+      "reference": {
+        "cpu_seconds": 4.521237000000005,
+        "wall_seconds": 4.5235123589999375
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.6751259999999952,
+        "wall_seconds": 3.675768808999919
+      },
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 5,
+      "reference": {
+        "cpu_seconds": 4.539570000000003,
+        "wall_seconds": 4.541871672999946
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.5321510000000043,
+        "wall_seconds": 3.532882260000065
+      },
+      "order": [
+        "guarded",
+        "reference"
+      ],
+      "pair": 6,
+      "reference": {
+        "cpu_seconds": 4.247607999999998,
+        "wall_seconds": 4.248386901999993
+      }
+    },
+    {
+      "guarded": {
+        "cpu_seconds": 3.398027000000005,
+        "wall_seconds": 3.3985688359999813
+      },
+      "order": [
+        "reference",
+        "guarded"
+      ],
+      "pair": 7,
+      "reference": {
+        "cpu_seconds": 4.307029999999996,
+        "wall_seconds": 4.307728402999942
+      }
+    }
+  ],
+  "source_command": "python3.12 -I -B research/cyclic-zero-elimination/verify.py --output /tmp/cyclic-zero-screen.json",
+  "status": "PASS_CYCLIC_ZERO_HOST_REMEASURE"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075"
+    },
+    {
+      "path": "research/ck-dyadic-replay-fast/fast_rows.py",
+      "usage": "input",
+      "git_blob": "362568f3ef2f0bc1253ff265c3b67d9c00da2ea1",
+      "sha256": "1b85e0f776021147371b8113262ef6698cabaa0c802de0ee51029749d912f0d6"
+    },
+    {
+      "path": "research/ck-dyadic-replay-fast/README.md",
+      "usage": "provenance",
+      "git_blob": "f1152a41a82add52b75805908affe3c452cca99b",
+      "sha256": "367a709383a6284ae9c8bc60d38af6a18f21e729b424b61a12b059f997cafd49"
+    },
+    {
+      "path": "research/u8-two-sided-biforest-seed35/independent.py",
+      "usage": "provenance",
+      "git_blob": "d52bdee20b26ffca05c25378a60a196817e1bb41",
+      "sha256": "ecc1571b8768426ca20707ba7b8b5786401c4da1b4dcf5ca821f9dbcb70aa447"
+    },
+    {
+      "path": "research/cyclic-zero-elimination/README.md",
+      "usage": "provenance",
+      "git_blob": "8930b3f06398557300466be87cc6523585174e14",
+      "sha256": "73b2c058517ef416aef6425c4898efa45a636257e7d98d4fa29aa3e505236b59"
+    }
+  ]
+}

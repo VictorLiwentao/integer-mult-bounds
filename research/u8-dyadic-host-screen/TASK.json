@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 3,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "u8-dyadic-host-defer-60b9",
+  "scope_status": "refined",
+  "actual_scope": "After leave-alone through #2433 and prior clifford-reuse host defer, screen the next leave-alone-safe production-wiring candidate: transfer proved ck-dyadic-replay-fast kernels onto u8-two-sided-biforest-seed35/independent.py; remeasure cyclic-zero; note soft-overlap blockers for parallel LEC/phase adapters; do not edit production files when magnitude fails.",
+  "scope_change_reason": "Catalogue replay-runtime asks for one measured bottleneck with before/after wall time. Expertise override preferred production wiring of proved opt-in adapters with identical receipts and stable host samples clearly above ~1.5x. The strongest leave-alone-safe remaining transfer (U8 dyadic kernels) remasured below that bar, so the session outcome is an evidence-backed DEFER rather than a production edit.",
+  "bottleneck_link": "Side result on review throughput: production wiring only when host magnitude clears the accepted tooling bar.",
+  "budget_minutes": 60,
+  "stop_rule": "Publish production wiring only with identical receipts and stable host samples clearly above ~1.5x; otherwise record an honest DEFER with per-round ratios.",
+  "outcome": "negative-result",
+  "evidence": "PASS_U8_DYADIC_HOST_SCREEN; U8 dyadic integer-stage ratio_of_medians 1.350x (per-round 1.302-1.388); cyclic-zero remeasure 1.343x (1.203-1.430); parallel adapters soft-overlap leave-alone; no production files changed.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "After leave-alone HPE/Clifford production PRs merge, does an opt-in parallel LEC or phase runner clear a stable >~1.5x host on a leave-alone-safe default path?",
+      "why_it_matters": "Those adapters have the strongest remaining claimed hosts, but soft-overlap leave-alone object space today.",
+      "first_step": "Remeasure on the merged tips with reference engines only.",
+      "blocked_by": "#2329 / #2409 / #2412 leave-alone resolution."
+    },
+    {
+      "question": "Is there another proved opt-in whose production target is byte-disjoint from leave-alone and ledger-Deferred packages and whose complete-host samples stably exceed ~1.5x on Linux?",
+      "why_it_matters": "Remaining screened adapters are thin or soft-overlapping.",
+      "first_step": "Refresh the open/#756-bar tooling inventory after the next merge batch.",
+      "blocked_by": "Inventory refresh."
+    }
+  ],
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  }
+}

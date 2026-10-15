@@ -1,0 +1,64 @@
+{
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, host remeasurement, packaging and writing. Not independent human peer review.",
+  "author": "Wentao Li",
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "candidates": [
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "identical_integer_receipts": true,
+      "name": "u8-two-sided-biforest + ck-dyadic-replay-fast kernels",
+      "per_round_range": [
+        1.3018413989420436,
+        1.3875237660179247
+      ],
+      "per_round_ratios": [
+        1.3875237660179247,
+        1.349754834618645,
+        1.3609679946031341,
+        1.3396315224303865,
+        1.3018413989420436
+      ],
+      "production_target": "research/u8-two-sided-biforest-seed35/independent.py _normal_row/_sum_rows",
+      "ratio_of_medians": 1.3499034212041068,
+      "reason": "stable ~1.35x below clearly-above-~1.5x bar; distinct from deferred complex-ck-two-sided production (~1.19x complete) but still thin",
+      "workload": "four complete integer-dyadic streams (333,064 primitives)"
+    },
+    {
+      "disposition": "DEFER_MAGNITUDE",
+      "name": "cyclic-zero-elimination (#736) remeasure",
+      "per_round_range": [
+        1.2025271688504884,
+        1.4301962870511142
+      ],
+      "production_target": "research/prime-power-cyclic-inverse/verify.py eliminate()",
+      "ratio_of_medians": 1.3426123408947084,
+      "reason": "confirms prior clifford-reuse-host-screen thin finding (~1.24x); still below bar"
+    },
+    {
+      "disposition": "DEFER_SOFT_OVERLAP",
+      "name": "phase-recipes-parallel / frontier1042-lec-parallel / layer-end-controls-parallel",
+      "reason": "strong host claims, but soft-overlap leave-alone #2329 Clifford zero_state and/or #2409/#2412 HPE integer production object space"
+    },
+    {
+      "disposition": "DEFER_SAME_BYTES_AS_LEDGER_DEFERRED",
+      "name": "scalar-fused sibling audit_local copies",
+      "reason": "gauge44-slots/leaver/leaver8/sw4 audit_local.py are byte-identical to deferred frames-x target"
+    },
+    {
+      "disposition": "LEAVE_ALONE_LEDGER_DEFERRED",
+      "name": "ck-dyadic-replay-production / scalar-fused-dyadic-production / clifford-reuse-host-screen / quadratic-affine-production"
+    },
+    {
+      "disposition": "LEAVE_ALONE_ALREADY_PUBLISHED",
+      "name": "tooling through #2433 (incl. #2409/#2412/#2431/#2433) and open leave-independents"
+    }
+  ],
+  "claim": "After leave-alone tooling through #2433 and the prior clifford-reuse host defer, the next leave-alone-safe production-wiring candidate (ck-dyadic fast kernels on u8-two-sided-biforest) fails the #756 host bar: stable integer-stage ratio_of_medians ~1.35x (per-round 1.30-1.39), with Fraction+integer host ~1.09x.",
+  "host": {
+    "platform": "Linux-6.12.94+-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "no_new_kappa": true,
+  "production_files_changed": false,
+  "status": "DEFER_PRODUCTION_WIRING_HOST_MAGNITUDE"
+}
