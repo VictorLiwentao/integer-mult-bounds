@@ -5,17 +5,28 @@
     {
       "path": "research/gauge44-frames-x/independent/audit_local.py",
       "sha256": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
-      "git_blob": "4744d8783c25bf7bf5076886169077ca3808309a"
+      "git_blob": "4744d8783c25bf7bf5076886169077ca3808309a",
+      "usage": "provenance",
+      "note": "Pairwise-era digest retained as provenance after research/scalar-fused-dyadic-production/; working frames-x auditor ships fused apply. Reference engine uses vendored baseline.py."
     },
     {
       "path": "research/community-k492-audit/pr622/replay/baseline558/complex-global/base/split-centres/CANONICAL-WORD.json.gz",
       "sha256": "66d3c3c70983224650643a0a05a21ac6c6959f84d0f4528650601016f5a76844",
-      "git_blob": "a2e5a1ffd454a353bd2d2100bc26259ff5b57af7"
+      "git_blob": "a2e5a1ffd454a353bd2d2100bc26259ff5b57af7",
+      "usage": "input"
     },
     {
       "path": "research/community-frontier799-audit/INDEPENDENT-LOCAL.json",
       "sha256": "675b89883366531bea5851d271e0ba184e2ab28c3d135c35d30bb30b0ed41c4e",
-      "git_blob": "0df66d61ad4f133eb4b49c0520ec0f421d382c45"
+      "git_blob": "0df66d61ad4f133eb4b49c0520ec0f421d382c45",
+      "usage": "input"
+    },
+    {
+      "path": "research/scalar-fused-dyadic/baseline.py",
+      "usage": "input",
+      "sha256": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+      "git_blob": "4744d8783c25bf7bf5076886169077ca3808309a",
+      "note": "Vendored pairwise auditor for reference-engine comparisons."
     }
   ],
   "benchmark_word": {

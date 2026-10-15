@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/scalar-fused-dyadic-production/baseline.py",
+    "research/gauge44-frames-x/independent/audit_local.py",
+    "research/community-frontier799-audit/integrated799-replay.tar.gz",
+    "research/community-frontier799-audit/INDEPENDENT-LOCAL.json",
+    "research/community-k492-audit/pr622/replay/baseline558/complex-global/base/split-centres/CANONICAL-WORD.json.gz",
+    "research/scalar-fused-dyadic/kernel.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Exact baseline copy of the base-commit PR799 auditor; production equals the fused-dyadic transform; identical honest+fuzz outcomes; temp-copy destination-drop corruption control; duplicate JSON-key check; read-only default verify."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Same equivalence and pin discipline under -O. Loaders use compile(..., optimize=0) so audit require()/RuntimeError admission stays enforced; zero-scale admission must raise RuntimeError."
+    }
+  ]
+}

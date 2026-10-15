@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "package": "research/scalar-fused-dyadic-production",
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "workload": "PR799 jx FULL-WORD independent audit with parent centre/port check",
+  "rounds": 5,
+  "baseline_seconds": [
+    1.136280213999953,
+    1.5169262400002026,
+    1.4961569869999494,
+    1.2115975869999147,
+    1.2881276900000103
+  ],
+  "production_seconds": [
+    0.6648336000000654,
+    0.9390184649998901,
+    0.7161079360000713,
+    0.6649176439998428,
+    0.9202733399999943
+  ],
+  "median_baseline_seconds": 1.2881276900000103,
+  "median_production_seconds": 0.7161079360000713,
+  "median_speedup": 1.7987898544946193,
+  "baseline_sha256": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+  "production_sha256": "b3695bf9c9988a8929702a1645c36b00791b9a8d5ab4dfd84568edeb26ecb7e9",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux 6.12.94+",
+  "note": "Host-descriptive; not a correctness gate. Receipts identical each round."
+}

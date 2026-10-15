@@ -1,5 +1,7 @@
 # Fused exact dyadic updates in the PR799 independent auditor
 
+**Production note:** `research/scalar-fused-dyadic-production/` wires the fused apply into production `research/gauge44-frames-x/independent/audit_local.py`. This opt-in package keeps a vendored pairwise `baseline.py` for reference-engine comparisons.
+
 **Verification tooling; no new κ.** This optional adapter accelerates the
 independent scalar/frame/cone audit retained by Jeremy Kothe's #799 X4 supplier.
 It computes `y + q*x` with one rational normalization when the denominators

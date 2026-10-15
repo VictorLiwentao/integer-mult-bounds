@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "chooser_seed": "scalar-fused-dyadic-production-60b9",
+  "budget_minutes": 60,
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Can the production PR799 independent auditor research/gauge44-frames-x/independent/audit_local.py adopt the proved exact fused dyadic apply from research/scalar-fused-dyadic/ (#849) so that the shipped auditor is faster while every receipt field stays identical, without editing other SELECTED-SOURCE-bound sibling copies (slots/leaver/sw4/t21)?",
+  "scope_change_reason": "The catalogue card asks for one measured replay bottleneck with before/after wall time and retained checks. Expertise override selected verifier-engineering after surveying leave-alone production rewrites through #2412 and the deferred thin ck-dyadic production tip. Remaining proved opt-in adapter #849 still left production frames-x on pairwise Fraction multiply-adds.",
+  "bottleneck_link": "Faster trustworthy PR799 independent audits increase review throughput for gauge44-frames-x / X4 tooling without changing kappa or check coverage.",
+  "stop_rule": "Stop after wiring one production object with identical-receipt evidence, pin-drift demotions, and a descriptive before/after wall-time sample clearly above ~1.5×; do not invent kappa or reopen leave-alone objects.",
+  "evidence": "PASS_SCALAR_FUSED_DYADIC_PRODUCTION via research/scalar-fused-dyadic-production/verify.py (also under -O); PASS_REGISTERED_RESEARCH_PACKAGE; PASS_IDENTICAL_SCALAR_FUSED_DYADIC_PRODUCTION_RECEIPTS via pinned-CPU benchmark.py --rounds 5; vendor baseline.py; demote live frames-x auditor pins in scalar-fused-dyadic and refresh complex-x4 / frames-x MANIFEST / ancestry MANIFEST digests; leave SELECTED-SOURCE sibling copies pairwise.",
+  "author": "Wentao Li",
+  "email": "wentaol4@illinois.edu",
+  "github": "VictorLiwentao",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, profiling, production wiring, packaging, benchmarking and writing. Not independent human peer review.",
+  "outcome": "completed",
+  "open_questions": [
+    {
+      "question": "Should the other SELECTED-SOURCE-bound byte-identical audit_local.py copies (slots, leaver, sw4 independent, t21) adopt the same fused apply with a coordinated SELECTED-SOURCE.json digest refresh?",
+      "why_it_matters": "Selected inventory still pins pairwise-era digests for those paths; cold-chain copies remain unfused.",
+      "first_step": "Enumerate SELECTED-SOURCE paths with sha256 03afcfc9… and dependent VERIFY binders.",
+      "blocked_by": "Maintainer inventory-refresh preference / one-object stop rule."
+    },
+    {
+      "question": "Should research/scalar-fused-dyadic be marked superseded as an opt-in monkey-patch now that production frames-x ships the fused apply?",
+      "why_it_matters": "Maintainers may want one recommended path for the PR799 independent auditor.",
+      "first_step": "Add a one-line pointer in that package README after this change merges.",
+      "blocked_by": "Documentation-only follow-up."
+    }
+  ]
+}

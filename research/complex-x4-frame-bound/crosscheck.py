@@ -26,7 +26,7 @@ import model as M    # noqa: E402
 import verify as V   # noqa: E402
 
 AUDIT = 'research/gauge44-frames-x/independent/audit_local.py'
-AUDIT_SHA256 = '03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd'
+AUDIT_SHA256 = 'b3695bf9c9988a8929702a1645c36b00791b9a8d5ab4dfd84568edeb26ecb7e9'
 
 
 def audit_module(repo):

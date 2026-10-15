@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "base_commit": "0b1cccf86e2f5132ed286a26ef0a681a495740ea",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "sha256": "6686ad58f1fbdbc87134a78901b60fd53a20d3984355e91defbbebc9e9fa8075",
+      "git_blob": "06c96f5579bb67ed1b86d334e78fbed7da6945f1"
+    },
+    {
+      "path": "research/gauge44-frames-x/independent/audit_local.py",
+      "usage": "provenance",
+      "git_blob": "4744d8783c25bf7bf5076886169077ca3808309a",
+      "sha256": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+      "note": "Pairwise-era digest retained as provenance; working production file ships fused dyadic apply (see OPTIMIZED digest in verify.py)."
+    },
+    {
+      "path": "research/community-frontier799-audit/integrated799-replay.tar.gz",
+      "usage": "input",
+      "sha256": "70dfdfcf2ff95352c6020ee9dfca6dca9032b33c10daed3f3dc574c014f4e2cb",
+      "git_blob": "c80685bdf48cea26561b25900ce0416ba2cf709f"
+    },
+    {
+      "path": "research/community-frontier799-audit/INDEPENDENT-LOCAL.json",
+      "usage": "input",
+      "sha256": "675b89883366531bea5851d271e0ba184e2ab28c3d135c35d30bb30b0ed41c4e",
+      "git_blob": "0df66d61ad4f133eb4b49c0520ec0f421d382c45"
+    },
+    {
+      "path": "research/community-k492-audit/pr622/replay/baseline558/complex-global/base/split-centres/CANONICAL-WORD.json.gz",
+      "usage": "input",
+      "sha256": "66d3c3c70983224650643a0a05a21ac6c6959f84d0f4528650601016f5a76844",
+      "git_blob": "a2e5a1ffd454a353bd2d2100bc26259ff5b57af7"
+    },
+    {
+      "path": "research/scalar-fused-dyadic/kernel.py",
+      "usage": "input",
+      "sha256": "970beb0c41acf63ac1030ecd265d12cb856e45988a73b2efe4abbf8e51a0ef12",
+      "git_blob": "a1ea9fe535a94350be030f25ddcec208e82675c0"
+    }
+  ]
+}

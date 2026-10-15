@@ -12,7 +12,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-AUDITOR = "research/gauge44-frames-x/independent/audit_local.py"
+# Production frames-x now ships fused apply; the pairwise reference is vendored.
+BASELINE = HERE / "baseline.py"
+PRODUCTION = "research/gauge44-frames-x/independent/audit_local.py"
 
 
 def require(ok, message):
@@ -30,19 +32,29 @@ def load(path, name):
 def source_pins(root=ROOT):
     pins = json.loads((HERE / "SOURCES.json").read_bytes())
     for entry in pins["files"]:
+        usage = entry.get("usage", "input")
+        if usage == "provenance":
+            continue
         data = (root / entry["path"]).read_bytes()
         require(hashlib.sha256(data).hexdigest() == entry["sha256"],
                 "source pin mismatch: " + entry["path"])
+    # Pairwise baseline bytes must stay exact.
+    require(hashlib.sha256(BASELINE.read_bytes()).hexdigest() ==
+            "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+            "vendored baseline drift")
     return pins
 
 
 def auditor(root=ROOT, engine="fused"):
     source_pins(root)
-    module = load(root / AUDITOR, "pinned_independent_auditor")
-    if engine == "fused":
+    if engine == "reference":
+        return load(BASELINE, "pinned_independent_auditor_baseline")
+    require(engine == "fused", "unknown engine")
+    # Prefer the production fused auditor when present; otherwise monkey-patch.
+    production = root / PRODUCTION
+    module = load(production, "pinned_independent_auditor")
+    if "def fused(" not in production.read_text(encoding="utf-8"):
         module.apply = load(HERE / "kernel.py", "fused_scalar_kernel").apply
-    else:
-        require(engine == "reference", "unknown engine")
     return module
 
 

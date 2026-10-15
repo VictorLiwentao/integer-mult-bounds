@@ -100,9 +100,10 @@
     },
     {
       "path": "research/gauge44-frames-x/MANIFEST.json",
-      "usage": "input",
+      "usage": "provenance",
       "git_blob": "139ce7bb6fb929d23c11ce2072ee7c226adea7b8",
-      "sha256": "e1b7998c8f7cb24f8674d250d0510f2b5b351b2ed0b35f17a17e6bacf3d9824b"
+      "sha256": "e1b7998c8f7cb24f8674d250d0510f2b5b351b2ed0b35f17a17e6bacf3d9824b",
+      "note": "Digest retained as provenance after scalar-fused-dyadic-production refreshed independent/audit_local.py in that MANIFEST."
     },
     {
       "path": "research/gauge44-frames-x/construction/jx/LOCAL-PINS-jx-X4.json",

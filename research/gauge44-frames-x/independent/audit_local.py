@@ -30,13 +30,30 @@ def contained(a,b):return basis(a+b)==b
 
 def registers(e):return e[1:3] if e[0]=='add' else e[1:2]
 
+def fused(q,x,y):
+    # Exact y+q*x with one normalization when both denominators are powers of two.
+    # Equivalent to Fraction multiply-then-add; see research/scalar-fused-dyadic/.
+    numerator=q.numerator*x.numerator
+    denominator=q.denominator*x.denominator
+    if y is None or not y:
+        return F(numerator,denominator)
+    dy=y.denominator
+    if denominator&(denominator-1) or dy&(dy-1):
+        return y+q*x
+    if dy>=denominator:
+        numerator=y.numerator+numerator*(dy//denominator)
+        denominator=dy
+    else:
+        numerator+=y.numerator*(denominator//dy)
+    return F(numerator,denominator)
+
 def apply(e,rows,dual=False):
     if e[0]=='add':
         t,s=e[1:3];q=F(e[3],e[4]);require(t!=s,'self add')
         if dual:t,s,q=s,t,-q
         dst=rows[t]
         for k,x in list(rows[s].items()):
-            a=dst.get(k,F(0))+q*x
+            a=fused(q,x,dst.get(k))
             if a:dst[k]=a
             else:dst.pop(k,None)
     elif e[0]=='scale':

@@ -125,7 +125,7 @@
   "independent/GAUGE44-GLOBAL-GUARD-REVIEW.json": "631107a9a9acb02441ce80298f815e0c624f811b0d58c6fd78f8dc58d564bb5b",
   "independent/GAUGE44-INDEPENDENT-PRICE.json": "e8cecbb4f05ca1a115512b246530278ed86558d0fae1229d09d7d9188f5f330f",
   "independent/README.md": "25668a62d8c91f6860f8412cf2fc750ba41bf1085dad3709ad5067c7956eac89",
-  "independent/audit_local.py": "03afcfc9da428b3f6edac81c1fee7f277ab81b64998efae78380b63498dec6cd",
+  "independent/audit_local.py": "b3695bf9c9988a8929702a1645c36b00791b9a8d5ab4dfd84568edeb26ecb7e9",
   "independent/price_profile.py": "d2f548ad6b99f64a8ca5fbaf822a89560bb99359957ce3420b497f6a46fc0acf",
   "independent/review_guards.py": "b83164d6c0122a055b3281f3381b305683a875760a2d727dd0188bb2aa59d67d",
   "inputs/PR589-EXPECTED.json": "b9f0e5ca038abe837b0007c8fe006f366a6f02009244ac57705a8a200e2301f4",
