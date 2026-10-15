@@ -44,7 +44,7 @@ Expected:
 ```text
 PASS_MUTABLE_SOURCE_7Q_SHARED_XOR paths6=40320 Xle2=0 Xle3=0 champion_min_X=6 tariffs=434,436,442 ... no_new_kappa
 PASS_INDEPENDENT_7Q_SHARED_XOR restored2=20 mid_sets=10 champion_min_X=6 ... no_new_kappa
-PASS_MUTABLE_SOURCE_7Q_SHARED_XOR_PACKAGE_TESTS groups=5
+PASS_MUTABLE_SOURCE_7Q_SHARED_XOR_PACKAGE_TESTS groups=6
 PASS_REGISTERED_RESEARCH_PACKAGE research/mutable-source-7q-shared-xor outcome=completed
 ```
 
