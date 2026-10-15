@@ -112,15 +112,87 @@ def block_projector(v,D):
     return P
 
 
+class PackedRows:
+    """Column-parallel Gaussian orthogonality rows via exact base-256 lanes.
+
+    Equivalent to pairwise `inner` zero-tests: for D<=32 one byte per column is
+    carry-free for the signed Hermitian products (see
+    research/quadratic-affine-packed/). Every matrix entry is still materialised
+    into the same I-plus-orthogonality binary row.
+    """
+
+    def __init__(self,vectors,dimension):
+        require(type(dimension) is int and 1<=dimension<=32,'Packed dimension must be in 1..32')
+        self.dimension=dimension
+        self.vectors=tuple(tuple(v) for v in vectors)
+        require(bool(self.vectors),'Empty packed sample')
+        for v in self.vectors:self._validate(v)
+        self.count=len(self.vectors)
+        unit=int.from_bytes(b'\x01'*self.count,'little')
+        self.offset=dimension*unit;self.low=127*unit;self.high=128*unit
+        self.real=[];self.imag=[]
+        for k in range(dimension):
+            real_pos,real_neg,imag_pos,imag_neg=(bytearray(self.count) for _ in range(4))
+            for j,(support,lo,hi) in enumerate(self.vectors):
+                if support>>k&1:
+                    phase=((lo>>k)&1)+2*((hi>>k)&1)
+                    (real_pos,imag_pos,real_neg,imag_neg)[phase][j]=1
+            self.real.append(int.from_bytes(real_pos,'little')-int.from_bytes(real_neg,'little'))
+            self.imag.append(int.from_bytes(imag_pos,'little')-int.from_bytes(imag_neg,'little'))
+        self.compaction=[];k=1
+        while k<self.count:
+            groups=(self.count+2*k-1)//(2*k);stride=16*k
+            repetitions=((1<<(stride*groups))-1)//((1<<stride)-1)
+            self.compaction.append((7*k,((1<<(2*k))-1)*repetitions));k*=2
+        self.row_mask=(1<<self.count)-1
+
+    def _validate(self,v):
+        require(len(v)==3 and all(type(x) is int and x>=0 for x in v),'Invalid phase masks')
+        support,lo,hi=v
+        require(support<1<<self.dimension and not ((lo|hi)&~support),
+                'Phase masks leave support or dimension')
+
+    def products(self,v):
+        self._validate(v);support,lo,hi=v;real=imag=self.offset
+        while support:
+            bit=support&-support;support^=bit;k=bit.bit_length()-1
+            phase=((lo>>k)&1)+2*((hi>>k)&1);r,i=self.real[k],self.imag[k]
+            if phase==0:real+=r;imag+=i
+            elif phase==1:real+=i;imag-=r
+            elif phase==2:real-=r;imag-=i
+            else:real-=i;imag+=r
+        return real,imag
+
+    def zero_lanes(self,real,imag):
+        different=(real^self.offset)|(imag^self.offset)
+        nonzero=(different+self.low)&self.high
+        bits=(self.high^nonzero)>>7
+        for shift,mask in self.compaction:bits=(bits|(bits>>shift))&mask
+        return bits&self.row_mask
+
+    def orthogonality_row(self,v):
+        return self.zero_lanes(*self.products(v))
+
+    def central_row(self,index):
+        require(type(index) is int and 0<=index<self.count,'Invalid packed row index')
+        return self.orthogonality_row(self.vectors[index])|(1<<index)
+
+
 def rank_witness(t,complex_phases,parity,sample,independent_rows):
+    """Exact finite rank obligation with packed orthogonality row construction.
+
+    Equivalent to the historical pairwise `inner` loop: every claimed independent
+    row is still I plus the full orthogonality relation, with the same GF(2)
+    elimination, digest and receipt fields.
+    """
     f=family(t,complex_phases,parity)
     require(sample and len(set(sample))==len(sample) and all(type(i) is int and 0<=i<f['n'] for i in sample),
             'Sample must contain distinct valid labels')
     require(independent_rows and len(set(independent_rows))==len(independent_rows) and
             all(type(i) is int and 0<=i<len(sample) for i in independent_rows),'Invalid independent row indices')
-    vectors=[vector(f,i) for i in sample];basis={};digest=sha256();bytewidth=(len(sample)+7)//8
+    rows=PackedRows([vector(f,i) for i in sample],f['D']);basis={};digest=sha256();bytewidth=(len(sample)+7)//8
     for i in independent_rows:
-        row=sum(1<<j for j,v in enumerate(vectors) if i==j or inner(vectors[i],v)==(0,0))
+        row=rows.central_row(i)
         digest.update(row.to_bytes(bytewidth,'little'));x=row
         while x:
             p=x.bit_length()-1

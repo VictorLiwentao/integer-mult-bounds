@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "files": [
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "e8870e5917057d59b730eb14721a778639eca050",
+      "sha256": "d46eb6d5b3e279428753d770653663fbdf1063e55c255ea073d768f344927ef7"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "ae6a99f28aa468649eb66a361e764d769363bf11",
+      "sha256": "10b9e340fd8e354a37a0c4813c90e5de1dd42044b5f6aca4a3fc5a42b685fa32"
+    },
+    {
+      "path": "certificates/quadratic-affine-vectors.json",
+      "usage": "provenance",
+      "git_blob": "18c312304cad0076e58581186ec4d02916c13434",
+      "sha256": "b55506bcf2334eebc07ce31078edb33282ff7d9bb57c40a9e4d5209d749dcd7f"
+    },
+    {
+      "path": "docs/research/quadratic-affine-vectors.md",
+      "usage": "provenance",
+      "git_blob": "75e23443f04dca4fb6e469a174e85481fa9cd2c8",
+      "sha256": "2fefaa114b274944c7eaf26297c062d76a7a5e18c541e40479250ed6d1a8e084"
+    },
+    {
+      "path": "scripts/audit_quadratic_affine.py",
+      "usage": "provenance",
+      "git_blob": "9b1cddc5e836a3038fb7e15dbb5813cfc11c96c6",
+      "sha256": "9b7b3a7b8bcf417d95f19e44ff488733e7a3f4757fd12bd98d417e1d01d70425"
+    },
+    {
+      "path": "scripts/experiments/quadratic_affine.py",
+      "usage": "provenance",
+      "git_blob": "271e0a4e0bc077244859009ac2201f172152720b",
+      "sha256": "8f9252bd092eb14779997c6767e090377e91f4d57e6526e9840ae0dd7dcc8f9c"
+    },
+    {
+      "path": "scripts/experiments/quadratic_affine_witnesses.json",
+      "usage": "input",
+      "git_blob": "134c9255268dd7043138491ad25cb4487e3168b9",
+      "sha256": "3efcebf41650681a8a21a901cd2f81dc07a0c4d28064b883af16b10c3e0036c3"
+    },
+    {
+      "path": "research/quadratic-affine-packed/packed.py",
+      "usage": "input",
+      "git_blob": "75bebca04b64ea9cccb745abb4fbade21394a537",
+      "sha256": "366a8046fc420eaa36ae397eec35928b91284b60f2d14f56565006ad6cd6f538"
+    },
+    {
+      "path": "research/quadratic-affine-packed/README.md",
+      "usage": "provenance",
+      "git_blob": "c2efb0bf9985f9f80bfbf240d4b031b97362a891",
+      "sha256": "ec6d039adf7ca63ed08f92d45e88c3ed5b053afa86b31aac2ac382d643d48951"
+    }
+  ]
+}

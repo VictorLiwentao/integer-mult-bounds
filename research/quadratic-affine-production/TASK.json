@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 4,
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "chooser_seed": "8b570eadddfd03e1d3fc9582a93389be",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected reproduction command and choose a single replay stage for profiling.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Can the production quadratic-affine rank witness (scripts/experiments/quadratic_affine.py:rank_witness, exercised by scripts/audit_quadratic_affine.py / certificates/quadratic-affine-vectors.json) adopt the exact base-256 packed-row algorithm from research/quadratic-affine-packed/ so the shipped verify-certificates path is faster while every orthogonality row, digest and receipt field stays identical?",
+  "scope_change_reason": "The catalogue card asks for one measured replay bottleneck with before/after wall time and retained checks. Expertise override selected verifier-engineering after profiling make verify-certificates poles. Leave-alone objects (joint frames, shared-point, mixed-point verify, ternary frames, parity-side, leech_minor/affine_vector_screens, central-factor production, exclusion embedding residual, inplace compile-scan) were skipped. Curtis Dransfield's opt-in packed adapter (#752) already proved the algorithm; production still used the pairwise inner loop. Open #1076 targets the same hotspot with a different bit-sliced engine and remains partially reviewed; this session wires the incorporated #752 packed check into the shipped source and certificate pin.",
+  "bottleneck_link": "Side result on review throughput: quadratic-affine-vectors is part of verify-certificates. A faster identical rank witness does not change kappa or the binding complex supplier.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship an equivalence-preserving production rank_witness change with frozen baseline, identical witness and audit payloads, rejection/temp-corruption controls, certificate pin discipline, registered replay and a measured before/after median. Do not invent kappa or reopen leave-alone objects.",
+  "outcome": "completed",
+  "evidence": "PASS_QUADRATIC_AFFINE_PRODUCTION via research/quadratic-affine-production/verify.py (also under -O); PASS_IDENTICAL_QUADRATIC_AFFINE_PRODUCTION_RECEIPTS via benchmark.py; certificates/quadratic-affine-vectors.json differs from base only in the quadratic_affine.py source pin.",
+  "author": "Wentao Li",
+  "github": "VictorLiwentao",
+  "email": "wentaol4@illinois.edu",
+  "ai_assistance": "Substantial AI assistance for orientation, overlap search, profiling, production wiring, packaging, benchmarking and writing. Not independent human peer review.",
+  "open_questions": [
+    {
+      "question": "If open #1076's distinct bit-sliced engine later lands, does it supersede or coexist with the packed production path?",
+      "why_it_matters": "Two production algorithms for the same hotspot would need an explicit maintainer choice before both edit scripts/experiments/quadratic_affine.py.",
+      "first_step": "Diff #1076 head against this packed production rank_witness and decide which algorithm ships.",
+      "blocked_by": "#1076 remains open / partially reviewed."
+    },
+    {
+      "question": "Should verify-certificates adopt a microbenchmark regression gate for the twelve-case rank_witness workload?",
+      "why_it_matters": "A future edit could restore the pairwise inner loop without failing equivalence tests.",
+      "first_step": "Decide whether RESULT.json medians belong in CI or remain descriptive.",
+      "blocked_by": "Maintainer CI-budget preference."
+    }
+  ]
+}
