@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "status": "PASS_TRANSFER_COUPLED_SHAPES_7Q_OBSTRUCTION",
+  "scope": "Five-source common-B mutable-source Q/R/X alphabet (PR1898). Full transfer-coupled shape census at total Q=p+a+b=7 with priced transfer C>=1 folded into fair shared-prefix XOR, divergent suffixes, and dual even-parity readout. Every covering shape has min R>=84; binding (5,1,1) attains R=84 with min fair X=9 (tariff floor 452>436). Answers #2779 OQ1 and the remaining-shapes OQ left by the (5,1,1)-only transfer-coupled package.",
+  "claim": {
+    "Q": 7,
+    "transfer_C_min": 1,
+    "shapes_enumerated": [
+      "1_1_5",
+      "1_2_4",
+      "1_3_3",
+      "2_1_4",
+      "2_2_3",
+      "3_1_3",
+      "3_2_2",
+      "4_1_2",
+      "5_1_1"
+    ],
+    "global_min_R": 84,
+    "binding_shape": [
+      5,
+      1,
+      1
+    ],
+    "binding_min_fair_X_at_R84": 9,
+    "shape_min_R": {
+      "1_1_5": 92,
+      "1_2_4": 98,
+      "1_3_3": 100,
+      "2_1_4": 90,
+      "2_2_3": 94,
+      "3_1_3": 88,
+      "3_2_2": 90,
+      "4_1_2": 86,
+      "5_1_1": 84
+    },
+    "tariff_floor_at_R84_fairX9": 452,
+    "endpoint_Q6_tariff": 436,
+    "undercuts_436_after_complete_bill": false,
+    "answers_independent_walks_oq_transfer_coupled": true,
+    "answers_remaining_transfer_coupled_shapes": true,
+    "oq_answer": "Every covering transfer-coupled dual schedule with shape (p,a,b), p+a+b=7, p,a,b>=1, divergent restored walks, dual even-parity readout, and priced transfer C>=1 folded into fair shared-prefix XOR has dirt-legal R>=84. The minimum 84 is attained only on maximal-share (5,1,1), where min fair X on the R=84 layer is 9 (tariff 452>436). All other shapes have R>=86 and already exceed 436 at X=C=1. Partitioned independent walks (#2779) remain at R=112; same-walk multi-connector (#2761) and the (5,1,1)-only transfer-coupled package are leave-alone.",
+    "no_new_kappa": true
+  },
+  "shapes": {
+    "1_1_5": {
+      "shape": [
+        1,
+        1,
+        5
+      ],
+      "Q": 7,
+      "covering_pairs": 3916416,
+      "attainable_R": [
+        92,
+        96,
+        104
+      ],
+      "histogram": {
+        "92": 1416576,
+        "96": 1249920,
+        "104": 1249920
+      },
+      "min_R": 92,
+      "champion": {
+        "prefix": [
+          0
+        ],
+        "suffix_a": [
+          1
+        ],
+        "suffix_b": [
+          2,
+          4,
+          7,
+          8,
+          16
+        ]
+      },
+      "source": "verify_live_census"
+    },
+    "1_2_4": {
+      "shape": [
+        1,
+        2,
+        4
+      ],
+      "Q": 7,
+      "covering_pairs": 10416000,
+      "attainable_R": [
+        98,
+        104
+      ],
+      "histogram": {
+        "98": 3124800,
+        "104": 7291200
+      },
+      "min_R": 98,
+      "champion": {
+        "prefix": [
+          0
+        ],
+        "suffix_a": [
+          1,
+          2
+        ],
+        "suffix_b": [
+          4,
+          8,
+          13,
+          16
+        ]
+      },
+      "source": "expected_pending_independent"
+    },
+    "1_3_3": {
+      "shape": [
+        1,
+        3,
+        3
+      ],
+      "Q": 7,
+      "covering_pairs": 7082880,
+      "attainable_R": [
+        100,
+        104,
+        112
+      ],
+      "histogram": {
+        "100": 1805440,
+        "104": 4999680,
+        "112": 277760
+      },
+      "min_R": 100,
+      "champion": {
+        "prefix": [
+          0
+        ],
+        "suffix_a": [
+          1,
+          2,
+          4
+        ],
+        "suffix_b": [
+          7,
+          8,
+          16
+        ]
+      },
+      "source": "expected_pending_independent"
+    },
+    "2_1_4": {
+      "shape": [
+        2,
+        1,
+        4
+      ],
+      "Q": 7,
+      "covering_pairs": 19165440,
+      "attainable_R": [
+        90,
+        92,
+        96,
+        100
+      ],
+      "histogram": {
+        "90": 4583040,
+        "92": 4999680,
+        "96": 7082880,
+        "100": 2499840
+      },
+      "min_R": 90,
+      "champion": {
+        "prefix": [
+          0,
+          3
+        ],
+        "suffix_a": [
+          1
+        ],
+        "suffix_b": [
+          4,
+          8,
+          13,
+          16
+        ]
+      },
+      "source": "verify_live_census"
+    },
+    "2_2_3": {
+      "shape": [
+        2,
+        2,
+        3
+      ],
+      "Q": 7,
+      "covering_pairs": 39997440,
+      "attainable_R": [
+        94,
+        96,
+        100,
+        104
+      ],
+      "histogram": {
+        "94": 7499520,
+        "96": 17498880,
+        "100": 14165760,
+        "104": 833280
+      },
+      "min_R": 94,
+      "champion": {
+        "prefix": [
+          0,
+          7
+        ],
+        "suffix_a": [
+          1,
+          2
+        ],
+        "suffix_b": [
+          8,
+          12,
+          16
+        ]
+      },
+      "source": "expected_pending_independent"
+    },
+    "3_1_3": {
+      "shape": [
+        3,
+        1,
+        3
+      ],
+      "Q": 7,
+      "covering_pairs": 37497600,
+      "attainable_R": [
+        88,
+        90,
+        92,
+        94,
+        96
+      ],
+      "histogram": {
+        "88": 6666240,
+        "90": 7499520,
+        "92": 7499520,
+        "94": 9999360,
+        "96": 5832960
+      },
+      "min_R": 88,
+      "champion": {
+        "prefix": [
+          0,
+          2,
+          15
+        ],
+        "suffix_a": [
+          1
+        ],
+        "suffix_b": [
+          4,
+          8,
+          16
+        ]
+      },
+      "source": "verify_live_census"
+    },
+    "3_2_2": {
+      "shape": [
+        3,
+        2,
+        2
+      ],
+      "Q": 7,
+      "covering_pairs": 28748160,
+      "attainable_R": [
+        90,
+        92,
+        94,
+        96,
+        98
+      ],
+      "histogram": {
+        "90": 4374720,
+        "92": 8124480,
+        "94": 7499520,
+        "96": 6249600,
+        "98": 2499840
+      },
+      "min_R": 90,
+      "champion": {
+        "prefix": [
+          0,
+          1,
+          8
+        ],
+        "suffix_a": [
+          2,
+          4
+        ],
+        "suffix_b": [
+          15,
+          16
+        ]
+      },
+      "source": "expected_pending_independent"
+    },
+    "4_1_2": {
+      "shape": [
+        4,
+        1,
+        2
+      ],
+      "Q": 7,
+      "covering_pairs": 36664320,
+      "attainable_R": [
+        86,
+        88,
+        90,
+        92,
+        96
+      ],
+      "histogram": {
+        "86": 5832960,
+        "88": 3333120,
+        "90": 9999360,
+        "92": 15832320,
+        "96": 1666560
+      },
+      "min_R": 86,
+      "champion": {
+        "prefix": [
+          0,
+          1,
+          13,
+          30
+        ],
+        "suffix_a": [
+          2
+        ],
+        "suffix_b": [
+          4,
+          10
+        ]
+      },
+      "source": "verify_live_census"
+    },
+    "5_1_1": {
+      "shape": [
+        5,
+        1,
+        1
+      ],
+      "Q": 7,
+      "covering_pairs": 8749440,
+      "attainable_R": [
+        84,
+        88,
+        90
+      ],
+      "histogram": {
+        "84": 1458240,
+        "88": 2083200,
+        "90": 5208000
+      },
+      "min_R": 84,
+      "champion": {
+        "prefix": [
+          0,
+          1,
+          7,
+          19,
+          28
+        ],
+        "suffix_a": [
+          2
+        ],
+        "suffix_b": [
+          9
+        ]
+      },
+      "source": "verify_live_census"
+    }
+  },
+  "champions": {
+    "1_1_5": {
+      "shape": [
+        1,
+        1,
+        5
+      ],
+      "R": 92,
+      "fair_X": 13,
+      "tariff_fair_X_C1": 476,
+      "walks": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          4,
+          7,
+          8,
+          16
+        ]
+      ]
+    },
+    "1_2_4": {
+      "shape": [
+        1,
+        2,
+        4
+      ],
+      "R": 98,
+      "fair_X": 13,
+      "tariff_fair_X_C1": 488,
+      "walks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          4,
+          8,
+          13,
+          16
+        ]
+      ]
+    },
+    "1_3_3": {
+      "shape": [
+        1,
+        3,
+        3
+      ],
+      "R": 100,
+      "fair_X": 17,
+      "tariff_fair_X_C1": 500,
+      "walks": [
+        [
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          0,
+          7,
+          8,
+          16
+        ]
+      ]
+    },
+    "2_1_4": {
+      "shape": [
+        2,
+        1,
+        4
+      ],
+      "R": 90,
+      "fair_X": 19,
+      "tariff_fair_X_C1": 484,
+      "walks": [
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          0,
+          7,
+          2,
+          8,
+          11,
+          16
+        ]
+      ]
+    },
+    "2_2_3": {
+      "shape": [
+        2,
+        2,
+        3
+      ],
+      "R": 94,
+      "fair_X": 19,
+      "tariff_fair_X_C1": 492,
+      "walks": [
+        [
+          0,
+          7,
+          1,
+          2
+        ],
+        [
+          0,
+          7,
+          8,
+          12,
+          16
+        ]
+      ]
+    },
+    "3_1_3": {
+      "shape": [
+        3,
+        1,
+        3
+      ],
+      "R": 88,
+      "fair_X": 19,
+      "tariff_fair_X_C1": 480,
+      "walks": [
+        [
+          0,
+          1,
+          8,
+          2
+        ],
+        [
+          0,
+          1,
+          8,
+          4,
+          15,
+          16
+        ]
+      ]
+    },
+    "3_2_2": {
+      "shape": [
+        3,
+        2,
+        2
+      ],
+      "R": 90,
+      "fair_X": 19,
+      "tariff_fair_X_C1": 484,
+      "walks": [
+        [
+          0,
+          1,
+          8,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          8,
+          15,
+          16
+        ]
+      ]
+    },
+    "4_1_2": {
+      "shape": [
+        4,
+        1,
+        2
+      ],
+      "R": 86,
+      "fair_X": 19,
+      "tariff_fair_X_C1": 476,
+      "walks": [
+        [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          15,
+          16
+        ]
+      ]
+    },
+    "5_1_1": {
+      "shape": [
+        5,
+        1,
+        1
+      ],
+      "R": 84,
+      "fair_X": 9,
+      "tariff_fair_X_C1": 452,
+      "walks": [
+        [
+          0,
+          1,
+          3,
+          6,
+          12,
+          8
+        ],
+        [
+          0,
+          1,
+          3,
+          6,
+          12,
+          16
+        ]
+      ]
+    }
+  },
+  "verify_live_shapes": [
+    "5_1_1",
+    "4_1_2",
+    "3_1_3",
+    "2_1_4",
+    "1_1_5"
+  ],
+  "unit_tariff": {
+    "b": 38,
+    "a": 2,
+    "x": 2
+  },
+  "tariff_check": {
+    "formula": "38*Q + 2*R + 2*X  (transfer C folded into fair X)",
+    "at_R84_fairX9": 452,
+    "binding_champion_fair": 452,
+    "endpoint_Q6": 436
+  },
+  "fair_X_note": "Fair shared-prefix XOR: prefix edges once + transfer C>=1 + both tip chains (prefix_end \u2192 suffix \u2192 0)."
+}
