@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "certificates/selected-result.json",
+    "research/community-frontier1094-audit/ASSEMBLY.json",
+    "research/rank7-joint-endframes/data/PARENT-base.json.gz",
+    "research/rank7-joint-endframes/data/PARENT-extra.json.gz",
+    "research/rank7-joint-endframes/data/STAGE1-FRAME-EDITS.json",
+    "research/rank7-joint-endframes/data/WORD-base.json.gz",
+    "research/rank7-joint-endframes/data/WORD-extra.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 180,
+      "checks": "Gaussian replay of V45 joint and four single-helper controls on both providers, cleanup and width deltas, selected supplier endpoints, four semantic mutants."
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/independent.py"],
+      "timeout_seconds": 180,
+      "checks": "Set-span replay of the same V45 invoice and supplier obstruction, with no import of verify.py."
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 300,
+      "checks": "Duplicate JSON keys, temp-copy certificate corruption, missing receipt, import separation, optimized read-only relocated replay."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 6,
+  "base_commit": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Does one changed supplier or assembly claim lack a source-bound independent check of a specific new implication?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/rank7-joint-endframes/README.md",
+      "docs/research/research-family-status.md"
+    ],
+    "methods": [
+      "Independently reconstruct a coordinated frame/circuit change and its single-change control, then derive the complete rank and physical ledger.",
+      "Implement certified moment inequalities through a different exact enclosure method."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls. Name the existing checks and the missing coverage. More digits or another equivalent evaluation of an unchanged root is not by itself new verification coverage.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read #2979 joint rank-7 end-frame proposal and the revision-6 evidence status. Its claimed kappa is not selected. Compare coordinated changes with the losing single-change controls and locate the complete physical ledger; an aggregate moment alone does not validate the mechanism.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Prioritize a bounded independent audit of #2979: reconstruct one joint group and its single-lowering control, check the declared frames/chronology, then trace changed children, idle widths and cleanup buffers into the complete invoice and both supplier caps. Choose one still-missing implication after checking existing audits. Stop with exact unresolved dependencies if full admission exceeds the session; do not launch a new lowering census on an unvalidated premise or substitute extra root digits for mechanism checking.",
+    "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+    "allowed_variations": [
+      "Reconstruct either a source ledger or a numeric enclosure with a different method."
+    ],
+    "scope_change_triggers": [
+      "Importing the primary function and calling its output independent verification.",
+      "Promoting #2979 from merged source archive to validated supplier solely from author PASS receipts or aggregate pricing."
+    ],
+    "overlap_terms": [
+      "independent moment",
+      "rank histogram",
+      "exact enclosure",
+      "2979",
+      "rank7 joint endframes",
+      "paired extraction",
+      "joint lowering"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Independent Gaussian and set-span replay of PR2979 group V45 only: the joint rank-7 end-frame lowering, its four losing single-helper controls, frame chronology, idle-width deltas, unchanged cleanup buffers, and the selected bit and complex supplier endpoints, which this group does not determine.",
+  "scope_change_reason": "rank7-joint-frame-audit already recounts all five groups and all 16 V45 subsets, and rank7-group-a-entrance-audit covers group A. Both leave the selected supplier endpoints uncertified. This package binds only the V45 joint word and its four single controls to those endpoints and stops.",
+  "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the V45 joint-versus-single invoice and the supplier-endpoint obstruction. Do not census the other groups, admit a new kappa, or replay the full #2979 native release.",
+  "outcome": "negative-result",
+  "evidence": "CERTIFICATE.json: joint delta -2 H1+10 H2+6 H3-10 H4 versus single +1 H1+10 H2+6 H3-10 H4; widths 8 to 7; cleanup stays 86 buffers; selected complex lower is below the bit lower and neither equals the V45 guide margin. Four mutants rejected by verify.py and independent.py.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for derivation, implementation, checking and writing.",
+  "open_questions": [
+    {
+      "question": "Can a consumer charge the exact V45 child delta and its four freed width units inside the selected complex profile without repaying idle capacity and the other four groups?",
+      "why_it_matters": "The local joint margin is positive only under an uncertified idle guide, and the selected complex endpoint is a different full profile.",
+      "first_step": "Substitute the exact V45 paid delta into the selected complex profile in research/community-frontier1094-audit/ASSEMBLY.json and reprice idle children with that profile's own consumer.",
+      "blocked_by": "The selected complex word is not the #2979 parent, and no V45-only allocation or physical consumer is supplied here."
+    }
+  ]
+}

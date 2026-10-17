@@ -1,0 +1,86 @@
+{
+  "bit_supplier_contains_v45_helper": false,
+  "bit_supplier_pr": 589,
+  "buffers_added_after_this_group": [
+    226,
+    228,
+    230,
+    363,
+    395
+  ],
+  "cleanup_gates_unchanged": 4992,
+  "five_group_stage1_widths": {
+    "4": 26,
+    "5": 2,
+    "6": 16,
+    "7": 52,
+    "8": 94,
+    "9": 218
+  },
+  "gate_edits": {
+    "B": 20,
+    "restore": 41
+  },
+  "group": "V45",
+  "helpers": [
+    249,
+    251,
+    265,
+    267
+  ],
+  "joint_paid_delta": {
+    "1": -2,
+    "2": 10,
+    "3": 6,
+    "4": -10
+  },
+  "joint_width_delta": {
+    "7": 4,
+    "8": -4
+  },
+  "private_buffers_after_group": 86,
+  "private_buffers_in_final_word": 91,
+  "providers_agree": true,
+  "rejected_mutants": [
+    "widened-frame",
+    "cleanup-mutation",
+    "omitted-gate",
+    "wrong-subspace"
+  ],
+  "selected_binding": "complex",
+  "selected_bit_lower": "1733427039589844234749/1000000000000000000000000",
+  "selected_complex_lower": "67018507072324140917/40000000000000000000000",
+  "selected_kappa": "836330098538459/500000000000000000",
+  "single_paid_delta": {
+    "1": 1,
+    "2": 10,
+    "3": 6,
+    "4": -10
+  },
+  "single_width_delta": {
+    "7": 1,
+    "8": -1
+  },
+  "subspace": [
+    256,
+    128,
+    64,
+    35,
+    16,
+    11,
+    5
+  ],
+  "supplier_caps_determined_by_group": false,
+  "surrogate_idle_guide": 2091300,
+  "surrogate_joint_margin": 22972,
+  "surrogate_joint_price": -8388172,
+  "surrogate_single_margin": -53141,
+  "surrogate_single_price": -2038159,
+  "v45_only_widths": {
+    "4": 26,
+    "5": 2,
+    "7": 66,
+    "8": 96,
+    "9": 218
+  }
+}
