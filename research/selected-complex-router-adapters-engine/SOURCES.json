@@ -49,7 +49,8 @@
       "usage": "input",
       "role": "engine",
       "git_blob": "9d536f4e093b0ceb8f22160e4f621ff5e0182642",
-      "sha256": "c6d34d685669132d6b877d6064d16e7a37e0ebc0290f72b93ded1b623602f7b7"
+      "sha256": "c6d34d685669132d6b877d6064d16e7a37e0ebc0290f72b93ded1b623602f7b7",
+      "pin": "head:23b168e97862c15faf17e8a3226157b8a5329a29:research/selected-complex-router-adapters-engine/router.py"
     },
     {
       "path": "docs/research/agent-task-catalog.json",
