@@ -5,7 +5,7 @@
 - Branch: `cursor/flag0-head-span-schedule-60b9` (VictorLiwentao fork).
 - Content tip: `c1ea52be05e21bb8efad20e7474fe417323e0e3e`. This is the
   scientific package commit. Its parent is the pinned base.
-- Packaging tip: `ec6509890dda563bda82088f14f2d24586d89388` (adds only this handoff + test/VERIFY alignment).
+- Packaging tip: branch HEAD (`git rev-parse origin/cursor/flag0-head-span-schedule-60b9`); content tip below is the scientific commit.
 - Package: `research/p104-flag0-head-span-schedule/`
 - Base: CrocSwap main `6f100d4bb5083f8c35d96fd95a539811c62f245c`
 - Card: `p104-side-correction` (refined), priority revision 6
