@@ -795,5 +795,81 @@
       "total_calls": 55188
     },
     "sources": 26
+  },
+  "fitted": {
+    "citations": 20,
+    "fitted_highpart": [
+      {
+        "active_width": 5,
+        "call_class": "highpart_exchange",
+        "columns": 4096,
+        "gap": 1,
+        "inner_peak": 20,
+        "outer_peak": 43,
+        "own_rows": 8,
+        "padded_ratio": "3/2",
+        "padded_rows": 12,
+        "reserve": 1,
+        "roots": 2,
+        "signature": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "active_width": 5,
+        "call_class": "highpart_exchange",
+        "columns": 8192,
+        "gap": 1,
+        "inner_peak": 20,
+        "outer_peak": 43,
+        "own_rows": 8,
+        "padded_ratio": "3/2",
+        "padded_rows": 12,
+        "reserve": 2,
+        "roots": 2,
+        "signature": [
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "fitted_peeled": [
+      {
+        "columns": 1024,
+        "gap": 1,
+        "inner_peak": 20,
+        "outer_peak": 42,
+        "own_rows": 8,
+        "padded_ratio": "3/2",
+        "padded_rows": 12,
+        "reserve": 1,
+        "roots": 2,
+        "signature": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "columns": 2048,
+        "gap": 1,
+        "inner_peak": 20,
+        "outer_peak": 42,
+        "own_rows": 8,
+        "padded_ratio": "3/2",
+        "padded_rows": 12,
+        "reserve": 2,
+        "roots": 2,
+        "signature": [
+          2,
+          1,
+          1
+        ]
+      }
+    ],
+    "sources": 26
   }
 }

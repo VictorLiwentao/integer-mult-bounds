@@ -29,7 +29,8 @@
     "research/physical-ordinary-interchange/source.py",
     "research/physical-ordinary-interchange/verify.py",
     "research/physical-ordinary-interchange/inputs/pr2808.tar",
-    "research/physical-ordinary-interchange/inputs/pr2809.tar"
+    "research/physical-ordinary-interchange/inputs/pr2809.tar",
+    "docs/research/agent-task-catalog.json"
   ],
   "commands": [
     {
@@ -41,7 +42,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 180,
+      "timeout_seconds": 120,
       "checks": "Pin inputs before engine import, citations, peeled+highpart plans, 12+12 physical Binary cases, adapter AST/runtime stock-free, eight controls, compose rho_peeled_highpart=0, match CERTIFICATE.json"
     },
     {
@@ -54,7 +55,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 180,
+      "timeout_seconds": 120,
       "checks": "Same admission under PYTHONOPTIMIZE via need(); -Werror clean after engine tempdir cleanup"
     },
     {
@@ -78,7 +79,7 @@
         "-B",
         "{package}/test_package.py"
       ],
-      "timeout_seconds": 480,
+      "timeout_seconds": 300,
       "checks": "Duplicate JSON keys, temp certificate corruption (normal and -O), engine pin and unpinned-module rejection, citation failure, controls, read-only package hash"
     },
     {
@@ -92,7 +93,7 @@
         "--suite",
         "fitted"
       ],
-      "timeout_seconds": 900,
+      "timeout_seconds": 600,
       "checks": "Peeled and high-part fitted branches at reserve extents 1 and 2: C0 restores parent-reserve coordinate; padded fresh-row ratio 3/2 from own high field"
     }
   ]
