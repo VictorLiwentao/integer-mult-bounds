@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SELECTED_STOCK_SHAPE_RHO_ZERO",
+  "producer": "selected-complex-m73",
+  "shape_rho": 0,
+  "S_leaf": 1,
+  "shape_B_bits_cited": 2642,
+  "shape_A_cited": 0,
+  "completed_ordinary_leaf_admission": true,
+  "slack_252_is_not_S_leaf": true,
+  "composition_under_rho_zero": "(43/26)*(1-s)*2642",
+  "no_new_kappa": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_SELECTED_STOCK_SHAPE_RHO_ZERO rho=0 S_leaf=1 B_bits=2642_cited A=0_cited completed_ordinary_leaf no_new_kappa"
+}

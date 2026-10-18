@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-coarse-depth-stock/README.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/selected-bit-parent-reserve/README.md",
+    "docs/research/selected-bootstrap-scope-map.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Pin sources, bind rho=0 with S_leaf=1 under completed ordinary-leaf, reject B>1 and 252-as-leaf controls, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same admission under PYTHONOPTIMIZE via need()"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Separate scanner rebuilds rho=0 without importing verify.evaluate logic beyond shared pins"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Duplicate JSON keys, temp certificate corruption, -O admission, B>1/252 controls, read-only package hash"
+    }
+  ]
+}
