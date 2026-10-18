@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "task_id": "p104-side-correction",
+  "priority_revision": 6,
+  "selected_kappa": "0.001672660197076918",
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "original_card": {
+    "id": "p104-side-correction",
+    "question": "Can the proposed P104 joint endpoint flags be realized by a chronological correction program with coefficients, dirty restoration and an affordable complete bill?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/p104-native-channel/README.md",
+      "research/p104-native-channel/PROOF.md",
+      "docs/research/community-efficient1000-review.md",
+      "research/p104-joint-unit-flags/README.md"
+    ],
+    "methods": [
+      "Construct one side-correction word at an explicit chronological cut with the needed frames still available.",
+      "Derive a lower bound on the side correction and hosting costs that decides whether this channel can beat the selected budget."
+    ],
+    "acceptance_gate": "An exact arbitrary-input identity, source/target frame availability and restoration at the chosen cut, plus the complete channel+correction+idle/hosting bill or an explicit favorable bound. The native channel alone is not a supplier. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the revision-6 family record and #2981 static joint flags, alongside the reviewed #1991 channel. #2981 is an author-checked source archive, not an independently validated executable correction or a refutation of program-level lifetime floors.",
+      "scope": "Source-bound orientation only. Read the named package and review before relying on its local evidence; this command is not its replay or supplier admission."
+    },
+    "first_experiment": "After checking live handoffs, pin one named collection from #2981 and attach acquisition/delivery times, source dependencies and coefficient requirements. Test legal access and arbitrary dirty restoration; price any completion against the full channel/endpoint/hosting allowance. Stop with the exact missing implication or a scoped counterexample rather than expanding the static cover census.",
+    "bottleneck_link": "Completing an already realized changed channel tests a concrete construction opportunity, instead of refining the incumbent packing. A positive local result still needs global and all-size admission.",
+    "allowed_variations": [
+      "One correction factorization, one chronological cut, or one explicit hosting obstruction.",
+      "A changed correction schedule with an updated full bill and native frame contract."
+    ],
+    "scope_change_triggers": [
+      "Recompiling the already certified low-rank channel without closing a new obligation.",
+      "Treating a pending ancestor, local histogram or unpriced side correction as an admitted global supplier.",
+      "Repeating a correction or physical conversion already supplied by a pending follow-up without adding independent coverage or a different unresolved obligation.",
+      "Repeating the 208-flag static matching or calling a static nested cover a chronological correction program. Independent audit of that certificate is distinct and remains useful."
+    ],
+    "overlap_terms": [
+      "P104",
+      "I-G/2",
+      "side correction",
+      "native channel",
+      "1972",
+      "1991",
+      "2586",
+      "endpoint transport",
+      "physical dual",
+      "relay composition",
+      "2981",
+      "joint unit flags",
+      "acquisition delivery",
+      "static nesting"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #2981 reports static joint endpoint flags and a matching of 208 departure and arrival flags; archival intake is not independent verification.",
+        "evidence": "research/p104-joint-unit-flags/README.md",
+        "remaining": "Independent flag check and a chronological coefficient program with dirty restoration and a complete cost.",
+        "status": "author-checked",
+        "source_commit": "3d24b92d8ba057b57cb2d480170ec407520e6882",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      }
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Answer #3683 OQ1 for present-head flag 0: on the published #2089 promote/add/restore at events 5758/5759/5807, census every window-named ADD source other than X0 as a non-self co-chart host alternative (FULL at ADD, FULL after restore, no post-channel destination, zero dirty-helper touches, zero endpoint repayment), retain uniqueness of X0 among registers named by ADD 5759 alone, and record the broader all-X co-chart count 103. Interpretive co-chart hosts on the published word only; no vector-equality claim and no dirty-helper construction.",
+  "scope_change_reason": "#3683 OQ1 asks whether any non-self / copied-host alternative among event-named registers also achieves zero dirt-helper touches and zero endpoint repayment on this cut. #3683 already proved uniqueness among ADD-5759-named registers and left copied-host alternatives open. This package expands the search domain to window-named ADD sources (and all X registers) and certifies an affirmative co-chart census. Distinct from #3669 chronology, deferred flag0-head-span-schedule, and open #3532.",
+  "bottleneck_link": "A legal I-G/2 completion needs an owner/host for every source read with dirty restoration. Showing many co-chart hosts with the same zero-dirt/zero-repay profile as S0 clarifies that self-ownership is not the only zero-mass interpretive host on this cut; priced dirty-helper copies remain the open mass question.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the 47-host window census and 103 all-X co-chart count are dual-scanned with dirt/repay checks. Do not build a dirty-helper copy word, reprint #3683 S0, reprint #3669 chronology, retarget #3532, or price a new kappa.",
+  "outcome": "completed",
+  "evidence": "Window 5758..5807 has 48 Y34 adds whose first-seen sources are the listed 48 X-registers. Each of the 47 non-X0 sources holds FULL at 5759 and after 5807, has last destination inside the channel, and differs from its initial — so endpoint repay toward initials is false. Window dirty-helper touches = 0. ADD 5759 still names only {Y34,X0}, so S0 uniqueness on that ADD is unchanged. All 103 non-X0 X-registers match the same co-chart/zero-repay profile. Exemplar schedule S_cochart_X5. Selected kappa unchanged.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for derivation, implementation, checking and writing.",
+  "no_new_kappa": true,
+  "open_questions": [
+    {
+      "question": "What is the minimum added host rank mass for a dirty-helper copied-host word that routes the 5759 operand through a fresh helper while leaving X0/Y34 at channel finals?",
+      "why_it_matters": "Co-chart alternatives pay zero new host mass on the published word. A dirty-helper floor would price the gap between interpretive co-chart hosting and an actual copied operand.",
+      "first_step": "Search nested helper paths from empty to FULL that acquire a copy of the X0-valued read before 5759 and restore dirt after, with X0 unwritten in the window.",
+      "blocked_by": "No dirty-helper copied-host word is constructed here."
+    },
+    {
+      "question": "Can a constructed dirt-restore program under S0 fit inside 5758–5807 without enlarging or replacing a published event?",
+      "why_it_matters": "The window is fully occupied by 2 transports and 48 adds with zero dirty-helper touches; a positive dirt-restore construction would need a free slot or a different cut.",
+      "first_step": "Attempt to insert a dirt-helper restore that preserves the published promote/add/restore semantics and remeasure dirt touches.",
+      "blocked_by": "This package only certifies the co-chart census; it does not construct or refute an inserted dirt-restore program."
+    }
+  ]
+}
