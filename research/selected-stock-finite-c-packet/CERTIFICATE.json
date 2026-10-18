@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SELECTED_STOCK_FINITE_C_PACKET",
+  "producer": "selected-complex-m73",
+  "packet_cardinality_factors": {
+    "sp72_bits": 2628,
+    "physical_families": 14826,
+    "family_split": [
+      14336,
+      480,
+      8,
+      2
+    ],
+    "packet_bits": 2642
+  },
+  "assembler_stock_unit": "group*physical",
+  "atom_width_free_stock_block": true,
+  "probed_widths": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "c_bits_by_width": {
+    "1": 2642,
+    "2": 2642,
+    "4": 2642,
+    "8": 2642,
+    "16": 2642,
+    "32": 2642,
+    "64": 2642
+  },
+  "zero_slopes": {
+    "1->2": 0.0,
+    "2->8": 0.0,
+    "8->64": 0.0
+  },
+  "coarse_residual_fixture": {
+    "divisor": 5,
+    "depth": 2,
+    "rows": 25,
+    "sequential_residuals": 2,
+    "all_rows_restored": true,
+    "omit_restore_diverges": true
+  },
+  "leaf_classes_separate": true,
+  "rho": "unbound",
+  "a_zero_cited_not_recomputed": true,
+  "outer_adoption": "not_claimed",
+  "no_new_kappa": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_SELECTED_STOCK_FINITE_C_PACKET C=Sp72x14826 bits=2642 w_free coarse_residual_restore rho=unbound no_new_kappa"
+}

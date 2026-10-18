@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "files": [
+    {
+      "path": "research/gauge44-slots-t16/code/assemble.py",
+      "usage": "input",
+      "git_blob": "581dd9cb29a45bd68cc651538311b63f6966ad68",
+      "sha256": "15f6986a476bac76bcdc0bfcf51da115389b46f1950d2766b6822f757888b13a"
+    },
+    {
+      "path": "research/selected-coarse-depth-stock/PROOF.md",
+      "usage": "input",
+      "git_blob": "e0854d3afd012f7413147bd927812467843aca77",
+      "sha256": "fe1a29b3757a3fda7124027e7e14228a6f3aa49521e23822909036172807f800"
+    },
+    {
+      "path": "research/selected-stock-shape-a-zero/README.md",
+      "usage": "input",
+      "git_blob": "085b611aaa22db486c67bade64bd7688230dff89",
+      "sha256": "ae5d65177bc492aa77ee53a500f11705a9484545c3437c5a2bd63c5f10d6c293"
+    },
+    {
+      "path": "research/selected-stock-envelope-m73/README.md",
+      "usage": "input",
+      "git_blob": "9c950560a82eb5747601768beab2474b6dd5e954",
+      "sha256": "efede1e472e45f78baf304da6bff7b6685b6bb4ae06cf6a1ea9d1ceaf6fd3b88"
+    },
+    {
+      "path": "research/selected-bit-parent-reserve/README.md",
+      "usage": "input",
+      "git_blob": "86dacf2f68b8e2127c8f6fe87fb98fd71ef1f422",
+      "sha256": "16b84730b7a604e805034008e11bae4f90fe6c91db6098d5bd5d011dded5f4ee"
+    },
+    {
+      "path": "notes/three-stage-cover-complex.tex",
+      "usage": "input",
+      "git_blob": "c54cb3d5ff13281fe2aa44ac3baeaac7fce75469",
+      "sha256": "1c5b638aa9b75365b8addec9c8eeee6bc5e499722901079b94c65fce033fde8a"
+    },
+    {
+      "path": "notes/three-stage-cover-bit.tex",
+      "usage": "input",
+      "git_blob": "f05225d21f92cf8cef21b6e12601d5b4d61991f0",
+      "sha256": "47123a756f823c83a0d48cca2bf5add6472cd88410b13aed345e70c8834fb511"
+    },
+    {
+      "path": "docs/research/selected-bootstrap-scope-map.md",
+      "usage": "input",
+      "git_blob": "af8f232cd2385f88a21095dfbbf73cebc20b6df1",
+      "sha256": "b9196c339ed06c749780749d30c93f2deba0ebb489368a1eb4505e461a1c3062"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "b1fea0c94436b236cc2b7d41a7be032811b94c81",
+      "sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0"
+    }
+  ]
+}

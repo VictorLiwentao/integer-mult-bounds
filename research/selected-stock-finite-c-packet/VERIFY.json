@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/gauge44-slots-t16/code/assemble.py",
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-stock-shape-a-zero/README.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/selected-bit-parent-reserve/README.md",
+    "notes/three-stage-cover-complex.tex",
+    "notes/three-stage-cover-bit.tex",
+    "docs/research/selected-bootstrap-scope-map.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Pin sources, bind Sp72x14826 packet as w-free C(w) candidate, coarse residual restore fixture, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same admission under PYTHONOPTIMIZE via need(); -Werror"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Separate scanner rebuilds packet identity without importing verify.evaluate"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Duplicate JSON keys, temp certificate corruption, -O admission, w-injection, omit-restore, read-only package hash"
+    }
+  ]
+}
