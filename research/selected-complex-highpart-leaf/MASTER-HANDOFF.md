@@ -6,8 +6,8 @@
 |---|---|
 | CrocSwap `main` base | `20ecf2891d80b5acf18d980b2164fb44ea7faa90` |
 | VictorLiwentao branch | `cursor/selected-complex-ordinary-leaf-eb60` |
-| Package tip | `cd9c9b89f23437f7ac251e621e8bb4e42366e0a3` |
-| Content tip (VERIFY/PROOF) | `91e00c51cfdde9b53e58580d64bb72081d64effa` |
+| Package tip |  |
+| Content tip (VERIFY/PROOF) |  |
 | Selected κ (unchanged) | `0.001672660197076918` (priority revision 6) |
 
 ## One-sentence claim
