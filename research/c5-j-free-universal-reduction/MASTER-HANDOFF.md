@@ -14,7 +14,7 @@ named alphabet. Dual scanners agree. Selected κ unchanged at
 Pinned CrocSwap main tip (branch base): `20ecf2891d80b5acf18d980b2164fb44ea7faa90`.
 Scientific geometry base (SOURCES): `463113d675af7410ac91d53a4fed51ec6494eb9a`.
 Branch: `cursor/c5-j-free-universal-reduction-60b9`.
-Scientific package tip: `aa9ff691f9be20da580a51745758d2a1c718878c` (Wentao-only; no `Co-authored-by: Victor Li`).
+Scientific package tip:  (Wentao-only; no ).
 Branch tip: this commit on `cursor/c5-j-free-universal-reduction-60b9` (`git rev-parse HEAD`).
 Package: `research/c5-j-free-universal-reduction/`.
 
