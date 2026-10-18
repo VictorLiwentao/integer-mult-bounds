@@ -3,7 +3,7 @@
 ## Candidate
 
 - Branch: `cursor/complex-router-adapters-engine-60b9` (VictorLiwentao fork).
-- Content tip: see `git rev-parse HEAD` after the scientific commit.
+- Content tip: `93542bce3a4610c8b20ef4336dd25e014fead0f1` (scientific `23b168e97862c15faf17e8a3226157b8a5329a29` + SOURCES head pin).
 - Package: `research/selected-complex-router-adapters-engine/`
 - Base: CrocSwap main `20ecf2891d80b5acf18d980b2164fb44ea7faa90`
 - Card: `selected-stock-envelope` (refined), priority revision 6
