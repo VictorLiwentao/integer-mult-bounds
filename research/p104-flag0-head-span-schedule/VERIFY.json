@@ -45,8 +45,8 @@
         "-B",
         "{package}/test_package.py"
       ],
-      "timeout_seconds": 900,
-      "checks": "Temp-tree clean pass with byte-identical tree; 17 rejections by both scanners under -O: ten certificate field corruptions, duplicate JSON key, witness byte flip, new-recipe phase corruption, two truncated R0 cascades rejected at the common-chart rule, an undercharged transport, and R1 placed after D23's restoration"
+      "timeout_seconds": 600,
+      "checks": "Temp-tree clean pass with byte-identical tree; 17 rejections by both scanners under -O: ten certificate field corruptions, duplicate JSON key, witness byte flip, new-recipe phase corruption, truncated R0 without D23 drop (native before-frame), truncated R0 target-only (common-chart), an undercharged transport, and R1 placed after D23's restoration"
     }
   ]
 }

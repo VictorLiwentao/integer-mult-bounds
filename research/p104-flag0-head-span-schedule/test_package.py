@@ -136,7 +136,9 @@ CASES = {
     "duplicate_key": (dup_key, "duplicate JSON key"),
     "witness_byte": (flip_witness, None),
     "recipe_phase": (bad_phase, None),
-    "control_without_drop": (cert_field(without_drop), "common"),
+    # without_drop leaves D23 on the head chart into later published transports, so
+    # verify fails at the native before-frame invariant; independent fails at continuity.
+    "control_without_drop": (cert_field(without_drop), None),
     "control_target_only": (cert_field(target_only), "common"),
     "control_undercharge": (cert_field(undercharge), None),
     "control_r1_after_restore": (cert_field(r1_after_restore), None),
