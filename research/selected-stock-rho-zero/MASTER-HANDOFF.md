@@ -15,7 +15,7 @@ Branch: `cursor/selected-stock-rho-zero-60b9`.
 Package: `research/selected-stock-rho-zero`.
 Scientific package tip: `2df5310f55e54dd3c4b83a4baa53951b4f4aae98`
 (Co-authored-by Victor Li stripped via commit-tree).
-Branch tip: `85fbb37e4ada95f320ba557305bc8918333562a7`.
+Branch tip: `00a42e3f4f2213d7528aeccd3cfb51b3cba2926e`.
 
 ## Switch
 
