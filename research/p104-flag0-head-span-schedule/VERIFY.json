@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-native-channel/inputs/LOWRANK-WITNESS.json",
+    "research/p104-native-channel/inputs/P104-FIXTURE.json",
+    "research/p104-native-channel/NATIVE-RECIPES.json.gz",
+    "research/p104-native-channel/check_native.py",
+    "research/p104-native-channel/vendor/native_verify.py",
+    "research/p104-joint-unit-flags/CERTIFICATE.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Applies repairs R0 and R1 to the published witness in memory, runs the published check_native.validate() on each (every native edge incl. 6 committed new-edge recipes, 208 endpoint adapters, all 280 framed rows and dirty-helper restorations), recomputes the bill, per-register surcharge, head co-hosting and X0 delivery into Y34, the head closure of all fifteen Y34 updates, and the exact least-frame zero-mass sweep (order-preserving and all 1,113 relocation slots), and requires equality with CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Separately written replay with reduced-basis frames and exact rational rows: common-chart ADDs, nested transports with paid rank equal to frame gap, 280/280 final rows equal to the published rows, bill, profile delta and register surcharge, head co-hosting and settling delivery, single-pass head closure, from-scratch least-frame replay for every order-preserving update and relocation slot, direct native check of each new recipe"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 900,
+      "checks": "Temp-tree clean pass with byte-identical tree; 17 rejections by both scanners under -O: ten certificate field corruptions, duplicate JSON key, witness byte flip, new-recipe phase corruption, two truncated R0 cascades rejected at the common-chart rule, an undercharged transport, and R1 placed after D23's restoration"
+    }
+  ]
+}

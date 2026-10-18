@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "base_commit": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "upstream": "CrocSwap/integer-mult-bounds",
+  "files": [
+    {
+      "path": "research/p104-native-channel/inputs/LOWRANK-WITNESS.json",
+      "usage": "input",
+      "git_blob": "86beaf424e9f0f800ae3a62797d94ec9386b7706",
+      "sha256": "0f541bef7f19fdeffd67157684e9f03d785f42c89973632f508fc1a0452b580e",
+      "credit": "Reviewed #1991 native channel witness (PR1972 word)"
+    },
+    {
+      "path": "research/p104-native-channel/inputs/P104-FIXTURE.json",
+      "usage": "input",
+      "git_blob": "2e16f99b295bb386fd13bd8fbd57b42ef54143a9",
+      "sha256": "516c06f6ec3cb84be588c546108de897650288576dd5fbf5fe44b9c5546ad8a4",
+      "credit": "P104 fixture used by the published native checker"
+    },
+    {
+      "path": "research/p104-native-channel/NATIVE-RECIPES.json.gz",
+      "usage": "input",
+      "git_blob": "ab129678c2df4f0d39b02b88457d02c37de0d9b6",
+      "sha256": "a1c4d83d3d5fe1338e99b59272e8cf5d43244c33888597da340b2aa7fef5b3e8",
+      "credit": "Published native recipes (Chafik Boukhalfa, PR1991)"
+    },
+    {
+      "path": "research/p104-native-channel/check_native.py",
+      "usage": "input",
+      "git_blob": "f8e54afbf146cd6f250063bcb1b9dabf0cbc42ea",
+      "sha256": "e67b874a061a4a28007b9a0fabaf30c8db4a587b1e1c7dd9396c77ff1e3a9fe6",
+      "credit": "Published native checker; its validate() is run unchanged on each repaired word"
+    },
+    {
+      "path": "research/p104-native-channel/vendor/native_verify.py",
+      "usage": "input",
+      "git_blob": "2c209dfa9cfade3bc20ac5fc9d876b433a147f8c",
+      "sha256": "3049471905b47b385c88378a1a3be7a18b8858aadd035b8a6da2f4a03b470f38",
+      "credit": "Independent native interpreter used by check_native.py and by independent.py"
+    },
+    {
+      "path": "research/p104-joint-unit-flags/CERTIFICATE.json",
+      "usage": "input",
+      "git_blob": "0fa7d2d40566e92f3ea1539723abf438ba65adb8",
+      "sha256": "a98126428a8da6eae91c50afcc42e014a284c82b554ef77e5b3a34fc6d228128",
+      "credit": "Nick Petalas, PR #2981 flag matching (flag 0 identity)"
+    },
+    {
+      "path": "research/p104-native-channel/compile.py",
+      "usage": "provenance",
+      "git_blob": "840d7608d6795d12ba174620279f88d8a6f727b4",
+      "sha256": "9d2fc2d81962ddb0b4dd7d6482d9918a87a6b05759690317dea79939ca5656a3",
+      "pin": "base_commit:research/p104-native-channel/compile.py",
+      "credit": "Native compiler used by build.py to lower the new edges"
+    },
+    {
+      "path": "research/p104-native-channel/vendor/clifford_exact.py",
+      "usage": "provenance",
+      "git_blob": "166841a037f069249f6f7f6dedb89248812f59e2",
+      "sha256": "2982ead07721e83358dc67c6f49c2b4c16a236a6bebdfd72f58221be1f5d0962",
+      "pin": "base_commit:research/p104-native-channel/vendor/clifford_exact.py",
+      "credit": "Exact Clifford lowering used by build.py"
+    },
+    {
+      "path": "research/p104-native-channel/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "a69311b74f74a2f8e8f411c1451baacd9bacddce",
+      "sha256": "5d743145d389ffdfaffc66096fa7e32c7155b18f73d74755403151d0435bb94c",
+      "pin": "base_commit:research/p104-native-channel/PROOF.md",
+      "credit": "Binary-frame semantics: nested transports, adds only in a common chart, paid rank per transport"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0",
+      "pin": "base_commit:docs/research/agent-task-catalog.json",
+      "credit": "Priority revision 6 task catalogue at the pinned base"
+    }
+  ]
+}
