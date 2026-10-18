@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "base_commit": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "upstream": "CrocSwap/integer-mult-bounds",
+  "files": [
+    {
+      "path": "research/p104-native-channel/inputs/LOWRANK-WITNESS.json",
+      "usage": "input",
+      "git_blob": "86beaf424e9f0f800ae3a62797d94ec9386b7706",
+      "sha256": "0f541bef7f19fdeffd67157684e9f03d785f42c89973632f508fc1a0452b580e",
+      "credit": "Reviewed #1991 native channel witness (PR1972 word)"
+    },
+    {
+      "path": "research/p104-native-channel/inputs/P104-FIXTURE.json",
+      "usage": "input",
+      "git_blob": "2e16f99b295bb386fd13bd8fbd57b42ef54143a9",
+      "sha256": "516c06f6ec3cb84be588c546108de897650288576dd5fbf5fe44b9c5546ad8a4",
+      "credit": "P104 fixture; loaded by the harness's pinned input reader"
+    },
+    {
+      "path": "research/p104-native-channel/NATIVE-RECIPES.json.gz",
+      "usage": "input",
+      "git_blob": "ab129678c2df4f0d39b02b88457d02c37de0d9b6",
+      "sha256": "a1c4d83d3d5fe1338e99b59272e8cf5d43244c33888597da340b2aa7fef5b3e8",
+      "credit": "Published native recipes (Chafik Boukhalfa, PR1991); loaded by the harness's pinned input reader, not used for any new edge"
+    },
+    {
+      "path": "research/p104-joint-unit-flags/CERTIFICATE.json",
+      "usage": "input",
+      "git_blob": "0fa7d2d40566e92f3ea1539723abf438ba65adb8",
+      "sha256": "a98126428a8da6eae91c50afcc42e014a284c82b554ef77e5b3a34fc6d228128",
+      "credit": "Nick Petalas, PR #2981 flag matching (flag 1 identity: X0 -> Y7, basis head 232)"
+    },
+    {
+      "path": "research/p104-native-channel/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "a69311b74f74a2f8e8f411c1451baacd9bacddce",
+      "sha256": "5d743145d389ffdfaffc66096fa7e32c7155b18f73d74755403151d0435bb94c",
+      "pin": "base_commit:research/p104-native-channel/PROOF.md",
+      "credit": "Binary-frame semantics: nested transports, adds only in a common chart, paid rank per transport (the least-frame model's rules)"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0",
+      "pin": "base_commit:docs/research/agent-task-catalog.json",
+      "credit": "Priority revision 6 task catalogue at the pinned base"
+    }
+  ]
+}

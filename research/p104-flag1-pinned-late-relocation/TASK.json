@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "task_id": "p104-side-correction",
+  "priority_revision": 6,
+  "selected_kappa": "0.001672660197076918",
+  "base_commit": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "original_card": {
+    "id": "p104-side-correction",
+    "question": "Can the proposed P104 joint endpoint flags be realized by a chronological correction program with coefficients, dirty restoration and an affordable complete bill?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/p104-native-channel/README.md",
+      "research/p104-native-channel/PROOF.md",
+      "docs/research/community-efficient1000-review.md",
+      "research/p104-joint-unit-flags/README.md"
+    ],
+    "methods": [
+      "Construct one side-correction word at an explicit chronological cut with the needed frames still available.",
+      "Derive a lower bound on the side correction and hosting costs that decides whether this channel can beat the selected budget."
+    ],
+    "acceptance_gate": "An exact arbitrary-input identity, source/target frame availability and restoration at the chosen cut, plus the complete channel+correction+idle/hosting bill or an explicit favorable bound. The native channel alone is not a supplier. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the revision-6 family record and #2981 static joint flags, alongside the reviewed #1991 channel. #2981 is an author-checked source archive, not an independently validated executable correction or a refutation of program-level lifetime floors.",
+      "scope": "Source-bound orientation only. Read the named package and review before relying on its local evidence; this command is not its replay or supplier admission."
+    },
+    "first_experiment": "After checking live handoffs, pin one named collection from #2981 and attach acquisition/delivery times, source dependencies and coefficient requirements. Test legal access and arbitrary dirty restoration; price any completion against the full channel/endpoint/hosting allowance. Stop with the exact missing implication or a scoped counterexample rather than expanding the static cover census.",
+    "bottleneck_link": "Completing an already realized changed channel tests a concrete construction opportunity, instead of refining the incumbent packing. A positive local result still needs global and all-size admission.",
+    "allowed_variations": [
+      "One correction factorization, one chronological cut, or one explicit hosting obstruction.",
+      "A changed correction schedule with an updated full bill and native frame contract."
+    ],
+    "scope_change_triggers": [
+      "Recompiling the already certified low-rank channel without closing a new obligation.",
+      "Treating a pending ancestor, local histogram or unpriced side correction as an admitted global supplier.",
+      "Repeating a correction or physical conversion already supplied by a pending follow-up without adding independent coverage or a different unresolved obligation.",
+      "Repeating the 208-flag static matching or calling a static nested cover a chronological correction program. Independent audit of that certificate is distinct and remains useful."
+    ],
+    "overlap_terms": [
+      "P104",
+      "I-G/2",
+      "side correction",
+      "native channel",
+      "1972",
+      "1991",
+      "2586",
+      "endpoint transport",
+      "physical dual",
+      "relay composition",
+      "2981",
+      "joint unit flags",
+      "acquisition delivery",
+      "static nesting"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #2981 reports static joint endpoint flags and a matching of 208 departure and arrival flags; archival intake is not independent verification.",
+        "evidence": "research/p104-joint-unit-flags/README.md",
+        "remaining": "Independent flag check and a chronological coefficient program with dirty restoration and a complete cost.",
+        "status": "author-checked",
+        "source_commit": "3d24b92d8ba057b57cb2d480170ec407520e6882",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      }
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Apply the C-pinned least-frame model (the private register keeps its published charts) to flag 1's delivering ADD 2797 (Y7 += D17/4) over its whole relocation window 2497..3613, and in particular to the 247 slots after 3366 that #3532 leaves relaxed-feasible. Locate the private events that carry the late-window obstruction. No repaired word is built and #3532's R0/R1 and bill are not recomputed.",
+  "scope_change_reason": "#3532 priced flag 1 at +2 rank units but its relaxed least-frame sweep leaves 247 late relocation slots open (its open question 1). The deferred flag-9 package added a C-pinned least-frame model and listed its application to flag 1 as a separate question. This package runs that model unchanged on flag 1 and adds a characterization of which private charts carry the obstruction; it is a thin delta and leaves #3532's constructions alone.",
+  "bottleneck_link": "Within the class of relocations that keep C's published events (both #3532 repairs lie there), the +2 rank-mass floor for co-hosting flag 1's head now holds over all 1,115 slots, not only the 868 before 3366. The late-window obstruction does not need the head: from slot 3184 on, D17's pinned least frame already leaves the hyperplane final(Y7) = ker(61). With C relaxed the 247 slots stay open, and opening any of them needs all four private ADDs 2480, 2482, 2504 and 2511 re-charted. This does not supply I-G/2, a side correction or a supplier.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after flag 1's relocation window: the four least-frame scans (C relaxed or pinned, with or without the head), the late-window verdicts, the hyperplane form of final(Y7), and the single-event-pin and released-core tests over the 40 private ADD/copy events. Do not build or bill a repaired word, re-chart C, touch flags 0, 9 or 43, price I-G/2 or build a side correction.",
+  "outcome": "completed",
+  "evidence": "Only 2797 (Y7 += D17/4, chart [95,486]) carries X0 into Y7 (-1/2); D17's row is written only at 2497 and 3613 and Y7 is never read, giving 1,115 relocation slots. All 280 non-private registers sit at their rank floor. Least-frame sweep with the head forced at the moved ADD: C relaxed, 868/1115 obstructed and the 247 slots after 3366 open (reproducing #3532); C pinned, 1115/1115 obstructed, and on each of the 247 late slots the only violated constraint is final(Y7). Head-free (the ADD merely moved): C relaxed, 0/1115 obstructed; C pinned, 458/1115, including all 429 slots after 3183, each blocked by final(Y7) alone. final(Y7) is the hyperplane {x : popcount(x & 61) even}. D17's pinned least frame is [486] at 2797 and [441,95] after 3183, both inside it; after the 3184 read Y31 += D17 it is rank 4 and outside, and after 3366 it is [395,75,32,18,6], with 32, 18 and 6 outside. Of the 40 private ADD/copy events (2462..2523), pinning only one of 2480 (D8 += C, [447]), 2482 (D10 += C, [447]), 2504 (D20 += C, [127]) or 2511 (D23 += C, [500]) already closes all 247 late slots; each chart is odd against 61 and reaches D17 by a chain of common-chart ADDs (via Y14/Y31, Y31, Y31 and Y59). Pinning the other 36 leaves all 247 open. The model is monotone in the pinned set, so a pinned subset closes every late slot exactly when it contains one of the four. D17's own private chart [486] at 2497 is even and not load-bearing. An independent scanner with its own echelon form and from-scratch per-slot replays agrees. Selected kappa unchanged.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for derivation, implementation, checking and writing.",
+  "no_new_kappa": true,
+  "open_questions": [
+    {
+      "question": "With C allowed to re-chart, is there a zero-added-mass co-hosting relocation of flag 1's delivering ADD after 3366?",
+      "why_it_matters": "It is the only remaining gap in flag 1's +2 floor over the relocation window. Any such repair must change C's common chart at all four of 2480, 2482, 2504 and 2511, so it would test whether the relaxed sweep is realizable at all.",
+      "first_step": "For each of the four private ADDs, ask whether the native framed induction admits a chart for D_k += C that excludes the published odd vector (447, 447, 127, 500), and what C's own transports then pay.",
+      "blocked_by": "The least-frame model abstracts C entirely when relaxed; deciding which charts the framed scalar rows admit for these ADDs needs the native checker and a C re-charting construction, which this package does not attempt."
+    },
+    {
+      "question": "Does the same four-event core structure hold for flag 9's 173 relaxed-open slots after 3462?",
+      "why_it_matters": "The deferred flag-9 package closes those slots only in the pinned class. A core characterization would say exactly which private charts a relaxed repair there must change.",
+      "first_step": "Run this package's PinnedSubset single-event and released-core tests on flag 9's constants (Y23, head 196, delivery 3124, partner D28).",
+      "blocked_by": "The flag-9 package is deferred and is not on the pinned base; flag 9 is not recomputed here."
+    },
+    {
+      "question": "Which +2 repair of #3532, R0 or R1, is cheaper under the repository's actual per-rank weights?",
+      "why_it_matters": "With the floor now window-global in the pinned class, the remaining flag-1 question in that class is the price at the floor, not its location.",
+      "first_step": "Evaluate #3532's deltas -H1+2H2+H5-H6 and H8-H6 under the per-rank weights used by the selected channel bill.",
+      "blocked_by": "H_r is symbolic in #3532 and is not evaluated here."
+    }
+  ]
+}

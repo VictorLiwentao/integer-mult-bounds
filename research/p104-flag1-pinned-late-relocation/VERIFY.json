@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-native-channel/inputs/LOWRANK-WITNESS.json",
+    "research/p104-native-channel/inputs/P104-FIXTURE.json",
+    "research/p104-native-channel/NATIVE-RECIPES.json.gz",
+    "research/p104-joint-unit-flags/CERTIFICATE.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Checks the committed headline, then reruns the SHA-256-pinned headstep.py least-frame model on flag 1's delivering ADD 2797: four relocation scans over all 1,115 slots (C relaxed or pinned, head forced or not), late-window verdicts for the 247 slots after 3366, the hyperplane form of final(Y7), D17's pinned least frame at five checkpoints, the four single-event pins and the released-core control, with propagation chains; requires equality with CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Separately written scanner (own pinned reads, rational delivery replay, lowest-bit echelon frames, from-scratch replay per slot) rechecks the delivering update, window, all four scans, the late verdicts, ker(61), each single-event pin, the released-core control and every committed chain link"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Temp-tree clean pass with byte-identical tree; 18 corruptions rejected under -O (certificate counts, late verdicts, blockers, head-free window, annihilator, core verdicts, core list, chain link and truncation, partner frame, private-event list, kappa, duplicate JSON key, witness and flag-matching byte flips, and a harness edit caught by the headstep pin)"
+    }
+  ]
+}
