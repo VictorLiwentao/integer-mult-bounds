@@ -1,0 +1,158 @@
+{
+  "cited_cancellation_charge": {
+    "j_free_floor": "45",
+    "note": "floors cited only; domination census not reprinted",
+    "one_j_floor": "561/16",
+    "package": "research/c5-fit-level-cancellation-charge",
+    "pr": 3643
+  },
+  "claim": "cost_preserving_JP_elimination_unlocks_universal_named_class_j_free_floor_45",
+  "complete_planes": 56,
+  "cycle_count": 23,
+  "fixtures": [
+    {
+      "formula": "I = sum_i e_i e_i^T",
+      "name": "diagonal",
+      "net_j": 0,
+      "pre_cost": 224
+    },
+    {
+      "formula": "I = J - sum_{i != j} e_i e_j^T",
+      "name": "j_identity_extension",
+      "net_j": 1,
+      "pre_cost": 16097
+    },
+    {
+      "formula": "I = J - sum_{i<j} P_ij + (n-1) sum_i D_i",
+      "name": "signed_gram_extension",
+      "net_j": 1,
+      "pre_cost": 47257
+    },
+    {
+      "formula": "I = sum_i e_i e_i^T + J - J",
+      "name": "padded_plus_minus_j",
+      "net_j": 0,
+      "pre_cost": 242
+    }
+  ],
+  "j_free_floor_cited": "45",
+  "named_class_optimum": 224,
+  "named_term_classes": [
+    "diagonal_e_i_e_i_T",
+    "full_support_J",
+    "off_diagonal_e_i_e_j_T",
+    "pairwise_gram_e_i_plus_e_j"
+  ],
+  "no_new_kappa": true,
+  "pair_expansion_lemma": {
+    "domination_holds": true,
+    "equality_pairs": 436,
+    "min_slack": 4,
+    "slack_histogram": {
+      "4": 436,
+      "5": 1216,
+      "6": 2932,
+      "8": 1632
+    },
+    "unordered_pairs": 6216
+  },
+  "parametric_lower_bounds": [
+    {
+      "cost": 32866,
+      "deltas": "empty",
+      "gamma": -2
+    },
+    {
+      "cost": 16545,
+      "deltas": "empty",
+      "gamma": -1
+    },
+    {
+      "cost": 224,
+      "deltas": "empty",
+      "gamma": 0
+    },
+    {
+      "cost": 16097,
+      "deltas": "empty",
+      "gamma": 1
+    },
+    {
+      "cost": 32418,
+      "deltas": "empty",
+      "gamma": 2
+    },
+    {
+      "cost": 16209,
+      "deltas": "matching_minus_one",
+      "gamma": 1
+    },
+    {
+      "attains_diagonal": true,
+      "cost": 224,
+      "deltas": "singleton_(0, 2)",
+      "gamma": 0
+    }
+  ],
+  "rank_histogram": {
+    "7": 4,
+    "8": 6,
+    "9": 13
+  },
+  "reduction": {
+    "lands_on": "diagonal I = sum_i e_i e_i^T",
+    "name": "coordinate_expand_and_identical_support_net",
+    "reduced_tariff": 224,
+    "steps": [
+      "expand each net \u00b1J to \u00b1(sum_i D_i + sum_{i!=j} OD_ij)",
+      "expand each net \u00b1P_ij to \u00b1(D_i + D_j + OD_ij + OD_ji)",
+      "cancel identical-support opposite signs"
+    ]
+  },
+  "reductions": [
+    {
+      "cost_preserving": true,
+      "name": "diagonal",
+      "net_j_after": 0,
+      "net_j_before": 0,
+      "post_cost": 224,
+      "pre_cost": 224
+    },
+    {
+      "cost_preserving": true,
+      "name": "j_identity_extension",
+      "net_j_after": 0,
+      "net_j_before": 1,
+      "post_cost": 224,
+      "pre_cost": 16097
+    },
+    {
+      "cost_preserving": true,
+      "name": "signed_gram_extension",
+      "net_j_after": 0,
+      "net_j_before": 1,
+      "post_cost": 224,
+      "pre_cost": 47257
+    },
+    {
+      "cost_preserving": true,
+      "name": "padded_plus_minus_j",
+      "net_j_after": 0,
+      "net_j_before": 0,
+      "post_cost": 224,
+      "pre_cost": 242
+    }
+  ],
+  "scalar_ports": 112,
+  "schema_version": 1,
+  "selected_kappa": "0.001672660197076918",
+  "subgradient_certificate": {
+    "convex_cost": true,
+    "delta_subdiff_contains_zero": true,
+    "diagonal_is_critical_point": true,
+    "gamma_subdiff_contains_zero": true,
+    "global_minimizer_cost": 224,
+    "ordered_od_tariff_sum": 16088
+  },
+  "universal_j_free_floor_applies": true
+}

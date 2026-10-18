@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/c5-dyadic-decoder-gate/inputs/DATA-PHASES.json.gz",
+    "research/c5-dyadic-decoder-gate/inputs/MATCHING.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Authenticate sources; 23 C5 census; pair slack min 4; expand-and-net reduction of diagonal/J-extension/Gram/+J-J fixtures to tariff 224; subgradient certificate; exact RESULT receipt"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Independent dense elimination and chordless-path census; same pair slack, reductions and subgradient certificate"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/test_verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Behavioral and source-corruption controls under -O admission"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "author-checked; no independent human or proof-kernel review",
+  "base": "463113d675af7410ac91d53a4fed51ec6494eb9a",
+  "branch_base_crocswap_main": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "claim": "cost-preserving J/P expand-and-net reduces every named-class exact fit of I_112 to diagonal tariff 224, unlocking universal #3643 J-free floor 45",
+  "commands": [
+    "python3.12 -I -W error -B research/c5-j-free-universal-reduction/verify.py",
+    "python3.12 -I -O -W error -B research/c5-j-free-universal-reduction/verify.py",
+    "python3.12 -I -W error -B research/c5-j-free-universal-reduction/independent.py",
+    "python3.12 -I -O -W error -B research/c5-j-free-universal-reduction/test_verify.py",
+    "python3.12 -W error -B scripts/research_package.py --package research/c5-j-free-universal-reduction"
+  ],
+  "unrun": [
+    "Selected full cold replay",
+    "Lean/Docker",
+    "human/proof-kernel review",
+    "true global decoder optimum outside named classes",
+    "cost-preserving reduction for every strict-fit target beyond I_112"
+  ],
+  "source_status": "Both scientific inputs canonical retained PR2782/PR1825 files; no pending executable dependency. Local 20 floors and #3643 domination census granted/cited, not replayed.",
+  "attribution": "Wentao Li <wentaol4@illinois.edu>; substantial AI assistance; no Co-authored-by Victor Li"
+}
