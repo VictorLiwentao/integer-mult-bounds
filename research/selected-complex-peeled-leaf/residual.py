@@ -55,14 +55,20 @@ def plan_identities(n, m=M_COMPLEX, pairs_fn=peel_pairs):
         position[("D", middle - 1 - k)] = ("H", delta + k)
     for key, value in position.items():
         need(value == reversal_target(n, *key), "peeled pairs plus coarse middle give F_n")
-    shapes = []
+    # Stream positions: 0 Pre, 1 reserve, 2..n+1 H, n+2 Z, n+3..2n+2 D, 2n+3 Post.
+    reserve_position, shapes, reserve_active, reserve_in_prefix = 1, [], 0, 0
     for i, j in pairs:
-        prefix_atoms, gap_atoms, suffix_atoms = i, (n - 1 - i) + j, n - 1 - j
+        first, second = 2 + i, n + 3 + j
+        need(first < n + 2 < second <= 2 * n + 2, "active fields are one head and one tail atom")
+        reserve_active += reserve_position in (first, second)
+        reserve_in_prefix += reserve_position < first
+        prefix_atoms, gap_atoms, suffix_atoms = first - 2, second - first - 2, 2 * n + 2 - second
         need(prefix_atoms + gap_atoms + suffix_atoms + 2 == 2 * n, "call covers the node stream")
         need(prefix_atoms == suffix_atoms, "reverse pairing is symmetric")
         shapes.append((prefix_atoms, gap_atoms, suffix_atoms))
+    need(reserve_in_prefix + reserve_active == len(pairs), "reserve placement accounted for every call")
     return dict(n=n, delta=delta, middle=middle, calls=len(pairs),
-                reserve_active_calls=0, shapes=shapes)
+                reserve_active_calls=reserve_active, shapes=shapes)
 
 
 def layout(delta, width, reserve, middle_extent, spectators=(2, 2, 2)):

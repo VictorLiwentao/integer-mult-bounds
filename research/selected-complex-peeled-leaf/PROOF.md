@@ -125,6 +125,9 @@ ordinary `m = 64` histogram changes the residual plan.
 
 - Global `rho = 0`. Routing, high-part exchange, residual digits and adapters
   are other leaf-call classes, and none is realized here.
+- That the selected bootstrap's particular ordinary level `A_(j-1)` is this
+  engine. The residual consumes only the completed interface, and this engine
+  is one published realization of that interface.
 - Stage-1 or production-width execution, a new proof of the C0 or borrowing
   arguments, or the finite construction on the `73f` intervals.
 - Any change to `A = 0`, `B_bits = 2642`, the finite-stock-as-C admission,
