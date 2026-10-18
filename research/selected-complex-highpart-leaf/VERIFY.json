@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "notes/three-stage-cover-rows.tex",
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/community-round8-audit/pr185-proof-reviewed.md",
+    "research/physical-ordinary-interchange/PROOF.md",
+    "research/selected-stock-shape-a-zero/PROOF.md",
+    "research/bit2234-stock-threshold/README.md",
+    "research/physical-ordinary-interchange/binary.py",
+    "research/physical-ordinary-interchange/check_binary.py",
+    "research/physical-ordinary-interchange/check_controls.py",
+    "research/physical-ordinary-interchange/check_engine.py",
+    "research/physical-ordinary-interchange/check_join.py",
+    "research/physical-ordinary-interchange/check_root.py",
+    "research/physical-ordinary-interchange/check_setup.py",
+    "research/physical-ordinary-interchange/encoded.py",
+    "research/physical-ordinary-interchange/ordinary.py",
+    "research/physical-ordinary-interchange/physical_words.py",
+    "research/physical-ordinary-interchange/provenance.py",
+    "research/physical-ordinary-interchange/session.py",
+    "research/physical-ordinary-interchange/source.py",
+    "research/physical-ordinary-interchange/verify.py",
+    "research/physical-ordinary-interchange/inputs/pr2808.tar",
+    "research/physical-ordinary-interchange/inputs/pr2809.tar"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Pin 25 inputs before engine import, citations, 5x5 (k,body) plan, 12 physical high-part cases with exact before/after widths, four controls, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same admission under PYTHONOPTIMIZE via need()"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Field-list plan and direct digit-swap payload hashes without importing the engine or verify.py"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 360,
+      "checks": "Duplicate JSON keys, temp certificate corruption (normal and -O), engine pin and unpinned-module rejection, citation failure, controls, read-only package hash"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py",
+        "--suite",
+        "fitted"
+      ],
+      "timeout_seconds": 600,
+      "checks": "One high-part exchange through the fitted internally-borrowing branch at reserve extents 1 and 2: C0 restores the parent-reserve coordinate on every column; padded fresh-row ratio 3/2 from the call's own high field"
+    }
+  ]
+}
