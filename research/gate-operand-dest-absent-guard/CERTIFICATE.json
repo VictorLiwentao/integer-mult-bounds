@@ -1,0 +1,102 @@
+{
+  "claim": {
+    "both_reject_all_dest_in_divergent": true,
+    "census": {
+      "dest_absent_accept": 4686,
+      "dest_absent_reject_dest_free_agree": 0,
+      "dest_absent_reject_dest_in_disagree": 3492,
+      "dest_free_agree": 4686,
+      "dest_in_agree": 1152,
+      "dest_in_disagree": 3492,
+      "max_len": 4,
+      "n": 6,
+      "simple_accept": 1236,
+      "simple_reject_dest_free_agree": 3450,
+      "simple_reject_dest_in_disagree": 3492,
+      "simple_reject_witness": [
+        1,
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "named_controls": {
+      "dest_free_ok": {
+        "agree": true,
+        "d": 0,
+        "dest_absent_accept": true,
+        "simple_accept": true,
+        "srcs": [
+          1,
+          2
+        ]
+      },
+      "dest_with_src": {
+        "agree": false,
+        "d": 0,
+        "dest_absent_accept": false,
+        "simple_accept": false,
+        "srcs": [
+          1,
+          0
+        ]
+      },
+      "dup_src": {
+        "agree": true,
+        "d": 0,
+        "dest_absent_accept": true,
+        "simple_accept": false,
+        "srcs": [
+          1,
+          1
+        ]
+      },
+      "self_even": {
+        "agree": false,
+        "d": 0,
+        "dest_absent_accept": false,
+        "simple_accept": false,
+        "srcs": [
+          0,
+          0
+        ]
+      },
+      "self_once": {
+        "agree": true,
+        "d": 0,
+        "dest_absent_accept": false,
+        "simple_accept": false,
+        "srcs": [
+          0
+        ]
+      },
+      "simple_rejects_agreeing_dest_free": {
+        "agree": true,
+        "d": 1,
+        "dest_absent_accept": true,
+        "simple_accept": false,
+        "srcs": [
+          0,
+          0
+        ]
+      }
+    },
+    "oq1_dest_absent_preserves_dest_free_agree": true,
+    "oq1_simple_support_preserves_dest_free_agree": false
+  },
+  "kappa_decimal": "0.001672660197076918",
+  "no_new_kappa": true,
+  "predecessor": {
+    "answers_oq": 1,
+    "package": "research/gate-operand-export-parity",
+    "pr": 3696,
+    "tip": "0581402f978addb2eda5306fd124001486c76b08"
+  },
+  "schema_version": 1,
+  "selected_word_positive_control": {
+    "both_guards_accept": 5472,
+    "gates": 5472
+  },
+  "status": "PASS_GATE_OPERAND_DEST_ABSENT_GUARD"
+}

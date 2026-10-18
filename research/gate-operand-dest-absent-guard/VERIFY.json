@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/e8-bit-p111-tuned/tune/bitE8mut-p111-tuned.json.gz",
+    "research/e8-bit-p111-tuned/code/xcheck_p.py",
+    "research/e8-bit-carrier-skeleton/code/bit/export_records.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source pins; #3696 tip bind; simple-support vs dest-absent census; named controls; selected-word positive control; certificate admission."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "need() admission remains enforced under -O; identical PASS marker."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent guard census without importing verify.py helpers."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys rejected; temp certificate corruption rejected; package files unchanged after read-only verify; predecessor #3696 package left untouched."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "task_id": "supplier-boundary-audit",
+  "priority_revision": 6,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "original_card": {
+    "id": "supplier-boundary-audit",
+    "question": "Does one selected supplier obligation follow from its actual source-bound checks?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/owner-boundary-audit/README.md",
+      "research/scatter-export-parity-audit/README.md"
+    ],
+    "methods": [
+      "Trace one hypothesis through the source, checker and complete caller.",
+      "Construct one semantically invalid but superficially well-formed fixture and test rejection."
+    ],
+    "acceptance_gate": "Pin the current sources and one obligation; the historical owner audit is an example, not evidence of a current bug.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read #2977 reported duplicate-scatter counterexample and its opt-in repair. The archive is not a production fix or an independently validated selected-result failure; the selected generator emits unique rows.",
+      "scope": "Source-binding orientation only; does not replay or validate the reported bug."
+    },
+    "first_experiment": "First check whether the scatter repair has been adopted. If still open, independently reproduce #2977 symbolic-versus-exported parity on the tiny duplicate fixture, compare the selected unique-row positive control, and define either enforced uniqueness or consistent multiplicity semantics. A bounded guard-adoption patch must preserve valid inputs and test the actual exported action. Stop after this obligation; no full historical replay or frontier change follows from the mutant alone.",
+    "bottleneck_link": "Closing a current acceptance gap or proof obligation strengthens reliability even without changing kappa.",
+    "allowed_variations": [
+      "Audit one named current condition using a new semantic counterexample."
+    ],
+    "scope_change_triggers": [
+      "Reporting the historical timing-only diagnostic as a new current acceptance bug.",
+      "Calling a malformed mutant a failure of the selected construction, or importing an opt-in repair without testing the exporter boundary."
+    ],
+    "overlap_terms": [
+      "owner boundary",
+      "bridge omission",
+      "hosting",
+      "2977",
+      "scatter export",
+      "duplicate index",
+      "parity semantics"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Answer #3696 OQ1 at the selected PR589 gate-operand boundary: on the pinned n=6, len(srcs)<=4 domain of the #3696 Sym/Exp lemma, compare the simple-support guard (all of d+srcs distinct) with the destination-absent guard (d not in srcs). Report whether each rejects all dest-in-sources divergent patterns without rejecting agreeing dest-free lists.",
+  "scope_change_reason": "PR #3696 proved dest-free always agree and dest-in can diverge, and left OQ1 asking for a simple-support (or other) guard that rejects all divergent dest-in cases without rejecting agreeing dest-free lists. This package answers that guard-sharpness obligation; it does not reprint the #3696 dest_free_agree/selected_gates census as a new claim.",
+  "bottleneck_link": "A successor schema needs to know whether scatter-style simple-support is sufficient for gate lists, or whether a weaker destination-absent check is the sharp guard that preserves all agreeing dest-free operand lists.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the two-guard census, named controls, and selected-word positive control. No production adoption, native replay, or kappa change. Do not modify research/gate-operand-export-parity/.",
+  "outcome": "completed",
+  "evidence": "CERTIFICATE.json, PROOF.md, verify.py, independent.py and test_package.py. On n=6,len<=4: both guards reject all 3492 dest-in divergent patterns; dest-absent rejects 0 of 4686 agreeing dest-free lists; simple-support rejects 3450 agreeing dest-free lists (witness d=1,srcs=[0,0]). Predecessor tip 0581402f978addb2eda5306fd124001486c76b08.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for reading the #3696 OQ1, deriving the guard census, implementing the verifier and controls, and writing this package.",
+  "no_new_kappa": true,
+  "open_questions": [
+    {
+      "question": "Should a successor opt-in exporter boundary adopt destination-absent (rather than full simple-support) for gate operand lists?",
+      "why_it_matters": "Destination-absent is the sharp answer to #3696 OQ1; simple-support would also block agreeing dest-free duplicate-source gates that Sym/Exp already treat as legal.",
+      "first_step": "Compose dest-absent with an existing opt-in checker/exporter wrapper and replay selected artifacts that currently use distinct operands only.",
+      "blocked_by": "Maintainer schema adoption; frozen exporters stay unchanged in this package."
+    },
+    {
+      "question": "Are the four selected-word checker rejects exhaustive for dest-in-sources divergence on the pinned word (#3696 OQ2)?",
+      "why_it_matters": "Guard sharpness is orthogonal to whether the checker's present reject set already covers every dest-in divergent mutant that can appear on the selected word.",
+      "first_step": "Enumerate dest-in mutants of B[0] (and optionally other sections) under the pinned word and classify Sym/Exp disagreement versus checker reject.",
+      "blocked_by": "Left as #3696 OQ2; not answered here."
+    }
+  ]
+}
