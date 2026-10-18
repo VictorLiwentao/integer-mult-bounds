@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-native-channel/inputs/LOWRANK-WITNESS.json",
+    "research/p104-tail-side-correction-seed749717/AUGMENTED-WITNESS.json.gz",
+    "research/p104-tail-side-correction-seed749717/CORRECTION-ROWS.json",
+    "research/p104-tail-flag0-owner/RESULT.json",
+    "research/p104-channel-touch-restoration-audit/CERTIFICATE.json"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/verify.py"],
+      "timeout_seconds": 90,
+      "checks": "Constructed splice: vector-equal D0 host, outside-window dirt save/restore, window length unchanged"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/independent.py"],
+      "timeout_seconds": 90,
+      "checks": "Equality-class and destination-index scan of the same splice without importing verify.py"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys, temp-tree corruption under -O, optimized admission, splice controls, scanner agreement, read-only replay"
+    }
+  ]
+}
