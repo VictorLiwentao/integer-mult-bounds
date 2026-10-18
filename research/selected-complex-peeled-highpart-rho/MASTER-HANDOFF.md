@@ -12,9 +12,10 @@ highpart 1 call; reserve_active=0 on both; S_leaf=1 on both. Therefore
 the complex cover's finite scalar/router guard (named, not phrase-assigned).
 Selected κ unchanged at `0.001672660197076918`.
 
-Pinned CrocSwap main: `02e9f894033290f56b9e4225bd8936df5a0808c6`.
+Pinned CrocSwap main: `20ecf2891d80b5acf18d980b2164fb44ea7faa90`.
 Branch: `cursor/peeled-highpart-rho-60b9`.
-Branch tip: `c48d615225097235effd1e5273deb7ad1580f0fa`.
+Content tip (gates PASS): `789e40be39978ec84f5e9ab546552c13658e31ad`.
+Packaging tip: `git rev-parse HEAD` on this branch after this file.
 Package: `research/selected-complex-peeled-highpart-rho`.
 
 ## Switch
