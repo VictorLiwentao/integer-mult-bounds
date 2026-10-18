@@ -1,0 +1,74 @@
+{
+  "baseline_fixed": 710,
+  "bill": {
+    "definition": "H_fused(q,j;I)=3C+2X+18D+R_SR+T_fused(q,j)+I*A(q); H_baseline(q,j;I)=4C+4X+24D+R_SR+T_baseline(q,j)+I*A(q); T_* is ADDRESS_affine_coeff_num_den_bit_sum; A(q)=|{m in SCREEN: gcd(m,q)=1}|; R_SR charges immutable-source certificate + exclusive-target return once.",
+    "name": "source_return_admitted_screen_host"
+  },
+  "claim": {
+    "I0_recovers_coeff_only_zero_beats": true,
+    "I1_has_exactly_one_odd_fused_beat": true,
+    "fusion_always_beats_baseline_on_grid": true,
+    "source_return_boundary_named": true
+  },
+  "counts": {
+    "I0_odd_fused_beats_dyadic": 0,
+    "I1_odd_fused_beats_dyadic": 1,
+    "I2_odd_fused_beats_dyadic": 33
+  },
+  "critical_I": {
+    "denominator": 17,
+    "fraction": "14/17",
+    "j": 0,
+    "kernel": 3,
+    "numerator": 14
+  },
+  "first_beat_I1": {
+    "H_dyadic": 677,
+    "H_odd": 674,
+    "j": 0,
+    "kernel": 3,
+    "margin": 3
+  },
+  "fused_fixed": 500,
+  "j_max": 32,
+  "kappa_decimal": "0.001672660197076918",
+  "kappa_fraction": "836330098538459/500000000000000000",
+  "kernels": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    15
+  ],
+  "no_new_kappa": true,
+  "odd_kernels": [
+    3,
+    5,
+    7,
+    9,
+    15
+  ],
+  "schema_version": 1,
+  "screen": {
+    "admitted_counts": {
+      "1": 49,
+      "15": 25,
+      "3": 32,
+      "5": 39,
+      "7": 42,
+      "9": 32
+    },
+    "first": 3,
+    "last": 99,
+    "name": "ODD_MODULI_3_99",
+    "size": 49
+  },
+  "status": "PASS_ODD_KERNEL_SOURCE_RETURN_HOST",
+  "units": {
+    "C": 100,
+    "D": 5,
+    "R_SR": 30,
+    "X": 40
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/odd-kernel-query-pair/program.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source pins; prior OQ1 cite; address_word cross-check; I=0 zero beats; critical I*=14/17; unique I=1 beat (3,0); I=2 has 33 q=3 beats; fusion save identity; certificate admission."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "need() admission remains enforced under -O; identical PASS marker."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent closed-form H_fused; I=0/I=1 census; match local host_bill.py."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys; temp certificate corruption rejected; package files unchanged after read-only verify; -O -Werror control."
+    }
+  ]
+}
