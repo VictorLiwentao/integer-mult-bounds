@@ -14,7 +14,7 @@ Selected κ unchanged at `0.001672660197076918`.
 
 Pinned CrocSwap main: `20ecf2891d80b5acf18d980b2164fb44ea7faa90`.
 Branch: `cursor/peeled-highpart-rho-60b9`.
-Branch tip: `789e40be39978ec84f5e9ab546552c13658e31ad`.
+Branch tip: `c48d615225097235effd1e5273deb7ad1580f0fa`.
 Package: `research/selected-complex-peeled-highpart-rho`.
 
 ## Switch
