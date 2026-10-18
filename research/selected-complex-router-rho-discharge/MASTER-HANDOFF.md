@@ -15,7 +15,9 @@ Selected κ unchanged at `0.001672660197076918`.
 Pinned CrocSwap main: `20ecf2891d80b5acf18d980b2164fb44ea7faa90`.
 Branch: `cursor/complex-router-rho-discharge-60b9`.
 Package: `research/selected-complex-router-rho-discharge`.
-Tip SHA: see final packaging commit on this branch (`git rev-parse HEAD`).
+Content tip: `a62ef2d6cbc7c4b3b23512c5c9a1e5d0504a4039` (full package except this
+handoff tip-pin commit).
+Packaging tip: `6b8ec515a735885e7388f5d4fa0eb3450e072c96`.
 
 ## Switch
 
