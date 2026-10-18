@@ -6,7 +6,7 @@
 |---|---|
 | CrocSwap `main` base | `20ecf2891d80b5acf18d980b2164fb44ea7faa90` |
 | VictorLiwentao branch | `cursor/selected-complex-ordinary-leaf-eb60` |
-| Package tip (this handoff) | *(fill after push)* |
+| Content tip (pre-handoff) |  |
 | Selected κ (unchanged) | `0.001672660197076918` (priority revision 6) |
 
 ## One-sentence claim
