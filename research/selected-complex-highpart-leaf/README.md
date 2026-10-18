@@ -60,6 +60,21 @@ on the shared engine and the fitted `(1,1,1)`-style fixture machinery; the
 checkable novelty is the high-part call class, exact `(k+body)/k` width costs,
 and dual scanners on that class.
 
+## Open next questions
+
+1. **Fixed cover routing.** Can the complex producer's fixed-port routing be
+   realized the same way, so that together with the deferred peeled residual
+   and this high-part class every PR185 leaf-call use has `S_leaf = 1`?
+   Relevance: global `rho` needs every class. First step: extract from
+   `notes/three-stage-cover-bit.tex` the constant number of width-`O(w)`
+   interchanges per fixed port and write one port's signatures against the
+   same engine. Blocked by: the complex cover note does not write routing as
+   ordinary interchanges.
+2. **Production-width high-part.** Does a production call at
+   `k = ceil(log_q S)` keep the parent reserve out of its fresh rows, not
+   only on the reduced fitted fixture? Blocked by: uniform `C(w)` for the
+   complex producer is not established; production fitted domain is huge.
+
 ## Credit
 
 Credit Aaron Wang / #3113, Sricharan Vagvala / #2105, Adam Gall / #2084,
