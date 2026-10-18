@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-stock-shape-a-zero/README.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/stock-routing-factor/RESULT.json",
+    "notes/three-stage-cover-complex.tex",
+    "notes/three-stage-cover-bit.tex",
+    "notes/three-stage-cover-rows.tex",
+    "research/selected-complex-router-adapters-engine/router.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Pin sources, run scalar/router engine measurement of routing∪adapters ordinary_calls=0 / rho_contrib=0, reject mutants, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same admission under PYTHONOPTIMIZE via need()"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Separate scanner rebuilds meters without verify.evaluate"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Duplicate JSON keys, temp certificate corruption, -O admission, ordinary mutant, closed form, read-only package hash"
+    }
+  ]
+}

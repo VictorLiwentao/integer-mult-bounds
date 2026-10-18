@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SELECTED_COMPLEX_ROUTER_ADAPTERS_ENGINE",
+  "producer": "selected-complex-m73",
+  "leaf_inventory": [
+    "peeled",
+    "routing",
+    "adapters",
+    "high-part"
+  ],
+  "routing_adapters_charge": "finite_scalar_router_engine",
+  "measurement": "executable_scalar_router_residual",
+  "routing_adapters_ordinary_leaf_calls": 0,
+  "routing_adapters_recursive_fourier_children": 0,
+  "routing_adapters_positive_rank_connectors": 0,
+  "routing_adapters_rho_contribution": 0,
+  "exhaustive_cases_m3": 64,
+  "reserve_independence": true,
+  "rank_zero_adapters_per_call": 2,
+  "scalar_shears_per_call": 3,
+  "bit_routing_ordinary_interchanges": "constant_unnamed_c_R",
+  "remaining_ordinary_leaf_classes": [
+    "peeled",
+    "high-part"
+  ],
+  "global_rho": "open_pending_peeled_highpart",
+  "A_cited": 0,
+  "B_bits_cited": 2642,
+  "composition_after_discharge": "(43/26)*(1-s)*2642 + rho_peeled_highpart",
+  "controls_rejected": [
+    "ordinary_leaf_injection",
+    "recursive_fourier_injection",
+    "positive_rank_connector",
+    "parent_reserve_active_read"
+  ],
+  "no_new_kappa": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_SELECTED_COMPLEX_ROUTER_ADAPTERS_ENGINE inventory=4 routing_adapters_ordinary_calls=0 rho_contrib=0 fourier_children=0 positive_rank=0 exhaust=64 reserve_indep=1 remaining=peeled+highpart A=0_cited B=2642_cited engine_measured no_new_kappa"
+}
