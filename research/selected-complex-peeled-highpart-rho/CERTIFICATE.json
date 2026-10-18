@@ -1,0 +1,799 @@
+{
+  "default": {
+    "adapters": {
+      "adapter_apis": [
+        {
+          "method": "Binary.run",
+          "params": [
+            "payload",
+            "width",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "reserve_params": 0,
+          "stock_params": 0
+        },
+        {
+          "method": "Ordinary.run",
+          "params": [
+            "payload",
+            "original",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "reserve_params": 0,
+          "stock_params": 0
+        }
+      ],
+      "adapters_close_ordinary_leaf_path": true,
+      "inventory_ordinary_classes": [
+        "peeled",
+        "highpart"
+      ],
+      "live_binary_calls": [
+        {
+          "adapter": "Binary",
+          "call_args": [
+            "payload",
+            "width",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "class_name": "peeled",
+          "parent_reserve_in_prefix": true,
+          "signature": [
+            2,
+            8,
+            2
+          ],
+          "stock_argument": null
+        },
+        {
+          "adapter": "Binary",
+          "call_args": [
+            "payload",
+            "width",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "class_name": "highpart",
+          "parent_reserve_in_prefix": true,
+          "signature": [
+            2,
+            4,
+            4
+          ],
+          "stock_argument": null
+        }
+      ],
+      "ordinary_external_stock_args": 0,
+      "runtime_signatures": [
+        {
+          "method": "Binary.run",
+          "params": [
+            "payload",
+            "width",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "stock_params": 0
+        },
+        {
+          "method": "Ordinary.run",
+          "params": [
+            "payload",
+            "original",
+            "prefixes",
+            "gap",
+            "suffix"
+          ],
+          "stock_params": 0
+        }
+      ]
+    },
+    "citations": 20,
+    "composition": {
+      "A_cited": 0,
+      "B_bits_cited": 2642,
+      "adapters_stock_args": 0,
+      "global_rho": "ordinary_peeled_highpart_closed_via_engine_and_adapters",
+      "highpart_S_leaf": 1,
+      "inventory_ordinary_classes": [
+        "peeled",
+        "highpart"
+      ],
+      "no_new_kappa": true,
+      "peeled_S_leaf": 1,
+      "rho_peeled_highpart": 0,
+      "routing_adapters_inventory": "finite_scalar_router_guard_cited_not_reassigned",
+      "selected_kappa": "0.001672660197076918"
+    },
+    "controls": {
+      "highpart": [
+        "body_swap_not_highpart",
+        "unequal_high_extents",
+        "reserve_consuming_call",
+        "omitted_highpart_call"
+      ],
+      "peeled": [
+        "forward_pairing",
+        "ordinary_m64_histogram",
+        "reserve_consuming_call",
+        "omitted_residual_call"
+      ]
+    },
+    "highpart_physical": [
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "5343fd4cb30290b0f9ba173d493827e83b659b5fbadae888409142beaca5d3c6",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            4,
+            4
+          ]
+        ],
+        "volume": 128,
+        "width_ratio": "2/1"
+      },
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "b65b2619ba8ff47f9f0c47bf2d7617408469e44977362fa09ffae36efe954b72",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            4,
+            4
+          ]
+        ],
+        "volume": 384,
+        "width_ratio": "2/1"
+      },
+      {
+        "active_width": 1,
+        "body": 2,
+        "calls": 1,
+        "final_sha256": "b2817a99066559eb6b99f73eed59fc87096214c0ef9fa04a485f9e3c67c2290e",
+        "full_chunk_width": 3,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            8,
+            8
+          ]
+        ],
+        "volume": 512,
+        "width_ratio": "3/1"
+      },
+      {
+        "active_width": 1,
+        "body": 2,
+        "calls": 1,
+        "final_sha256": "8d8ffe0eab6e0c59e963743febb8c0ae555778b4afc177d13ebf0748c0deea03",
+        "full_chunk_width": 3,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            8,
+            8
+          ]
+        ],
+        "volume": 1536,
+        "width_ratio": "3/1"
+      },
+      {
+        "active_width": 2,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "b2817a99066559eb6b99f73eed59fc87096214c0ef9fa04a485f9e3c67c2290e",
+        "full_chunk_width": 3,
+        "k": 2,
+        "peaks": [
+          [
+            11,
+            16
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            4,
+            4
+          ]
+        ],
+        "volume": 512,
+        "width_ratio": "3/2"
+      },
+      {
+        "active_width": 2,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "8d8ffe0eab6e0c59e963743febb8c0ae555778b4afc177d13ebf0748c0deea03",
+        "full_chunk_width": 3,
+        "k": 2,
+        "peaks": [
+          [
+            11,
+            16
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            4,
+            4
+          ]
+        ],
+        "volume": 1536,
+        "width_ratio": "3/2"
+      },
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "5343fd4cb30290b0f9ba173d493827e83b659b5fbadae888409142beaca5d3c6",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            4,
+            4
+          ]
+        ],
+        "volume": 128,
+        "width_ratio": "2/1"
+      },
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "b65b2619ba8ff47f9f0c47bf2d7617408469e44977362fa09ffae36efe954b72",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            4,
+            4
+          ]
+        ],
+        "volume": 384,
+        "width_ratio": "2/1"
+      },
+      {
+        "active_width": 2,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "b2817a99066559eb6b99f73eed59fc87096214c0ef9fa04a485f9e3c67c2290e",
+        "full_chunk_width": 3,
+        "k": 2,
+        "peaks": [
+          [
+            11,
+            21
+          ]
+        ],
+        "q": 3,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            4,
+            4
+          ]
+        ],
+        "volume": 512,
+        "width_ratio": "3/2"
+      },
+      {
+        "active_width": 2,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "8d8ffe0eab6e0c59e963743febb8c0ae555778b4afc177d13ebf0748c0deea03",
+        "full_chunk_width": 3,
+        "k": 2,
+        "peaks": [
+          [
+            11,
+            21
+          ]
+        ],
+        "q": 3,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            4,
+            4
+          ]
+        ],
+        "volume": 1536,
+        "width_ratio": "3/2"
+      },
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "5343fd4cb30290b0f9ba173d493827e83b659b5fbadae888409142beaca5d3c6",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            36
+          ]
+        ],
+        "q": 5,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            4,
+            4
+          ]
+        ],
+        "volume": 128,
+        "width_ratio": "2/1"
+      },
+      {
+        "active_width": 1,
+        "body": 1,
+        "calls": 1,
+        "final_sha256": "b65b2619ba8ff47f9f0c47bf2d7617408469e44977362fa09ffae36efe954b72",
+        "full_chunk_width": 2,
+        "k": 1,
+        "peaks": [
+          [
+            11,
+            36
+          ]
+        ],
+        "q": 5,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            4,
+            4
+          ]
+        ],
+        "volume": 384,
+        "width_ratio": "2/1"
+      }
+    ],
+    "highpart_plan": {
+      "S_leaf": 1,
+      "body_range": [
+        1,
+        5
+      ],
+      "calls_per_shape": 1,
+      "k_range": [
+        1,
+        5
+      ],
+      "max_width_ratio": "6/1",
+      "min_width_ratio": "2/1",
+      "reserve_active_calls": 0,
+      "shapes": 25
+    },
+    "peeled_physical": [
+      {
+        "calls": 1,
+        "delta": 1,
+        "final_sha256": "5343fd4cb30290b0f9ba173d493827e83b659b5fbadae888409142beaca5d3c6",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            8,
+            2
+          ]
+        ],
+        "volume": 128,
+        "width": 1
+      },
+      {
+        "calls": 1,
+        "delta": 1,
+        "final_sha256": "b65b2619ba8ff47f9f0c47bf2d7617408469e44977362fa09ffae36efe954b72",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            8,
+            2
+          ]
+        ],
+        "volume": 384,
+        "width": 1
+      },
+      {
+        "calls": 2,
+        "delta": 2,
+        "final_sha256": "d7594c44ba33b26d6efe54405b41526e3ccf61441ffbea7c7b870d596306cb00",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            32,
+            2
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "volume": 512,
+        "width": 1
+      },
+      {
+        "calls": 2,
+        "delta": 2,
+        "final_sha256": "b5cdb44091e1eb604c9906dc68d2aa3d06c56abf6ef15c9f90314ab27e3c2500",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            32,
+            2
+          ],
+          [
+            12,
+            8,
+            4
+          ]
+        ],
+        "volume": 1536,
+        "width": 1
+      },
+      {
+        "calls": 2,
+        "delta": 2,
+        "final_sha256": "d7594c44ba33b26d6efe54405b41526e3ccf61441ffbea7c7b870d596306cb00",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            32,
+            2
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "volume": 512,
+        "width": 1
+      },
+      {
+        "calls": 2,
+        "delta": 2,
+        "final_sha256": "b5cdb44091e1eb604c9906dc68d2aa3d06c56abf6ef15c9f90314ab27e3c2500",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            32,
+            2
+          ],
+          [
+            12,
+            8,
+            4
+          ]
+        ],
+        "volume": 1536,
+        "width": 1
+      },
+      {
+        "calls": 1,
+        "delta": 1,
+        "final_sha256": "bafdc5a773c1c86756c5b7159824efcce34d6a6e876e2339a345c2eb430e067a",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            36
+          ]
+        ],
+        "q": 5,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            8,
+            2
+          ]
+        ],
+        "volume": 512,
+        "width": 2
+      },
+      {
+        "calls": 1,
+        "delta": 1,
+        "final_sha256": "3d46968ed3501b547cc65816f5d12600a804094023f33fb105835a44ce703ae2",
+        "middle": 2,
+        "peaks": [
+          [
+            11,
+            36
+          ]
+        ],
+        "q": 5,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            8,
+            2
+          ]
+        ],
+        "volume": 1536,
+        "width": 2
+      },
+      {
+        "calls": 3,
+        "delta": 3,
+        "final_sha256": "3db937140a6ce94e9b2283fab325fb7468918d07e7fc204b427ff1890d281b0c",
+        "middle": 0,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            32,
+            2
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            8,
+            2,
+            8
+          ]
+        ],
+        "volume": 512,
+        "width": 1
+      },
+      {
+        "calls": 3,
+        "delta": 3,
+        "final_sha256": "01470bbb44afd187f6583b902cc7e41da4ddcd30ff6f56381b9dde8a6db4fe44",
+        "middle": 0,
+        "peaks": [
+          [
+            11,
+            15
+          ]
+        ],
+        "q": 2,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            32,
+            2
+          ],
+          [
+            12,
+            8,
+            4
+          ],
+          [
+            24,
+            2,
+            8
+          ]
+        ],
+        "volume": 1536,
+        "width": 1
+      },
+      {
+        "calls": 3,
+        "delta": 3,
+        "final_sha256": "3db937140a6ce94e9b2283fab325fb7468918d07e7fc204b427ff1890d281b0c",
+        "middle": 0,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 1,
+        "signatures": [
+          [
+            2,
+            32,
+            2
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            8,
+            2,
+            8
+          ]
+        ],
+        "volume": 512,
+        "width": 1
+      },
+      {
+        "calls": 3,
+        "delta": 3,
+        "final_sha256": "01470bbb44afd187f6583b902cc7e41da4ddcd30ff6f56381b9dde8a6db4fe44",
+        "middle": 0,
+        "peaks": [
+          [
+            11,
+            20
+          ]
+        ],
+        "q": 3,
+        "reserve": 3,
+        "signatures": [
+          [
+            6,
+            32,
+            2
+          ],
+          [
+            12,
+            8,
+            4
+          ],
+          [
+            24,
+            2,
+            8
+          ]
+        ],
+        "volume": 1536,
+        "width": 1
+      }
+    ],
+    "peeled_plan": {
+      "S_leaf": 1,
+      "internal_deltas_covered": 73,
+      "internal_nodes": 1460,
+      "leaf_nodes": 73,
+      "m": 73,
+      "max_calls": 72,
+      "nodes": 1533,
+      "reserve_active_calls": 0,
+      "total_calls": 55188
+    },
+    "sources": 26
+  }
+}

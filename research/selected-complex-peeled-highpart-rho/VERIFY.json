@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "notes/stopped-product-interface.tex",
+    "notes/three-stage-cover-rows.tex",
+    "notes/three-stage-cover-complex.tex",
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/community-round8-audit/pr185-proof-reviewed.md",
+    "research/physical-ordinary-interchange/PROOF.md",
+    "research/bit2234-stock-threshold/README.md",
+    "research/selected-stock-shape-a-zero/PROOF.md",
+    "certificates/selected-result.json",
+    "research/physical-ordinary-interchange/binary.py",
+    "research/physical-ordinary-interchange/check_binary.py",
+    "research/physical-ordinary-interchange/check_controls.py",
+    "research/physical-ordinary-interchange/check_engine.py",
+    "research/physical-ordinary-interchange/check_join.py",
+    "research/physical-ordinary-interchange/check_root.py",
+    "research/physical-ordinary-interchange/check_setup.py",
+    "research/physical-ordinary-interchange/encoded.py",
+    "research/physical-ordinary-interchange/ordinary.py",
+    "research/physical-ordinary-interchange/physical_words.py",
+    "research/physical-ordinary-interchange/provenance.py",
+    "research/physical-ordinary-interchange/session.py",
+    "research/physical-ordinary-interchange/source.py",
+    "research/physical-ordinary-interchange/verify.py",
+    "research/physical-ordinary-interchange/inputs/pr2808.tar",
+    "research/physical-ordinary-interchange/inputs/pr2809.tar"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Pin inputs before engine import, citations, peeled+highpart plans, 12+12 physical Binary cases, adapter AST/runtime stock-free, eight controls, compose rho_peeled_highpart=0, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same admission under PYTHONOPTIMIZE via need(); -Werror clean after engine tempdir cleanup"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Field-list plans and direct digit-swap payload hashes without importing the engine or verify.py"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 480,
+      "checks": "Duplicate JSON keys, temp certificate corruption (normal and -O), engine pin and unpinned-module rejection, citation failure, controls, read-only package hash"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py",
+        "--suite",
+        "fitted"
+      ],
+      "timeout_seconds": 900,
+      "checks": "Peeled and high-part fitted branches at reserve extents 1 and 2: C0 restores parent-reserve coordinate; padded fresh-row ratio 3/2 from own high field"
+    }
+  ]
+}
