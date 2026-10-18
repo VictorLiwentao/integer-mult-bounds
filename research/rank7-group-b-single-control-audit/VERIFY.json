@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/rank7-joint-endframes/data/STAGE1-FRAME-EDITS.json",
+    "research/rank7-joint-endframes/construction/STAGE-PRICES.json",
+    "research/rank7-joint-endframes/data/PARENT-base.json.gz",
+    "research/rank7-joint-endframes/data/PARENT-extra.json.gz",
+    "research/rank7-joint-endframes/data/WORD-base.json.gz",
+    "research/rank7-joint-endframes/data/WORD-extra.json.gz",
+    "research/rank7-joint-endframes/allocation/FILL.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "XOR-closure ledger of group B joint versus single-299 control"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/independent.py"],
+      "timeout_seconds": 120,
+      "checks": "Annihilator-mask ledger of the same group-B margins"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys, temp-copy certificate corruption, optimized admission, scanner agreement"
+    }
+  ]
+}

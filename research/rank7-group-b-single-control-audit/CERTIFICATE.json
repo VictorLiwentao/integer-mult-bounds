@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "claim_id": "rank7-group-b-single-control-audit",
+  "pinned_main": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "group": "B",
+  "shared_W": [
+    256,
+    128,
+    64,
+    34,
+    17,
+    11,
+    4
+  ],
+  "helpers": [
+    299,
+    448,
+    449,
+    484,
+    485
+  ],
+  "gate_edits": 21,
+  "break_even_guide": 2091300,
+  "joint_profile_delta": {
+    "1": -1,
+    "2": 20,
+    "3": -14,
+    "4": 2,
+    "5": -2
+  },
+  "single299_profile_delta": {
+    "1": 3,
+    "2": 20,
+    "3": -14,
+    "4": 2,
+    "5": -2
+  },
+  "joint_delta_units": -10499041,
+  "single299_delta_units": -2032357,
+  "joint_margin": 42541,
+  "single299_margin": -58943,
+  "joint_widths": {
+    "299": 7,
+    "448": 6,
+    "449": 6,
+    "484": 6,
+    "485": 6
+  },
+  "single299_widths": {
+    "299": 7,
+    "448": 7,
+    "449": 7,
+    "484": 7,
+    "485": 7
+  },
+  "fill_placements_per_helper": 666,
+  "fill_group_placements": 3330,
+  "providers": {
+    "base": {
+      "provider": "base",
+      "parent_profile": {
+        "1": 2434,
+        "2": 632,
+        "3": 286,
+        "4": 104,
+        "5": 26,
+        "8": 8
+      },
+      "joint_profile_delta": {
+        "1": -1,
+        "2": 20,
+        "3": -14,
+        "4": 2,
+        "5": -2
+      },
+      "single299_profile_delta": {
+        "1": 3,
+        "2": 20,
+        "3": -14,
+        "4": 2,
+        "5": -2
+      },
+      "joint_delta_units": -10499041,
+      "single299_delta_units": -2032357,
+      "joint_freed_width_units": 5,
+      "single299_freed_width_units": 1,
+      "joint_margin": 42541,
+      "single299_margin": -58943,
+      "parent_widths": {
+        "299": 8,
+        "448": 7,
+        "449": 7,
+        "484": 7,
+        "485": 7
+      },
+      "joint_widths": {
+        "299": 7,
+        "448": 6,
+        "449": 6,
+        "484": 6,
+        "485": 6
+      },
+      "single299_widths": {
+        "299": 7,
+        "448": 7,
+        "449": 7,
+        "484": 7,
+        "485": 7
+      },
+      "start_extra": {
+        "299": [],
+        "448": [
+          51
+        ],
+        "449": [
+          51
+        ],
+        "484": [
+          51
+        ],
+        "485": [
+          51
+        ]
+      },
+      "fill_placements_per_helper": 666,
+      "fill_group_placements": 3330
+    },
+    "extra": {
+      "provider": "extra",
+      "parent_profile": {
+        "1": 2434,
+        "2": 632,
+        "3": 286,
+        "4": 104,
+        "5": 26,
+        "8": 8
+      },
+      "joint_profile_delta": {
+        "1": -1,
+        "2": 20,
+        "3": -14,
+        "4": 2,
+        "5": -2
+      },
+      "single299_profile_delta": {
+        "1": 3,
+        "2": 20,
+        "3": -14,
+        "4": 2,
+        "5": -2
+      },
+      "joint_delta_units": -10499041,
+      "single299_delta_units": -2032357,
+      "joint_freed_width_units": 5,
+      "single299_freed_width_units": 1,
+      "joint_margin": 42541,
+      "single299_margin": -58943,
+      "parent_widths": {
+        "299": 8,
+        "448": 7,
+        "449": 7,
+        "484": 7,
+        "485": 7
+      },
+      "joint_widths": {
+        "299": 7,
+        "448": 6,
+        "449": 6,
+        "484": 6,
+        "485": 6
+      },
+      "single299_widths": {
+        "299": 7,
+        "448": 7,
+        "449": 7,
+        "484": 7,
+        "485": 7
+      },
+      "start_extra": {
+        "299": [],
+        "448": [
+          51
+        ],
+        "449": [
+          51
+        ],
+        "484": [
+          51
+        ],
+        "485": [
+          51
+        ]
+      },
+      "fill_placements_per_helper": 666,
+      "fill_group_placements": 3330
+    }
+  },
+  "obstruction_or_result": "group_B_joint_wins_single299_loses_on_guide",
+  "no_new_kappa": true,
+  "selected_kappa": "0.001672660197076918"
+}
