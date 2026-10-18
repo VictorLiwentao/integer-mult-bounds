@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SELECTED_COMPLEX_ROUTER_RHO_DISCHARGE",
+  "producer": "selected-complex-m73",
+  "leaf_inventory": [
+    "peeled",
+    "routing",
+    "adapters",
+    "high-part"
+  ],
+  "routing_adapters_charge": "finite_scalar_router_guard",
+  "routing_adapters_ordinary_leaf_calls": 0,
+  "routing_adapters_recursive_fourier_children": 0,
+  "routing_adapters_rho_contribution": 0,
+  "bit_routing_ordinary_interchanges": "constant_unnamed_c_R",
+  "remaining_ordinary_leaf_classes": [
+    "peeled",
+    "high-part"
+  ],
+  "global_rho": "open_pending_peeled_highpart",
+  "A_cited": 0,
+  "B_bits_cited": 2642,
+  "composition_after_discharge": "(43/26)*(1-s)*2642 + rho_peeled_highpart",
+  "no_new_kappa": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_SELECTED_COMPLEX_ROUTER_RHO_DISCHARGE inventory=4 routing_adapters_ordinary_calls=0 rho_contrib=0 remaining=peeled+highpart A=0_cited B=2642_cited no_new_kappa"
+}
