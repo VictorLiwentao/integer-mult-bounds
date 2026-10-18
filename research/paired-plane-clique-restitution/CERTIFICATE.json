@@ -1,0 +1,18 @@
+{
+  "hypothesis": "quotient-collision-restitution",
+  "orthogonal_pairs": 109,
+  "collapsed_pairs": 448,
+  "rank2_pairs": 144,
+  "rank2_triples": 8,
+  "sample_rank2_triple": [5, 15, 30],
+  "cross_rank_1_pairs": 879,
+  "clique_24": [1, 4, 8, 11, 17, 18, 19, 21, 22, 23, 24, 28, 34, 36, 38, 39, 41, 42, 43, 45, 46, 51, 52, 53],
+  "clique_24_cross_rank_1_pairs": 173,
+  "restitution_per_plane": 4,
+  "rank2_pair_copy_mass": 8,
+  "rank2_triple_copy_mass": 12,
+  "singleton_copy_mass": 224,
+  "moment_at_224": "293/292",
+  "selected_decimal": "0.001672660197076918",
+  "large_clique_open": true
+}

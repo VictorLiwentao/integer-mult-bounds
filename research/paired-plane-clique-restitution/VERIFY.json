@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/community-frontier1094-audit/selected-replay.tar.gz",
+    "research/paired-plane-port-matching-seed6c563a/CERTIFICATE.json",
+    "certificates/selected-result.json"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "Gram-I2 planes, every form-rank-2 pair and triple has support charge at least 2, restitution 8 and 12, moment 293/292, eight negative controls including a corrupted temporary certificate and duplicate JSON keys."
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/independent.py"],
+      "timeout_seconds": 120,
+      "checks": "Independent recomputation of the form-rank-2 census, support charges, and restitution identity, without importing verify.py."
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 180,
+      "checks": "Optimized replay, temporary-copy certificate corruption, and duplicate JSON key rejection."
+    }
+  ]
+}
