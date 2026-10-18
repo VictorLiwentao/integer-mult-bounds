@@ -1,0 +1,1179 @@
+{
+  "basis_head": 232,
+  "bill": {
+    "R0": {
+      "added_events": 1,
+      "added_rank_mass": 2,
+      "added_scalar_adds": 0,
+      "added_transport_occurrences": 1,
+      "distinct_native_edges": 742,
+      "dropped_native_edges": 2,
+      "endpoint_adapters": 208,
+      "events": 4059,
+      "formal_boundary_columns": 280,
+      "new_native_edges": 4,
+      "paid_profile": {
+        "1": 1073,
+        "2": 60,
+        "3": 86,
+        "4": 104,
+        "5": 49,
+        "6": 23,
+        "7": 8,
+        "8": 8
+      },
+      "private_events": {
+        "copy": 8,
+        "erase": 8,
+        "zero": 8
+      },
+      "private_events_unchanged": true,
+      "profile_delta": {
+        "1": -1,
+        "2": 2,
+        "5": 1,
+        "6": -1
+      },
+      "rank_mass": 2370,
+      "register_mass_delta": {
+        "D17": 2
+      },
+      "scalar_adds": 2624,
+      "transport_occurrences": 1411
+    },
+    "R1": {
+      "added_events": 0,
+      "added_rank_mass": 2,
+      "added_scalar_adds": 0,
+      "added_transport_occurrences": 0,
+      "distinct_native_edges": 741,
+      "dropped_native_edges": 1,
+      "endpoint_adapters": 208,
+      "events": 4058,
+      "formal_boundary_columns": 280,
+      "new_native_edges": 2,
+      "paid_profile": {
+        "1": 1074,
+        "2": 58,
+        "3": 86,
+        "4": 104,
+        "5": 48,
+        "6": 23,
+        "7": 8,
+        "8": 9
+      },
+      "private_events": {
+        "copy": 8,
+        "erase": 8,
+        "zero": 8
+      },
+      "private_events_unchanged": true,
+      "profile_delta": {
+        "6": -1,
+        "8": 1
+      },
+      "rank_mass": 2370,
+      "register_mass_delta": {
+        "Y7": 2
+      },
+      "scalar_adds": 2624,
+      "transport_occurrences": 1410
+    },
+    "published": {
+      "distinct_native_edges": 740,
+      "endpoint_adapters": 208,
+      "events": 4058,
+      "formal_boundary_columns": 280,
+      "paid_profile": {
+        "1": 1074,
+        "2": 58,
+        "3": 86,
+        "4": 104,
+        "5": 48,
+        "6": 24,
+        "7": 8,
+        "8": 8
+      },
+      "private_events": {
+        "copy": 8,
+        "erase": 8,
+        "zero": 8
+      },
+      "rank_mass": 2368,
+      "scalar_adds": 2624,
+      "transport_occurrences": 1410
+    }
+  },
+  "claim_id": "p104-flag1-head-step-repair",
+  "flag_index": 1,
+  "forced_hosting": {
+    "head_closure_table": [
+      {
+        "event": 19,
+        "first_obstruction": [
+          "Y8",
+          22,
+          "final frame excludes head"
+        ],
+        "must_change": 272,
+        "obstructions": 56,
+        "partner": "Q1",
+        "private_registers_forced": []
+      },
+      {
+        "event": 20,
+        "first_obstruction": [
+          "Y8",
+          23,
+          "final frame excludes head"
+        ],
+        "must_change": 268,
+        "obstructions": 56,
+        "partner": "Q4",
+        "private_registers_forced": []
+      },
+      {
+        "event": 2013,
+        "first_obstruction": [
+          "Y8",
+          2014,
+          "final frame excludes head"
+        ],
+        "must_change": 141,
+        "obstructions": 56,
+        "partner": "D5",
+        "private_registers_forced": [
+          [
+            "C",
+            2465
+          ]
+        ]
+      },
+      {
+        "event": 2146,
+        "first_obstruction": [
+          "Y8",
+          2147,
+          "final frame excludes head"
+        ],
+        "must_change": 141,
+        "obstructions": 56,
+        "partner": "D17",
+        "private_registers_forced": [
+          [
+            "C",
+            2465
+          ]
+        ]
+      },
+      {
+        "event": 2526,
+        "first_obstruction": [
+          "Y8",
+          2528,
+          "final frame excludes head"
+        ],
+        "must_change": 58,
+        "obstructions": 23,
+        "partner": "D5",
+        "private_registers_forced": []
+      },
+      {
+        "event": 2797,
+        "first_obstruction": [
+          "Y8",
+          2799,
+          "final frame excludes head"
+        ],
+        "must_change": 37,
+        "obstructions": 14,
+        "partner": "D17",
+        "private_registers_forced": []
+      }
+    ],
+    "least_frame_order_preserving_infeasible": {
+      "19": [
+        "Y0",
+        "Y1",
+        "Y101",
+        "Y102",
+        "Y103",
+        "Y11",
+        "Y13",
+        "Y14",
+        "Y16",
+        "Y19",
+        "Y21",
+        "Y22",
+        "Y23",
+        "Y25",
+        "Y28",
+        "Y3",
+        "Y30",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y36",
+        "Y38",
+        "Y40",
+        "Y42",
+        "Y45",
+        "Y47",
+        "Y49",
+        "Y52",
+        "Y54",
+        "Y56",
+        "Y58",
+        "Y59",
+        "Y6",
+        "Y61",
+        "Y63",
+        "Y65",
+        "Y68",
+        "Y70",
+        "Y72",
+        "Y74",
+        "Y75",
+        "Y77",
+        "Y8",
+        "Y80",
+        "Y82",
+        "Y84",
+        "Y86",
+        "Y88",
+        "Y90",
+        "Y92",
+        "Y93",
+        "Y94",
+        "Y95",
+        "Y97",
+        "Y99"
+      ],
+      "20": [
+        "Y0",
+        "Y1",
+        "Y101",
+        "Y102",
+        "Y103",
+        "Y11",
+        "Y13",
+        "Y14",
+        "Y16",
+        "Y19",
+        "Y21",
+        "Y22",
+        "Y23",
+        "Y25",
+        "Y28",
+        "Y3",
+        "Y30",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y36",
+        "Y38",
+        "Y40",
+        "Y42",
+        "Y45",
+        "Y47",
+        "Y49",
+        "Y52",
+        "Y54",
+        "Y56",
+        "Y58",
+        "Y59",
+        "Y6",
+        "Y61",
+        "Y63",
+        "Y65",
+        "Y68",
+        "Y70",
+        "Y72",
+        "Y74",
+        "Y75",
+        "Y77",
+        "Y8",
+        "Y80",
+        "Y82",
+        "Y84",
+        "Y86",
+        "Y88",
+        "Y90",
+        "Y92",
+        "Y93",
+        "Y94",
+        "Y95",
+        "Y97",
+        "Y99"
+      ],
+      "2013": [
+        "Y1",
+        "Y101",
+        "Y102",
+        "Y103",
+        "Y11",
+        "Y13",
+        "Y14",
+        "Y16",
+        "Y19",
+        "Y21",
+        "Y22",
+        "Y23",
+        "Y25",
+        "Y28",
+        "Y3",
+        "Y30",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y36",
+        "Y38",
+        "Y40",
+        "Y42",
+        "Y45",
+        "Y47",
+        "Y49",
+        "Y52",
+        "Y54",
+        "Y56",
+        "Y58",
+        "Y59",
+        "Y61",
+        "Y63",
+        "Y65",
+        "Y68",
+        "Y70",
+        "Y72",
+        "Y74",
+        "Y75",
+        "Y77",
+        "Y8",
+        "Y80",
+        "Y82",
+        "Y84",
+        "Y86",
+        "Y88",
+        "Y90",
+        "Y92",
+        "Y93",
+        "Y94",
+        "Y95",
+        "Y97",
+        "Y99"
+      ],
+      "2146": [
+        "Y1",
+        "Y101",
+        "Y102",
+        "Y103",
+        "Y13",
+        "Y14",
+        "Y16",
+        "Y21",
+        "Y22",
+        "Y23",
+        "Y25",
+        "Y28",
+        "Y3",
+        "Y30",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y36",
+        "Y38",
+        "Y40",
+        "Y42",
+        "Y45",
+        "Y47",
+        "Y49",
+        "Y52",
+        "Y54",
+        "Y56",
+        "Y58",
+        "Y59",
+        "Y61",
+        "Y63",
+        "Y65",
+        "Y68",
+        "Y70",
+        "Y72",
+        "Y74",
+        "Y75",
+        "Y77",
+        "Y8",
+        "Y80",
+        "Y82",
+        "Y84",
+        "Y86",
+        "Y88",
+        "Y90",
+        "Y92",
+        "Y93",
+        "Y94",
+        "Y95",
+        "Y97",
+        "Y99"
+      ],
+      "2526": [
+        "Y103",
+        "Y13",
+        "Y14",
+        "Y16",
+        "Y21",
+        "Y22",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y56",
+        "Y58",
+        "Y59",
+        "Y61",
+        "Y63",
+        "Y65",
+        "Y68",
+        "Y70",
+        "Y8",
+        "Y88",
+        "Y90",
+        "Y92",
+        "Y93"
+      ],
+      "2797": [
+        "Y103",
+        "Y13",
+        "Y16",
+        "Y21",
+        "Y31",
+        "Y32",
+        "Y33",
+        "Y35",
+        "Y59",
+        "Y61",
+        "Y8",
+        "Y88",
+        "Y90",
+        "Y92"
+      ]
+    },
+    "least_frame_relocation_scan": {
+      "obstructed_slots": 868,
+      "partner_row_writes_bounding_window": [
+        2497,
+        3613
+      ],
+      "relaxed_feasible_slots": 247,
+      "runs": [
+        {
+          "after_published_first": 2497,
+          "after_published_last": 2525,
+          "infeasible": [
+            "Y103",
+            "Y13",
+            "Y14",
+            "Y16",
+            "Y21",
+            "Y22",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y56",
+            "Y58",
+            "Y59",
+            "Y61",
+            "Y63",
+            "Y65",
+            "Y68",
+            "Y70",
+            "Y8",
+            "Y88",
+            "Y90",
+            "Y92",
+            "Y93"
+          ],
+          "infeasible_count": 23,
+          "slots": 29
+        },
+        {
+          "after_published_first": 2526,
+          "after_published_last": 2798,
+          "infeasible": [
+            "Y103",
+            "Y13",
+            "Y16",
+            "Y21",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y8",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 14,
+          "slots": 272
+        },
+        {
+          "after_published_first": 2799,
+          "after_published_last": 2802,
+          "infeasible": [
+            "Y103",
+            "Y13",
+            "Y16",
+            "Y21",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 13,
+          "slots": 4
+        },
+        {
+          "after_published_first": 2803,
+          "after_published_last": 2806,
+          "infeasible": [
+            "Y103",
+            "Y16",
+            "Y21",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 12,
+          "slots": 4
+        },
+        {
+          "after_published_first": 2807,
+          "after_published_last": 2810,
+          "infeasible": [
+            "Y103",
+            "Y21",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 11,
+          "slots": 4
+        },
+        {
+          "after_published_first": 2811,
+          "after_published_last": 2814,
+          "infeasible": [
+            "Y103",
+            "Y31",
+            "Y32",
+            "Y33",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 10,
+          "slots": 4
+        },
+        {
+          "after_published_first": 2815,
+          "after_published_last": 2816,
+          "infeasible": [
+            "Y103",
+            "Y31",
+            "Y32",
+            "Y35",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 9,
+          "slots": 2
+        },
+        {
+          "after_published_first": 2817,
+          "after_published_last": 2818,
+          "infeasible": [
+            "Y103",
+            "Y31",
+            "Y32",
+            "Y59",
+            "Y61",
+            "Y88",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 8,
+          "slots": 2
+        },
+        {
+          "after_published_first": 2819,
+          "after_published_last": 2820,
+          "infeasible": [
+            "Y103",
+            "Y31",
+            "Y32",
+            "Y59",
+            "Y61",
+            "Y90",
+            "Y92"
+          ],
+          "infeasible_count": 7,
+          "slots": 2
+        },
+        {
+          "after_published_first": 2821,
+          "after_published_last": 3183,
+          "infeasible": [
+            "Y103",
+            "Y31",
+            "Y59",
+            "Y61"
+          ],
+          "infeasible_count": 4,
+          "slots": 363
+        },
+        {
+          "after_published_first": 3184,
+          "after_published_last": 3187,
+          "infeasible": [
+            "Y103",
+            "Y59",
+            "Y61"
+          ],
+          "infeasible_count": 3,
+          "slots": 4
+        },
+        {
+          "after_published_first": 3188,
+          "after_published_last": 3363,
+          "infeasible": [
+            "Y103",
+            "Y59"
+          ],
+          "infeasible_count": 2,
+          "slots": 176
+        },
+        {
+          "after_published_first": 3364,
+          "after_published_last": 3365,
+          "infeasible": [
+            "Y103"
+          ],
+          "infeasible_count": 1,
+          "slots": 2
+        },
+        {
+          "after_published_first": 3366,
+          "after_published_last": 3612,
+          "infeasible": [],
+          "infeasible_count": 0,
+          "slots": 247
+        }
+      ],
+      "slots": 1115
+    },
+    "non_private_registers_at_rank_floor": 280
+  },
+  "head_cohosting": {
+    "R0": {
+      "cohosted_target_updates": [
+        2797
+      ],
+      "delivering_update": 2797,
+      "delivering_update_event": [
+        "add",
+        "Y7",
+        "D17",
+        "1/4",
+        [
+          95,
+          486,
+          232
+        ]
+      ],
+      "source_delivery_into_target": [
+        [
+          2797,
+          "D17",
+          "-1/2",
+          "-1/2"
+        ]
+      ],
+      "source_events_after_update": [
+        3643,
+        3799,
+        3851,
+        3955
+      ],
+      "source_frame_rank_at_update": 9,
+      "source_spans_head_at_update": true,
+      "target_updates": [
+        19,
+        20,
+        2013,
+        2146,
+        2526,
+        2797
+      ],
+      "update_chart_rank": 3
+    },
+    "R1": {
+      "cohosted_target_updates": [
+        3611
+      ],
+      "delivering_update": 3611,
+      "delivering_update_event": [
+        "add",
+        "Y7",
+        "D17",
+        "1/4",
+        [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      ],
+      "source_delivery_into_target": [
+        [
+          3611,
+          "D17",
+          "-1/2",
+          "-1/2"
+        ]
+      ],
+      "source_events_after_update": [
+        3642,
+        3798,
+        3850,
+        3954
+      ],
+      "source_frame_rank_at_update": 9,
+      "source_spans_head_at_update": true,
+      "target_updates": [
+        19,
+        20,
+        2013,
+        2146,
+        2526,
+        3611
+      ],
+      "update_chart_rank": 9
+    },
+    "partner_row_writes": [
+      2497,
+      3613
+    ],
+    "published_head_hosting_target_updates": [],
+    "published_source_delivery_into_target": [
+      [
+        2797,
+        "D17",
+        "-1/2",
+        "-1/2"
+      ]
+    ],
+    "published_target_updates": [
+      19,
+      20,
+      2013,
+      2146,
+      2526,
+      2797
+    ],
+    "target_read_events": []
+  },
+  "no_new_kappa": true,
+  "pinned_main": "6f100d4bb5083f8c35d96fd95a539811c62f245c",
+  "repairs": {
+    "R0": {
+      "class": "order-preserving: every published event kept in published order with the same ADD registers and coefficients; one downward D17 transport inserted after the delivering ADD",
+      "rule": "D17 and Y7 enter the published 2797 chart plus the head (rank 3) at their last transports before 2797; D17 drops back to the published chart immediately after; Y7's terminal transport starts from the rank-3 chart",
+      "splices": [
+        {
+          "events": [
+            [
+              "transport",
+              "D17",
+              [
+                486
+              ],
+              [
+                95,
+                486,
+                232
+              ],
+              2
+            ]
+          ],
+          "published": [
+            [
+              "transport",
+              "D17",
+              [
+                486
+              ],
+              [
+                95,
+                486
+              ],
+              1
+            ]
+          ],
+          "published_range": [
+            2795,
+            2796
+          ]
+        },
+        {
+          "events": [
+            [
+              "transport",
+              "Y7",
+              [
+                95
+              ],
+              [
+                95,
+                486,
+                232
+              ],
+              2
+            ]
+          ],
+          "published": [
+            [
+              "transport",
+              "Y7",
+              [
+                95
+              ],
+              [
+                95,
+                486
+              ],
+              1
+            ]
+          ],
+          "published_range": [
+            2796,
+            2797
+          ]
+        },
+        {
+          "events": [
+            [
+              "add",
+              "Y7",
+              "D17",
+              "1/4",
+              [
+                95,
+                486,
+                232
+              ]
+            ],
+            [
+              "transport",
+              "D17",
+              [
+                95,
+                486,
+                232
+              ],
+              [
+                95,
+                486
+              ],
+              1
+            ]
+          ],
+          "published": [
+            [
+              "add",
+              "Y7",
+              "D17",
+              "1/4",
+              [
+                95,
+                486
+              ]
+            ]
+          ],
+          "published_range": [
+            2797,
+            2798
+          ]
+        },
+        {
+          "events": [
+            [
+              "transport",
+              "Y7",
+              [
+                95,
+                486,
+                232
+              ],
+              [
+                484,
+                232,
+                12,
+                55,
+                75,
+                24,
+                7,
+                2
+              ],
+              5
+            ]
+          ],
+          "published": [
+            [
+              "transport",
+              "Y7",
+              [
+                95,
+                486
+              ],
+              [
+                484,
+                232,
+                12,
+                55,
+                75,
+                24,
+                7,
+                2
+              ],
+              6
+            ]
+          ],
+          "published_range": [
+            3473,
+            3474
+          ]
+        }
+      ]
+    },
+    "R1": {
+      "class": "relocation: the delivering ADD (with Y7's 2796 and 3473 transports) moves into D17's full-chart window between its lift at 3612 and its restoration at 3613; no event added or removed",
+      "rule": "Y7 lifts from [95] to the full chart, takes Y7 += D17/4 there, then drops to its final frame",
+      "splices": [
+        {
+          "events": [],
+          "published": [
+            [
+              "transport",
+              "Y7",
+              [
+                95
+              ],
+              [
+                95,
+                486
+              ],
+              1
+            ],
+            [
+              "add",
+              "Y7",
+              "D17",
+              "1/4",
+              [
+                95,
+                486
+              ]
+            ]
+          ],
+          "published_range": [
+            2796,
+            2798
+          ]
+        },
+        {
+          "events": [],
+          "published": [
+            [
+              "transport",
+              "Y7",
+              [
+                95,
+                486
+              ],
+              [
+                484,
+                232,
+                12,
+                55,
+                75,
+                24,
+                7,
+                2
+              ],
+              6
+            ]
+          ],
+          "published_range": [
+            3473,
+            3474
+          ]
+        },
+        {
+          "events": [
+            [
+              "transport",
+              "D17",
+              [
+                95,
+                447,
+                6,
+                32,
+                20
+              ],
+              [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+              ],
+              4
+            ],
+            [
+              "transport",
+              "Y7",
+              [
+                95
+              ],
+              [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+              ],
+              8
+            ],
+            [
+              "add",
+              "Y7",
+              "D17",
+              "1/4",
+              [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+              ]
+            ],
+            [
+              "transport",
+              "Y7",
+              [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+              ],
+              [
+                484,
+                232,
+                12,
+                55,
+                75,
+                24,
+                7,
+                2
+              ],
+              1
+            ]
+          ],
+          "published": [
+            [
+              "transport",
+              "D17",
+              [
+                95,
+                447,
+                6,
+                32,
+                20
+              ],
+              [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128,
+                256
+              ],
+              4
+            ]
+          ],
+          "published_range": [
+            3612,
+            3613
+          ]
+        }
+      ]
+    }
+  },
+  "schema_version": 1,
+  "selected_kappa": "0.001672660197076918",
+  "source_register": "X0",
+  "target_register": "Y7"
+}
