@@ -14,7 +14,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 300,
+      "timeout_seconds": 180,
       "checks": "Source pins; predecessor distance/histogram cross-check; depth-6 MITM 890/0/890; certificate admission."
     },
     {
@@ -26,7 +26,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 300,
+      "timeout_seconds": 180,
       "checks": "need() admission remains enforced under -O; identical PASS marker."
     },
     {
@@ -36,8 +36,8 @@
         "-B",
         "{package}/independent.py"
       ],
-      "timeout_seconds": 300,
-      "checks": "Independent frozenset F2[Dic_3] MITM; coverage digest matches certificate."
+      "timeout_seconds": 180,
+      "checks": "Independent suffix-first MITM; coverage digest matches certificate."
     },
     {
       "argv": [

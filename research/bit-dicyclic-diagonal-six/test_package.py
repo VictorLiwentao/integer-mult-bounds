@@ -88,7 +88,7 @@ def test_readonly_verify_leaves_tree():
         env=env,
         capture_output=True,
         text=True,
-        timeout=300,
+        timeout=180,
         check=False,
     )
     need(proc.returncode == 0, "verify failed: " + proc.stderr + proc.stdout)
