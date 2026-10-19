@@ -16,7 +16,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 600,
+      "timeout_seconds": 300,
       "checks": "Arithmetic 3^k never |48; model_callee PASS; Incoming mismatch census 40824/104976 on rows {6..26}; certificate match; source pins"
     },
     {
@@ -28,7 +28,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 600,
+      "timeout_seconds": 300,
       "checks": "Same admission under PYTHONOPTIMIZE via need(); warnings as errors"
     },
     {
@@ -38,7 +38,7 @@
         "-B",
         "{package}/independent.py"
       ],
-      "timeout_seconds": 120,
+      "timeout_seconds": 60,
       "checks": "Separate arithmetic + closed-form bad-count identity"
     },
     {
@@ -48,7 +48,7 @@
         "-B",
         "{package}/test_package.py"
       ],
-      "timeout_seconds": 120,
+      "timeout_seconds": 60,
       "checks": "Corruption rejection, duplicate JSON keys, read-only default"
     }
   ]
