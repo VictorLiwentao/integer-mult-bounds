@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "b1fea0c94436b236cc2b7d41a7be032811b94c81",
+      "sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0"
+    },
+    {
+      "path": "docs/research/selected-bit-caller-storage-map.md",
+      "usage": "provenance",
+      "git_blob": "a629053341d99854cc1bf1e6ca9a51cbbfa9c316",
+      "sha256": "0ee787c489aab70eed1f73bc62f8ff8e7fe6bbc3bab1fe8ff1a24359708c133b"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/routes.py",
+      "usage": "input",
+      "git_blob": "35531201dc349a811dfabc6f1f6e64697d665194",
+      "sha256": "ed7dc3679451696ab1dd841146b215c9515a3eec5e4ff3763f33c315f1696ada"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/bitstream.py",
+      "usage": "input",
+      "git_blob": "4d1fd4abb0f2aabe833e5cbc9efb51039739e7ca",
+      "sha256": "f78bac9641007dbd8824984edcac057274fe016ce78bd9cb512d0c0913274783"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/words.py",
+      "usage": "input",
+      "git_blob": "8d4ba37e2778acb35b34e0719df2caf138fbeb50",
+      "sha256": "5c37f57708ba3131bdcb03139f9dbc29886bee44569c09cbba51b68f75acd7f9"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/directory.py",
+      "usage": "input",
+      "git_blob": "c74cacf5ce809c0561d374f137a52df0992b4226",
+      "sha256": "4270e370b2bfe38ef73aadcd97d1b3496b56bd582115d74331eb9e5ceb90bec7"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/stream.py",
+      "usage": "input",
+      "git_blob": "5e5a4bb0f98971447043e25d4dd6991bfc070389",
+      "sha256": "c7dc7da5b00f27016982ada4c0416f8328568b00df16d97012f33d4b372d79b5"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/records.py",
+      "usage": "input",
+      "git_blob": "4f00467a0ff580954ad2fd0c7380240c753ddef3",
+      "sha256": "0c9c4b23e998597fb877bb1a29da69ac869b68262abe635b162b4dba9c69b372"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/counts.py",
+      "usage": "input",
+      "git_blob": "81b48940ce222290a40d4fb349ce827f4788469d",
+      "sha256": "00b476dbda0e8cc99886bf794439e1cb9e775f435f599a3557e99321fe084069"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/cardinality.py",
+      "usage": "input",
+      "git_blob": "b8ba857e32c5903408e1e61ff916300848b4a208",
+      "sha256": "505d5e560c5a507e6184edcc19a87cf1fed243eb34a5cb21fbe1e4fe017e7f22"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/matrices.py",
+      "usage": "input",
+      "git_blob": "5d497353efbb9eeaaf4facd96ab40ffb0f3aa20d",
+      "sha256": "00b687434039b54529ee092e34f9435cfcd66e0816eb3bd2a6688c73f4e01459"
+    },
+    {
+      "path": "research/selected-bit-recursive-caller/predecessor/vendor/oracle.py",
+      "usage": "input",
+      "git_blob": "244f131466698a3ace10b657242fe1f65c07fd1f",
+      "sha256": "7bd18089e32ce48085b5e3a75159f6a82cdb2649ec682c53db05e399d97aef67"
+    }
+  ]
+}

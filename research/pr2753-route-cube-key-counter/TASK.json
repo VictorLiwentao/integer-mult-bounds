@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "task_id": "supplier-boundary-audit",
+  "priority_revision": 6,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "original_card": {
+    "id": "supplier-boundary-audit",
+    "question": "Does one selected supplier obligation follow from its actual source-bound checks?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/owner-boundary-audit/README.md",
+      "research/scatter-export-parity-audit/README.md"
+    ],
+    "methods": [
+      "Trace one hypothesis through the source, checker and complete caller.",
+      "Construct one semantically invalid but superficially well-formed fixture and test rejection."
+    ],
+    "acceptance_gate": "Pin the current sources and one obligation; the historical owner audit is an example, not evidence of a current bug.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read #2977 reported duplicate-scatter counterexample and its opt-in repair. The archive is not a production fix or an independently validated selected-result failure; the selected generator emits unique rows.",
+      "scope": "Source-binding orientation only; does not replay or validate the reported bug."
+    },
+    "first_experiment": "First check whether the scatter repair has been adopted. If still open, independently reproduce #2977 symbolic-versus-exported parity on the tiny duplicate fixture, compare the selected unique-row positive control, and define either enforced uniqueness or consistent multiplicity semantics. A bounded guard-adoption patch must preserve valid inputs and test the actual exported action. Stop after this obligation; no full historical replay or frontier change follows from the mutant alone.",
+    "bottleneck_link": "Closing a current acceptance gap or proof obligation strengthens reliability even without changing kappa.",
+    "allowed_variations": [
+      "Audit one named current condition using a new semantic counterexample."
+    ],
+    "scope_change_triggers": [
+      "Reporting the historical timing-only diagnostic as a new current acceptance bug.",
+      "Calling a malformed mutant a failure of the selected construction, or importing an opt-in repair without testing the exporter boundary."
+    ],
+    "overlap_terms": [
+      "owner boundary",
+      "bridge omission",
+      "hosting",
+      "2977",
+      "scatter export",
+      "duplicate index",
+      "parity semantics"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Exact non-fibre key-path and partition-Counter invoice for pinned PR2753 routes.route_cube (append_word cells H*d*d*(L+1); partition Counters 3P/2HP; copy_key 2HP*d*d*(L+1)), answering #3944 OQ1 first step without reprinting the fibre formula or invoicing high_key numerical Ring traffic; no H2 admission or kappa change.",
+  "scope_change_reason": "Refine the supplier-boundary audit to #3944 open question 1: meter append_word/key paths and Counter lifetimes on the same pinned route_cube fixtures with closed forms not forced by the fibre identity (2d^2L+2)V, outside UT4 weighted n_b and unfinished (2,3)/(3,2) dirty-role gates.",
+  "bottleneck_link": "Fibre copy_bits already matches O(wV); exact non-fibre key/Counter identities are the minimal checkable step toward a full total-traffic invoice that can sharpen bootstrap constants.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after exact route_cube key/Counter invoice, word-width lemma, fixtures, package tests; no fibre-formula reprint, no atom_swap retarget, no high_key numerical closure, no H2 construction, no supplier admission, no kappa change.",
+  "outcome": "completed",
+  "evidence": "CERTIFICATE.json exact formulas; six metered fixtures including w=1 cap=1, scaled chart, d=2, F-variation append_word control; independent closed-form checker; corruption controls.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for source audit, derivation, implementation, verification and writing.",
+  "open_questions": [
+    {
+      "question": "Can numerical Matrices/high_key Ring traffic be closed with an all-parameter identity in the style of linear-sign-total-traffic?",
+      "why_it_matters": "OQ1 of #3944 names high_key numerical work alongside key appends and Counter drains; this package closes only the latter two families.",
+      "first_step": "Meter raw_header/multiply/divmod cell traffic on the same fixtures and look for a popcount-style countdown identity.",
+      "blocked_by": "Word-value-dependent Ring paths resist a single polynomial closed form without a countdown lemma."
+    },
+    {
+      "question": "Does composing fibre + key + Counter + numerical traffic yield one total-tape identity that sharpens bootstrap constants beyond fibre alone?",
+      "why_it_matters": "Full tape traffic would replace the fibre-only lower bound for constant-factor billing.",
+      "first_step": "Add the #3944 fibre meter to this package's key/Counter meter under a single observer without reprinting either formula as the other's consequence.",
+      "blocked_by": "Numerical high_key invoice still open; pool acquisition semantics remain outside both metrics."
+    }
+  ],
+  "predecessors": [
+    {
+      "pr": 3944,
+      "credit": "Wentao Li; exact fibre copy_bits invoice and OQ1 total-traffic follow-up on the same route_cube"
+    },
+    {
+      "pr": 2753,
+      "credit": "David Arias; all-size logical BIT caller and stated O(wV) route/leaf charge"
+    },
+    {
+      "pr": 2697,
+      "credit": "Jose Manuel; first-range caller and routes/bitstream lineage retained in PR2753 vendor"
+    },
+    {
+      "pr": 2708,
+      "credit": "Nick Petalas; route live-volume storage peaks for the same decorated-key cube"
+    },
+    {
+      "pr": 2809,
+      "credit": "Jose Manuel; physical caller retaining O(wV) route/leaf routines"
+    },
+    {
+      "note": "linear-sign-total-traffic closed sign traffic only; binary-digit-cost-audit prices atom_swap, not route_cube"
+    }
+  ],
+  "nearest_overlap": [
+    {
+      "package": "research/pr2753-route-cube-owv-fibre",
+      "difference": "Fibre copy_bits invoice and OwV match; this package meters append_word/copy_key/Counter sites and refuses to reprint the fibre formula."
+    },
+    {
+      "package": "research/linear-sign-total-traffic",
+      "difference": "Exact total traffic for linear_sign only; leaves route/leaf H2 binding open."
+    },
+    {
+      "package": "research/selected-route-live-volume",
+      "difference": "Storage peaks on the decorated cube; not a key/Counter time invoice."
+    },
+    {
+      "package": "research/binary-digit-cost-audit",
+      "difference": "Exact digit-swap/atom_swap bills; not routes.route_cube."
+    }
+  ],
+  "soft_overlap_estimate": 0.4,
+  "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+}
