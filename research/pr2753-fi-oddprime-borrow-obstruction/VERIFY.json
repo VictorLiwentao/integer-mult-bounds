@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-compatible-row-padding/README.md",
+    "research/selected-lcm-stock-wrapper-fit/README.md",
+    "research/selected-outer-borrowing-wrapper/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Arithmetic 3^k never |48; model_callee PASS; Incoming mismatch census 40824/104976 on rows {6..26}; certificate match; source pins"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Same admission under PYTHONOPTIMIZE via need(); warnings as errors"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Separate arithmetic + closed-form bad-count identity"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Corruption rejection, duplicate JSON keys, read-only default"
+    }
+  ]
+}

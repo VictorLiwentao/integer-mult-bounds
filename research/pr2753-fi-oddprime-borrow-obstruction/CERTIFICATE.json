@@ -1,0 +1,172 @@
+{
+  "arithmetic": {
+    "gl2_order": 48,
+    "three_pow_mod_16": [
+      1,
+      3,
+      9,
+      11,
+      1,
+      3,
+      9,
+      11,
+      1,
+      3,
+      9,
+      11,
+      1,
+      3,
+      9,
+      11,
+      1
+    ],
+    "three_pow_never_divisible_by_48": true
+  },
+  "checks": 74,
+  "claim": "PR2753 LowCodes GL2(F3) unweighted Incoming under the outer-wrapper two-call schedule at q=3 with borrowed width (R=27,S=24,R'=48) does not realize wrapper F_I; exact per-call mismatch census 40824/104976 on genuine rows {6..26}; model_callee passes; 3^k never divisible by 48",
+  "fixture": {
+    "F_width": 104976,
+    "R": 27,
+    "R_pad": 48,
+    "gl_order": 48,
+    "k": 3,
+    "n": 2,
+    "q": 3,
+    "stock": 24,
+    "volume": 59049,
+    "w": 1,
+    "weights": [
+      1,
+      1
+    ]
+  },
+  "incoming": {
+    "bad_per_bad_row": 1944,
+    "bad_rows": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "calls_censused": 1,
+    "censuses": [
+      {
+        "bad": 40824,
+        "bad_per_row": {
+          "6": 1944,
+          "7": 1944,
+          "8": 1944,
+          "9": 1944,
+          "10": 1944,
+          "11": 1944,
+          "12": 1944,
+          "13": 1944,
+          "14": 1944,
+          "15": 1944,
+          "16": 1944,
+          "17": 1944,
+          "18": 1944,
+          "19": 1944,
+          "20": 1944,
+          "21": 1944,
+          "22": 1944,
+          "23": 1944,
+          "24": 1944,
+          "25": 1944,
+          "26": 1944
+        },
+        "bad_rows": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "good_genuine": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pad_rows_bad": 0,
+        "rows": 48,
+        "width": 104976
+      }
+    ],
+    "children": {
+      "enter": 120,
+      "return": 120
+    },
+    "endpoint_rejected": true,
+    "good_genuine_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "padded_rows_bad": 0,
+    "per_call_bad": 40824,
+    "per_call_width": 104976,
+    "residuals": {
+      "MOVE": 12
+    }
+  },
+  "kappa": "836330098538459/500000000000000000",
+  "model_callee": {
+    "F_columns": [
+      104976,
+      104976
+    ],
+    "columns": 59049,
+    "padded_calls": [
+      48,
+      48
+    ],
+    "pass": true,
+    "wrapper_passes": {
+      "ADD": 6,
+      "chunk_swap": 1,
+      "sign": 2
+    }
+  },
+  "no_new_kappa": true,
+  "schema_version": 1,
+  "sources_sha256": "deb167db369f9ae4188575ce9deb3cac67011eae5adb154ceb14bfbd1e5ce006"
+}
