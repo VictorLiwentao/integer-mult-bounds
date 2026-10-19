@@ -1,0 +1,30 @@
+{
+  "added_t1": 47,
+  "added_t2": 0,
+  "body": 81,
+  "checks": 49,
+  "children_enter_return": 816,
+  "claim": "identity-weight PR2753 Node+padding equals wrapper F_I; fitted t>1 metadata peak independent of t",
+  "compatible_rows_t1": 96,
+  "fi_mismatches_identity_t1": 0,
+  "fi_mismatches_identity_t2": 0,
+  "fi_mismatches_weighted_oracle": 3528,
+  "fixture": "one-family GL2(F3) two-MOVE model, not selected GL64",
+  "genuine_rows": 49,
+  "identity_weights": [
+    1,
+    1
+  ],
+  "kappa_unchanged": "0.001672660197076918",
+  "multiplicity_t2_rows": 96,
+  "no_new_kappa": true,
+  "plan_rows_counter_peak": 2,
+  "plan_rows_peak_independent_of_t": true,
+  "plan_rows_t_max": 16,
+  "sources_sha256": "74e495c783d0eb3ca110cb74c31c720a0683c8792cfe81888aa543ea8419b7c5",
+  "stock": 48,
+  "weighted_control": [
+    2,
+    1
+  ]
+}
