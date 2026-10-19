@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "PASS_OUTER_WRAPPER_TK_STOCK_PADDING",
+  "sigma": 6748,
+  "ell": 16,
+  "lcm": 269241600,
+  "live_quotient": 9475,
+  "multiplicity_domain": "1 <= t < q",
+  "stock_shape": "S(t) = t * K^D(e)",
+  "below_two_padding": true,
+  "stages": 14,
+  "fixture_count": 7,
+  "rejected_controls": 9,
+  "no_new_kappa": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_OUTER_WRAPPER_TK_STOCK_PADDING sigma=6748 ell=16 multiplicity=1..q-1 below_two fourteen_fit_guards no_new_kappa"
+}

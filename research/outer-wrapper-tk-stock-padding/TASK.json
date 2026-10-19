@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "formal-interface-lemma",
+  "priority_revision": 6,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "original_card": {
+    "id": "formal-interface-lemma",
+    "question": "Can one small, precisely scoped interface lemma be formalized with its actual hypotheses?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "research/hyperplane-end-lean/PROOF.md"
+    ],
+    "methods": [
+      "Formalize a missing boundary lemma identified by the selected review.",
+      "Audit a formal theorem-to-certificate binding independently."
+    ],
+    "acceptance_gate": "State the exact formalized proposition and remaining assumptions; avoid duplicate arithmetic formalizations already present.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the exact hypotheses in the hyperplane-end proof and distinguish Lean theorems from finite supplier assumptions.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "State one missing boundary lemma in full before starting a proof-assistant build.",
+    "bottleneck_link": "A missing interface proof can reduce the conditional gap even if it does not change kappa.",
+    "allowed_variations": [
+      "Narrow to one formal lemma or one theorem-to-certificate binding."
+    ],
+    "scope_change_triggers": [
+      "Formalizing already-covered arithmetic and claiming the full multiplication theorem."
+    ],
+    "overlap_terms": [
+      "hyperplane end",
+      "formal interface",
+      "Lean binding"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "For PR2753 stock S(t)=t K^D(e) with every integer multiplicity 1<=t<q (q>2^80), prove log_q S(t)<6748 w (1+log2 e), the outer-wrapper precondition 1<=S(t)<=q^k with below-two padding, and retention of all fourteen selected ell=16 fit guards. Extends unit-multiplicity selected-lcm-stock-wrapper-fit; does not bind F_I callee semantics or complex m=73 C(w).",
+  "scope_change_reason": "The catalogue card asks for one small interface lemma. The storage map's open outer-wrapper stock-padding obligation names tK^D(e) divisibility and the below-two factor; the unit-multiplicity prior leaves t>1 unbound. This package answers that multiplicity gap only.",
+  "bottleneck_link": "Compatible stock must meet the outer wrapper's modulus and fit guards before borrowing connects the logical BIT caller to bootstrap implications; binding every t<q closes that numerical interface without changing kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after proving the t-family envelope, wrapper below-two padding and fourteen fit premises with mutation controls. Do not implement the GL64 callee, physical metadata restoration, Callback.abort composition or a complex m=73 divisor.",
+  "outcome": "completed",
+  "evidence": "verify.py and independent.py prove log_q(t K^D)<6748 w (1+log2 e) for 1<=t<q by absorbing log_q t<1 into the strict packet bound, check wrapper padding fixtures, and reproduce all fourteen selected cutoffs at ell=16. CERTIFICATE.json records the typed receipt. No new kappa (0.001672660197076918).",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for source reading, lemma framing, verifier construction, controls, and writeup.",
+  "open_questions": [
+    {
+      "question": "Is PR2753's actual unweighted incoming program the F_I callee of the outer wrapper at one odd prime and one borrowed width, including pointwise restoration of the padded t K^D rows?",
+      "why_it_matters": "The numerical modulus now fits for every t<q, but the wrapper endpoint still assumes a completed unweighted call that the q=2 toy does not supply.",
+      "first_step": "Pin one PR2753 incoming program and compare its endpoint, row restoration and borrowed heads with the wrapper contract at a concrete t>1.",
+      "blocked_by": "Root coupling, numerical arenas and physical tape placement remain open."
+    },
+    {
+      "question": "Can the padding/count streams and complete metadata restoration share the physical caller's fixed tape inventory for a t K^D modulus?",
+      "why_it_matters": "A live-content bound and a numerical stock fit are not a placement/movement or erased-backing-capacity proof.",
+      "first_step": "Start from the active Frame/bank integration in Discussion 2319 and serialize padding/count locations for one fitted t>1 plan.",
+      "blocked_by": "Physical blank-return and movement proofs are still required."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-bit-recursive-caller/PROOF.md",
+    "research/selected-outer-borrowing-wrapper/README.md",
+    "research/selected-lcm-stock-wrapper-fit/README.md",
+    "docs/research/selected-bit-caller-storage-map.md",
+    "research/community-frontier1094-audit/ASSEMBLY.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Pin sources, prove t K^D envelope under 1<=t<q, wrapper below-two padding, fourteen ell=16 fit guards, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same admission under PYTHONOPTIMIZE via need()"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Separate scanner rebuilds the multiplicity absorption without importing verify.py"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Duplicate JSON keys, temp certificate corruption, -O admission, padding domain, read-only package hash"
+    }
+  ]
+}

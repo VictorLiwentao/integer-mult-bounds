@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "files": [
+    {
+      "path": "research/selected-bit-recursive-caller/PROOF.md",
+      "usage": "input",
+      "git_blob": "1a08e57eac2a37764066d31baa3ecd3769759158",
+      "sha256": "552fa306d5cc228f4d8d8553f8ac5fc6a738ef2b66a2cb765ba0638cd229794d"
+    },
+    {
+      "path": "research/selected-outer-borrowing-wrapper/README.md",
+      "usage": "input",
+      "git_blob": "2bddb5740bd791e54dfbfdf79e4796fca10da800",
+      "sha256": "8182847bb349b85313e74396dde92292a156270aa4796b1278bd016730a78934"
+    },
+    {
+      "path": "research/selected-lcm-stock-wrapper-fit/README.md",
+      "usage": "input",
+      "git_blob": "d670df78e99587a4b70cf77af957fdef58c0b371",
+      "sha256": "d56ee549aa15d75da7d42411a0456de5cfbb66b142422fec53c562c5a4803bb6"
+    },
+    {
+      "path": "docs/research/selected-bit-caller-storage-map.md",
+      "usage": "input",
+      "git_blob": "a629053341d99854cc1bf1e6ca9a51cbbfa9c316",
+      "sha256": "0ee787c489aab70eed1f73bc62f8ff8e7fe6bbc3bab1fe8ff1a24359708c133b"
+    },
+    {
+      "path": "research/community-frontier1094-audit/ASSEMBLY.json",
+      "usage": "input",
+      "git_blob": "5fd676df060f3b450782fdf5ff5f6beb63a5eeb0",
+      "sha256": "1122cb3a575f8c788345fc1bf4c108ac7c3250fb81a5988671f5eb04b3ab3045"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "b1fea0c94436b236cc2b7d41a7be032811b94c81",
+      "sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0"
+    }
+  ]
+}
