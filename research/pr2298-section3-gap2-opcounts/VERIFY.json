@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "docs/nonadjacent-axis-audit.md",
+    "research/selected-conservative-outer/PROOF.md",
+    "research/pr2298-format-recovery-audit/TASK.json",
+    "research/synthetic-layout-independent/physical.py"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "126-pattern gap-2 census, bound assertions, physical spot-checks, certificate match, source pins"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "Same admission under PYTHONOPTIMIZE via need(); warnings as errors"
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/independent.py"],
+      "timeout_seconds": 60,
+      "checks": "Separate digest recomputation of reversal/tensor counts with pair_invoice=1+g"
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 120,
+      "checks": "Duplicate JSON keys, read-only default, -O corruption, gap invoice mutants"
+    }
+  ]
+}
