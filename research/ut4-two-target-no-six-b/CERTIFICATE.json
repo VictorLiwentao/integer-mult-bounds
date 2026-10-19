@@ -1,0 +1,14 @@
+{
+  "active_roles": 2,
+  "canonical_zero_sum_middles": 5582,
+  "key_pairs_abc_cba_I": 0,
+  "keys_sum": 1568064,
+  "low_rank_excluded": 182,
+  "max_keys_per_middle": 1408,
+  "n_b": 6,
+  "rank_XY_at_least_2": 5400,
+  "schema_version": 1,
+  "side_zero_key_joins": 12544512,
+  "status": "no_nb6_two_target_quotient",
+  "targets": 2
+}
