@@ -1,0 +1,31 @@
+{
+  "claim": "In the Dic_3 {u,v}-paid three-register model, every diagonal triple with positive-generator direct bill at least 7 has no paid word of length at most 6.",
+  "depth_six_layer": {
+    "best": null,
+    "coverage_sha256": "038abea852e5c05c9eaeb36d046046671b3d388a22d9341bacb8f87b677822cb",
+    "eligible_targets_with_word": 0,
+    "eligible_targets_without_word": 890,
+    "endpoint_count": 890,
+    "hits": [],
+    "max_calls": 6,
+    "minimum_direct_bill": 7
+  },
+  "distinct_product_count_through_three": 94727,
+  "distinct_products_by_minimum_depth_through_three": {
+    "0": 1,
+    "1": 56,
+    "2": 2352,
+    "3": 92318
+  },
+  "group": "Dic_3",
+  "kappa_decimal": "0.001672660197076918",
+  "kappa_fraction": "836330098538459/500000000000000000",
+  "no_new_kappa": true,
+  "package": "research/bit-dicyclic-diagonal-six",
+  "paid_operation_types": 56,
+  "predecessor_depth_five_hits": 0,
+  "predecessor_depth_four_hits": 0,
+  "registers": 3,
+  "schema_version": 1,
+  "selected_kappa_unchanged": true
+}
