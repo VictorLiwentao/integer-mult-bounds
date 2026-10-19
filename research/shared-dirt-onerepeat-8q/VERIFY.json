@@ -14,7 +14,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 600,
+      "timeout_seconds": 300,
       "checks": "Shared-dirt one-repeat (2,6) dual census; rank-4 outside R=96 identity; Σe=40; champions; tariff floor 496; certificate match; source pins"
     },
     {
@@ -25,7 +25,7 @@
         "-B",
         "{package}/verify.py"
       ],
-      "timeout_seconds": 600,
+      "timeout_seconds": 300,
       "checks": "Same admission under PYTHONOPTIMIZE via need()"
     },
     {
@@ -35,7 +35,7 @@
         "-B",
         "{package}/independent.py"
       ],
-      "timeout_seconds": 600,
+      "timeout_seconds": 300,
       "checks": "Separate shared-dirt one-repeat dual census, champions, tariff arithmetic"
     },
     {
@@ -45,8 +45,8 @@
         "-B",
         "{package}/test_package.py"
       ],
-      "timeout_seconds": 2400,
-      "checks": "Corruption rejection, duplicate JSON keys, -O controls, independent replay"
+      "timeout_seconds": 120,
+      "checks": "Corruption rejection, duplicate JSON keys, -O need() admission, source-pin drift (no nested full census)"
     }
   ]
 }
