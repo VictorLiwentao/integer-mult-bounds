@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "files": [
+    {
+      "path": "research/weighted-wrapper-contract/TASK.json",
+      "usage": "input",
+      "git_blob": "0a1ff76b025b6b67bf4d20e7cbd5a086864e63cb",
+      "sha256": "200f4f6f4efe52602cf1861d17acf5388de2b81b9aefba929ffbb9f4b88d3fd9",
+      "size_bytes": 9372
+    },
+    {
+      "path": "research/weighted-wrapper-contract/README.md",
+      "usage": "input",
+      "git_blob": "f0a912efd96af3804f5663ba39323763bc0ed797",
+      "sha256": "e1565fb54651303258ef144f7b774e8ef1e7534d3b1129c516a6f88326408c71",
+      "size_bytes": 11677
+    },
+    {
+      "path": "research/weighted-wrapper-contract/algebra.py",
+      "usage": "input",
+      "git_blob": "9a0ec3710cbfeae7e70d4963d8e9f8b4073e2571",
+      "sha256": "7a87e6094dd5968f48998ab22c0dfdcf289021458e84eb2c02d775d68e287797",
+      "size_bytes": 7625
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "b1fea0c94436b236cc2b7d41a7be032811b94c81",
+      "sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129",
+      "size_bytes": 10725
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0",
+      "size_bytes": 58553
+    }
+  ]
+}

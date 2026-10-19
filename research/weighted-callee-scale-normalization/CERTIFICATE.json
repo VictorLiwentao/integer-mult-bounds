@@ -1,0 +1,35 @@
+{
+  "claim": "Post-scales T=diag(1,2) after each F_(2,1) realize involutory P'; ordinary wrapper attains J with exact bill scales_two_F=4V=36",
+  "counts": {
+    "input_restores": 0,
+    "negative_controls": 3,
+    "normalized_agreements": 81,
+    "normalized_total": 81,
+    "raw_agreements": 9,
+    "raw_failures": 72,
+    "raw_total": 81,
+    "scales_per_F": 18,
+    "scales_two_F": 36,
+    "weight_table_rewrites": 0
+  },
+  "fixture": {
+    "dimension": 2,
+    "modulus": 3,
+    "scale_T": [
+      1,
+      2
+    ],
+    "volume_V": 9,
+    "weights": [
+      2,
+      1
+    ]
+  },
+  "kappa": {
+    "changed": false,
+    "decimal": "0.001672660197076918",
+    "fraction": "836330098538459/500000000000000000"
+  },
+  "marker": "PASS_WEIGHTED_CALLEE_SCALE_NORMALIZATION M=3 n=2 a=(2,1) raw_agreements=9/81 normalized_agreements=81/81 scales_two_F=36 no_new_kappa",
+  "schema_version": 1
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 6,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one exact all-size/compiler, precision, hosting or restoration implication be proved or falsified?",
+    "starting_points": [
+      "certificates/selected-result.json",
+      "docs/audit.md"
+    ],
+    "methods": [
+      "Prove one missing implication with explicit quantified hypotheses.",
+      "Find an exact counterexample at the claimed interface boundary."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the selected review scope and choose one exact all-size or precision implication.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Write its quantified inputs and conclusion; find a missing hypothesis or construct a minimal exact adversarial instance.",
+    "bottleneck_link": "Finite supplier improvements are useful only under the retained transfer obligations.",
+    "allowed_variations": [
+      "Choose one tape, precision, hosting or restoration lemma."
+    ],
+    "scope_change_triggers": [
+      "Replacing a quantified obligation with another finite smoke test."
+    ],
+    "overlap_terms": [
+      "uniform transfer",
+      "all-size",
+      "precision"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Answer weighted-wrapper-contract OQ1: exhibit an explicit left-diagonal post-scale normalization of the pinned failing weighted callee a=(2,1) on (Z/3Z)^2 that realizes involutory P'=TP, admit the ordinary two-call wrapper (81/81), and charge the exact bill scales_two_F=4V=36 with no input restore and no weight-table rewrite.",
+  "scope_change_reason": "Preferred #2687 OQ1 BIT-supplier bill is not grounded non-cancellably in this budget; #2888 OQ1 non-toy fitted-k/GL64 Incoming is blocked (only runnable odd-prime GL2 borrow fixture fails F_I). Take the disjoint #840-style normalization invoice demanded by weighted-wrapper-contract OQ1.",
+  "bottleneck_link": "A priced normalization of a concrete weighted callee turns the fixed-word endpoint criterion into an implementable ordinary-wrapper path without claiming a new supplier or kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after exact algebraic census, 4V bill, prior-algebra cross-check, independent replay, package tests; no supplier search and no GL64/Incoming binding.",
+  "outcome": "completed",
+  "evidence": "CERTIFICATE.json raw 9/81 vs normalized 81/81; scales_two_F=36; (P')^2=I; Norm o F_a = F_P'; three negative scale controls; independent closed-form match.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for derivation, implementation, checking and writing.",
+  "open_questions": [
+    {
+      "question": "Does the same left-diagonal post-scale pattern normalize the precision-blind family a=(1+p^(w-1),1) on (Z/p^w Z)^2 with bill still 4V?",
+      "why_it_matters": "The p-power family is the named precision-blind obstruction in the predecessor; a uniform scale lemma would close that family.",
+      "first_step": "Expand P'=T P at p=3,w=2 and count non-unit scale support.",
+      "blocked_by": "No all-w scale lemma is proved here."
+    },
+    {
+      "question": "Can the 4V algebraic bill be lowered onto a literal Boolean payload meter in the unchanged PR2808 harness without rewriting weights?",
+      "why_it_matters": "Algebraic multiplies are not yet a physical tape invoice.",
+      "first_step": "Attach scale meters to one modulo-3 Boolean fixture in the predecessor harness.",
+      "blocked_by": "Harness instrumentation is outside this package."
+    }
+  ],
+  "predecessors": [
+    {
+      "ref": "research/weighted-wrapper-contract",
+      "credit": "Jerry Chen (@CubeJerry); Theorem 1 / formula (5); OQ1 answered here"
+    },
+    {
+      "pr": 2808,
+      "credit": "Nick Petalas; ordinary two-call body wrapper and weighted counterexample"
+    }
+  ]
+}

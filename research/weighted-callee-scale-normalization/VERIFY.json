@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/weighted-wrapper-contract/TASK.json",
+    "research/weighted-wrapper-contract/README.md",
+    "research/weighted-wrapper-contract/algebra.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source pins; P^2=2I; (P')^2=I; Norm o F_a = F_P'; raw 9/81 vs normalized 81/81; scales_two_F=36; prior algebra cross-check; three negative controls; certificate admission."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "need() admission remains enforced under -O; identical PASS marker."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent closed-form census and 4V bill; match CERTIFICATE counts."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys; temp certificate corruption rejected; package files unchanged after read-only verify; -O -Werror; need() under -OO."
+    }
+  ]
+}
