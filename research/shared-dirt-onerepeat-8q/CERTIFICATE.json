@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SHARED_DIRT_ONEREPEAT_8Q_OBSTRUCTION",
+  "scope": "Five-source common-B mutable-source Q/R/X alphabet (PR1898) at (b,a,x)=(38,2,2). Freestanding mixed shared-dirt + one-repeat partitioned dual at total Q=8 on shape (2,6): every covering one-repeat length-6 long walk paired with short (0,\u03c3) under joint even live-read parity has exact R=96; tariff floor at X=0 is 496>436. Saves 16 versus independent one-repeat R=112 but does not undercut shared-dirt distinct floor R=82 or the six-query endpoint. Answers independent-walks-9q OQ2 without editing leave-alones through #2883/#2868/#2867/#2861/#2860/#2858/#2851.",
+  "claim": {
+    "Q": 8,
+    "partition": [
+      2,
+      6
+    ],
+    "alphabet": "shared_dirt_one_repeat_partitioned_dual",
+    "covering_pairs": 59996160,
+    "min_R": 96,
+    "valid_one_repeat_walks": 4530960,
+    "rank4_one_repeat_walks": 3749760,
+    "valid_rank_lt4_walks": 781200,
+    "covering_rank_lt4": 0,
+    "independent_one_repeat_min_R": 112,
+    "shared_dirt_distinct_min_R": 82,
+    "save_vs_independent": 16,
+    "tariff_floor_at_X0": 496,
+    "endpoint_Q6_tariff": 436,
+    "undercuts_436_after_complete_bill": false,
+    "beats_independent_one_repeat": true,
+    "beats_shared_dirt_distinct_82": false,
+    "answers_independent_walks_9q_oq2_mixed_shared_dirt_excess": true,
+    "oq_answer": "Every covering shared-dirt one-repeat partitioned dual on shape (2,6) (short walk (0,\u03c3); long walk of length 6 whose five nonzero slots contain exactly one repeated nonzero label; shared dirt / joint even live-read parity) has R=96 exactly (covering 59996160; spectrum {96}). Only rank-4 longs cover, always with \u03a3e=40 and \u03c3 outside the long span (16 choices); independent dirt on the same pairs has R=112, so shared dirt saves exactly 16. All 781200 rank<4 valid longs admit covering_rank_lt4=0; sigma-in-span never covers. Shared-dirt distinct floor R=82 is not undercut. At X=0 the abstract tariff is already 496>436 under (b,a,x)=(38,2,2). Leave-alones through #2883/#2868/#2867/#2861/#2860/#2858/#2851 are not reopened.",
+    "no_new_kappa": true,
+    "kappa_decimal": "0.001672660197076918"
+  },
+  "shared_dirt_one_repeat_2_plus_6": {
+    "kind": "shared_dirt_one_repeat_partition_2_plus_6",
+    "Q": 8,
+    "valid_one_repeat_walks": 4530960,
+    "rank4_one_repeat_walks": 3749760,
+    "valid_rank_lt4_walks": 781200,
+    "covering_rank_lt4": 0,
+    "covering_pairs": 59996160,
+    "attainable_R": [
+      96
+    ],
+    "histogram": {
+      "96": 59996160
+    },
+    "min_R": 96,
+    "sum_even_rank4": 40,
+    "sigmas_outside_rank4": 16,
+    "first_witness": {
+      "96": [
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          4,
+          1,
+          8,
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "champion": {
+    "champion": {
+      "short": [
+        0,
+        16
+      ],
+      "long": [
+        0,
+        4,
+        1,
+        8,
+        2,
+        1
+      ],
+      "shared_R": 96,
+      "independent_R": 112,
+      "path_X": 8,
+      "structural": {
+        "applies": true,
+        "rank": 4,
+        "sigma_in_span": false,
+        "R_shared": 96,
+        "R_independent": 112,
+        "sum_even": 40,
+        "save": 16
+      }
+    },
+    "shared_dirt_onerepeat_min_R": 96,
+    "independent_one_repeat_min_R": 112,
+    "shared_dirt_distinct_min_R": 82,
+    "tariff_floor_at_X0": 496,
+    "endpoint_tariff_Q6": 436,
+    "undercuts_436_after_complete_bill": false,
+    "beats_independent_one_repeat": true,
+    "beats_shared_dirt_distinct_82": false
+  },
+  "unit_tariff": {
+    "b": 38,
+    "a": 2,
+    "x": 2
+  },
+  "tariff_check": {
+    "formula": "38*Q + 2*R + 2*X",
+    "at_R96_X0": 496,
+    "champion": 512,
+    "endpoint_Q6": 436,
+    "independent_one_repeat_at_R112_X0": 528,
+    "shared_dirt_distinct_at_R82_X0": 468
+  }
+}
