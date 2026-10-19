@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "task_id": "connector-alphabet-change",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "original_card": {
+    "id": "connector-alphabet-change",
+    "question": "Does one explicit extension of the connector alphabet offer a favorable completed budget?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/universal-connector-boundary/README.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Construct and charge a legal extra operation on a minimal instance.",
+      "Prove a target-specific bound after adding one specified operation family."
+    ],
+    "acceptance_gate": "State which fixed-alphabet premise changes and charge its implementation; do not declare it free. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/universal-connector-boundary/verify.py"
+      ],
+      "expected": "PASS_UNIVERSAL_CONNECTOR_BOUNDARY",
+      "inspect": "Reproduce the 945-pairing control, then read Exact interface to list the allowed calls.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Add exactly one legally priced operation and test a tiny dirty-input instance before enumerating larger cases.",
+    "bottleneck_link": "A new legal connector operation could change recursive interface cost; a larger census in the same alphabet is a separate side result.",
+    "allowed_variations": [
+      "Choose one additional operation and a small source count for its first counterexample."
+    ],
+    "scope_change_triggers": [
+      "Keeping the alphabet and only increasing the source count; record this as a changed assignment.",
+      "Extending a source-count census without naming a supplier/interface decision it could change; audit #2973 pruning concerns before relying on the affected predecessor exclusions."
+    ],
+    "overlap_terms": [
+      "universal connector",
+      "source-toggle",
+      "connector alphabet"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Answer open #4075 OQ2: expand PR2298 \u00a73 exchange counts into an exact composite chunk-swap ledger for the \u00a77 nonadjacent CRT + line-exposure row at fixed (d<=8, ell=4, tau=99830289/10^8): M(d)=2*floor(d/2)+2(d-1) exchanges charged at most (1+ell^tau) each by lem:chunk-swap; M(d)<=3d-2 sharp on even d; saving (1-tau)*(1-epsilon)=6618729/4000000000; numerical per-d worst-pattern charges on the adjacent {3,4} domain. No new kappa.",
+  "scope_change_reason": "Preferred #2687 admitted BIT-supplier bill is not grounded without a non-cancellable hosted source-return (prior soft-overlap DEFERs); #2888 OQ1 needs non-toy fitted-k/GL64 Incoming (toys DEFER'd). Priority revision 6 then prefers a disjoint #840-style lemma: #4075 OQ2 \u00a77 numerical exposure ledger, clear of the deferred gap-2 scaffold retarget.",
+  "bottleneck_link": "An explicit M(d)*(1+ell^tau) ledger justifies the \u00a77 nonadjacent-exposure exponent tau+epsilon*(1-tau) from certified exchange counts rather than O-notation alone, tightening the conservative-outer cost gap evidence.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after M(d) closed form, 510-pattern composite ledger, saving identity, independent replay, package tests; no gap-g>=2 retarget, no new kappa, no BIT-supplier claim.",
+  "outcome": "completed",
+  "evidence": "CERTIFICATE.json: M(8)=22=3*8-2; patterns=510; saving 6618729/4000000000; per_d_ledger worst-pattern Decimal charges; physical unit checks on pinned move_address.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for derivation, implementation, checking and writing.",
+  "open_questions": [
+    {
+      "question": "Does the same M(d)*(1+ell^tau) ledger extend verbatim to gap-g>=2 pair invoices once a non-thin general-g physical lemma exists?",
+      "why_it_matters": "Deferred gap-2 package only certified g=2 counts; \u00a77 charging for non-adjacent gaps remains open.",
+      "first_step": "Pin a general-g stream lemma, then recompute per-d worst charges with bit_moves=g per unequal exchange.",
+      "blocked_by": "Gap-2 soft-overlap DEFER vs open #4075; no general-g physical lemma on main."
+    },
+    {
+      "question": "Can the Decimal ell^tau charges be replaced by a fully rational interval certificate without transcendental evaluation?",
+      "why_it_matters": "Current numerical rows use Decimal.ln/exp; a rational enclosure would remove analytic trust.",
+      "first_step": "Bound 4^(99830289/10^8) between two explicit rationals and replay the worst-charge inequalities.",
+      "blocked_by": "No rational-power enclosure is constructed here."
+    }
+  ],
+  "predecessors": [
+    {
+      "pr": 4075,
+      "credit": "Wentao Li; \u00a73 adjacent opcount census; OQ2 answered here"
+    },
+    {
+      "pr": 2413,
+      "credit": "thakrarsagar; format-recovery audit posing \u00a73 count OQ"
+    },
+    {
+      "pr": 2298,
+      "credit": "Jose Manuel / jmbarrancoml; conservative outer \u00a73/\u00a77"
+    },
+    {
+      "ref": "docs/nonadjacent-axis-audit.md",
+      "credit": "Douglas Colkitt; lem:chunk-swap nonadjacent routing"
+    }
+  ]
+}

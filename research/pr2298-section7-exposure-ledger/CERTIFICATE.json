@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "model": {
+    "claim": "Exact composite chunk-swap ledger for PR2298 \u00a77 nonadjacent CRT + line exposure: M(d)=2*floor(d/2)+2(d-1) exchanges, each charged at most (1+ell^tau) by lem:chunk-swap; M(d)<=3d-2 (sharp on even d); saving (1-tau)*(1-epsilon) matches published 6618729/4000000000; answers #4075 OQ2 on the adjacent {3,4} domain at d<=8.",
+    "tau": "99830289/100000000",
+    "epsilon": "1/40",
+    "section7_exponent": "3993381271/4000000000",
+    "section7_saving": "6618729/4000000000",
+    "published_saving": "6618729/4000000000",
+    "ell": 4,
+    "max_d": 8,
+    "selected_kappa": "0.001672660197076918",
+    "no_new_kappa": true
+  },
+  "multipliers": {
+    "1": {
+      "crt_forward": 0,
+      "crt_inverse": 0,
+      "tensor": 0,
+      "M": 0,
+      "linear_majorant": 1
+    },
+    "2": {
+      "crt_forward": 1,
+      "crt_inverse": 1,
+      "tensor": 2,
+      "M": 4,
+      "linear_majorant": 4
+    },
+    "3": {
+      "crt_forward": 1,
+      "crt_inverse": 1,
+      "tensor": 4,
+      "M": 6,
+      "linear_majorant": 7
+    },
+    "4": {
+      "crt_forward": 2,
+      "crt_inverse": 2,
+      "tensor": 6,
+      "M": 10,
+      "linear_majorant": 10
+    },
+    "5": {
+      "crt_forward": 2,
+      "crt_inverse": 2,
+      "tensor": 8,
+      "M": 12,
+      "linear_majorant": 13
+    },
+    "6": {
+      "crt_forward": 3,
+      "crt_inverse": 3,
+      "tensor": 10,
+      "M": 16,
+      "linear_majorant": 16
+    },
+    "7": {
+      "crt_forward": 3,
+      "crt_inverse": 3,
+      "tensor": 12,
+      "M": 18,
+      "linear_majorant": 19
+    },
+    "8": {
+      "crt_forward": 4,
+      "crt_inverse": 4,
+      "tensor": 14,
+      "M": 22,
+      "linear_majorant": 22
+    }
+  },
+  "per_d_ledger": {
+    "1": {
+      "M": 0,
+      "linear_majorant": 1,
+      "worst_widths": [
+        3
+      ],
+      "worst_bit_moves": 0,
+      "worst_pattern_charge": "0E-79",
+      "coarse_charge": "0E-79",
+      "linear_charge": "4.9906002855689305638021238874109631276131978263689045824015734772573274385013617"
+    },
+    "2": {
+      "M": 4,
+      "linear_majorant": 4,
+      "worst_widths": [
+        3,
+        4
+      ],
+      "worst_bit_moves": 4,
+      "worst_pattern_charge": "19.962401142275722255208495549643852510452791305475618329606293909029309754005447",
+      "coarse_charge": "19.962401142275722255208495549643852510452791305475618329606293909029309754005447",
+      "linear_charge": "19.962401142275722255208495549643852510452791305475618329606293909029309754005447"
+    },
+    "3": {
+      "M": 6,
+      "linear_majorant": 7,
+      "worst_widths": [
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 6,
+      "worst_pattern_charge": "29.943601713413583382812743324465778765679186958213427494409440863543964631008170",
+      "coarse_charge": "29.943601713413583382812743324465778765679186958213427494409440863543964631008170",
+      "linear_charge": "34.934201998982513946614867211876741893292384784582332076811014340801292069509532"
+    },
+    "4": {
+      "M": 10,
+      "linear_majorant": 10,
+      "worst_widths": [
+        3,
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 8,
+      "worst_pattern_charge": "47.906002855689305638021238874109631276131978263689045824015734772573274385013617",
+      "coarse_charge": "49.906002855689305638021238874109631276131978263689045824015734772573274385013617",
+      "linear_charge": "49.906002855689305638021238874109631276131978263689045824015734772573274385013617"
+    },
+    "5": {
+      "M": 12,
+      "linear_majorant": 13,
+      "worst_widths": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 10,
+      "worst_pattern_charge": "57.887203426827166765625486648931557531358373916426854988818881727087929262016340",
+      "coarse_charge": "59.887203426827166765625486648931557531358373916426854988818881727087929262016340",
+      "linear_charge": "64.877803712396097329427610536342520658971571742795759571220455204345256700517702"
+    },
+    "6": {
+      "M": 16,
+      "linear_majorant": 16,
+      "worst_widths": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 12,
+      "worst_pattern_charge": "75.849604569102889020833982198575410041811165221902473318425175636117239016021787",
+      "coarse_charge": "79.849604569102889020833982198575410041811165221902473318425175636117239016021787",
+      "linear_charge": "79.849604569102889020833982198575410041811165221902473318425175636117239016021787"
+    },
+    "7": {
+      "M": 18,
+      "linear_majorant": 19,
+      "worst_widths": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 14,
+      "worst_pattern_charge": "85.830805140240750148438229973397336297037560874640282483228322590631893893024511",
+      "coarse_charge": "89.830805140240750148438229973397336297037560874640282483228322590631893893024511",
+      "linear_charge": "94.821405425809680712240353860808299424650758701009187065629896067889221331525872"
+    },
+    "8": {
+      "M": 22,
+      "linear_majorant": 22,
+      "worst_widths": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "worst_bit_moves": 16,
+      "worst_pattern_charge": "103.79320628251647240364672552304118880749035218011590081283461649966120364702996",
+      "coarse_charge": "109.79320628251647240364672552304118880749035218011590081283461649966120364702996",
+      "linear_charge": "109.79320628251647240364672552304118880749035218011590081283461649966120364702996"
+    }
+  },
+  "asymptotic_constant": {
+    "linear_factor": 3,
+    "ell_tau_prefactor": "1.0018662050984933195097777973973878605899167872581081230181150167580710057334174",
+    "domain": "ell <= p/(3d), d <= p^epsilon (PR2298 \u00a73 / checks.py)",
+    "target_exponent": "3993381271/4000000000"
+  },
+  "pattern_count": 510,
+  "max_bit_moves": 16,
+  "physical_unit_checks": 5,
+  "saving_matches_published": true,
+  "even_d_sharp": true,
+  "row_digest_sha256": "d77c5083f879c89bbf22fb9b26e049b8d2c49538acb5f64eea13a4203cd280ad"
+}

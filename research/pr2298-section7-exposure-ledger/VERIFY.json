@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "docs/nonadjacent-axis-audit.md",
+    "research/selected-conservative-outer/PROOF.md",
+    "research/selected-conservative-outer/checks.py",
+    "research/pr2298-format-recovery-audit/TASK.json",
+    "research/synthetic-layout-independent/physical.py"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "Composite M(d) ledger, 510-pattern charges, saving identity, certificate match, source pins"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-Werror", "-B", "{package}/verify.py"],
+      "timeout_seconds": 120,
+      "checks": "Same admission under PYTHONOPTIMIZE via need(); warnings as errors"
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/independent.py"],
+      "timeout_seconds": 60,
+      "checks": "Separate closed-form M(d) and saving identity vs certificate"
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/test_package.py"],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys, read-only default, -O, independent, mutants"
+    }
+  ]
+}
