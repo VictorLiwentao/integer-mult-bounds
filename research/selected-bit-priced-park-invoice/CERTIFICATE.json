@@ -1,0 +1,71 @@
+{
+  "abort_tape": {
+    "moves": 83,
+    "reads": 77,
+    "writes": 20
+  },
+  "callback_abort_tape_formula": true,
+  "composed": {
+    "abort_tape": {
+      "moves": 83,
+      "reads": 77,
+      "writes": 20
+    },
+    "abort_tape_total": 180,
+    "interrupt_pays_output_disposal": false,
+    "park_restore": {
+      "moves": 122,
+      "reads": 168,
+      "steps": 84,
+      "writes": 62
+    },
+    "park_restore_steps": 84,
+    "returned_output_disposal": {
+      "moves": 0,
+      "reads": 0,
+      "steps": 0,
+      "writes": 0
+    }
+  },
+  "face_lengths": [
+    12,
+    0,
+    7,
+    1
+  ],
+  "fields_len": 2,
+  "interrupt_no_output_disposal": true,
+  "kappa_decimal": "0.001672660197076918",
+  "marker": "PASS_SELECTED_BIT_PRICED_PARK_INVOICE callback_abort_tape_formula park_restore_table interrupt_no_output_disposal three_mutants no_new_kappa",
+  "mutants": {
+    "omit_park_restore_undercounts_steps": true,
+    "omit_stack_clear_undercounts_and_leaves_dirt": true,
+    "wrong_clear_formula_rejected": true
+  },
+  "no_new_kappa": true,
+  "park_restore": {
+    "moves": 122,
+    "reads": 168,
+    "steps": 84,
+    "writes": 62
+  },
+  "park_restore_params": {
+    "S": 12,
+    "d": 1,
+    "r": 3
+  },
+  "park_restore_table": true,
+  "program_len": 1,
+  "schema_version": 1,
+  "scope": "Priced park/restore invoice on the PR2809 interrupt path including Callback.abort four Stack-face Tape.clear charges and program/fields rewinds, composed with the published PR2769/PR2635 park+restore table invoice; interrupt pays no returned-output disposal; three mutants; not ScratchPool lease-end, enclosing ownership, GL64, H2, or stock-envelope",
+  "source_correspondence": {
+    "callback_abort_present": true,
+    "contract_names_interrupt_gap": true,
+    "four_stack_face_clear": true,
+    "lease_restore_present": true,
+    "park_restore_formula_present": true,
+    "tape_clear_rewind_present": true
+  },
+  "status": "PASS_SELECTED_BIT_PRICED_PARK_INVOICE",
+  "success_path_disposal_control_reads": 5
+}

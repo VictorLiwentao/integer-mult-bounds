@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "20ecf2891d80b5acf18d980b2164fb44ea7faa90",
+  "files": [
+    {
+      "path": "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/controller.py",
+      "usage": "input",
+      "git_blob": "c631a9e77fbcccf0e8f448adc22978728aed7b60",
+      "sha256": "fa09146991f6c04e6f4b6eb9bf0c8e103e70e90a0e402ff3d69814e6aac8ff8c"
+    },
+    {
+      "path": "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/records.py",
+      "usage": "input",
+      "git_blob": "4f00467a0ff580954ad2fd0c7380240c753ddef3",
+      "sha256": "0c9c4b23e998597fb877bb1a29da69ac869b68262abe635b162b4dba9c69b372"
+    },
+    {
+      "path": "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/words.py",
+      "usage": "input",
+      "git_blob": "8d4ba37e2778acb35b34e0719df2caf138fbeb50",
+      "sha256": "5c37f57708ba3131bdcb03139f9dbc29886bee44569c09cbba51b68f75acd7f9"
+    },
+    {
+      "path": "research/selected-bit-physical-caller/inputs/pr2769/vendor/parking_machine.py",
+      "usage": "input",
+      "git_blob": "cafd614a3b7bc87b019361fcdf890ed976f26d19",
+      "sha256": "68134779debfb795468a1aaecbc2b9d321d7d4e451313ce7dc8fa7092561df4c"
+    },
+    {
+      "path": "research/selected-bit-physical-caller/inputs/pr2769/PROOF.md",
+      "usage": "input",
+      "git_blob": "7207ce7dec86694f01a3d9c049dcb87cc909e380",
+      "sha256": "fc9e7dcc5b385b6e508d6a6e9524b93059fa3e9fd5fcfb5eedbd85b3a54ba55e"
+    },
+    {
+      "path": "research/selected-bit-physical-caller/numerical_frame.py",
+      "usage": "input",
+      "git_blob": "dc92611dd5f131718806fa96470b8f3494e15e2a",
+      "sha256": "3fd62eda5d0b48bf31ea244708a77afdc6d16cf4fc9439d140ef422a38c7406c"
+    },
+    {
+      "path": "docs/research/selected-bit-physical-contract-map.md",
+      "usage": "input",
+      "git_blob": "bc2810efa90ba8d5a25cc9627ae9ffd4ffa5c5a0",
+      "sha256": "1311f839e109a16e3f1c093a62b51583ebaf1277ffda6e0df0768ba8e6a09c8e"
+    },
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "b1fea0c94436b236cc2b7d41a7be032811b94c81",
+      "sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
+      "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/controller.py",
+    "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/records.py",
+    "research/selected-bit-physical-caller/inputs/pr2753/predecessor/vendor/words.py",
+    "research/selected-bit-physical-caller/inputs/pr2769/vendor/parking_machine.py",
+    "research/selected-bit-physical-caller/inputs/pr2769/PROOF.md",
+    "research/selected-bit-physical-caller/numerical_frame.py",
+    "docs/research/selected-bit-physical-contract-map.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Pin sources, Tape.clear/rewind formulas, Callback.abort meter, park+restore table, match CERTIFICATE.json"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same admission under PYTHONOPTIMIZE via need()"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Separate algebra without importing verify.py"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Duplicate JSON keys, temp certificate corruption, -O admission, read-only package hash"
+    }
+  ]
+}
