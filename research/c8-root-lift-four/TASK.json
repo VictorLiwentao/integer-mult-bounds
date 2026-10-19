@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "task_id": "bit-new-register-model",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "original_card": {
+    "id": "bit-new-register-model",
+    "question": "Can an explicitly larger or nonabelian register model escape the scoped three-register obstruction?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/bit-three-register-lower-bound/README.md",
+      "certificates/selected-result.json",
+      "research/bit-gl3-mixed-targets-length10/README.md",
+      "docs/research/community-efficient1000-review.md"
+    ],
+    "methods": [
+      "Construct the smallest exact identity in a newly specified legal operation alphabet.",
+      "Derive a target-specific relaxation bound for that same explicit alphabet."
+    ],
+    "acceptance_gate": "Name the changed hypothesis, all counted roles and a uniform identity; finite column tests alone do not certify it. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read Model section 1 of the three-register bound and identify the exact excluded free operations.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "First compare the alphabet, role count and length with the fully replayed #1974 census and #2027 mixed-root tariff. Identify a changed premise and a legal native implementation; then price one smallest completed instance before searching larger words.",
+    "bottleneck_link": "A small-width completed saving changes the bit primitive; a finite-address identity alone is insufficient.",
+    "allowed_variations": [
+      "Choose a fixed larger register count or a specified nonabelian operation family."
+    ],
+    "scope_change_triggers": [
+      "Remaining inside the already-excluded three-register abelian model.",
+      "Repeating the two-register GL3 census or a covered three-register length without changing a hypothesis; a formal group-algebra word without native conversion is a partial result."
+    ],
+    "overlap_terms": [
+      "three-register",
+      "nonabelian",
+      "group algebra"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "In F2[C8] on four registers, prove that diag([g^4]^4) has exact minimum 4 in the rank-one label alphabet D_N([g^s]), s=1..7.",
+  "scope_change_reason": "The catalogue asks whether a larger register model escapes a three-register obstruction. This package answers the higher 2-power half of the C4 root-lift question: order 8 on four registers, not another three-register abelian word.",
+  "bottleneck_link": "A three-call root lift would be a shorter bit-primitive word than the diagonal involution product. The rank screen still allows it, so the negative certificate is the obstruction.",
+  "budget_minutes": 60,
+  "stop_rule": "Decide length at most 3 versus the four-call diagonal word on this one C8 target. Do not search C16 or a noncommutative extension.",
+  "outcome": "completed",
+  "evidence": "All 399 label patterns of length 1..3 reduce to a nonzero low-degree rank-one sum or to a degree-4 sum of at most three rank-one matrices. The diagonal four-call word attains the target. An independent meet-in-the-middle over 840 factors finds 0 hits through length 3.",
+  "author": "Wentao Li",
+  "ai_assistance": "Substantial AI assistance for the C8 augmentation case split, the exhaustive length-three product check, and the package writeup.",
+  "open_questions": [
+    {
+      "question": "Does C16, or a specified noncommutative extension of this rank-one label alphabet, admit a three-call word for four involution outputs?",
+      "why_it_matters": "The C4 note asked whether some higher 2-power or noncommutative extension is shorter. C8 is not; the other half is untouched.",
+      "first_step": "Name the group algebra and the target degree, then isolate the cross terms whose valuation equals that degree.",
+      "blocked_by": "Pairwise products of valuation-1 labels land on degree 4 and do not control a degree-8 target. No noncommutative alphabet is fixed here."
+    }
+  ]
+}

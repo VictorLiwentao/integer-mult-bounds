@@ -1,0 +1,22 @@
+{
+  "dead_single": 228,
+  "dead_triple": 72,
+  "direct_word_length": 4,
+  "four_block_rank_demand": 16,
+  "group": "C8",
+  "idempotents": 120,
+  "live_degree4_letters_at_most": 3,
+  "live_patterns": 99,
+  "minimum": 4,
+  "multiplication_rank_epsilon": 7,
+  "multiplication_rank_epsilon4": 4,
+  "no_new_kappa": true,
+  "no_word_length_at_most_3": true,
+  "pair_sums_in_rank_one_idempotents": 0,
+  "patterns": 399,
+  "rank_budget_permits_three": true,
+  "registers": 4,
+  "same_image_square_failures": 0,
+  "target": "diag([g^4],[g^4],[g^4],[g^4])",
+  "three_call_rank_budget": 21
+}
