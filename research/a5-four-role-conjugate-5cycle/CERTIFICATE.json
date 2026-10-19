@@ -1,0 +1,62 @@
+{
+  "direct_paid_calls": 4,
+  "direct_word": [
+    [
+      "x",
+      "E11"
+    ],
+    [
+      "y",
+      "E11"
+    ],
+    [
+      "y",
+      "E22"
+    ],
+    [
+      "x",
+      "E22"
+    ]
+  ],
+  "dirty_lowers": false,
+  "group": "A5=<x,y | x^2=y^3=(xy)^5=e>",
+  "group_elements_sha256": "9030f2eebc1fe7d848d7946a9c254306f7d0221fb68109e3b0d7c2dcb498e217",
+  "group_order": 60,
+  "hits_by_depth": [
+    0,
+    0,
+    0
+  ],
+  "identity_digest": "f6ae3e657d9c38ad92a0cb00c51d0be1e21b795c9e6347a13052626fa4fe98f4",
+  "layer_sizes": [
+    1,
+    240,
+    37285,
+    5150035
+  ],
+  "no_new_kappa": true,
+  "package": "research/a5-four-role-conjugate-5cycle",
+  "paid_factors": 240,
+  "paid_labels": [
+    "x",
+    "y"
+  ],
+  "predecessor_group_elements_sha256": "9030f2eebc1fe7d848d7946a9c254306f7d0221fb68109e3b0d7c2dcb498e217",
+  "predecessor_package": "research/a5-conjugate-5cycle-seedd316f8",
+  "rank_one_idempotents": 120,
+  "relations": {
+    "x_order": 2,
+    "xy_order": 5,
+    "y_order": 3,
+    "yx_order": 5
+  },
+  "result_minimum": 4,
+  "roles": 4,
+  "schema_version": 1,
+  "seen_total_through_short_depth": 5187561,
+  "selected_kappa": "0.001672660197076918",
+  "short_depth": 3,
+  "short_witness": null,
+  "target": "diag([xy],[yx],[e],[e])",
+  "target_digest": "bc492929dc097d2f5848ef0a139da5af36f208ec88405565e35d45655c1b23de"
+}

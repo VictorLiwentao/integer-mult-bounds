@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/a5-conjugate-5cycle-seedd316f8/CERTIFICATE.json",
+    "certificates/selected-result.json",
+    "docs/research/agent-task-catalog.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Read-only forward BFS through length 3 over 240 paid factors in M4(F2[A5]); compares committed CERTIFICATE.json; source pins; need() admission; temp corruption reject."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Same verify under -O -Werror; need() still enforces admission."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Independent even-permutation A5 + uv^T idempotent rebuild; separate BFS; no primary model import."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/test_package.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Direct-word, omission, dirty-toggle, duplicate-JSON, corruption and relation controls."
+    }
+  ]
+}
